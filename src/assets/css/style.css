@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap');
+
+:root {
+  --my-animation : blink 1s infinite;
+  --font-title: 'Open Sans', sans-serif;
+  --font-paragrhaps: 'Poltawski Nowy', serif; 
+  --font-third: 'Roboto', sans-serif;  
+}
+
+.menu {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: flex-end;
+  align-items: center;
+  /* posición fija */
+  position: fixed;   
+  top: 0; /* posición en la parte superior */
+  left: 0; /* posición en la parte izquierda */
+  right: 0; /*posición en la parte derecha*/
+  background-color: #000000;  
+  height: 8%;
+}
+
+/* h1 span {
+  font-weight: normal;
+  color: #999;
+} */
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;  
+  color: var(--font-color);
+  font-family: var(--font-title);
+  margin: 0;
+}
+
+h1 span {
+  font-weight: normal;
+  color: #278bd3;
+}
+
+/* header {
+  padding: 1rem;
+  border: solid 1px red;
+} */
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0.15rem;
+}
+
+.links {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.logo {
+  float: left;
+}
+
+.icono-inicio{
+  padding-left: 15rem;
+  margin-right: 4rem ;
+}
+.icono-mapa{
+  margin-right:4rem ;
+}
+.menu h1{
+  text-align: left;
+}
+.container2{
+  margin-left:200px ;
+  display: flex;
+  justify-content: flex-end;
+}
+.container2 li{ 
+  margin-left: 5rem;
+  font-size: x-large;
+}
+
+span{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* 
+
+/* .menu ul li{
+  margin-left: 0.5rem;
+} */
+
+/* ul {
+  margin: auto;
+  text-align: center; */
+
+  

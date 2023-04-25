@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap');
+
+:root {
+  --my-animation : blink 1s infinite;
+  --font-title: 'Open Sans', sans-serif;
+  --font-paragrhaps: 'Poltawski Nowy', serif; 
+  --font-third: 'Roboto', sans-serif;
+}
+
+
+
+#fond-blog {
+  position: relative; /* Establecer la posición relativa para que el fondo se pueda superponer en la imagen */
+}
+
+#fond-blog img {
+  width: 220%; /* Ajustar el ancho de la imagen */
+  
+ 
+  display: block; /* Establecer la imagen como un elemento en bloque */
+  margin: 55px auto 0; /* Centrar la imagen horizontalmente y agregar un margen superior */
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Blog h2 {
+  animation: var(--my-animation);
+}
+
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.post:hover .post-image {
+  transform: scale(1.2);
+}
+
+.post-hover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(120, 117, 126, 0.71);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.post:hover .post-hover {
+  opacity: 1;
+}
+
+.post-hover-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+

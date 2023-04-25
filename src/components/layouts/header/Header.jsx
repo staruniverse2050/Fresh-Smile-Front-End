@@ -1,0 +1,53 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export const Header = () => {
+  return (
+    <header>
+      <div className="menu">
+      <a href="#home"><img className="logo" src="./public/logo.png" alt="" /></a>
+        <h1> 
+          <span>ORAL</span>PREMIUM
+        </h1>
+        <ul>
+
+          
+          <div className="container2">
+            <li>
+              <Link to="/">
+                <a class="links" href="#home">Inicio</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/Nosotros">
+                <a class="links" href="#about">Nosotros</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/promociones">
+                <a class="links" href="/#">Promociones</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/promociones">
+                <a class="links" href="/#">Sedes</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/Blog">
+                <a class="links" href="/#">Blog</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/Contactp">
+                <a class="links" href="/#">Contacto</a>
+              </Link>
+            </li>
+          </div>
+        </ul>
+        <a href="#home"><img className="icono-inicio" src="./public/icono_inicio.png" alt="" /></a>
+        <a href="#home"><img className="icono-mapa" src="./public/icono_map.png" alt="" /></a>
+      </div>
+    </header>
+  );
+};

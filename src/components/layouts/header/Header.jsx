@@ -14,7 +14,7 @@ export const Header = () => {
           
           <div className="container2">
             <li>
-              <Link to="/">
+              <Link to="/Home">
                 <a class="links" href="#home">Inicio</a>
               </Link>
             </li>
@@ -24,12 +24,12 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/promociones">
-                <a class="links" href="/#">Promociones</a>
+              <Link to="/Procedimientos">
+                <a class="links" href="/#">Procedimientos</a>
               </Link>
             </li>
             <li>
-              <Link to="/promociones">
+              <Link to="/Clinica">
                 <a class="links" href="/#">Sedes</a>
               </Link>
             </li>
@@ -39,7 +39,7 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/Contactp">
+              <Link to="/Contacto">
                 <a class="links" href="/#">Contacto</a>
               </Link>
             </li>

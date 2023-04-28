@@ -2,11 +2,19 @@ import React from "react";
 import './Blog.css'
 
 
+export const handleClick = () => 
+  console.log('El botón ha sido presionado');
 
 export const Blog = () => {
   return (
-   
-     
+<>
+<div className="header-banner">
+  <img className="banner-img" src="public/banner.jpg" alt="" />
+<h1 class="title2">En este blog te brindaremos informacion sobre nuestras clinicas</h1>
+<button className="btn" onClick={handleClick}>Agenda tu cita</button>
+</div>
+
+
 <div>
 <div className="post-container">
         <div className="post">
@@ -42,6 +50,6 @@ export const Blog = () => {
       </div>
       </div>     
         
-    
+    </>
   );
 };

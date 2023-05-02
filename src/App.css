@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 :root {
-  --my-animation : blink 1s infinite;
   --font-title: 'Open Sans', sans-serif;
   --font-paragrhaps: 'Poltawski Nowy', serif; 
-  --font-third: 'Roboto', sans-serif;
-  --font-color: red;
+  /* --font-third: 'Roboto', sans-serif; */
+  --font-color: rgb(255, 255, 255);
 }
 
 body{
-  background: #000;
+  background: #ffffff;
+ 
 }
+
+/* Responsive */
+

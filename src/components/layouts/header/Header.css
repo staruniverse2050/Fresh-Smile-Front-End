@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap');
 
 :root {
-  --my-animation : blink 1s infinite;
   --font-title: 'Open Sans', sans-serif;
   --font-paragrhaps: 'Poltawski Nowy', serif; 
   --font-third: 'Roboto', sans-serif;  
@@ -23,7 +22,7 @@
 
 h1 {
   font-size: 2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-transform: uppercase;  
   color: var(--font-color);
   font-family: var(--font-title);
@@ -83,14 +82,41 @@ span{
   margin-right: 1rem;
 }
 
-/* 
+ /* #icon-menu img{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  font-size: 20px;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 100%;
+  color: #424140;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+} */
+
+/* #icon-menu:hover{
+  opacity: 0.8;
+}  */
+
 
 /* .menu ul li{
   margin-left: 0.5rem;
 } */
 
-/* ul {
+ /* ul {
   margin: auto;
-  text-align: center; */
-
-  
+  text-align: center; 
+ } */
+/* 
+  @media screen and (min-width: 2114px) {
+    header {
+      width: 50%;
+      font-size: 1.2em;
+      padding: 1em;
+    }
+  } */

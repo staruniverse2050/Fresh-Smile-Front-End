@@ -50,45 +50,22 @@ export const Blog = () => {
 
 
 <footer>
-<div class="footer-area">
-    <div class="container">
+<div className="footer-area">
+    <div className="container">
+    <div className="footer-contacts">
+    <i className="fa-solid fa-location-dot"></i><p className="adress-footer"><span  className="adress">Dirección:</span><span> Cra 21a, calle 9na #099</span></p>
+                    <p className="email-footer"><span>Email:</span><span> freshsmile@gmail.com</span></p>                    
+                  </div>
 
-    <div class="address">
-  <div class="container">
-    <div class="footer-content">
-      <div class="address-info">
-        <i class="fa-sharp fa-solid fa-location-dot"></i>
-      <p><span>Direccion</span></p><p className="dateT"><span>cra21a, calle 9na #099</span></p>
-</div>
-</div>
-
-  <div class="email">
-    <div class="container">
-      <div class="footer-content">
-      <div class="email-info">
-        <i class="fa-solid fa-envelope"></i>
-        <p><span>E-mail</span></p><p className="dateT"><span>freshsmile@gmail.com</span></p>
-      </div>
-    </div>
-    </div>
-  </div>
-
-  <div class="phone">
-    <div class="container">
-      <div class="footer-content">
-      <div class="phone-info">
-        <i class="fa-solid fa-phone-volume"></i>
-        <p><span>Contactanos</span></p><p className="dateT"><span>3204415807</span></p>
-      </div>
-    </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-</div>
-</div>
-
+                  <div class="footer-head">
+                  <h4>Contáctanos:</h4>
+                  <h5>+57 3204415807</h5>
+                  <div className="flicker-img">
+                    <a href="#"><img src="./public/logo.png" alt="logo"></img></a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
 </footer>
 
     </>

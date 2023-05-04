@@ -1,5 +1,5 @@
 import React from "react";
-import './procedimientos.css'
+// import './procedimientos.css'
 import dientes from '../procedimientos/assets/img/dientes.png'
 import card2 from '../procedimientos/assets/img/card2.png'
 

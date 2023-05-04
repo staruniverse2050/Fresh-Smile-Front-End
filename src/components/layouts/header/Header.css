@@ -2,8 +2,8 @@
 
 :root {
   --font-title: 'Open Sans', sans-serif;
-  --font-paragrhaps: 'Poltawski Nowy', serif; 
-  --font-third: 'Roboto', sans-serif;  
+  --font-paragrhaps: 'Poltawski Nowy', serif;
+  --font-third: 'Roboto', sans-serif;
 }
 
 .menu {
@@ -12,18 +12,21 @@
   justify-content: flex-end;
   align-items: center;
   /* posición fija */
-  position: fixed;   
-  top: 0; /* posición en la parte superior */
-  left: 0; /* posición en la parte izquierda */
-  right: 0; /*posición en la parte derecha*/
-  background-color: #000000;  
+  position: fixed;
+  top: 0;
+  /* posición en la parte superior */
+  left: 0;
+  /* posición en la parte izquierda */
+  right: 0;
+  /*posición en la parte derecha*/
+  background-color: #000000;
   height: 8%;
 }
 
 h1 {
   font-size: 2rem;
   /* font-weight: bold; */
-  text-transform: uppercase;  
+  text-transform: uppercase;
   color: var(--font-color);
   font-family: var(--font-title);
   margin: 0;
@@ -57,32 +60,36 @@ h1 span {
   float: left;
 }
 
-.icono-inicio{
+.icono-inicio {
   padding-left: 15rem;
-  margin-right: 4rem ;
+  margin-right: 4rem;
 }
-.icono-mapa{
-  margin-right:4rem ;
+
+.icono-mapa {
+  margin-right: 4rem;
 }
-.menu h1{
+
+.menu h1 {
   text-align: left;
 }
-.container2{
-  margin-left:200px ;
+
+.container2 {
+  margin-left: 200px;
   display: flex;
   justify-content: flex-end;
 }
-.container2 li{ 
+
+.container2 li {
   margin-left: 5rem;
   font-size: x-large;
 }
 
-span{
+span {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
- /* #icon-menu img{
+/* #icon-menu img{
   width: 50px;
   height: 50px;
   position: absolute;
@@ -108,7 +115,7 @@ span{
   margin-left: 0.5rem;
 } */
 
- /* ul {
+/* ul {
   margin: auto;
   text-align: center; 
  } */

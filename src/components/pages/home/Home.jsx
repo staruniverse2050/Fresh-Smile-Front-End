@@ -7,7 +7,7 @@ export const Home = () => {
       <div className="container_banner">
         {/* <img className="" src="./public/banner.jpg" alt="" /> */}
         <div className="container_home">
-          <h1>¡Bienvenido a la clinica Fresh Smile Cmills!</h1>
+          <h1>¡Bienvenidos a la clinica Fresh Smile Cmills!</h1>
           <div className="container-btn">
             <button className="boton">Agendar Cita</button>
             <button className="boton">Buscar Clinica</button>
@@ -15,22 +15,36 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="container-procedimientos">
-        <div className="procedimientos">
-          <img src="./public/diseñosonrisa.jpg" alt="sede 1" />
-          <button>Diseño de sonrisa</button>
+      <div className="barra">
+        <h2>Clinica Fresh Smile Cmills</h2>
+        {/* <p>Contenido del contenedor...</p> */}
+      </div>
+
+      <div className="container-sedes">
+        <div className="sedes">
+          <img src="./public/sede1.png" alt="sede 1" />
+          <h1>Sede Armenia</h1>
+          <button>Ingresar</button>
         </div>
 
-        <div className="procedimientos">
-          <img src="./public/blanqueamiento.jpg" alt="sede 2" />
-          <button>Blanqueamiento</button>
+        <div className="sedes">
+          <img src="./public/sede2.png" alt="sede 2" />
+          <h1>Sede Tebaida</h1>
+          <button>Ingresar</button>
         </div>
 
-        <div className="procedimientos">
-          <img src="./public/implantes.jpg" alt="sede 3" />
-          <button>Implantes</button>
+        <div className="sedes">
+          <img src="./public/sede3.png" alt="sede 3" />
+          <h1>Sede Circasia</h1>
+          <button>Ingresar</button>
         </div>
       </div>
+
+      <div className="barra-2">
+        <h2>Nuestro Blog</h2>
+        {/* <p>Contenido del contenedor...</p> */}
+      </div>
+
       <div class="container-wrapper">
         <div className="container-blog">
           <img src="./public/implantes.jpg" alt="" />
@@ -87,30 +101,32 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="barra">
-        <h2>Procedimientos</h2>
+
+
+      <div className="barra-3">
+        <h2>Conoce todos los procedimientos</h2>
         {/* <p>Contenido del contenedor...</p> */}
       </div>
 
-      <div className="container-sedes">
-        <div className="sedes">
-          <img src="./public/sede1.png" alt="sede 1" />
-          <h1>Sede Armenia</h1>
-          <button>Ingresar</button>
+      <div className="container-procedimientos">
+        <div className="procedimientos">
+          <img src="./public/diseñosonrisa.jpg" alt="sede 1" />
+          <button>Diseño de sonrisa</button>
         </div>
 
-        <div className="sedes">
-          <img src="./public/sede2.png" alt="sede 2" />
-          <h1>Sede Tebaida</h1>
-          <button>Ingresar</button>
+        <div className="procedimientos">
+          <img src="./public/blanqueamiento.jpg" alt="sede 2" />
+          <button>Blanqueamiento</button>
         </div>
 
-        <div className="sedes">
-          <img src="./public/sede3.png" alt="sede 3" />
-          <h1>Sede Circasia</h1>
-          <button>Ingresar</button>
+        <div className="procedimientos">
+          <img src="./public/implantes.jpg" alt="sede 3" />
+          <button>Implantes</button>
         </div>
       </div>
+      
+    
+
     </>
   );
 };

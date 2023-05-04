@@ -24,7 +24,7 @@
 }
 
 .container_home h1 {
-  /* line-height: 1.5; */
+  line-height: 1.5;
   color: #ffffff;
   text-align: center;
   font-size: 3em;
@@ -169,19 +169,60 @@
 
 .barra {
   width: 30%;
-  margin: 0 auto;
+  padding-top: 30px;
+  margin: 20px auto;
   /* border: 2px solid #000; */
   border-radius: 20px;
   padding: 10px;
-  background-color: #579BB1;
+  /* background-color: #8dd1e0; */
   text-align: center;
+  /* margin: 20px 10px; */
 }
 
 .barra h2 {
   font-size: 45px;
+  color: #74c7da;
+}
+
+
+.barra-2 {
+  width: 50%;
+  padding-top: 30px;
+  margin: 20px auto;
+  /* border: 2px solid #000; */
+  border-radius: 20px;
+  padding: 10px;
+  /* background-color: #8dd1e0; */
+  background: linear-gradient(to bottom,
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)),
+  url('https://images.pexels.com/photos/6528856/pexels-photo-6528856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  text-align: center;
+  /* margin: 20px 10px; */
+}
+
+.barra-2 h2 {
+  font-size: 45px;
   color: #ffffff;
 }
 
+.barra-3 {
+  width: 50%;
+  padding-top: 30px;
+  margin: 20px auto;
+  /* border: 2px solid #000; */
+  border-radius: 15px;
+  padding: 10px;
+  /* background-color: #8dd1e0; */
+  background: rgb(177, 175, 175);
+  text-align: center;
+  /* margin: 20px 10px; */
+}
+
+.barra-3 h2 {
+  font-size: 45px;
+  color: #ffffff;
+}
 .container-procedimientos {
   display: flex;
   /* justify-content: space-around; */

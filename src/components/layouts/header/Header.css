@@ -6,6 +6,7 @@
   --font-third: 'Roboto', sans-serif;
 }
 
+
 .menu {
   display: flex;
   /* justify-content: center; */
@@ -33,8 +34,10 @@ h1 {
 }
 
 h1 span {
-  font-weight: normal;
-  color: #278bd3;
+  /* font-weight: normal; */
+  color: #5FFDFF;
+  --font-title: 'Open Sans', sans-serif;
+  --font-paragrhaps: 'Poltawski Nowy', serif; 
 }
 
 .menu ul {

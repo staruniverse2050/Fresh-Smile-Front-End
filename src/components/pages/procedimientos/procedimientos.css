@@ -10,7 +10,6 @@
   position: absolute;
   top: 20%;
   left: 4%;
-
 }
 
 
@@ -92,10 +91,10 @@ a{
   font-weight: bold;
 
 }
-
+/* 
 div:hover{
   background-color: #A9F5F2;
-}
+} */
 
 .text{
   font-size: 22px;
@@ -202,9 +201,9 @@ a{
 
 }
 
-div:hover{
+/* div:hover{
   background-color: #A9F5F2;
-}
+} */
 
 .text2{
   font-size: 22px;
@@ -310,9 +309,9 @@ a{
 
 }
 
-div:hover{
+/* div:hover{
   background-color: #A9F5F2;
-}
+} */
 
 .text3{
   font-size: 22px;

@@ -13,6 +13,14 @@ export const Blog = () => {
 </div>
 </div>
 
+{/* --------------------container title blog--------------------- */}
+
+<div className="container-titleB">
+        <h2>Blog</h2>
+      </div>
+
+{/* -------------------cards hover------------------------- */}
+
 <div>
 <div className="post-container">
         <div className="post">
@@ -49,21 +57,29 @@ export const Blog = () => {
       </div>     
 
 
+      {/* <!-- -------------search------------------ --> */}
+
+<form>
+<div class="search-option" id="searchform">
+<input type="text" name="buscador" id="search" placeholder="Buscar..."/>
+</div>
+</form>
+
+{/* ---------------------cards--------------------------------- */}
+
       <div className="left-blog">
   <div className="recent-post">
 
     <div className="recent-single-post">
       <div className="post-img">
-             <img src="./public/cards6.jpg" alt="Ortodoncia_Brackets"/>
+             <img src="./public/dental.png" alt="Ortodoncia_Brackets"/>
       </div>
       <div className="pst-content">
-        <h4>Ortodoncia Con Brackects</h4>
-        <p>Los tratamientos de ortodoncia están enfocados
-         a la corrección de la mordida, consiguiendo que 
-         los dientes encajen a la perfección. Con una dentadura 
-         nivelada y alineada la sonrisa
-         no solo resulta más armónica, sino que disfrutarás
-         de una correcta distribución de las cargas masticatorias.</p>
+        <h4>Clinica 1</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          Impedit quos suscipit temporibus accusamus, harum alias nemo, 
+          ab labore beatae eaque error tempore omnis ex totam fugit asperiores 
+          deserunt explicabo accusantium.</p>
         <a href="#" className="button">Leer más</a>
       </div>
     </div>
@@ -75,14 +91,14 @@ export const Blog = () => {
 
     <div className="recent-single-post">
       <div className="post-img">
-             <img src="./public/cards6.jpg" alt="Ortodoncia_Brackets"/>
+             <img src="./public/dental.png" alt="Ortodoncia_Brackets"/>
       </div>
       <div className="pst-content">
-        <h4>BLANQUEAMIENTO DENTAL</h4>
-        <p>El blanqueamiento dental es un tratamiento que se aplica a los dientes que han cambiado de color, 
-          siendo uno de los tratamiento estéticos más conservadores con el tejido dentario. 
-          Con este tratamiento se consigue cambiar el tono del color de los dientes, dejando estos más blancos, 
-          luminosos y devolviendo el brillo natural del esmalte dental.</p>
+        <h4>Clinica 2</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          Impedit quos suscipit temporibus accusamus, harum alias nemo, 
+          ab labore beatae eaque error tempore omnis ex totam fugit asperiores 
+          deserunt explicabo accusantium.</p>
         <a href="#" className="button">Leer más</a>
       </div>
     </div>
@@ -94,19 +110,59 @@ export const Blog = () => {
 
     <div className="recent-single-post">
       <div className="post-img">
-             <img src="./public/cards6.jpg" alt="Ortodoncia_Brackets"/>
+             <img src="./public/dental.png" alt="Ortodoncia_Brackets"/>
       </div>
       <div className="pst-content">
-        <h4>CARILLAS DENTALES</h4>
-        <p>Las carillas dentales son unas finas láminas de porcelana o composite que se adhieren 
-          a la cara visible del diente para mejorar su aspecto estético. Debido a su finalidad estética,
-           estas láminas se colocan en la cara vestibular de los dientes frontales, por ser los más visibles 
-           cuando sonreímos.</p>
+        <h4>Clinica 3</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          Impedit quos suscipit temporibus accusamus, harum alias nemo, 
+          ab labore beatae eaque error tempore omnis ex totam fugit asperiores 
+          deserunt explicabo accusantium.</p>
         <a href="#" className="button">Leer más</a>
       </div>
     </div>
     </div>
     </div>
+
+
+    {/* <!-- -------link contact wpp------- --> */}
+
+<div class="space-wpp">
+    <a href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información." class="float" target="_blank ">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
+  </div>
+
+{/* -------------------container title enjoy blog----------------------------------- */}
+
+    <div className="container-titleB1">
+        <h2>Disfruta de nuestro blog</h2>
+      </div>
+
+{/* -----------------------post--------------------------------------- */}
+
+     <div className="container-post">
+      <div className="post-img">
+      <a href="#"><img src="./public/cards6.jpg" alt="clinica_4"/></a>
+      </div>
+      <div className="post-img">
+      <a href="#"><img src="./public/cards6.jpg" alt="clinica_5"/></a>
+      </div>
+      <div className="post-img">
+      <a href="#"><img src="./public/cards6.jpg" alt="clinica_6"/></a>
+      </div>
+       <div className="post-img">
+      <a href="#"><img src="./public/cards6.jpg" alt="clinica_7"/></a>
+      </div>
+      <div className="post-img">
+      <a href="#"><img src="./public/cards6.jpg" alt="clinica_8"/></a>
+      </div>
+      <div className="post-img">
+      <a href="#"><img src="./public/cards6.jpg" alt="clinica_9"/></a>
+      </div>
+</div>
+
+{/* ----------------------------------footer-------------------------------------- */}
 
 <footer>
 <div className="footer-area">
@@ -116,7 +172,7 @@ export const Blog = () => {
    <p><i className="fa-solid fa-location-dot"></i><span>Dirección:</span>Cra 21a, calle 9na #099</p>
    </div>
    <div classname="icono">
-    <p><i class="fa-thin fa-envelope-open-text"></i><span>Email:</span>freshsmile@gmail.com</p>                    
+    <p><i class="fa-solid fa-envelope-open-text"></i><span>Email:</span>freshsmilecmills@gmail.com</p>                    
                   </div>
            </div>
      

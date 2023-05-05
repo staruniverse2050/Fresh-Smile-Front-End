@@ -49,7 +49,7 @@
   
 }
 
-.posteo-blog:hover .image-card {
+.posteo-blog:hover left-blog.image-card {
   transform: scale(1.2);
 }
 
@@ -200,7 +200,7 @@ margin-left: 65px;
   padding: 50px 1px;
  margin-left: 70px;
 padding-top: 20px;
-margin-right: 102em;
+margin-right: 90em;
 }
 
 .left-blog {
@@ -265,7 +265,7 @@ padding: 20px 20px;
 border-radius: 2px;
 text-decoration: none;
 margin-top: 2px;
-margin-left: 380px;
+margin-left: 520px;
 font-size: 25px;
 }
 

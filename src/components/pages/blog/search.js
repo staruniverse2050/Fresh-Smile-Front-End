@@ -3,7 +3,7 @@ document.addEventListener("keyup", e => {
 
     if(e.key === "escape")e.target.value = ""
 
-    document.querySelectorAll(".recent-single-post").forEach(elementos=>{
+    document.querySelectorAll(".recent-single-post1").forEach(elementos=>{
 
 
     

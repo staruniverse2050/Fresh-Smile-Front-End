@@ -1,17 +1,22 @@
 .contact {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    /* background: url('https://images.pexels.com/photos/4269492/pexels-photo-4269492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/6528851/pexels-photo-6528851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    /* opacity: 0.8;  */
-    /* background-position: cover; */
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+	/* background: url('https://images.pexels.com/photos/4269492/pexels-photo-4269492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+		),
+		url("https://images.pexels.com/photos/6528851/pexels-photo-6528851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	/* opacity: 0.8;  */
+	/* background-position: cover; */
+	background-size: cover;
+	/* background-repeat: no-repeat; */
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
 }
 
 /* .contact .content {
@@ -20,165 +25,160 @@
 } */
 
 .content h2 {
-    font-size: 70px;
-    font-weight: 500;
-    color: #ffffff;
-    /* margin-bottom: 200px; */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+	font-size: 70px;
+	font-weight: 500;
+	color: #ffffff;
+	/* margin-bottom: 200px; */
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .contact .content p {
-    text-align: center;
-    font-size: 30px;
-    color: #ffffff;
-    margin-top: 20px;
+	text-align: center;
+	font-size: 30px;
+	color: #ffffff;
+	margin-top: 20px;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+	width: 100%;
+	display: flex;
+    /* flex-direction: ; */
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
 }
 
 .container .contactInfo {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
 }
 
 .container .contactInfo .box {
-    /* position: relative; */
-    padding: 20px 0;
-    display: flex;
+	/* position: relative; */
+    margin-top: 60px;
+	padding: 20px 0;
+	display: flex;
 }
 
 .container .contactInfo .box .icon {
-    min-width: 60px;
-    height: 80px;
-    width: 70px;
-    /* background: #fff; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
+	min-width: 60px;
+	height: 80px;
+	width: 70px;
+	/* background: #fff; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
 }
 
 .container .contactInfo .box .text h3 {
-    display: flex;
-    margin-left: 20px;
-    font-size: 30px;
-    color: #5FFDFF;
-    flex-direction: column;
-    font-weight: 500;
+	display: flex;
+	margin-left: 20px;
+	font-size: 30px;
+	color: #5ffdff;
+	flex-direction: column;
+	font-weight: 500;
 }
 
 .container .contactInfo .box .text p {
-    display: flex;
-    margin-left: 20px;
-    font-size: 30px;
-    color: rgb(252, 248, 248);
-    flex-direction: column;
-    font-weight: 300;
+	display: flex;
+	margin-left: 20px;
+	font-size: 30px;
+	color: rgb(252, 248, 248);
+	flex-direction: column;
+	font-weight: 300;
 }
 
-input , textarea{
-    background: rgba(250, 245, 245, 0.5);
-    
+input,
+textarea {
+	background: rgba(250, 245, 245, 0.5);
 }
-
 
 .contactForm {
-    width: 40%;
-    padding: 40px;
-      background: rgba(250, 245, 245, 0.5);
+    margin-top: 20vh;
+	width: 40%;
+	padding: 40px;
+	background: rgba(250, 245, 245, 0.5);
 }
 
 .contactForm h2 {
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    font-weight: 500;
+	font-size: 30px;
+	color: rgb(0, 0, 0);
+	font-weight: 500;
 }
 
 .contactForm .inputBox {
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-   
-   
-    
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
 }
 
 .contactForm .inputBox input,
 .contactForm .inputBox textarea {
-  width: 100%;
-  padding: 5px 0;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 2px solid #b1a1a1;
-  outline: none;
-  resize: none;
-  height: 45px;
-
+	width: 100%;
+	padding: 5px 0;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #b1a1a1;
+	outline: none;
+	resize: none;
+	height: 45px;
 }
-
 
 .contactForm .inputBox span {
-    position: absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5s;
-    color: rgb(21, 20, 20);/*color de la letra*/
-    font-size: 23px; /*tamaño de letra del span*/
-  
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: rgb(21, 20, 20); /*color de la letra*/
+	font-size: 23px; /*tamaño de letra del span*/
 }
 
-.contactForm .inputBox input:focus~span,
-.contactForm .inputBox input:valid~span,
-.contactForm .inputBox textarea:focus~span,
-.contactForm .inputBox textarea:valid~span {
-    color: rgb(17, 17, 17);
-    font-size: 12px;
-    transform: translateY(-20px);
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+	color: rgb(17, 17, 17);
+	font-size: 12px;
+	transform: translateY(-20px);
 }
 
 .contactForm .inputBox input[type="submit"] {
-    background:#5FFDFF;
-    color: hwb(0 0% 100%);
-    border-radius: 55px;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-    height: 78px;
-    width: 58%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto; /* agregar margen automático para centrar horizontalmente */
-    font-size: 23px; /*tamaño de letra del span*/
+	background: #5ffdff;
+	color: hwb(0 0% 100%);
+	border-radius: 55px;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+	height: 78px;
+	width: 58%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto; /* agregar margen automático para centrar horizontalmente */
+	font-size: 23px; /*tamaño de letra del span*/
 }
 
 .inputBox-post input[type="checkbox"] {
-    transform: scale(1.5); /* aumentar tamaño del checkbox */
-  }
-  
-  .inputBox-post label {
-    font-size: 20px; /* aumentar tamaño de la fuente */
-    text-align: left; /* mover el texto hacia la izquierda */
-    margin-left: 10px; /* agregar un margen izquierdo */
-    color: #000000;
-  }
-  
-  .post-text {
-    text-align: center;
-    padding: 20px;
-    font-size: 23px; /*tamaño de letra del span*/
-  }
-  
+	transform: scale(1.5); /* aumentar tamaño del checkbox */
+}
+
+.inputBox-post label {
+	font-size: 20px; /* aumentar tamaño de la fuente */
+	text-align: left; /* mover el texto hacia la izquierda */
+	margin-left: 10px; /* agregar un margen izquierdo */
+	color: #000000;
+}
+
+.post-text {
+	text-align: center;
+	padding: 20px;
+	font-size: 23px; /*tamaño de letra del span*/
+}

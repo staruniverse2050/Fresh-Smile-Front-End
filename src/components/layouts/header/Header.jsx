@@ -46,8 +46,12 @@ export const Header = () => {
             </li>
           </div>
         </ul>
-        <a href="#home"><img className="icono-inicio" src="./public/icono_inicio.png" alt="" /></a>
-        <a href="#home"><img className="icono-mapa" src="./public/icono_map.png" alt="" /></a>
+        <Link to="/login">
+          <img className="icono-inicio" src="/icono_inicio.png" alt="" />
+        </Link>
+        <a href="#home">
+          <img className="icono-mapa" src="/icono_map.png" alt="" />
+        </a>
       </div>
 
       {/* <div id="icon-menu">

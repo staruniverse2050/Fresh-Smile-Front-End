@@ -34,9 +34,6 @@
   }
 }
 
-.Blog h2 {
-  animation: var(--my-animation);
-}
 
 
 .post-container {
@@ -46,7 +43,7 @@
 }
 
 .post {
-  position: relative;
+  /* position: relative; */
   width: 400px;
   height: 300px;
   margin: 20px;
@@ -66,34 +63,10 @@
   transform: scale(1.2);
 }
 
-.post-hover {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(120, 117, 126, 0.71);
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: all 400ms ease-in-out;
-
-}
-
-.post:hover .post-hover {
-  opacity: 1;
-}
-
-.post-hover-title {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-}
-
 /* ---------css minjibyung---------- */
 /* -------------container blog img-------------- */
 
-.header-banner {
+/* .header-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,7 +117,7 @@
 
 .date-btn:hover, .date-btn:focus {
   background-color: #298697;
-}
+} */
 
 /* -------------------container blog title----------- */
 

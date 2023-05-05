@@ -66,13 +66,11 @@
   /* Color de fondo */
 }
 
-<<<<<<< HEAD
+
 /* Estilos Sedes */
 
 
 
-=======
->>>>>>> 428d9110786a3b917d735d91ce0645f3ce45a451
 .container-sedes {
   display: flex;
   justify-content: center;
@@ -93,7 +91,7 @@
   background: #8dd1e0;
   width: 60%;
   /* height: 90%; */
-<<<<<<< HEAD
+
 }
 
 .sedes img {
@@ -258,8 +256,7 @@
   margin-bottom: 10px;
 }
 
-=======
-}
+
 
 .sedes img {
   float: right;
@@ -421,7 +418,7 @@
   margin-bottom: 10px;
 }
 
->>>>>>> 428d9110786a3b917d735d91ce0645f3ce45a451
+
 button {
   height: 50px;
   background-color: #249bad;
@@ -438,11 +435,10 @@ button:hover {
   background-color: #298697;
 }
 
-<<<<<<< HEAD
+
 /* Estilos Blog */
 
-=======
->>>>>>> 428d9110786a3b917d735d91ce0645f3ce45a451
+
 .container-wrapper {
   padding-top: 20px;
   /* background: red; */

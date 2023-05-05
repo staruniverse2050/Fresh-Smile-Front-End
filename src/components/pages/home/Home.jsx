@@ -39,7 +39,15 @@ export const Home = () => {
           <button>Ingresar</button>
         </div>
       </div>
-
+      <div class="space-wpp">
+        <a
+          href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información."
+          class="float"
+          target="_blank "
+        >
+          <i class="fa fa-whatsapp my-float"></i>
+        </a>
+      </div>
       <div className="barra-2">
         <h2>Nuestro Blog</h2>
         {/* <p>Contenido del contenedor...</p> */}

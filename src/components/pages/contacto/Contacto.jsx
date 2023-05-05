@@ -7,66 +7,79 @@ const Contacto = () => {
     <>
      <section className="contact">
       <div className="content">
-        <h2>Contact Us</h2>
+        <h2>CONTACTENOS </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil
-          odit adipisci illo inventore eum, corrupti commodi delectus.
+         Te brindamos nuestros servicios.Ponte en contacto con nosotros para obtener una sonrisa más saludable y hermosa.
         </p>
       </div>
       <div className="container">
         <div className="contactInfo">
           <div className="box">
             <div className="icon">
-              <i className="fa fa-map-marker" aria-hidden="true"></i>
+           <img src="public/icono-dirección.png" alt="" />
             </div>
             <div className="text">
-              <h3>Address</h3>
+              <h3>Sede</h3>
               <p>
-                1234 Pachora Road,
+                Sede Norte calle 6 N #16A-54 
                 <br />
-                Pune,India,
+                 Edificio torre valparaiso.local 2 profesionales
                 <br />
-                14568
+                {/* 14568 */}
               </p>
             </div>
           </div>
           <div className="box">
             <div className="icon">
-              <i className="fa fa-phone" aria-hidden="true"></i>
+              <img src="public/icono-llamada.png" alt="" />
             </div>
             <div className="text">
-              <h3>Phone</h3>
-              <p>12345678</p>
+              <h3>Telefono</h3>
+              <p>3103594986</p>
             </div>
           </div>
           <div className="box">
             <div className="icon">
-              <i className="fa fa-envelope-o" aria-hidden="true"></i>
+             <img src="public/icono-email.png" alt="" />
             </div>
             <div className="text">
               <h3>Email</h3>
-              <p>abc@gmail.com</p>
+              <p>freshsmilecmills@gmail.com</p>
             </div>
           </div>
         </div>
         <div className="contactForm">
           <form>
-            <h2>Send Message</h2>
+            <h2>Te brindamos los mejores servicios</h2>
             <div className="inputBox">
               <input type="text" required="required" />
-              <span>Full Name</span>
+              <span>Ingresa su nombre completo</span>
             </div>
             <div className="inputBox">
               <input type="text" required="required" />
-              <span>Email</span>
+              <span>Ingrese su telefono</span>
             </div>
             <div className="inputBox">
               <textarea name="" id="" required="required"></textarea>
-              <span>Type your Message...</span>
+              <span>Ingrese su correo electronico</span>
             </div>
             <div className="inputBox">
-              <input type="submit" value="Send" />
+              <textarea name="" id="" required="required"></textarea>
+              <span>Motivo de mensaje</span>
             </div>
+          
+
+    <div className="inputBox-post">
+      <input type="checkbox" id="terms" />
+      <label htmlFor="terms">Acepto los términos y condiciones</label>
+    </div>
+    <div className="inputBox">
+              <input type="submit" value="Enviar" />
+            </div>
+            <div className="post-text">
+              <p>Si desea solicitar más información contacte con nosotros</p>
+            </div>
+            
           </form>
         </div>
       </div>

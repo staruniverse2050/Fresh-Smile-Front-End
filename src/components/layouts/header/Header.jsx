@@ -6,13 +6,13 @@ export const Header = () => {
   return (
     <header>
       <div className="menu">
-      <a href="#home"><img className="logo" src="./public/logo.png" alt="" /></a>
-        <h1> 
-        <span>Fresh</span>Smile<span>Cmills</span>
+        <a href="#home"><img className="logo" src="./public/logo.png" alt="" /></a>
+        <h1>
+          <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
         <ul>
 
-          
+
           <div className="container2">
             <li>
               <Link to="/Home">

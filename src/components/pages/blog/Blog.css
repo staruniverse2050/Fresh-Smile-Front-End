@@ -1,13 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap');
-
-:root {
-  --my-animation : blink 1s infinite;
-  --font-title: 'Open Sans', sans-serif;
-  --font-paragrhaps: 'Poltawski Nowy', serif; 
-  --font-third: 'Roboto', sans-serif;
-}
-
-
 
 #fond-blog {
   position: relative; /* Establecer la posición relativa para que el fondo se pueda superponer en la imagen */
@@ -36,22 +26,22 @@
 
 
 
-.post-container {
+.cards-blog {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.post {
+.posteo-blog {
   /* position: relative; */
   width: 400px;
   height: 300px;
   margin: 20px;
   overflow: hidden;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
-.post-image {
+.image-card {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -59,7 +49,7 @@
   
 }
 
-.post:hover .post-image {
+.posteo-blog:hover left-blog.image-card {
   transform: scale(1.2);
 }
 
@@ -129,6 +119,7 @@
   padding: 30px;
   background-color: #d8e5e9;
   text-align: center;
+  margin-top: 250px;
 }
 
 .container-titleB h2 {
@@ -139,7 +130,7 @@
 
 /* ----------------footer----------------- */
 
-.container {
+.container1 {
   display: flex;
   justify-content: space-around;
   font-size: 15px;
@@ -151,7 +142,7 @@
       background: #000000;
   }
 
-  .container {
+  .container1 {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -204,12 +195,12 @@ margin-left: 65px;
 
 /* -------------------cards-------------------- */
 
-.recent-single-post {
+.recent-single-post1 {
   border-bottom: 2px solid rgb(221, 221, 221);
   padding: 50px 1px;
  margin-left: 70px;
 padding-top: 20px;
-margin-right: 102em;
+margin-right: 90em;
 }
 
 .left-blog {
@@ -220,7 +211,7 @@ margin-top: 10px;
 .left-blog h4 {
 color: rgb(68, 68, 68);
 background: none 0px 0px repeat scroll rgb(249, 249, 249);
-font-size: 17px;
+font-size: 25px;
 font-weight: 500;
 margin-bottom: 5px;
 text-transform: uppercase;
@@ -229,22 +220,16 @@ padding: 10px 10px;
 }
 
 h4 {
-font-size: 24px;
-line-height: 26px;
-font-family: Raleway, sans-serif;
-margin: 0px 0px 15px;
-display: block;
-  margin-block-start: 1.33em;
-  margin-block-end: 1.33em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
+  line-height: 26px;
+  font-family: Raleway, sans-serif;
+  display: block;
+  }
 
 .pst-content h4{
 color:#007bff;
 }
 
-.post-img {
+.post1-img {
 display: inline-block;
 width: 400px;
 height: 300px;
@@ -280,7 +265,7 @@ padding: 20px 20px;
 border-radius: 2px;
 text-decoration: none;
 margin-top: 2px;
-margin-left: 380px;
+margin-left: 520px;
 font-size: 25px;
 }
 
@@ -339,26 +324,24 @@ background-color: #0069d9;
 .filtro {
   display: none;
 }
-form {
+
+.buscador-blog{
   display: block;
-  margin-top: 12em;
-  margin-left: 140em;
-  margin-right: 13em;
+  margin-top: 8em;
+  margin-left: 75em;
+  margin-right: 73em;
   background-color: #80a1c5;
 }
-.search-option {
-
-  width: 17px;
-  margin-bottom: 30px;
-}
+/* .search-option {
+  margin-bottom: 50px;
+} */
 .search-option input {
   border: medium none;
-  padding: 19px 25px ;
-  width: 356px;
+  padding: 17px 91px;
 }
-input, input[type="text"]{
-/* box-shadow: none !important; */
-font-size: 20px;
+.search-option input, input[type="text"]{
+box-shadow: none !important;
+font-size: 25px;
 }
 .fa-regular{
  color: #418aa4;

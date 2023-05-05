@@ -23,54 +23,40 @@ export const Blog = () => {
 
       {/* -------------------cards hover------------------------- */}
 
-      <div className="post-container">
-        <div className="post">
-          <img className="post-image" src="./public/cards4.jpg" alt="" />
-          <div className="post-hover">
-            <h2 className="post-hover-title">Hover</h2>
-          </div>
+      <div className="cards-blog">
+        <div className="posteo-blog">
+          <img className="image-card" src="./public/cards4.jpg" alt="" />
         </div>
-        <div className="post">
+        <div className="posteo-blog">
           <img
-            className="post-image"
-            src="./public/IMPLANTES-DENTALES.jpg"
-            alt=""
-          />
-          <div className="post-hover">
-            <h2 className="post-hover-title">Hover</h2>
-          </div>
+            className="image-card"
+            src="./public/IMPLANTES-DENTALES.jpg" alt=""/>
         </div>
-        <div className="post">
-          <img className="post-image" src="./public/instagram1.jpg" alt="" />
-          <div className="post-hover">
-            <h2 className="post-hover-title">Hover</h2>
-          </div>
+        <div className="posteo-blog">
+          <img
+            className="image-card"
+            src="./public/cards5.jpg" alt=""/>
         </div>
       </div>
 
       {/* <!-- -------------search------------------ --> */}
 
-      <form>
+      <form className="buscador-blog">
         <div class="search-option" id="searchform">
-          <input
-            type="text"
-            name="buscador"
-            id="search"
-            placeholder="Buscar..."
-          />
+          <input type="text" name="buscador" id="search" placeholder="Buscar..."/>
         </div>
       </form>
 
       {/* ---------------------cards--------------------------------- */}
 
       <div className="left-blog">
-        <div className="recent-post">
-          <div className="recent-single-post">
-            <div className="post-img">
-              <img src="./public/dental.png" alt="Ortodoncia_Brackets" />
+        <div className="recent-post1">
+          <div className="recent-single-post1">
+            <div className="post1-img">
+              <img src="./public/consultorio1.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
-              <h4>Clinica 1</h4>
+              <h4>DENTIX</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Impedit quos suscipit temporibus accusamus, harum alias nemo, ab
@@ -86,13 +72,13 @@ export const Blog = () => {
       </div>
 
       <div className="left-blog">
-        <div className="recent-post">
-          <div className="recent-single-post">
-            <div className="post-img">
-              <img src="./public/dental.png" alt="Ortodoncia_Brackets" />
+        <div className="recent-post1">
+          <div className="recent-single-post1">
+            <div className="post1-img">
+              <img src="./public/consultorio2.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
-              <h4>Clinica 2</h4>
+              <h4>ODONTOESTEFIC</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Impedit quos suscipit temporibus accusamus, harum alias nemo, ab
@@ -108,13 +94,13 @@ export const Blog = () => {
       </div>
 
       <div className="left-blog">
-        <div className="recent-post">
-          <div className="recent-single-post">
-            <div className="post-img">
-              <img src="./public/dental.png" alt="Ortodoncia_Brackets" />
+        <div className="recent-post1">
+          <div className="recent-single-post1">
+            <div className="post1-img">
+              <img src="./public/consultorio3.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
-              <h4>Clinica 3</h4>
+              <h4>CENTRO MEDICO INTEGRAL</h4>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Impedit quos suscipit temporibus accusamus, harum alias nemo, ab
@@ -150,32 +136,32 @@ export const Blog = () => {
       {/* -----------------------post--------------------------------------- */}
 
       <div className="container-post">
-        <div className="post-img">
+        <div className="post1-img">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_4" />
           </a>
         </div>
-        <div className="post-img">
+        <div className="post1-img">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_5" />
           </a>
         </div>
-        <div className="post-img">
+        <div className="post1-img">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_6" />
           </a>
         </div>
-        <div className="post-img">
+        <div className="post1-img">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_7" />
           </a>
         </div>
-        <div className="post-img">
+        <div className="post1-img">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_8" />
           </a>
         </div>
-        <div className="post-img">
+        <div className="post1-img">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_9" />
           </a>
@@ -186,7 +172,7 @@ export const Blog = () => {
 
       <footer>
         <div className="footer-area">
-          <div className="container">
+          <div className="container1">
             <div className="footer-contacts">
               <div classname="icono">
                 <p>

@@ -15,39 +15,35 @@ export const Home = () => {
         </div>
       </div>
 
+   
       <div className="barra">
-        <h2>Clinica Fresh Smile Cmills</h2>
-        {/* <p>Contenido del contenedor...</p> */}
+        <h2>Conoce todos los procedimientos</h2>
       </div>
 
-      <div className="container-sedes">
-        <div className="sedes">
-          <img src="./public/sede1.png" alt="sede 1" />
-          <h1>Sede Armenia</h1>
-          <button>Ingresar</button>
+      <div className="container-procedimientos">
+        <div className="procedimientos">
+          <img src="./public/diseñosonrisa.jpg" alt="sede 1" />
+          <button>Diseño de sonrisa</button>
         </div>
 
-        <div className="sedes">
-          <img src="./public/sede2.png" alt="sede 2" />
-          <h1>Sede Tebaida</h1>
-          <button>Ingresar</button>
+        <div className="procedimientos">
+          <img src="./public/blanqueamiento.jpg" alt="sede 2" />
+          <button>Blanqueamiento</button>
         </div>
 
-        <div className="sedes">
-          <img src="./public/sede3.png" alt="sede 3" />
-          <h1>Sede Circasia</h1>
-          <button>Ingresar</button>
+        <div className="procedimientos">
+          <img src="./public/implantes.jpg" alt="sede 3" />
+          <button>Implantes</button>
         </div>
       </div>
+    {/* Chat WhatsAPP */}
       <div class="space-wpp">
-        <a
-          href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información."
-          class="float"
-          target="_blank "
-        >
+        <a href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información." class="float" target="_blank ">
           <i class="fa fa-whatsapp my-float"></i>
         </a>
       </div>
+
+
       <div className="barra-2">
         <h2>Nuestro Blog</h2>
         {/* <p>Contenido del contenedor...</p> */}
@@ -110,28 +106,36 @@ export const Home = () => {
         </div>
       </div>
 
-
-      <div className="barra-3">
-        <h2>Conoce todos los procedimientos</h2>
+      <div className="barra">
+        <h2>Clinica Fresh Smile Cmills</h2>
         {/* <p>Contenido del contenedor...</p> */}
       </div>
 
-      <div className="container-procedimientos">
-        <div className="procedimientos">
-          <img src="./public/diseñosonrisa.jpg" alt="sede 1" />
-          <button>Diseño de sonrisa</button>
+      <div className="container-sedes">
+        <div className="sedes">
+          <img src="./public/sede1.png" alt="sede 1" />
+          <h1>Sede Armenia</h1>
+          <button>Ingresarrrr</button>
         </div>
 
-        <div className="procedimientos">
-          <img src="./public/blanqueamiento.jpg" alt="sede 2" />
-          <button>Blanqueamiento</button>
+        <div className="sedes">
+          <img src="./public/sede2.png" alt="sede 2" />
+          <h1>Sede Tebaida</h1>
+          <button>Ingresar</button>
         </div>
 
-        <div className="procedimientos">
-          <img src="./public/implantes.jpg" alt="sede 3" />
-          <button>Implantes</button>
+        <div className="sedes">
+          <img src="./public/sede3.png" alt="sede 3" />
+          <h1>Sede Circasia</h1>
+          <button>Ingresar</button>
         </div>
       </div>
+
+      {/* <div className="barra-3">
+        <h2>Conoce nuestros procedimientos</h2>
+        <p>Contenido del contenedor...</p>
+      </div> */}
+     
       
     
 

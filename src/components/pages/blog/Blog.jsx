@@ -50,7 +50,7 @@ export const Blog = () => {
       {/* ---------------------cards--------------------------------- */}
 
       <div className="left-blog">
-        <div className="recent-post1">
+        {/* <div className="recent-post1"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
               <img src="./public/consultorio1.jpg" alt="Ortodoncia_Brackets" />
@@ -68,11 +68,12 @@ export const Blog = () => {
               </a>
             </div>
           </div>
+          
         </div>
-      </div>
+
 
       <div className="left-blog">
-        <div className="recent-post1">
+        {/* <div className="recent-post1"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
               <img src="./public/consultorio2.jpg" alt="Ortodoncia_Brackets" />
@@ -91,10 +92,10 @@ export const Blog = () => {
             </div>
           </div>
         </div>
-      </div>
+
 
       <div className="left-blog">
-        <div className="recent-post1">
+        {/* <div className="recent-post12"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
               <img src="./public/consultorio3.jpg" alt="Ortodoncia_Brackets" />
@@ -113,7 +114,6 @@ export const Blog = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* <!-- -------link contact wpp------- --> */}
 

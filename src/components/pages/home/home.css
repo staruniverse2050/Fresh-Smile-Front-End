@@ -1,3 +1,4 @@
+/* Estilos banner */
 .container_banner {
   display: flex;
   flex-direction: column;
@@ -44,19 +45,12 @@
   height: 5%;
   background-color: #249bad;
   color: white;
-  /* Color de texto */
   padding: 30px 24px;
-  /* Espacio interno */
   text-align: center;
-  /* Alineación de texto */
   font-size: 20px;
-  /* Tamaño de fuente */
   margin: 10px;
-  /* Margen exterior */
   cursor: pointer;
-  /* Cambiar cursor al pasar el ratón */
   border-radius: 40px;
-  /* Radio de borde */
   border: none;
 }
 
@@ -66,10 +60,7 @@
   /* Color de fondo */
 }
 
-
 /* Estilos Sedes */
-
-
 
 .container-sedes {
   display: flex;
@@ -88,7 +79,7 @@
   margin: 20px 10px;
   vertical-align: top;
   text-align: center;
-  background: #8dd1e0;
+  background: #F8F8F8;
   width: 60%;
   /* height: 90%; */
 
@@ -102,135 +93,15 @@
 }
 
 .sedes h1 {
+  color: #000000;
   padding-top: 99px;
   font-size: 35px;
   margin-bottom: 10px;
 }
 
-.sedes button {
-  padding: 10px;
-  border: none;
-  height: 50px;
-  width: 110px;
-  font-size: 18px;
-  background: radial-gradient(circle at 87.4% 76.19%,
-      #a8ab65 0,
-      #9fad69 3.33%,
-      #95af6d 6.67%,
-      #8ab173 10%,
-      #7fb37a 13.33%,
-      #74b582 16.67%,
-      #69b68a 20%,
-      #5db793 23.33%,
-      #51b89c 26.67%,
-      #44b8a5 30%,
-      #36b8ae 33.33%,
-      #28b8b7 36.67%,
-      #1bb8c0 40%,
-      #11b7c9 43.33%,
-      #13b6d0 46.67%,
-      #20b5d7 50%,
-      #30b3dd 53.33%,
-      #41b2e2 56.67%,
-      #51afe5 60%,
-      #61ade8 63.33%,
-      #71aae9 66.67%,
-      #81a7e9 70%,
-      #8fa4e7 73.33%,
-      #9da1e4 76.67%,
-      #aa9ee0 80%,
-      #b69adb 83.33%,
-      #c097d5 86.67%,
-      #ca94ce 90%,
-      #d292c6 93.33%,
-      #d98fbe 96.67%,
-      #df8eb5 100%);
-  color: #ffffff;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.sedes button:hover {
-  /* background: #5AACFF; */
-  background: radial-gradient(circle at 81.8% 27.73%,
-      #419985 0,
-      #38998c 6.25%,
-      #309993 12.5%,
-      #279999 18.75%,
-      #2099a0 25%,
-      #1c99a6 31.25%,
-      #1c98ab 37.5%,
-      #2197b0 43.75%,
-      #2996b5 50%,
-      #3395b9 56.25%,
-      #3e93bc 62.5%,
-      #4992bf 68.75%,
-      #5490c0 75%,
-      #5f8ec1 81.25%,
-      #6a8cc1 87.5%,
-      #748ac0 93.75%,
-      #7e87be 100%);
-  color: #ffffff;
-}
-
-.barra {
-  width: 30%;
-  padding-top: 30px;
-  margin: 20px auto;
-  /* border: 2px solid #000; */
-  border-radius: 20px;
-  padding: 10px;
-  /* background-color: #8dd1e0; */
-  text-align: center;
-  /* margin: 20px 10px; */
-}
-
-.barra h2 {
-  font-size: 45px;
-  color: #74c7da;
-}
-
-
-.barra-2 {
-  width: 50%;
-  padding-top: 30px;
-  margin: 20px auto;
-  /* border: 2px solid #000; */
-  border-radius: 20px;
-  padding: 10px;
-  /* background-color: #8dd1e0; */
-  background: linear-gradient(to bottom,
-  rgba(0, 0, 0, 0.5),
-  rgba(0, 0, 0, 0.5)),
-  url('https://images.pexels.com/photos/6528856/pexels-photo-6528856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  text-align: center;
-  /* margin: 20px 10px; */
-}
-
-.barra-2 h2 {
-  font-size: 45px;
-  color: #ffffff;
-}
-
-.barra-3 {
-  width: 50%;
-  padding-top: 30px;
-  margin: 20px auto;
-  /* border: 2px solid #000; */
-  border-radius: 15px;
-  padding: 10px;
-  /* background-color: #8dd1e0; */
-  background: rgb(177, 175, 175);
-  text-align: center;
-  /* margin: 20px 10px; */
-}
-
-.barra-3 h2 {
-  font-size: 45px;
-  color: #ffffff;
-}
 
 /* Estilos  Procedimientos */
+
 .container-procedimientos {
   display: flex;
   /* justify-content: space-around; */
@@ -256,8 +127,6 @@
   margin-bottom: 10px;
 }
 
-
-
 .sedes img {
   float: right;
   width: 40%;
@@ -271,48 +140,6 @@
   margin-bottom: 10px;
 }
 
-.sedes button {
-  padding: 10px;
-  border: none;
-  height: 50px;
-  width: 110px;
-  font-size: 18px;
-  background: radial-gradient(circle at 87.4% 76.19%,
-      #a8ab65 0,
-      #9fad69 3.33%,
-      #95af6d 6.67%,
-      #8ab173 10%,
-      #7fb37a 13.33%,
-      #74b582 16.67%,
-      #69b68a 20%,
-      #5db793 23.33%,
-      #51b89c 26.67%,
-      #44b8a5 30%,
-      #36b8ae 33.33%,
-      #28b8b7 36.67%,
-      #1bb8c0 40%,
-      #11b7c9 43.33%,
-      #13b6d0 46.67%,
-      #20b5d7 50%,
-      #30b3dd 53.33%,
-      #41b2e2 56.67%,
-      #51afe5 60%,
-      #61ade8 63.33%,
-      #71aae9 66.67%,
-      #81a7e9 70%,
-      #8fa4e7 73.33%,
-      #9da1e4 76.67%,
-      #aa9ee0 80%,
-      #b69adb 83.33%,
-      #c097d5 86.67%,
-      #ca94ce 90%,
-      #d292c6 93.33%,
-      #d98fbe 96.67%,
-      #df8eb5 100%);
-  color: #ffffff;
-  border-radius: 10px;
-  cursor: pointer;
-}
 
 .sedes button:hover {
   /* background: #5AACFF; */
@@ -351,7 +178,7 @@
 
 .barra h2 {
   font-size: 45px;
-  color: #74c7da;
+  color: #7DC3E8;
 }
 
 
@@ -362,11 +189,11 @@
   /* border: 2px solid #000; */
   border-radius: 20px;
   padding: 10px;
-  /* background-color: #8dd1e0; */
-  background: linear-gradient(to bottom,
+  background-color: #8dd1e0;
+  /* background: linear-gradient(to bottom,
   rgba(0, 0, 0, 0.5),
   rgba(0, 0, 0, 0.5)),
-  url('https://images.pexels.com/photos/6528856/pexels-photo-6528856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  url('https://images.pexels.com/photos/6528856/pexels-photo-6528856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
   text-align: center;
   /* margin: 20px 10px; */
 }
@@ -487,4 +314,54 @@ button:hover {
   color: white;
   border: none;
   border-radius: 4px;
+}
+
+
+/* Estilos Barras */
+.barra {
+  width: 30%;
+  padding-top: 30px;
+  margin: 20px auto;
+  /* border: 2px solid #000; */
+  border-radius: 20px;
+  padding: 10px;
+  /* background-color: #8dd1e0; */
+  text-align: center;
+  /* margin: 20px 10px; */
+}
+
+.barra-2 {
+  width: 50%;
+  padding-top: 30px;
+  margin: 20px auto;
+  /* border: 2px solid #000; */
+  border-radius: 20px;
+  padding: 10px;
+  /* background-color: #8dd1e0; */
+  text-align: center;
+  /* margin: 20px 10px; */
+}
+
+.barra-2 h2 {
+  font-size: 45px;
+  color: #ffffff;
+}
+
+
+.barra-3 {
+  width: 50%;
+  padding-top: 30px;
+  margin: 20px auto;
+  /* border: 2px solid #000; */
+  border-radius: 15px;
+  padding: 10px;
+  /* background-color: #8dd1e0; */
+  /* background: rgb(177, 175, 175); */
+  text-align: center;
+  /* margin: 20px 10px; */
+}
+
+.barra-3 h2 {
+  font-size: 45px;
+  color: #5FFDFF;
 }

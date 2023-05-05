@@ -51,9 +51,9 @@ export const Home = () => {
 
       <div class="container-wrapper">
         <div className="container-blog">
-          <img src="./public/implantes.jpg" alt="" />
+          <img src="./public/consultorio2.jpg" alt="" />
           <div className="content">
-            <h2>Título</h2>
+            <h2>Odontoestetic</h2>
             <p className="p-blog">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
               laborum dignissimos voluptate laboriosam voluptatum a, ipsum
@@ -65,22 +65,9 @@ export const Home = () => {
         </div>
         <hr></hr>
         <div className="container-blog">
-          <img src="./public/implantes.jpg" alt="" />
+          <img src="./public/consultorio3.jpg" alt="" />
           <div className="content">
-            <h2>Título</h2>
-            <p className="p-blog">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Recusandae dolores beatae harum, cumque doloremque vel incidunt,
-              quod earum quia odio, voluptate consequatur placeat magni sunt
-              officia! Dignissimos dolorum accusamus molestias!
-            </p>
-            <button className="btn-blog">Leer más</button>
-          </div>
-        </div>
-        <div className="container-blog">
-          <img src="./public/implantes.jpg" alt="" />
-          <div className="content">
-            <h2>Título</h2>
+            <h2>Centro Medico Integral</h2>
             <p className="p-blog">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Recusandae dolores beatae harum, cumque doloremque vel incidunt,
@@ -92,9 +79,23 @@ export const Home = () => {
         </div>
         <hr></hr>
         <div className="container-blog">
-          <img src="./public/implantes.jpg" alt="" />
+          <img src="./public/consultorio1.jpg" alt="" />
           <div className="content">
-            <h2>Título</h2>
+            <h2>Dentixt</h2>
+            <p className="p-blog">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Recusandae dolores beatae harum, cumque doloremque vel incidunt,
+              quod earum quia odio, voluptate consequatur placeat magni sunt
+              officia! Dignissimos dolorum accusamus molestias!
+            </p>
+            <button className="btn-blog">Leer más</button>
+          </div>
+        </div>
+        <hr></hr>
+        <div className="container-blog">
+          <img src="./public/consultorio3.jpg" alt="" />
+          <div className="content">
+            <h2>Centro Medico Integral</h2>
             <p className="p-blog">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Recusandae dolores beatae harum, cumque doloremque vel incidunt,
@@ -115,7 +116,7 @@ export const Home = () => {
         <div className="sedes">
           <img src="./public/sede1.png" alt="sede 1" />
           <h1>Sede Armenia</h1>
-          <button>Ingresarrrr</button>
+          <button>Ingresar</button>
         </div>
 
         <div className="sedes">

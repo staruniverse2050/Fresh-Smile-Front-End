@@ -58,20 +58,19 @@ export const Blog = () => {
             <div className="pst-content">
               <h4>DENTIX</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit quos suscipit temporibus accusamus, harum alias nemo, ab
-                labore beatae eaque error tempore omnis ex totam fugit
-                asperiores deserunt explicabo accusantium.
-              </p>
+               Dentix es una empresa española de servicios dentales fundada en 2010
+               por Ángel Lorenzo. Es una empresa familiar cuyo modelo de negocio se 
+               basa en clínicas propias, no en acuerdos de franquicia.<br>
+               </br>
+               Sede central: Calle de la Ribera del Loira, 56, 28042; 
+               Madrid, Comunidad de Madrid, España
+               </p>
               <a href="#" className="button">
                 Leer más
               </a>
             </div>
           </div>
-          
         </div>
-
-
       <div className="left-blog">
         {/* <div className="recent-post1"> */}
           <div className="recent-single-post1">
@@ -79,12 +78,14 @@ export const Blog = () => {
               <img src="./public/consultorio2.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
-              <h4>ODONTOESTEFIC</h4>
+              <h4>ODONTOESTETIC</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit quos suscipit temporibus accusamus, harum alias nemo, ab
-                labore beatae eaque error tempore omnis ex totam fugit
-                asperiores deserunt explicabo accusantium.
+              Odontoestetic es una clínica privada prestadora de servicios de salud oral,
+               con mas de 15 años de experiencia, especializada en áreas de educación, 
+               promoción y prevención de salud bucal, rehabilitación oral, endodoncia, 
+               periodoncia, ortodoncia y estética dental.<br>
+               </br>
+               Sede central: Carrera 12 #1A Norte, Armenia 630004
               </p>
               <a href="#" className="button">
                 Leer más
@@ -93,20 +94,21 @@ export const Blog = () => {
           </div>
         </div>
 
-
       <div className="left-blog">
         {/* <div className="recent-post12"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
-              <img src="./public/consultorio3.jpg" alt="Ortodoncia_Brackets" />
+              <img src="./public/consultorio4.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
-              <h4>CENTRO MEDICO INTEGRAL</h4>
+              <h4>PRODENTALES</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit quos suscipit temporibus accusamus, harum alias nemo, ab
-                labore beatae eaque error tempore omnis ex totam fugit
-                asperiores deserunt explicabo accusantium.
+              El Dr.Oscar Zapata ofrece odontología general y especializada 
+              para pacientes de todas las edades. Sus servicios abarcan la 
+              prevención, el diagnóstico y el tratamiento de condiciones 
+              especiales o enfermedades que afectan a los dientes.<br>
+              </br>
+               Sede central: Cl 3 N 12-05 Armenia - Quindío, Colombia
               </p>
               <a href="#" className="button">
                 Leer más
@@ -136,32 +138,32 @@ export const Blog = () => {
       {/* -----------------------post--------------------------------------- */}
 
       <div className="container-post">
-        <div className="post1-img">
+        <div className="post1-img1">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_4" />
           </a>
         </div>
-        <div className="post1-img">
+        <div className="post1-img1">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_5" />
           </a>
         </div>
-        <div className="post1-img">
+        <div className="post1-img1">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_6" />
           </a>
         </div>
-        <div className="post1-img">
+        <div className="post1-img1">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_7" />
           </a>
         </div>
-        <div className="post1-img">
+        <div className="post1-img1">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_8" />
           </a>
         </div>
-        <div className="post1-img">
+        <div className="post1-img1">
           <a href="#">
             <img src="./public/cards6.jpg" alt="clinica_9" />
           </a>

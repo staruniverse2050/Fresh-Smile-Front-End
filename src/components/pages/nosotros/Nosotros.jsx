@@ -8,48 +8,63 @@ export const Nosotros = () => {
       
       <div className="container_banner">
         {/* <img className="" src="./public/banner.jpg" alt="" /> */}
-        <div className="container_homer">
-          <h1>¡Bienvenido a la clinica Fresh Smile Cmills!</h1>
-          <div className="container-btn">
-            <button className="boton">Agendar Cita</button>
-            <button className="boton">Buscar Clinica</button>
-          </div>
+        <div className="container_home">
+          <h1>¡Sobre Nosotros!</h1>
+         
         </div>
       </div>
+
 
       <div className="post-nosotros">
   <img className="" src="./public/nosotros.jpg" alt="" /> 
   <div className="post-nts">
   <h2 className="post-title">Nosotros</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend dui eu nibh malesuada, id lobortis purus rhoncus. 
-      Integer eu bibendum ipsum. Nullam vitae tincidunt massa. Praesent eget sem quis nisi lobortis facilisis quis ut mauris.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend dui eu nibh malesuada, id lobortis purus rhoncus. Integer eu bibendum ipsum. Nullam vitae tincidunt massa. 
-      Praesent eget sem quis nisi lobortis facilisis quis ut mauris.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend dui eu nibh malesuada, id lobortis purus rhoncus. 
-      Integer eu bibendum ipsum. Nullam vitae tincidunt massa. Praesent eget sem quis nisi lobortis facilisis quis ut mauris.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend dui eu nibh malesuada, id lobortis purus rhoncus. Integer eu bibendum ipsum. Nullam vitae tincidunt massa. 
-      Praesent eget sem quis nisi lobortis facilisis quis ut mauris.
+    <p>Nuestros consultorios son un lugar donde los profesionales de la salud dental brindan una amplia gama de servicios de
+       atención dental a los pacientes. Estos servicios pueden incluir desde limpiezas dentales regulares hasta tratamientos de 
+       ortodoncia y cirugías dentales, además nuestros asistentes dentales ayudan al odontólogo y al higienista dental en el
+       tratamiento de los pacientes y se encargan de tareas administrativas en el consultorio.
       </p>     
   </div>
 
+   {/* Chat WhatsAPP */}
+   <div class="space-wpp">
+        <a href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información." class="float" target="_blank ">
+          <i class="fa fa-whatsapp my-float"></i>
+        </a>
+      </div>
+
+
   <div className="icon-container">
-  <img className="icon-container" src="./public/diamante.png" alt="" /> 
-  <span className="text">Valores</span>
-  <span className="subtext">Aquí puedes agregar tu texto adicional</span>
+  <img className="icon-container" src="./public/cohete.png" alt="" /> 
+  <span className="text">Misión</span>
+  <span className="subtext">La misión de nuestro consultorio odontológico </span>
+  <span className="subtext">ser proporcionar una atención dental  </span>
+  <span className="subtext">de alta calidad y personalizada a los pacientes  </span>
+  <span className="subtext">promoviendo la salud oral y mejorando </span>
+  <span className="subtext">la salud de nuestros pacientes </span>
+
 </div>
+
+<div className="icon-container">
+  <img className="icon-container" src="./public/ojo.png" alt="" /> 
+  <span className="text">Visión</span>
+  <span className="subtext">Ser reconocidos como el consultorio  </span>
+  <span className="subtext">odontológico líder en nuestra  </span>
+  <span className="subtext">comunidad, brindando una atención </span>
+
+
+</div>
+
+
 
 <div className="icon-container">
   <img className="icon-container" src="./public/diamante.png" alt="" /> 
   <span className="text">Valores</span>
-  <span className="subtext">Aquí puedes agregar tu texto adicional</span>
-</div>
+ 
+  <span className="subtext">Profesionalismo: ofrecer servicios </span>
+  <span className="subtext"> odontológicos de alta calidad basados  </span>
+  <span className="subtext">en conocimientos científicos </span>
 
-
-
-<div className="icon-container">
-  <img className="icon-container" src="./public/diamante.png" alt="" /> 
-  <span className="text">Valores</span>
-  <span className="subtext">Aquí puedes agregar tu texto adicional</span>
 </div>
 
 

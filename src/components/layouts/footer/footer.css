@@ -1,0 +1,35 @@
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 24pxpx;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 1px solid #ccc;
+    padding: 90px 0;
+  }
+  
+  .footer-area {
+    max-width: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between */
+  }
+  
+  .footer-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .icono {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icono i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  

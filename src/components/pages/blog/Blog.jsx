@@ -172,7 +172,7 @@ export const Blog = () => {
 
       {/* ----------------------------------footer-------------------------------------- */}
 
-      <footer>
+      {/* <footer>
         <div className="footer-area">
           <div className="container1">
             <div className="footer-contacts">
@@ -200,7 +200,7 @@ export const Blog = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 };

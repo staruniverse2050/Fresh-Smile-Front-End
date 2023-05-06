@@ -49,9 +49,12 @@ export const Header = () => {
         <Link to="/login">
           <img className="icono-inicio" src="/icono_inicio.png" alt="" />
         </Link>
-        <a href="#home">
+        <Link to="/Clinica">
+        <a href="#clinica">
           <img className="icono-mapa" src="/icono_map.png" alt="" />
         </a>
+        </Link>
+        
       </div>
 
       {/* <div id="icon-menu">

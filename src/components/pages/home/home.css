@@ -39,9 +39,9 @@
   display: flex;
 }
 
-.boton {
+.boton-home {
   align-items: center;
-  width: 10%;
+  width: 15%;
   height: 5%;
   background-color: #249bad;
   color: white;
@@ -54,15 +54,15 @@
   border: none;
 }
 
-.boton:hover,
-.boton:focus {
+.boton-home:hover,
+.boton-home:focus {
   background-color: #298697;
   /* Color de fondo */
 }
 
 /* Estilos Sedes */
 
-.container-sedes {
+.container-sedes-inicio {
   display: flex;
   justify-content: center;
   align-items: center;

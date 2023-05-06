@@ -10,8 +10,12 @@ export const Home = () => {
         <div className="container_home">
           <h1>¡Bienvenidos a la clinica Fresh Smile Cmills!</h1>
           <div className="container-btn">
-            <button className="boton">Agendar Cita</button>
-            <button className="boton">Buscar Clinica</button>
+            <button className="boton-home">
+            <Link to="/login"><a class="links" href="#login">Agendar Cita</a>
+              </Link></button>
+            <button className="boton-home">
+            <Link to="/Clinica"><a class="links" href="#clinica">Buscar Clinica</a>
+              </Link></button>
           </div>
         </div>
       </div>
@@ -134,7 +138,7 @@ export const Home = () => {
         {/* <p>Contenido del contenedor...</p> */}
       </div>
 
-      <div className="container-sedes">
+      <div className="container-sedes-inicio">
         <div className="sedes-div">
           <img src="./public/sede1.png" alt="sede 1" />
           <h1>Sede Armenia</h1>

@@ -17,6 +17,10 @@ body{
   background: #ffffff;
  
 }
+.hide-header {
+  display: none;
+}
+
 
 /* Responsive */
 

@@ -2,8 +2,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./components/pages/home/Home";
 import { Header } from "./components/layouts/header/Header";
-import { Footer } from "./components/layouts/footer/Footer";
-// import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
+// import { Footer } from "./components/layouts/footer/Footer";
+import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import { Login } from "./components/layouts/Login/Login";
 import { Register } from "./components/layouts/Register/Register";
@@ -26,7 +26,6 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
-      <Footer />
     </>
   );
 }

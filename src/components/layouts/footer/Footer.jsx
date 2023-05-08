@@ -1,7 +1,6 @@
 import React from "react";
 import "./footer.css"
 
-
 export const Footer = () => {
   return (
     <footer>
@@ -10,8 +9,7 @@ export const Footer = () => {
             <div className="footer-contacts">
             <div classname="icono">
                 <p>
-                 
-                  <span>Fresh Smile Cmilss te atiende de las mejores maneras</span>
+                  <span>Fresh Smile Cmills te atiende de las mejores maneras</span>
                 </p>
               </div>
               <div classname="icono">
@@ -29,12 +27,12 @@ export const Footer = () => {
             </div>
             <div classname="icono">
                 <p>
-                  <i class="fa-solid fa-envelope-open-text"></i>
+                <i class="fa-solid fa-phone"></i>
                   <span>Telefono:</span>freshsmilecmills@gmail.com
                 </p>
                 <div classname="icono">
                 <p>
-                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <i class="fa-solid fa-location-dot"></i>
                   <span>Los mejores especialistas:</span>Armenia-Quindio 
                 </p>
               </div>

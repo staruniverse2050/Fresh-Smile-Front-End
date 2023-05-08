@@ -1,6 +1,6 @@
 import React from "react";
 import './Clinica.css'
-
+import { Footer } from "../../layouts/footer/Footer";
 
 export const Clinica = () => {
   return (
@@ -45,6 +45,8 @@ export const Clinica = () => {
 
       </div>
 
+      <Footer />
+      
     </>
 
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
+import { Footer } from "../../layouts/footer/Footer";
+
 
 export const Home = () => {
   return (
@@ -169,8 +171,7 @@ export const Home = () => {
         <p>Contenido del contenedor...</p>
       </div> */}
 
-
-
+<Footer />
 
 
     </>

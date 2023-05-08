@@ -1,5 +1,6 @@
 import React from "react";
 // import './procedimientos.css'
+import { Footer } from "../../layouts/footer/Footer";
 import dientes from '../procedimientos/assets/img/dientes.png'
 import card2 from '../procedimientos/assets/img/card2.png'
 
@@ -95,6 +96,9 @@ export const Procedimientos = () => {
                 </div>
 
             </div>
+
+            <Footer />
+
         </>
     );
 };

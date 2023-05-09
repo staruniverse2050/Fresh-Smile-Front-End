@@ -1,8 +1,11 @@
-import React from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import './Header.css'
 
 export const Header = () => {
+  const { loginWithRedirect } = useAuth0();
+
   return (
     <header>
       <div className="menu">
@@ -11,8 +14,6 @@ export const Header = () => {
           <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
         <ul>
-
-
           <div className="container2">
             <li>
               <Link to="/Home">
@@ -46,15 +47,15 @@ export const Header = () => {
             </li>
           </div>
         </ul>
-        <Link to="/login">
+        <div onClick={() => loginWithRedirect()}>
           <img className="icono-inicio" src="/icono_inicio.png" alt="" />
-        </Link>
+        </div>
         <Link to="/Clinica">
-        <a href="#clinica">
-          <img className="icono-mapa" src="/icono_map.png" alt="" />
-        </a>
+          <a href="#clinica">
+            <img className="icono-mapa" src="/icono_map.png" alt="" />
+          </a>
         </Link>
-        
+
       </div>
 
       {/* <div id="icon-menu">

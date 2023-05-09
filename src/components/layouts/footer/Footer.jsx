@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer>
     <div className="footer-area">
-      {/* <div className="container"> */}
+      <div className="container">
         <div className="row">
           <div className="footer-content">
         <div className="title-info">
@@ -15,7 +15,7 @@ export const Footer = () => {
         {/* </div> */}
 
       <div className="address">
-    <div className="container">
+    {/* <div className="container"> */}
       <div className="footer-content">
         <div className="address-info">
           <i className="fa-sharp fa-solid fa-location-dot"></i>
@@ -24,10 +24,10 @@ export const Footer = () => {
     </div>
     </div>
     </div>
-  </div>
+  {/* </div> */}
 
   <div className="email">
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="footer-content">
         <div className="email-info">
           <i className="fa-solid fa-envelope"></i>
@@ -35,10 +35,10 @@ export const Footer = () => {
         </div>
       </div>
       </div>
-    </div>
+    {/* </div> */}
 
       <div className="phone">
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="footer-content">
         <div className="phone-info">
           <i className="fa-solid fa-phone-volume"></i>
@@ -46,10 +46,10 @@ export const Footer = () => {
         </div>
       </div>
       </div>
-    </div>
+    {/* </div> */}
 
       <div className="redes">
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="footer-content">
         <div className="redes-info">
           <i className="fa-sharp fa-solid fa-heart"></i>
@@ -64,19 +64,19 @@ export const Footer = () => {
           <a href="#"><i className="fa fa-instagram"></i></a>
         </li>
       </ul>
-    </div>
+    {/* </div> */}
         </div>
         </div>
       </div>
       </div>
     </div>
  </div>
-
+</div>
   
   {/* <!-- --------footer contacts-------- --> */}
   
   <h6> 
-    &copy; Copyright <strong>Fresh Cmille Smills</strong>. All Rights Reserved 2022
+Los mejores servicios te lo brinda nuestro consultorio.
   </h6>
   </footer>
               

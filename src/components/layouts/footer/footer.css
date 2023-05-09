@@ -1,18 +1,16 @@
 
 footer{
-  height: 10px;
-  margin-top: 1em;
-  margin-left: 0px;
+  width: 100%;
 
 }
 h6{
   font-family: 'Open Sans', sans-serif;
   display:inline-block;
 	text-align: center;
-font-size: 13px;
+font-size: 35px;
 	width: 100%;
   background: #f1f1f1 none repeat scroll 0 0;
-  padding: 15px 0;
+  padding: 20px 15px;
 }
 /* .footer{
   color:rgb(38, 165, 197); */
@@ -21,44 +19,31 @@ font-size: 13px;
 
     /* -----------banner-dates-------------- */
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   font-size: 15px;
   /* font-weight: 500; */
   letter-spacing: 1px;
-  /* margin-right: 100px; */
-  padding: 1px;
+  /* padding: 1px; */
 }
     .footer-area {
       background: #000000;
-     padding: 10px ;
+padding: 150px;
   }
-  .container {
-    padding-right: 15em;
-    padding-left: 55px;
-    margin-right: auto;
-    margin-left: auto;
-}
-/* .footer-content {
-  display: block;
-  overflow: hidden;
-} */
+
 .title-info h4{
   color: #ffffff;
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-left: 33em;
+  margin-left: 100px;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
 
 }
-h4{
-  padding-top: 80px;
-}
 .footer-area p{
   font-size: 17px;
-  padding: 1px 2px;
+  /* padding: 1px 2px; */
 }
 .footer-area p span{
   color: #ffffff;
@@ -71,8 +56,9 @@ h4{
 }
 
 .address{
-  padding-top: 80px;
-  padding-right: 150em;
+  margin-top: 10px;
+margin-right: 18em;
+position: static;
 
 }
 .fa-location-dot{
@@ -84,54 +70,50 @@ margin-left: 110px;
   font-size: 30px;
 }
 .phone{
-  padding-top: 1em;
-  margin-right: 100px;
+  padding-top: 10px;
+  /* margin-left: 40%; */
+  /* padding-top: 1em; */
+  margin-right: 20em;
 }
 .fa-phone-volume{
   margin-left: 55px;
 
 }
 .phone-info .dateT{
-  margin-right: 30px;
+  font-size: 30px;
+  margin-top: 10px;
+  /* margin-right: 30px; */
 }
 .email{
-  padding-top: 0.0em;
-  margin-right: 70em;
+  /* padding-top: 0.0em; */
+  margin-right: 15em;
 }
 .fa-envelope{
-  margin-left: 33px;
+  margin-left: 45px;
 
 }
 .email-info .dateT{
-  margin-right: 30px;
+  margin-right: 70px;
+  font-size: 35px;
 }
-.alarm{
-  padding-top: 20px;
-  margin-right: 50px;
-}
-.fa-business-time{
-  margin-left: 40px;
 
-}
-.alarm-info .dateT{
-  margin-right: 18px;
-}
 .redes{
-  padding-right: 150em;
-  padding-top: 20px;
+  /* padding-right: 150em; */
+  padding-top: 10px;
 
 }
 .fa-heart{
-  margin-left: 100px;
+  margin-left: 95px;
 }
 
 .container i {
   color: #ffffff;
-  font-size: 35px;
-  margin-right: 100px;
+  font-size: 40px;
+
+  /* margin-right: 120px; */
 }
 .panel-icons .footer-icons i, li{
-/* font-size: 20px; */
+font-size: 28px;
 margin-left: 10px;
 }
 .footer-icons li {
@@ -139,8 +121,8 @@ margin-left: 10px;
 }
 
 .footer-icons {
-  margin-top: 18px;
-  margin-left: 23px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .footer-icons ul {
   list-style: outside none none;
@@ -180,41 +162,4 @@ border:#3EC1D5;
 .area-padding {
   padding: 80px 0px 60px;
 }
-
-
-
-/* footer {
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 24px;
-    text-align: center;
-    margin-top: 80px;
-    border-top: 1px solid #ccc;
-    padding: 80px 0;
-  }
-  
-  .footer-area {
-    max-width: 100px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-
-  }
-  
-  .footer-contacts {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .icono {
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .icono i {
-    font-size: 20px;
-    margin-right: 50px;
-  } */
   

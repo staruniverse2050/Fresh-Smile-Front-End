@@ -4,43 +4,81 @@ import "./footer.css"
 export const Footer = () => {
   return (
     <footer>
-        <div className="footer-area">
-          <div className="container1">
-            <div className="footer-contacts">
-            <div classname="icono">
-                <p>
-                  <span>Fresh Smile Cmills te atiende de las mejores maneras</span>
-                </p>
-              </div>
-              <div classname="icono">
-                <p>
-                  <i className="fa-solid fa-location-dot"></i>
-                  <span>Dirección:</span>Cra 21a, calle 9na #099
-                </p>
-              </div>
-              <div classname="icono">
-                <p>
-                  <i class="fa-solid fa-envelope-open-text"></i>
-                  <span>Email:</span>freshsmilecmills@gmail.com
-                </p>
-              </div>
-            </div>
-            <div classname="icono">
-                <p>
-                <i class="fa-solid fa-phone"></i>
-                  <span>Telefono:</span>freshsmilecmills@gmail.com
-                </p>
-                <div classname="icono">
-                <p>
-                  <i class="fa-solid fa-location-dot"></i>
-                  <span>Los mejores especialistas:</span>Armenia-Quindio 
-                </p>
-              </div>
+    <div className="footer-area">
+      {/* <div className="container"> */}
+        <div className="row">
+          <div className="footer-content">
+        <div className="title-info">
+          <h4>Fresh Smile Cmills</h4>
+        </div>
+        </div>
+        {/* </div> */}
 
-              </div>
-              </div>
-              </div>
-              </footer>
+      <div className="address">
+    <div className="container">
+      <div className="footer-content">
+        <div className="address-info">
+          <i className="fa-sharp fa-solid fa-location-dot"></i>
+        <p><span>¿Como llegar?</span><p className="dateT">cra 21</p></p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div className="email">
+      <div className="container">
+        <div className="footer-content">
+        <div className="email-info">
+          <i className="fa-solid fa-envelope"></i>
+          <p><span>E-mail</span><p className="dateT">freshsmilecmills@gmail.com</p></p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+      <div className="phone">
+      <div className="container">
+        <div className="footer-content">
+        <div className="phone-info">
+          <i className="fa-solid fa-phone-volume"></i>
+          <p><span>Telefono</span><p className="dateT">3204415807</p></p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+      <div className="redes">
+      <div className="container">
+        <div className="footer-content">
+        <div className="redes-info">
+          <i className="fa-sharp fa-solid fa-heart"></i>
+          <p><span>Redes Sociales</span></p>
+          <div className="panel-icons">
+    <div className="footer-icons">
+      <ul>
+        <li>
+          <a href="#"><i className="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i className="fa fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+ </div>
+
+  
+  {/* <!-- --------footer contacts-------- --> */}
+  
+  <h6> 
+    &copy; Copyright <strong>Fresh Cmille Smills</strong>. All Rights Reserved 2022
+  </h6>
+  </footer>
               
             
               

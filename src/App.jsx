@@ -10,6 +10,7 @@ import { Register } from "./components/layouts/Register/Register";
 import { Blog } from "./components/pages/blog/Blog";
 import Contacto from "./components/pages/contacto/Contacto";
 import {Clinica} from "./components/pages/clinica/Clinica";
+import {Informacion1} from "./components/pages/procedimientos/Informacion1/Informacion1"
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Clinica" element={<Clinica />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/Informacion1" element={<Informacion1 />} /> 
       </Routes>
     </>
   );

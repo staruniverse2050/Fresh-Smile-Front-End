@@ -8,9 +8,9 @@ export const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="footer-content">
-        <div className="title-info">
-          <h4>Fresh Smile Cmills</h4>
-        </div>
+        {/* <div className="title-info">
+          <h4>Fresh Smile Cmills</h4> */}
+        {/* </div> */}
         </div>
         {/* </div> */}
 
@@ -19,7 +19,7 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="address-info">
           <i className="fa-sharp fa-solid fa-location-dot"></i>
-        <p><span>Direccion</span><p className="dateT">Cra 21</p></p>
+        <p><span>Direccion</span><p className="dateT">Cra 21a, calle 9na #099</p></p>
       </div>
     </div>
     </div>
@@ -78,6 +78,9 @@ export const Footer = () => {
   <h6> 
 Los mejores servicios te lo brinda nuestro consultorio.
   </h6>
+  <h5> 
+  &copy;<strong>Fresh Cmille Smills</strong> 2022
+</h5>
   </footer>
               
             

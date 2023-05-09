@@ -1,5 +1,6 @@
 /* Estilos banner */
 .container_banner {
+  font-family: 'Noto Sans Khojki';
   display: flex;
   font-family: 'Noto Sans Khojki';
   flex-direction: column;
@@ -363,7 +364,7 @@ background: radial-gradient(circle, rgba(164,179,255,1) 0%, rgba(195,211,255,1) 
 
 .p-contacto {
   color: #000000;
-  font-size: 19px;
+  font-size: 23px;
   margin-bottom: 20px;
   font-family: 'Noto Sans Khojki';
 }

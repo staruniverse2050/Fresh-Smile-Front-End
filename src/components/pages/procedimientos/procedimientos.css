@@ -1,6 +1,6 @@
-body{
+/* body{
   padding: 35%;
-}
+} */
 
 /* primera card */
 .card-container{
@@ -14,6 +14,7 @@ body{
   position:absolute;
   top: 20%;
   left: 4%;
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -55,6 +56,7 @@ body{
 .title {
   font-size: 23px;
   color: #7DC3E8;
+  font-family: 'Noto Sans Khojki';
   
 }
 
@@ -76,6 +78,7 @@ body{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btns button:hover{
@@ -96,8 +99,8 @@ a{
 } 
 
 .textt{
-  font-family: cursive;
-  font-size: 16px;
+  font-family: 'Noto Sans Khojki';
+  font-size: 20px;
   margin-top: 15px;
 }
 
@@ -116,7 +119,7 @@ a{
    position:absolute;
   top: 20%;
   left: 28%;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -163,6 +166,7 @@ h2,p{
   font-size: 20px;
   color: #7DC3E8;
   text-align: center;
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-titles{
@@ -183,6 +187,7 @@ h2,p{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn2 button:hover{
@@ -195,7 +200,7 @@ a{
   color: #189CFC;
   text-decoration: none;
   font-weight: bold;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-container2:hover{
@@ -203,8 +208,8 @@ a{
 } 
 
 .text2{
-  font-size: 16px;
-  font-family: cursive;
+  font-size: 20px;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }
 
@@ -223,7 +228,7 @@ a{
   position: absolute; 
   top: 20%;
   left: 52%;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -268,7 +273,7 @@ h2,p{
   font-size: 18px;
   color: #7DC3E8;
   text-align: center;
-  
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-title3{
@@ -289,6 +294,7 @@ h2,p{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn3 button:hover{
@@ -301,7 +307,7 @@ a{
   color: #189CFC;
   text-decoration: none;
   font-weight: bold;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-container3:hover{
@@ -309,8 +315,8 @@ a{
 } 
 
 .text3{
-  font-size: 18px;
-  font-family: cursive;
+  font-size: 20px;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }
 
@@ -328,7 +334,7 @@ a{
   position:absolute; 
   top: 20%;
   left: 76%;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -405,7 +411,7 @@ a{
   color: #189CFC;
   text-decoration: none;
   font-weight: bold;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-container4:hover{
@@ -414,7 +420,7 @@ a{
 
 .text4{
   font-size: 20px;
-  font-family: cursive;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }
 
@@ -432,7 +438,7 @@ a{
   position: absolute;
   top: 80%;
   left: 4%;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -477,7 +483,7 @@ h2,p{
 .title5 {
   font-size: 22px;
   color: #7DC3E8;
-  
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-title5{
@@ -498,6 +504,7 @@ h2,p{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn5 button:hover{
@@ -519,7 +526,7 @@ a{
 
 .text5{
   font-size: 20px;
-  font-family: cursive;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }
 
@@ -581,6 +588,7 @@ h2,p{
 .title6 {
   font-size: 28px;
   color: #7DC3E8;
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-title6{
@@ -601,6 +609,7 @@ h2,p{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn6 button:hover{
@@ -622,7 +631,7 @@ a{
 
 .text6{
   font-size: 20px;
-  font-family: cursive;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }
 
@@ -640,7 +649,7 @@ a{
    position: absolute;
   top: 80%;
   left: 52%;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -685,7 +694,7 @@ h2,p{
 .title7 {
   font-size: 25px;
   color: #7DC3E8;
-  
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-title7{
@@ -706,6 +715,7 @@ h2,p{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn7 button:hover{
@@ -727,7 +737,7 @@ a{
 
 .text7{
   font-size: 22px;
-  font-family: cursive;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }
 
@@ -745,7 +755,7 @@ a{
   top: 80%;
   left: 76%;
   margin-bottom: 100%;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 
@@ -790,7 +800,7 @@ h2,p{
 .title8 {
   font-size: 25px;
   color: #7DC3E8;
-  
+  font-family: 'Noto Sans Khojki';
 }
 
 .card-title8{
@@ -811,6 +821,7 @@ h2,p{
   margin: bottom 0.5rem; 
   border-radius: 3px;
   font-size: 20px;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn8 button:hover{
@@ -832,6 +843,6 @@ a{
 
 .text8{
   font-size: 22px;
-  font-family: cursive;
+  font-family: 'Noto Sans Khojki';
   margin: 10px;
 }

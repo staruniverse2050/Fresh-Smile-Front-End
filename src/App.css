@@ -20,7 +20,9 @@ body{
 .hide-header {
   display: none;
 }
-
+title{
+  font-family: 'Noto Sans Khojki';
+}
 
 /* Responsive */
 

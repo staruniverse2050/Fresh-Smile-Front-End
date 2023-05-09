@@ -19,7 +19,7 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="address-info">
           <i className="fa-sharp fa-solid fa-location-dot"></i>
-        <p><span>¿Como llegar?</span><p className="dateT">cra 21</p></p>
+        <p><span>Direccion</span><p className="dateT">Cra 21</p></p>
       </div>
     </div>
     </div>
@@ -31,7 +31,7 @@ export const Footer = () => {
         <div className="footer-content">
         <div className="email-info">
           <i className="fa-solid fa-envelope"></i>
-          <p><span>E-mail</span><p className="dateT">freshsmilecmills@gmail.com</p></p>
+          <p><span className="email-text">E-mail</span><p className="dateT">freshsmilecmills@gmail.com</p></p>
         </div>
       </div>
       </div>

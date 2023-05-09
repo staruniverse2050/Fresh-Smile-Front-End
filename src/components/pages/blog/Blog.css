@@ -124,7 +124,7 @@
 
 .container-titleB h2 {
   font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Noto Sans Khojki';
   color: #ffffff;
 }
 
@@ -157,7 +157,7 @@ padding: 20px 10px;
 
 h4 {
   line-height: 26px;
-  font-family: Raleway, sans-serif;
+  font-family: 'Noto Sans Khojki';
   display: block;
   }
 
@@ -195,9 +195,10 @@ margin-left: 26px;
 .pst-content p {
 color: rgb(68, 68, 68);
 margin: 15px 2px 85px;
-font-size: 30px;
+font-size: 25px;
 word-wrap: break-word;
 text-align: justify;
+font-family: 'Noto Sans Khojki';
 }
 
 .button {
@@ -210,6 +211,7 @@ text-decoration: none;
 margin-top: 2px;
 margin-left: 520px;
 font-size: 25px;
+font-family: 'Noto Sans Khojki';
 }
 
 .button:hover {
@@ -231,7 +233,7 @@ background-color:  #7DC3E8;
 
 .container-titleB1 h2 {
   font-size: 50px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Noto Sans Khojki';
   color: #ffffff;
 }
 
@@ -285,4 +287,5 @@ background-color:  #7DC3E8;
 .search-option input, input[type="text"]{
 box-shadow: none !important;
 font-size: 25px;
+font-family: 'Noto Sans Khojki';
 }

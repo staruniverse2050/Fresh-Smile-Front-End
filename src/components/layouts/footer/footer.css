@@ -1,10 +1,10 @@
-
+/* 
 footer{
   width: 100%;
 
-}
+} */
 h6{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans Khojki';
   display:inline-block;
 	text-align: center;
 font-size: 35px;
@@ -28,24 +28,28 @@ font-size: 35px;
 }
     .footer-area {
       background: #000000;
-padding: 150px;
+padding: 100px;
   }
 
 .title-info h4{
   color: #ffffff;
   font-size: 35px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-left: 100px;
-  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  font-family: 'Noto Sans Khojki';
   font-weight: 100;
+}
+h4{
+bottom: 20px;
 
 }
 .footer-area p{
+  font-family: 'Noto Sans Khojki';
   font-size: 17px;
   /* padding: 1px 2px; */
 }
 .footer-area p span{
+  font-family: 'Noto Sans Khojki';
   color: #ffffff;
   /* font-weight: 700; */
   font-size: 35px;
@@ -62,18 +66,18 @@ position: static;
 
 }
 .fa-location-dot{
-margin-left: 110px;
+margin-left: 80px;
 
 }
 .address-info .dateT{
-  margin-left: 95px;
+  margin-left: 50px;
   font-size: 30px;
 }
 .phone{
   padding-top: 10px;
   /* margin-left: 40%; */
   /* padding-top: 1em; */
-  margin-right: 20em;
+  margin-right: 25em;
 }
 .fa-phone-volume{
   margin-left: 55px;
@@ -86,17 +90,18 @@ margin-left: 110px;
 }
 .email{
   /* padding-top: 0.0em; */
-  margin-right: 15em;
+  margin-left: 10em;
 }
 .fa-envelope{
-  margin-left: 45px;
-
+  margin-left: 1em;
+}
+.email-info{
+  margin-right:15em;
 }
 .email-info .dateT{
-  margin-right: 70px;
+  margin-right: 1em;
   font-size: 35px;
 }
-
 .redes{
   /* padding-right: 150em; */
   padding-top: 10px;

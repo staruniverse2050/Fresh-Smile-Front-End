@@ -1,18 +1,18 @@
 import React from "react";
-// import './procedimientos.css'
-import { Footer } from "../../layouts/footer/Footer";
-import dientes from '../procedimientos/assets/img/dientes.png'
-import card2 from '../procedimientos/assets/img/card2.png'
+ import './procedimientos.css'
+//  import { Footer } from "../../layouts/footer/Footer";
+
+
 
 
 export const Procedimientos = () => {
     return (
         <>
-            <div>
+            
                 <div className="card-container">
 
                     <div className="image-container">
-                        <img src={dientes} />
+                    <img src="./public/dientes.png" /> 
                     </div>
 
                     <div className="card-content">
@@ -20,7 +20,7 @@ export const Procedimientos = () => {
                         <div className="title">
                             <h2>Blanqueamiento dental</h2>
                         </div>
-                        <div className="text">
+                        <div className="textt">
                             <p>Las encías y los dientes sanos hacen que sea más fácil comer bien y disfrutar de la buena comida. Hay una variedad de problemas que pueden afectar la salud oral, pero un buen cuidado mantendrá los dientes y las encías fuertes a medida que envejece.</p>
                         </div>
 
@@ -40,7 +40,7 @@ export const Procedimientos = () => {
                 <div className="card-container2">
 
                     <div className="image-container2">
-                        <img src={card2} />
+                        <img src="./public/card2.png"/>
                     </div>
 
                     <div className="card-content2">
@@ -50,7 +50,7 @@ export const Procedimientos = () => {
                         </div>
 
                         <div className="text2">
-                            <p>La ortodoncia es importante para la salud dental porque soluciona de forma definitiva problemas de maloclusión y malposición. Además, con el paso del tiempo, estos pueden empeorar y degenerar en otras enfermedades y consecuencias negativas para la salud general del paciente.</p>
+                            <p>La ortodoncia es importante para la salud dental porque soluciona de forma definitiva problemas de maloclusión y malposición. Además, con el paso del tiempo, estos pueden empeorar y degenerar otras enfermedades .</p>
                         </div>
 
                     </div>
@@ -71,16 +71,16 @@ export const Procedimientos = () => {
                 <div className="card-container3">
 
                     <div className="image-container3">
-                        <img src={dientes} />
+                        <img src="./public/muela-del-juicio-3.png" /> 
                     </div>
 
                     <div className="card-content3">
 
                         <div className="title3">
-                            <h2>Blanqueamiento dental</h2>
+                            <h2>Extracción de muelas del juicio</h2>
                         </div>
                         <div className="text3">
-                            <p>Las encías y los dientes sanos hacen que sea más fácil comer bien y disfrutar de la buena comida. Hay una variedad de problemas que pueden afectar la salud oral, pero un buen cuidado mantendrá los dientes y las encías fuertes a medida que envejece.</p>
+                            <p> A medida que va pasando el tiempo, muchas veces se necesita extraer algunas piezas bucales ya sea por infección o porque genera molestia o malestar.</p>
                         </div>
 
                     </div>
@@ -95,9 +95,167 @@ export const Procedimientos = () => {
 
                 </div>
 
-            </div>
+                  
+                  {/* cuarta card */}
 
-            <Footer />
+                  <div className="card-container4">
+
+                    <div className="image-container4">
+                        <img src="./public/cariesniño.png"/> 
+                    </div>
+
+                    <div className="card-content4">
+
+                        <div className="title4">
+                            <h2> Caries dental infantil</h2>
+                        </div>
+                        <div className="text4">
+                            <p> Esto es debido principalmente a un alto consumo de productos azucarados, combinando con algunas deficiencias en los hábitos de higiene bucodental.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="btn4">
+                        <button>
+                            <a>
+                                ver mas
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                {/* quinta card */}
+
+
+                 <div className="card-container5">
+
+                    <div className="image-container5">
+                        <img src="./public/fractura.png" /> 
+                    </div>
+
+                    <div className="card-content5">
+
+                        <div className="title5">
+                            <h2>Fracturas en los dientes</h2>
+                        </div>
+                        <div className="text5">
+                            <p>En medio de algún juego o trastada, sufran un golpe en la boca que les provoque la rotura o un traumatismo de alguna pieza dental.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="btn5">
+                        <button>
+                            <a>
+                                ver mas
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                {/* sexta card */}
+
+
+                  <div className="card-container6">
+
+                    <div className="image-container6">
+                        <img src="./public/implantesss.png" /> 
+                    </div>
+
+                    <div className="card-content6">
+
+                        <div className="title6">
+                            <h2>Implantes dentales</h2>
+                        </div>
+                        <div className="text6">
+                            <p>Un implante dental es una solución para reponer un diente perdido, se trata de un dispositivo médico con una forma que imita a la de la raíz del diente.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="btn6">
+                        <button>
+                            <a>
+                                ver mas
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                 {/* septima card */}
+
+
+                  <div className="card-container7">
+
+                    <div className="image-container7">
+                        <img src="./public/invisible.png"/>
+                    </div>
+
+                    <div className="card-content7">
+
+                        <div className="title7">
+                            <h2>Ortodoncia invisible</h2>
+                        </div>
+                        <div className="text7">
+                            <p> Es la corrección de la posición de los huesos y los dientes mediante aparatos que no son perceptibles a la vista.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="btn7">
+                        <button>
+                            <a>
+                                ver mas
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                
+                 {/* octava card */}
+
+
+                  <div className="card-container8">
+
+                    <div className="image-container8">
+                        <img src="./public/sonrisa.png" /> 
+                    </div>
+
+                    <div className="card-content8">
+
+                        <div className="title8">
+                            <h2>Diseño de sonrisa</h2>
+                        </div>
+                        <div className="text8">
+                            <p>Sabemos la importancia de una sonrisa y por eso entendemos que el diseño de esta debe ser acorde a lo que quieres.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="btn8">
+                        <button>
+                            <a>
+                                ver mas
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                
+                {/* <Footer /> */}
+           
 
         </>
     );

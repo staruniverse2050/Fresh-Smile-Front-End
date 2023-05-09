@@ -32,6 +32,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	font-family: 'Noto Sans Khojki';
 }
 
 .contact .content p {
@@ -39,6 +40,7 @@
 	font-size: 30px;
 	color: #ffffff;
 	margin-top: 20px;
+	font-family: 'Noto Sans Khojki';
 }
 
 .container {
@@ -82,6 +84,7 @@
 	color: #5ffdff;
 	flex-direction: column;
 	font-weight: 500;
+	font-family: 'Noto Sans Khojki';
 }
 
 .container .contactInfo .box .text p {
@@ -91,6 +94,7 @@
 	color: rgb(252, 248, 248);
 	flex-direction: column;
 	font-weight: 300;
+	font-family: 'Noto Sans Khojki';
 }
 
 input,
@@ -107,6 +111,7 @@ textarea {
 
 .contactForm h2 {
 	font-size: 30px;
+	font-family: 'Noto Sans Khojki';
 	color: rgb(0, 0, 0);
 	font-weight: 500;
 }
@@ -126,6 +131,7 @@ textarea {
 	border-bottom: 2px solid #b1a1a1;
 	outline: none;
 	resize: none;
+	font-family: 'Noto Sans Khojki';
 	height: 45px;
 }
 
@@ -133,6 +139,7 @@ textarea {
 	position: absolute;
 	left: 0;
 	padding: 5px 0;
+	font-family: 'Noto Sans Khojki';
 	font-size: 16px;
 	margin: 10px 0;
 	pointer-events: none;
@@ -148,6 +155,7 @@ textarea {
 	color: rgb(17, 17, 17);
 	font-size: 12px;
 	transform: translateY(-20px);
+	font-family: 'Noto Sans Khojki';
 }
 
 .contactForm .inputBox input[type="submit"] {
@@ -159,6 +167,7 @@ textarea {
 	font-size: 18px;
 	height: 78px;
 	width: 58%;
+	font-family: 'Noto Sans Khojki';
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -175,10 +184,12 @@ textarea {
 	text-align: left; /* mover el texto hacia la izquierda */
 	margin-left: 10px; /* agregar un margen izquierdo */
 	color: #000000;
+	font-family: 'Noto Sans Khojki';
 }
 
 .post-text {
 	text-align: center;
+	font-family: 'Noto Sans Khojki';
 	padding: 20px;
 	font-size: 23px; /*tamaño de letra del span*/
 }

@@ -9,6 +9,7 @@ body {
 	height: 50vh;
 	background-color: #f5f5f5;
 	position: relative;
+	font-family: 'Noto Sans Khojki';
   }
   
   .Register {
@@ -21,6 +22,7 @@ body {
 	position: absolute;
 	bottom: 30vh; /* Se reduce la distancia del formulario a la imagen */
 	left: 50%;
+	font-family: 'Noto Sans Khojki';
 	transform: translateX(-50%);
 	z-index: 1;
 	margin-bottom: 50px;
@@ -37,6 +39,7 @@ body {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	font-size: 16px;
+	font-family: 'Noto Sans Khojki';
 	background-color: #fff;
   }
   
@@ -47,6 +50,7 @@ body {
 	border-radius: 5px;
 	padding: 10px;
 	font-size: 16px;
+	font-family: 'Noto Sans Khojki';
 	cursor: pointer;
   }
   
@@ -54,6 +58,7 @@ body {
 	font-size: 14px;
 	text-align: center;
 	margin-top: 20px;
+	font-family: 'Noto Sans Khojki';
 	color: #000;
   }
   
@@ -61,6 +66,7 @@ body {
 	color: #0077cc;
 	text-decoration: none;
 	font-weight: bold;
+	font-family: 'Noto Sans Khojki';
   }
   
   .RegisterHeader img {

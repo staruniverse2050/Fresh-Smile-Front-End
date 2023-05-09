@@ -25,6 +25,7 @@
   /*posición en la parte derecha*/
   background-color: #000000;
   height: 8%;
+  z-index: 9999;
 }
 
 h1 {

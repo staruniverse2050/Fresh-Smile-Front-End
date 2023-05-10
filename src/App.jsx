@@ -10,6 +10,8 @@ import { Blog } from "./components/pages/blog/Blog";
 import Contacto from "./components/pages/contacto/Contacto";
 import {Clinica} from "./components/pages/clinica/Clinica";
 import {Informacion1} from "./components/pages/procedimientos/Informacion1/Informacion1"
+// import { Navigate } from "react-router-dom";
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
     <>
       <Header />
       <Routes>
+      {/* <Route path="/" element={<Navigate to="/Home" />} /> */}
         <Route path="/Home" element={<Home />} />
         <Route path="/Procedimientos" element={<Procedimientos />} /> 
         <Route path="/Register/Register" element={<Register />} />

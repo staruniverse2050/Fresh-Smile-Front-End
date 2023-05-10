@@ -1,6 +1,7 @@
 import React from "react";
  import './procedimientos.css'
 //  import { Footer } from "../../layouts/footer/Footer";
+import { Link } from "react-router-dom";
 
 
 
@@ -8,7 +9,9 @@ import React from "react";
 export const Procedimientos = () => {
     return (
         <>
-            
+            <body className="mio">
+                
+           
                 <div className="card-container">
 
                     <div className="image-container">
@@ -27,11 +30,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btns">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                        <Link to={'/Informacion1'}><button><a>ver mas</a></button></Link>
                     </div>
 
                 </div>
@@ -256,7 +255,7 @@ export const Procedimientos = () => {
                 
                 {/* <Footer /> */}
            
-
+                </body>
         </>
     );
 };

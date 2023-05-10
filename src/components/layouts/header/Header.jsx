@@ -24,10 +24,16 @@ export const Header = () => {
     loginWithRedirect();
   };
 
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  }
+
   return (
     <header>
       <div className="menu">
-        <a href="#home"><img className="logo" src={logoImage} alt="" /></a>
+        <a href="#home"><img className="logo" src="./public/logo.png" alt="" /></a>
         <h1>
           <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
@@ -35,50 +41,63 @@ export const Header = () => {
           <div className="container2">
             <li>
               <Link to="/Home">
-                <a class="links" href="#home">Inicio</a>
+                <a className="links" href="#home">Inicio</a>
               </Link>
             </li>
             <li>
               <Link to="/Nosotros">
-                <a class="links" href="#about">Nosotros</a>
+                <a className="links" href="#about">Nosotros</a>
               </Link>
             </li>
             <li>
               <Link to="/Procedimientos">
-                <a class="links" href="/#">Procedimientos</a>
+                <a className="links" href="/#">Procedimientos</a>
               </Link>
             </li>
             <li>
               <Link to="/Clinica">
-                <a class="links" href="/#">Sedes</a>
+                <a className="links" href="/#">Sedes</a>
               </Link>
             </li>
             <li>
               <Link to="/Blog">
-                <a class="links" href="/#">Blog</a>
+                <a className="links" href="/#">Blog</a>
               </Link>
             </li>
             <li>
               <Link to="/Contacto">
-                <a class="links" href="/#">Contacto</a>
+                <a className="links" href="/#">Contacto</a>
               </Link>
             </li>
           </div>
         </ul>
-        <div onClick={isAuthenticated ? handleLogout : handleLogin}>
-          <img className="icono-inicio" src={isAuthenticated ? user.picture : "/icono_inicio.png"} alt="" />
-        </div>
+        {isAuthenticated && (
+          <div className="dropdown-wrapper" onClick={toggleDropdown}>
+            <img className="icono-inicio" src={user.picture} alt="" />
+            {showDropdown && (
+              <div className="dropdown">
+                <ul>
+                  <li>
+                    <a className="dropdown-button" href="#" onClick={handleLogout}>
+                      Cerrar sesión
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {!isAuthenticated && (
+          <img className="icono-inicio" src="/icono_inicio.png" alt="Inicio" onClick={handleLogin} />
+        )}
+
         <Link to="/Clinica">
           <a href="#clinica">
             <img className="icono-mapa" src="/icono_map.png" alt="" />
           </a>
         </Link>
-
       </div>
-
-      {/* <div id="icon-menu">
-      <img src="./public/menu2.png" alt="" />
-      </div> */}
     </header>
   );
 };

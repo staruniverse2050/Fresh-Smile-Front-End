@@ -1,14 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,400&display=swap'); */
-
-
-/* 
-:root {
-  --font-title: 'Open Sans', sans-serif;
-  --font-paragrhaps: 'Poltawski Nowy', serif;
-  --font-third: 'Roboto', sans-serif;
-} */
-
-
 .menu {
   font-family: 'Noto Sans Khojki';
   display: flex;
@@ -71,9 +60,14 @@ h1 span {
 }
 
 .icono-inicio {
-  padding-left: 15rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   margin-right: 4rem;
+  margin-left: 2rem;
+
 }
+
 
 .icono-mapa {
   margin-right: 4rem;
@@ -100,41 +94,26 @@ span {
   margin-right: 1rem;
 }
 
-/* #icon-menu img{
-  width: 50px;
-  height: 50px;
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-button {
+  display: block;
+  padding: 0.5rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown {
   position: absolute;
-  right: 20px;
-  top: 16px;
-  font-size: 20px;
-  padding: 10px;
-  background: #ffffff;
-  border-radius: 100%;
-  color: #424140;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-} */
-
-/* #icon-menu:hover{
-  opacity: 0.8;
-}  */
-
-
-/* .menu ul li{
-  margin-left: 0.5rem;
-} */
-
-/* ul {
-  margin: auto;
-  text-align: center; 
- } */
-/* 
-  @media screen and (min-width: 2114px) {
-    header {
-      width: 50%;
-      font-size: 1.2em;
-      padding: 1em;
-    }
-  } */
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}

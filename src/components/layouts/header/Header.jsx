@@ -1,15 +1,33 @@
-import React  from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import './Header.css'
 
 export const Header = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+
+  const [logoImage, setLogoImage] = useState("/icono_inicio.png");
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLogoImage(user.picture);
+    } else {
+      setLogoImage("/icono_inicio.png");
+    }
+  }, [isAuthenticated, user]);
+
+  const handleLogout = () => {
+    logout({ returnTo: window.location.origin });
+  };
+
+  const handleLogin = () => {
+    loginWithRedirect();
+  };
 
   return (
     <header>
       <div className="menu">
-        <a href="#home"><img className="logo" src="./public/logo.png" alt="" /></a>
+        <a href="#home"><img className="logo" src={logoImage} alt="" /></a>
         <h1>
           <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
@@ -47,8 +65,8 @@ export const Header = () => {
             </li>
           </div>
         </ul>
-        <div onClick={() => loginWithRedirect()}>
-          <img className="icono-inicio" src="/icono_inicio.png" alt="" />
+        <div onClick={isAuthenticated ? handleLogout : handleLogin}>
+          <img className="icono-inicio" src={isAuthenticated ? user.picture : "/icono_inicio.png"} alt="" />
         </div>
         <Link to="/Clinica">
           <a href="#clinica">

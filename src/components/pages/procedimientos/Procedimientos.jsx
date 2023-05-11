@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 export const Procedimientos = () => {
     return (
         <>
@@ -55,11 +56,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn2">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                        <Link to={'/Informacion2'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
@@ -85,11 +82,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn3">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                        <Link to={'/Informacion3'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
@@ -115,11 +108,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn4">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                        <Link to={'/Informacion4'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>

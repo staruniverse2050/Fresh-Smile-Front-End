@@ -1,4 +1,4 @@
-.ca{
+.caja{
   width: 50%;
   height: 150px;
   padding: 100px;
@@ -26,16 +26,16 @@ overflow: hidden;
   }
 }
 
-.ca:hover{
+.caja:hover{
   transform: scale(1.1);
 }
 
-.pa{
+.parra{
  
-  width: 83%;
+  width: 60%;
   position: relative;
-  left:25%;
-  bottom: 200%;
+  left:40%;
+  bottom: 180%;
   text-align:center;
   font-size: 19px;
   color:#000000b2;
@@ -43,7 +43,7 @@ overflow: hidden;
   
 }
 
-.ti{
+.letra{
  position: relative;
  left: 42%;
  bottom: 65px;
@@ -52,23 +52,23 @@ font-size: 33px;
 font-family: 'Noto Sans Khojki';
 }
 
-.fo img{
-  width: 25%;
+.imgg img{
+  width: 40%;
   position: relative;
   right: 40px;
-  bottom: 100px;
+  bottom: 80px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.fo:hover img{
+.imgg:hover img{
   transform: scale(1.1);
 }
 
 /* container1 */
 
-.ca1{
+.caja1{
   width: 50%;
   height: 150px;
   padding: 100px;
@@ -96,46 +96,44 @@ overflow: hidden;
   }
 }
 
-.ca1:hover{
+.caja1:hover{
   transform: scale(1.1);
 }
 
 
-.pa1{
+.parra1{
   height:1px;
-  width: 80%;
+  width: 45%;
   position: relative;
-  left:28%;
-  bottom: 350px;
+  left:50%;
+  bottom: 300px;
   text-align:center;
-  font-size: 18px;
+  font-size: 23px;
   color:#000000b2;
   font-family: 'Noto Sans Khojki';
   
 }
 
-.ti1{
-  width: 55%;
+.letra1{
  position: relative;
- left: 38%;
+ left: 57%;
  bottom: 90px;
  color: #00bef5;
-font-size: 23px;
-text-align: center;
+font-size: 45px;
 font-family: 'Noto Sans Khojki';
 }
 
-.fo1 img{
-  width: 30%;
+.img1 img{
+  width: 35%;
   position: relative;
-  right: 60px;
-  bottom:150px;
+  right: 30px;
+  bottom: 100px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.fo1:hover img{
+.img1:hover img{
   transform: scale(1.1);
 }
 
@@ -143,7 +141,7 @@ font-family: 'Noto Sans Khojki';
 /* container2 */
 
 
-.ca2{
+.caja2{
   width: 50%;
   height: 210px;
   padding: 100px;
@@ -171,16 +169,16 @@ overflow: hidden;
   }
 }
 
-.ca2:hover{
+.caja2:hover{
   transform: scale(1.1);
 }
 
-.pa2{
+.parra2{
   height:1px;
-  width: 70%;
+  width: 45%;
   position: relative;
-  left:35%;
-  bottom: 340px;
+  left:50%;
+  bottom: 260px;
   text-align:center;
   margin-left:0%;
   font-size: 19px;
@@ -189,35 +187,33 @@ overflow: hidden;
   
 }
 
-.ti2{
+.letra2{
  position: relative;
- width: 70%;
- left: 40%;
- bottom: 90px;
+ left: 45%;
+ bottom: 60px;
  color: #00bef5;
-font-size: 30px;
-text-align: center;
+font-size: 35px;
 font-family: 'Noto Sans Khojki';
 }
 
-.fo2 img{
-  width: 40%;
+.img2 img{
+  width: 36%;
   position: relative;
-  right: 80px;
-  bottom: 150px;
+  right: 30px;
+  bottom: 50px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.fo2:hover img{
+.img2:hover img{
   transform: scale(1.1);
 }
 
 /* container3 */
 
 
-.ca3{
+.caja3{
   width: 50%;
   height: 150px;
   padding: 100px;
@@ -245,52 +241,50 @@ overflow: hidden;
   }
 }
 
-.ca3:hover{
+.caja3:hover{
   transform: scale(1.1);
 }
 
-.pa3{
+.parra3{
   height:1px;
-  width: 75%;
+  width: 45%;
   position: relative;
-  left:33%;
-  bottom: 350px;
+  left:50%;
+  bottom: 250px;
   text-align:center;
-  font-size: 17px;
+  font-size: 19px;
   color:#000000b2;
   font-family: 'Noto Sans Khojki';
   
 }
 
-.ti3{
+.letra3{
  position: relative;
- width: 55%;
- text-align: center;
- left: 40%;
- bottom: 95px;
+ left: 62%;
+ bottom: 80px;
  color: #00bef5;
-font-size: 30px;
+font-size: 36px;
 font-family: 'Noto Sans Khojki';
 }
 
-.fo3 img{
+.img3 img{
   width: 37%;
   position: relative;
-  right:70px;
-  bottom: 150px;
+  right: 40px;
+  bottom: 80px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.fo3:hover img{
+.img3:hover img{
   transform: scale(1.1);
 }
 
 /* conteiner4 */
 
 
-.ca4{
+.caja4{
   width: 50%;
   height: 170px;
   padding: 100px;
@@ -318,11 +312,11 @@ overflow: hidden;
   }
 }
 
-.ca4:hover{
+.caja4:hover{
   transform: scale(1.1);
 }
 
-.pa4{
+.parra4{
   
   width: 70%;
   position: relative;
@@ -335,28 +329,26 @@ overflow: hidden;
   
 }
 
-.ti4{
+.letra4{
  position: relative;
- text-align: center;
- width: 80%;
- left: 30%;
- bottom: 90px;
+ left: 60%;
+ bottom: 70px;
  color: #00bef5;
-font-size: 29px;
+font-size: 33px;
 font-family: 'Noto Sans Khojki';
 }
 
-.fo4 img{
-  width: 35%;
+.img4 img{
+  width: 32%;
   position: relative;
-  right: 60px;
-  bottom: 140px;
+  right: 35px;
+  bottom: 100px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.fo4:hover img{
+.image4:hover img{
   transform: scale(1.1);
 }
 

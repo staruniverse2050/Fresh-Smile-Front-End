@@ -44,14 +44,26 @@ h1 span {
   text-decoration: none;
   color: #ffffff;
   padding: 0.5rem;
-  position: relative;
-  left: 220px;
   transition: transform 0.3s ease;
 }
 
 .links:hover{
   color: #5FFDFF;
 }
+
+.links + .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
 
 
 .logo {

@@ -71,26 +71,28 @@ export const Header = () => {
             </li>
           </div>
         </ul>
-        {isAuthenticated && (
-          <div className="dropdown-wrapper" onClick={toggleDropdown}>
-            <img className="icono-inicio" src={user.picture} alt="" />
-            {showDropdown && (
-              <div className="dropdown">
-                <ul>
-                  <li>
-                    <a className="dropdown-button" href="#" onClick={handleLogout}>
-                      Cerrar sesión
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
+        <div className="icono-inicio-wrapper">
+          {isAuthenticated && (
+            <div className="dropdown-wrapper" onClick={toggleDropdown}>
+              <img className="icono-inicio" src={user.picture} alt="" />
+              {showDropdown && (
+                <div className="dropdown">
+                  <ul>
+                    <li>
+                      <a className="dropdown-button" href="#" onClick={handleLogout}>
+                        Cerrar sesión
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
 
-        {!isAuthenticated && (
-          <img className="icono-inicio" src="/icono_inicio.png" alt="Inicio" onClick={handleLogin} />
-        )}
+          {!isAuthenticated && (
+            <img className="icono-inicio" src="/icono_inicio.png" alt="Inicio" onClick={handleLogin} />
+          )}
+        </div>
 
         <Link to="/Clinica">
           <a href="#clinica">

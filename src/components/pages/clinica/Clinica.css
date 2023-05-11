@@ -3,9 +3,9 @@
  /* background-color: #aaa2a241; */
  width:100%;
  padding: 100px;
- font-family: Arial, Helvetica, sans-serif;
+ font-family: 'Noto Sans Khojki';
  border-radius: 85px; 
- font-size: 70px; 
+ font-size: 60px; 
  text-align: center;
  /* margin: 150px; */
  /* position: relative; */
@@ -17,6 +17,7 @@
 .container-sedes {
   /* display: inline-block; */
   width: 90%;
+  font-family: 'Noto Sans Khojki';
   height: 900px;
   margin: 100px;
   /* vertical-align: top; */
@@ -40,7 +41,7 @@
 
 
 .container-sedes h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans Khojki';
   color: #7DC3E8;
   font-size: 90px;
   margin-bottom: 90px; /* Espacio inferior del título */
@@ -52,15 +53,15 @@
 .container-sedes ul {
   list-style: none; /* Eliminar la viñeta de la lista */
   padding: 0; /* Eliminar el espacio interno por defecto */
-  margin-bottom: 80px; /* Espacio inferior de la lista */
+  margin-bottom: 70px; /* Espacio inferior de la lista */
  
 }
 
 .container-sedes li {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans Khojki';
   color: #181818;
   font-size: 35px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   /* Espacio inferior de cada elemento de la lista */
 }
 
@@ -84,10 +85,11 @@
   align-items: center;
   /* padding: 30px;  */
   width: 20%;
+  font-family: 'Noto Sans Khojki';
   height: 20%;
   background-color: #7DC3E8;
   color: #FFFFFF; 
-  font-size: 50px; 
+  font-size: 42px; 
   /* margin-top: 100px;  */
   cursor: pointer; 
   border-radius: 40px;  
@@ -106,7 +108,7 @@
   }
   
   .texto {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans Khojki';
     color: #181818;
     /* font-size: 60px;   */
     width: 50%;

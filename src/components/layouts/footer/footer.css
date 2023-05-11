@@ -52,7 +52,7 @@ padding: 100px;
 }
 h4{
   margin-top: 15px;
-
+  font-family: 'Noto Sans Khojki';
 }
 .footer-area p{
   font-family: 'Noto Sans Khojki';
@@ -67,13 +67,14 @@ h4{
 }
 .dateT{
   color: #ffffff;
-
+  font-family: 'Noto Sans Khojki';
 }
 
 .address{
   margin-top: 10px;
 margin-right: 18em;
 position: static;
+font-family: 'Noto Sans Khojki';
 
 }
 .fa-location-dot{
@@ -83,12 +84,14 @@ margin-left: 80px;
 .address-info .dateT{
   margin-left: 1px;
   font-size: 30px;
+  font-family: 'Noto Sans Khojki';
 }
 .phone{
   padding-top: 10px;
   /* margin-left: 40%; */
   /* padding-top: 1em; */
   margin-right: 25em;
+  font-family: 'Noto Sans Khojki';
 }
 .fa-phone-volume{
   margin-left: 55px;
@@ -97,25 +100,30 @@ margin-left: 80px;
 .phone-info .dateT{
   font-size: 30px;
   margin-top: 10px;
+  font-family: 'Noto Sans Khojki';
   /* margin-right: 30px; */
 }
 .email{
   /* padding-top: 0.0em; */
   margin-left: 10em;
+  font-family: 'Noto Sans Khojki';
 }
 .fa-envelope{
   margin-left: 1em;
 }
 .email-info{
   margin-right:15em;
+  font-family: 'Noto Sans Khojki';
 }
 .email-info .dateT{
   margin-right: 1em;
   font-size: 35px;
+  font-family: 'Noto Sans Khojki';
 }
 .redes{
   /* padding-right: 150em; */
   padding-top: 10px;
+  font-family: 'Noto Sans Khojki';
 
 }
 .fa-heart{
@@ -157,6 +165,7 @@ margin-left: 9px;
   display: block;
   font-size: 20px;
   height: 40px;
+  font-family: 'Noto Sans Khojki';
   line-height: 42px;
   margin-right: 5px;
   width: 40px;

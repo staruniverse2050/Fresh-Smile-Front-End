@@ -78,9 +78,6 @@ export const Footer = () => {
   <h6> 
 Los mejores servicios te lo brinda nuestro consultorio.
   </h6>
-  <h5> 
-  &copy;<strong>Fresh Cmille Smills</strong> 2022
-</h5>
   </footer>
               
             

@@ -1,154 +1,146 @@
-/* 
-footer{
-  width: 100%;
-
-} */
-h6{
+h6 {
   font-family: 'Noto Sans Khojki';
-  display:inline-block;
-  color:#ffffff;
-	text-align: center;
-font-size: 35px;
-	width: 100%;
-  background:#000000 none repeat scroll 0 0;
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  font-size: 35px;
+  width: 100%;
+  background: #000000 none repeat scroll 0 0;
   padding: 20px 25px;
 }
-h5{
-  /* font-family: 'Noto Sans Khojki'; */
-  display:inline-block;
-	text-align: center;
-font-size: 20px;
-font-family: 'Noto Sans Khojki';
-	width: 100%;
+
+h5 {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Noto Sans Khojki';
+  width: 100%;
   background: #e7e5e5 none repeat scroll 0 0;
   padding: 20px 15px;
 }
-/* .footer{
-  color:rgb(38, 165, 197); */
-
-
-
-    /* -----------banner-dates-------------- */
-.container {
-  /* display: flex; */
-  justify-content: space-around;
-  font-size: 15px;
-  /* font-weight: 500; */
-  letter-spacing: 1px;
-  /* padding: 1px; */
+.footer-area {
+  background: #000000;
+  padding: -14px;
 }
-    .footer-area {
-      background: #000000;
-padding: 100px;
-  }
 
-.title-info h4{
+.title-info h4 {
   color: #ffffff;
-  font-size: 35px;
+  font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Noto Sans Khojki';
   font-weight: 100;
 }
-h4{
+
+h4 {
   margin-top: 15px;
   font-family: 'Noto Sans Khojki';
-}
-.footer-area p{
-  font-family: 'Noto Sans Khojki';
-  font-size: 17px;
-  /* padding: 1px 2px; */
-}
-.footer-area p span{
-  font-family: 'Noto Sans Khojki';
-  color: #ffffff;
-  /* font-weight: 700; */
-  font-size: 35px;
-}
-.dateT{
-  color: #ffffff;
-  font-family: 'Noto Sans Khojki';
+  font-size: 20px;
 }
 
-.address{
+.footer-area p {
+  font-family: 'Noto Sans Khojki';
+  font-size: 15px;
+}
+
+.footer-area p span {
+  font-family: 'Noto Sans Khojki';
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.dateT {
+  color: #ffffff;
+  font-family: 'Noto Sans Khojki';
+  font-size: 20px;
+}
+.address {
   margin-top: 10px;
-margin-right: 18em;
-position: static;
-font-family: 'Noto Sans Khojki';
-
+  text-align: center;
+  font-family: 'Noto Sans Khojki';
 }
-.fa-location-dot{
-margin-left: 80px;
 
+.fa-location-dot {
+  margin-left: 5px;
 }
-.address-info .dateT{
+
+.address-info .dateT {
   margin-left: 1px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Noto Sans Khojki';
 }
-.phone{
-  padding-top: 10px;
-  /* margin-left: 40%; */
-  /* padding-top: 1em; */
-  margin-right: 25em;
-  font-family: 'Noto Sans Khojki';
-}
-.fa-phone-volume{
-  margin-left: 55px;
 
+.phone {
+  padding-top: 5px;
+  text-align: center;
+  font-family: 'Noto Sans Khojki';
 }
-.phone-info .dateT{
-  font-size: 30px;
+
+.fa-phone-volume {
+  margin-left: 5px;
+}
+
+.phone-info .dateT {
+  font-size: 20px;
   margin-top: 10px;
   font-family: 'Noto Sans Khojki';
-  /* margin-right: 30px; */
 }
-.email{
-  /* padding-top: 0.0em; */
-  margin-left: 10em;
-  font-family: 'Noto Sans Khojki';
-}
-.fa-envelope{
-  margin-left: 1em;
-}
-.email-info{
-  margin-right:15em;
-  font-family: 'Noto Sans Khojki';
-}
-.email-info .dateT{
-  margin-right: 1em;
-  font-size: 35px;
-  font-family: 'Noto Sans Khojki';
-}
-.redes{
-  /* padding-right: 150em; */
-  padding-top: 10px;
-  font-family: 'Noto Sans Khojki';
 
+.email {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Noto Sans Khojki';
 }
-.fa-heart{
-  margin-left: 95px;
+
+.fa-envelope {
+  margin-left: 0.5em;
+}
+
+.email-info {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: 'Noto Sans Khojki';
+}
+
+.email-info .dateT {
+  margin-right: 0.5em;
+  font-size: 25px;
+  font-family: 'Noto Sans Khojki';
+}
+
+.redes {
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Noto Sans Khojki';
+}
+
+.fa-heart {
+  margin-left: 5px;
 }
 
 .container i {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 8px;
+}
 
-  /* margin-right: 120px; */
+.panel-icons .footer-icons i,
+li {
+  font-size: 20px;
+  margin-left: 5px;
 }
-.panel-icons .footer-icons i, li{
-font-size: 25px;
-margin-left: 9px;
-}
+
 .footer-icons li {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .footer-icons {
   margin-top: 20px;
   margin-left: 20px;
 }
+
 .footer-icons ul {
   list-style: outside none none;
   margin: 0;
@@ -163,29 +155,30 @@ margin-left: 9px;
   border: 1px solid #ffffff;
   color: #ffffff;
   display: block;
-  font-size: 20px;
-  height: 40px;
+  font-size: 15px;
+  height: 30px;
   font-family: 'Noto Sans Khojki';
-  line-height: 42px;
-  margin-right: 5px;
-  width: 40px;
+  line-height: 32px;
+  margin-right: 3px;
+  width: 30px;
   border-radius: 50%;
 }
+
 .footer-icons a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
-
 }
-.footer-icons a:hover{
+
+.footer-icons a:hover {
   background: #3EC1D5;
   text-shadow: none;
-  color:#fff;
+  color: #fff;
 }
+
 .footer-icons ul li a:hover {
-border:#3EC1D5;
+  border-color: #3EC1D5;
 }
 
 .area-padding {
-  padding: 80px 0px 60px;
+  padding: 40px 0px 30px;
 }
-  

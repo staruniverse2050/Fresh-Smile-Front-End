@@ -6,45 +6,49 @@ export const Clinica = () => {
   return (
     <>
 
+<div className="barra">
+        <h2>¿Quienes Somos?</h2>
+      </div>
 
-      <h2 className="Sedes">nuestras sedes</h2>
+    
+      <h2 className="Sedes">Nuestras sedes</h2>
 
 
       <div className="container-sedes">
-        <img src="./public/armenia.jpg" alt="sede1" />
-        <h1>armenia</h1>
-        <h1>7:00am-12:30pm</h1>
-        <h1>sede central</h1>
-        <button className="botton-sede">Agendar tu Cita</button>
-      </div>
+      <img src="./public/SedeArmenia.png" alt="sede2" />
+  <h2>Nuestra sede en Armenia:</h2>
+  
+  <ul>
+    <li><strong>Dirección:</strong> Calle 6 #16A/54 Edificio Torre Valparaiso</li>
+    <li><strong>Horario:</strong> Lunes a Viernes de 9am a 6pm</li>
+    <li><strong>Teléfono:</strong> 3103594986</li>
+  </ul>
+  <button className="botton-sede">Agendar tu Cita</button>
+</div>
 
-      <div className="container-sedes">
-        <img src="./public/tebaida.png" alt="sede2" />
-        <h1>Tebaida</h1>
-        <h1>7:00am-12:30pm</h1>
-        <h1>sede central</h1>
-        <button className="botton-sede">Agendar tu Cita</button>
-      </div>
+<div className="container-sedes">
+      <img src="./public/sedeQuimbaya.jpg" alt="sede2" />
+  <h2>Nuestra sede en Génova</h2>
+ 
+  <ul>
+    <li><strong>Dirección:</strong> Carrera 11 #26A-04</li>
+    <li><strong>Horario:</strong> Lunes a Viernes de 9am a 6pm</li>
+    <li><strong>Teléfono:</strong> +3188950833</li>
+  </ul>
+  <button className="botton-sede">Agendar tu Cita</button>
+</div>
 
-      <div className="container-sedes">
-        <img src="./public/armenia.jpg" alt="sede3" />
-        <h1>circasia</h1>
-        <h1>7:00am-12:30pm</h1>
-        <h1>sede central</h1>
-        <button className="botton-sede">Agendar tu Cita</button>
-      </div>
-
-      <div className="container-mapa">
-        <div className="mapa">
-          <img src="public/ubicación.jpg" alt="ubicacion" />
-        </div>
-
-        <div class="texto">
-          <h2>¡Aquí encuentras la ubicación de nuestra sede principal en armenia!</h2>
-        </div>
-
-      </div>
-
+<div className="container-sedes">
+      <img src="./public/sedeNeiva.jpg" alt="sede2" />
+  <h2>Nuestra sede en Tebaida</h2>
+ 
+  <ul>
+    <li><strong>Dirección:</strong> Calle 12 CR 5 #4/93</li>
+    <li><strong>Horario:</strong> Lunes a Viernes de 9am a 6pm</li>
+    <li><strong>Teléfono:</strong> +3188950833</li>
+  </ul>
+  <button className="botton-sede">Agendar tu Cita</button>
+</div>
       <Footer />
       
     </>

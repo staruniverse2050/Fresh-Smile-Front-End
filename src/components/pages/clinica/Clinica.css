@@ -1,16 +1,17 @@
 .Sedes{
   color: #181818;
  /* background-color: #aaa2a241; */
- width: 20%;
- padding: 20px;
- font-family: 'Noto Sans Khojki';
- border-radius: 25px; 
- font-size: 50px; 
+ width:100%;
+ padding: 100px;
+ font-family: Arial, Helvetica, sans-serif;
+ border-radius: 85px; 
+ font-size: 70px; 
  text-align: center;
- margin: 90px;
+ /* margin: 150px; */
  /* position: relative; */
- top: 150px;
- left: 1500px;
+ /* top: 150px; */
+ /* left: 1500px; */
+ 
 
 }
 .container-sedes {
@@ -20,44 +21,76 @@
   margin: 100px;
   /* vertical-align: top; */
   text-align: center;
-  border-radius: 20px;
-  background-color:#F8F8F8;
+  /* border-radius: 20px; */
+  background-color:#dadada;
   /* position: relative; */
+  border-radius: 45px;
 }
 
 .container-sedes img {
-  width: 40%;
-  padding: 120px;
-  margin: 23px;
+  width: 50%;
+  height: 100%;
+  /* padding: 120px; */
+  /* margin: 23px; */
   display: block;
   float:left;
   /* position: relative; */
+ border-radius: 65px;
+}
+
+
+.container-sedes h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #7DC3E8;
+  font-size: 90px;
+  margin-bottom: 90px; /* Espacio inferior del título */
+  text-align: center;
+  letter-spacing: 0.5px;
+  padding: 45px;
+}
+
+.container-sedes ul {
+  list-style: none; /* Eliminar la viñeta de la lista */
+  padding: 0; /* Eliminar el espacio interno por defecto */
+  margin-bottom: 80px; /* Espacio inferior de la lista */
  
 }
 
-.container-sedes h1 {
-  font-family: 'Noto Sans Khojki';
+.container-sedes li {
+  font-family: Arial, Helvetica, sans-serif;
   color: #181818;
-  font-size: 40px;
-  margin-top: 50px; 
-  text-align: center;
-  margin: 100px;
-  top: 200px;
-  left: 100px; 
+  font-size: 35px;
+  margin-bottom: 50px;
+  /* Espacio inferior de cada elemento de la lista */
 }
+
+
+
+.botton-sede {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 
 .botton-sede   {
   align-items: center;
-  padding: 30px; 
+  /* padding: 30px;  */
   width: 20%;
   height: 20%;
   background-color: #7DC3E8;
   color: #FFFFFF; 
   font-size: 50px; 
-  margin-top: 100px; 
+  /* margin-top: 100px;  */
   cursor: pointer; 
   border-radius: 40px;  
-  font-family: 'Noto Sans Khojki';
 }
 
   .container-mapa {
@@ -73,15 +106,17 @@
   }
   
   .texto {
-    font-family: 'Noto Sans Khojki';
-  color: #181818;
-  font-size: 60px;  
-  width: 50%;
-  top: 300px;
-  left: 100px;
-  position: absolute;
-
+    font-family: Arial, Helvetica, sans-serif;
+    color: #181818;
+    /* font-size: 60px;   */
+    width: 50%;
+    top: 300px;
+    /* text-align: right; Alineación a la derecha */
+    /* left: 100px; */
+    /* position: absolute; */
   }
+  
+  
 
   .mapa img{
     width: 20%;

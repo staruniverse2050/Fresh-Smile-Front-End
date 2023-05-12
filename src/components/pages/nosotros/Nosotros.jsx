@@ -1,6 +1,6 @@
 import React from "react";
 import "./nosotros.css";
-// import { Footer } from "../../layouts/footer/Footer";
+import { Footer } from "../../layouts/footer/Footer";
 
 
 export const Nosotros = () => {
@@ -17,11 +17,7 @@ export const Nosotros = () => {
 
 <div className="container-us">
       <div className="post-nosotros">
-<<<<<<< HEAD
   <img className="" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852193/Fresh_Smile_Cmills/imagen15.jpg_gg3f9o.jpg" alt="" /> 
-=======
-  <img className="" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg" alt="" /> 
->>>>>>> 8ea0a606eab2b1cc63e1be21f13f1795a5e7cccf
   <div className="post-nts">
   <h2 className="post-title">Nosotros</h2> 
     <p className="text-us">
@@ -78,17 +74,12 @@ export const Nosotros = () => {
     </div>
     </div>
 
-<<<<<<< HEAD
 
 
 
 
   {/* <div className="icon-container">
   <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cohete_wdjrsc.png" alt="" /> 
-=======
-  <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png" alt="" /> 
->>>>>>> 8ea0a606eab2b1cc63e1be21f13f1795a5e7cccf
   <span className="text">Misión</span>
   <span className="subtext">La misión de nuestro consultorio odontológico </span>
   <span className="subtext">ser proporcionar una atención dental  </span>
@@ -99,7 +90,7 @@ export const Nosotros = () => {
 </div>
 
 <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png" alt="" /> 
+  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
   <span className="text">Visión</span>
   <span className="subtext">Ser reconocidos como el consultorio  </span>
   <span className="subtext">odontológico líder en nuestra  </span>
@@ -111,7 +102,7 @@ export const Nosotros = () => {
 
 
 <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png" alt="" /> 
+  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
   <span className="text">Valores</span>
  
   <span className="subtext">Profesionalismo: ofrecer servicios </span>
@@ -123,7 +114,7 @@ export const Nosotros = () => {
 
 
 
-{/* <Footer /> */}
+<Footer />
       
     </>
   );

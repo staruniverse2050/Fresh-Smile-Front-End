@@ -69,6 +69,11 @@ export const Header = () => {
                 <a className="links" href="/#">Contacto</a>
               </Link>
             </li>
+            <li>
+              <Link to="/Cita">
+                <a className="links" href="/#">Mis citas</a>
+              </Link>
+            </li>
           </div>
         </ul>
         <div className="icono-inicio-wrapper">

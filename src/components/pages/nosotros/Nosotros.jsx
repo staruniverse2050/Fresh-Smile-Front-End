@@ -1,6 +1,6 @@
 import React from "react";
 import "./nosotros.css";
-import { Footer } from "../../layouts/footer/Footer";
+// import { Footer } from "../../layouts/footer/Footer";
 
 
 export const Nosotros = () => {
@@ -71,7 +71,7 @@ export const Nosotros = () => {
 
 </div>
 
-<Footer />
+{/* <Footer /> */}
       
     </>
   );

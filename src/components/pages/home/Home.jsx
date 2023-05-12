@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./home.css";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {CloudinaryImage} from '@cloudinary/url-gen';
-import { Footer } from "../../layouts/footer/Footer";
+// import { Footer } from "../../layouts/footer/Footer";
 const myImage = new CloudinaryImage('sample', {cloudName: 'dfvxujvf8'}).resize(fill().width(100).height(150));
 
 
@@ -178,7 +178,7 @@ En Fresh Smile Cmills, comprendemos la importancia de una sonrisa hermosa y salu
         <p>Contenido del contenedor...</p>
       </div> */}
 
-<Footer />
+{/* <Footer /> */}
 
 
     </>

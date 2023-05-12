@@ -1,6 +1,6 @@
 import React from "react";
 import "./Blog.css";
-import { Footer } from "../../layouts/footer/Footer";
+// import { Footer } from "../../layouts/footer/Footer";
 
 export const Blog = () => {
   return (
@@ -202,7 +202,7 @@ export const Blog = () => {
           </div>
         </div>
       </footer> */}
-            <Footer />
+            {/* <Footer /> */}
 
     </>
   );

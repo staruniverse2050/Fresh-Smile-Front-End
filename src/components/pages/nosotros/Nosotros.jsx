@@ -114,7 +114,7 @@ export const Nosotros = () => {
 
 
 
-<Footer />
+{/* <Footer /> */}
       
     </>
   );

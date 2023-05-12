@@ -6,13 +6,13 @@ import './Header.css'
 export const Header = () => {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
-  const [logoImage, setLogoImage] = useState("/icono_inicio.png");
+  const [logoImage, setLogoImage] = useState("https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png");
 
   useEffect(() => {
     if (isAuthenticated) {
       setLogoImage(user.picture);
     } else {
-      setLogoImage("/icono_inicio.png");
+      setLogoImage("https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png");
     }
   }, [isAuthenticated, user]);
 
@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <header>
       <div className="menu">
-        <a href="#home"><img className="logo" src="./public/logo.png" alt="" /></a>
+        <a href="#home"><img className="logo" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png" alt="" /></a>
         <h1>
           <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
@@ -90,13 +90,13 @@ export const Header = () => {
           )}
 
           {!isAuthenticated && (
-            <img className="icono-inicio" src="/icono_inicio.png" alt="Inicio" onClick={handleLogin} />
+            <img className="icono-inicio" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png" alt="Inicio" onClick={handleLogin} />
           )}
         </div>
 
         <Link to="/Clinica">
           <a href="#clinica">
-            <img className="icono-mapa" src="/icono_map.png" alt="" />
+            <img className="icono-mapa" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
           </a>
         </Link>
       </div>

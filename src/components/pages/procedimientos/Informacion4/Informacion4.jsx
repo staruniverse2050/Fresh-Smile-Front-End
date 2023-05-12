@@ -8,7 +8,7 @@ export const Informacion4 = () => {
 
 <h2 className="titu">Qué causa la caries dental en niños pequeños</h2>
 <div className="foto">
-<img src="./public/niño.png" />
+<img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683853286/ni%C3%B1o_utrjyv.jpg" />
 </div>
 
 
@@ -22,7 +22,7 @@ export const Informacion4 = () => {
 
 <h2 className="titu1">Cómo prevenir la caries dental en niños pequeños</h2>
 <div className="foto1">
-<img src="./public/niño2.png" />
+<img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683853302/ni%C3%B1o2_bum8pg.jpg" />
 </div>
 
 
@@ -38,7 +38,7 @@ export const Informacion4 = () => {
 
 <h2 className="titu2">Tratamiento para las caries de los niños pequeños</h2>
 <div className="foto2">
-<img src="./public/niño3.png" />
+<img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683853302/ni%C3%B1o3_begvma.jpg" />
 </div>
 
 
@@ -53,7 +53,7 @@ export const Informacion4 = () => {
 
 <h2 className="titu3">¿Qué es la caries de la primera infancia?</h2>
 <div className="foto3">
-<img src="./public/niño4.png"/> 
+<img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683853301/ni%C3%B1o4_ilp1qa.jpg"/> 
 </div>
 
 
@@ -70,7 +70,7 @@ export const Informacion4 = () => {
 
 <h2 className="titu4">¿Cómo puedo saber si mi hijo tiene caries?</h2>
 <div className="foto4">
-<img src="./public/niño5.png" /> 
+<img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683853302/ni%C3%B1o5_xjriec.jpg" /> 
 </div>
 
 

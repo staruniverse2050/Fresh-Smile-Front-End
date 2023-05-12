@@ -16,7 +16,7 @@ export const Procedimientos = () => {
                 <div className="card-container">
 
                     <div className="image-container">
-                    <img src="./public/dientes.png" /> 
+                    <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825573/Fresh_Smile_Cmills/dientes_zcwmpd.jpg" /> 
                     </div>
 
                     <div className="card-content">
@@ -40,7 +40,7 @@ export const Procedimientos = () => {
                 <div className="card-container2">
 
                     <div className="image-container2">
-                        <img src="./public/card2.png"/>
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825550/Fresh_Smile_Cmills/card2_yy2764.jpg"/>
                     </div>
 
                     <div className="card-content2">
@@ -67,7 +67,7 @@ export const Procedimientos = () => {
                 <div className="card-container3">
 
                     <div className="image-container3">
-                        <img src="./public/muela-del-juicio-3.png" /> 
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/muela-del-juicio-3_pm63sl.jpg" /> 
                     </div>
 
                     <div className="card-content3">
@@ -93,7 +93,7 @@ export const Procedimientos = () => {
                   <div className="card-container4">
 
                     <div className="image-container4">
-                        <img src="./public/cariesniño.png"/> 
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cariesni%C3%B1o_g7r06o.webp"/> 
                     </div>
 
                     <div className="card-content4">
@@ -120,7 +120,7 @@ export const Procedimientos = () => {
                  <div className="card-container5">
 
                     <div className="image-container5">
-                        <img src="./public/fractura.png" /> 
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/fractura_zbhiv0.jpg" /> 
                     </div>
 
                     <div className="card-content5">
@@ -151,7 +151,7 @@ export const Procedimientos = () => {
                   <div className="card-container6">
 
                     <div className="image-container6">
-                        <img src="./public/implantesss.png" /> 
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/implantesss_rykxgn.jpg" /> 
                     </div>
 
                     <div className="card-content6">
@@ -183,7 +183,7 @@ export const Procedimientos = () => {
                   <div className="card-container7">
 
                     <div className="image-container7">
-                        <img src="./public/invisible.png"/>
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825574/Fresh_Smile_Cmills/invisible_ofkqdk.jpg"/>
                     </div>
 
                     <div className="card-content7">
@@ -216,7 +216,7 @@ export const Procedimientos = () => {
                   <div className="card-container8">
 
                     <div className="image-container8">
-                        <img src="./public/sonrisa.png" /> 
+                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825566/Fresh_Smile_Cmills/sonrisa_xg60tc.jpg" /> 
                     </div>
 
                     <div className="card-content8">

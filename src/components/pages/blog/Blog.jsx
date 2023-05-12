@@ -26,17 +26,17 @@ export const Blog = () => {
 
       <div className="cards-blog">
         <div className="posteo-blog">
-          <img className="image-card" src="./public/cards4.jpg" alt="" />
+          <img className="image-card" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825573/Fresh_Smile_Cmills/cards4_t3s2vw.jpg" alt="" />
         </div>
         <div className="posteo-blog">
           <img
             className="image-card"
-            src="./public/IMPLANTES-DENTALES.jpg" alt=""/>
+            src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825573/Fresh_Smile_Cmills/IMPLANTES-DENTALES_oqct6q.jpg" alt=""/>
         </div>
         <div className="posteo-blog">
           <img
             className="image-card"
-            src="./public/cards5.jpg" alt=""/>
+            src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825570/Fresh_Smile_Cmills/cards5_iwgqu0.jpg" alt=""/>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ export const Blog = () => {
         {/* <div className="recent-post1"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
-              <img src="./public/consultorio1.jpg" alt="Ortodoncia_Brackets" />
+              <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825568/Fresh_Smile_Cmills/consultorio1_bfe5nv.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
               <h4>DENTIX</h4>
@@ -76,7 +76,7 @@ export const Blog = () => {
         {/* <div className="recent-post1"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
-              <img src="./public/consultorio2.jpg" alt="Ortodoncia_Brackets" />
+              <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/consultorio2_lg9nnz.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
               <h4>ODONTOESTETIC</h4>
@@ -99,7 +99,7 @@ export const Blog = () => {
         {/* <div className="recent-post12"> */}
           <div className="recent-single-post1">
             <div className="post1-img">
-              <img src="./public/consultorio4.jpg" alt="Ortodoncia_Brackets" />
+              <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/consultorio2_lg9nnz.jpg" alt="Ortodoncia_Brackets" />
             </div>
             <div className="pst-content">
               <h4>PRODENTALES</h4>
@@ -141,32 +141,32 @@ export const Blog = () => {
       <div className="container-post">
         <div className="post1-img1">
           <a href="#">
-            <img src="./public/cards6.jpg" alt="clinica_4" />
+            <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/cards6_jmq5tv.jpg" alt="clinica_4" />
           </a>
         </div>
         <div className="post1-img1">
           <a href="#">
-            <img src="./public/cards6.jpg" alt="clinica_5" />
+            <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/cards6_jmq5tv.jpg" alt="clinica_5" />
           </a>
         </div>
         <div className="post1-img1">
           <a href="#">
-            <img src="./public/cards6.jpg" alt="clinica_6" />
+            <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/cards6_jmq5tv.jpg" alt="clinica_6" />
           </a>
         </div>
         <div className="post1-img1">
           <a href="#">
-            <img src="./public/cards6.jpg" alt="clinica_7" />
+            <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/cards6_jmq5tv.jpg" alt="clinica_7" />
           </a>
         </div>
         <div className="post1-img1">
           <a href="#">
-            <img src="./public/cards6.jpg" alt="clinica_8" />
+            <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/cards6_jmq5tv.jpg" alt="clinica_8" />
           </a>
         </div>
         <div className="post1-img1">
           <a href="#">
-            <img src="./public/cards6.jpg" alt="clinica_9" />
+            <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/cards6_jmq5tv.jpg" alt="clinica_9" />
           </a>
         </div>
       </div>

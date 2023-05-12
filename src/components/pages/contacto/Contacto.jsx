@@ -13,7 +13,7 @@ const Contacto = () => {
           </div>
             <div className="box">
               <div className="icon">
-                <img src="/icono-dirección.png" alt="" />
+                <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825570/Fresh_Smile_Cmills/icono-direcci%C3%B3n_dw26px.png" alt="" />
               </div>
               <div className="text">
                 <h3>Dirección</h3>
@@ -22,7 +22,7 @@ const Contacto = () => {
             </div>
             <div className="box">
               <div className="icon">
-                <img src="/icono-llamada.png" alt="" />
+                <img src="/https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825570/Fresh_Smile_Cmills/icono-llamada_bzhwda.png" alt="" />
               </div>
               <div className="text">
                 <h3>Teléfono</h3>
@@ -31,7 +31,7 @@ const Contacto = () => {
             </div>
             <div className="box">
               <div className="icon">
-                <img src="/icono-email.png" alt="" />
+                <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825570/Fresh_Smile_Cmills/icono-llamada_bzhwda.png" alt="" />
               </div>
               <div className="text">
                 <h3>Correo electrónico</h3>

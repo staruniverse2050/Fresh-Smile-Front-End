@@ -15,7 +15,7 @@ export const Clinica = () => {
 
 
       <div className="container-sedes">
-      <img src="./public/SedeArmenia.png" alt="sede2" />
+      <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825571/Fresh_Smile_Cmills/SedeArmenia_yglzlk.png" alt="sede2" />
   <h2>Nuestra sede en Armenia:</h2>
   
   <ul>
@@ -27,7 +27,7 @@ export const Clinica = () => {
 </div>
 
 <div className="container-sedes">
-      <img src="./public/sedeQuimbaya.jpg" alt="sede2" />
+      <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825565/Fresh_Smile_Cmills/sedeQuimbaya_r2oukn.jpg" alt="sede2" />
   <h2>Nuestra sede en Génova</h2>
  
   <ul>
@@ -39,7 +39,7 @@ export const Clinica = () => {
 </div>
 
 <div className="container-sedes">
-      <img src="./public/sedeNeiva.jpg" alt="sede2" />
+      <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825565/Fresh_Smile_Cmills/sedeNeiva_mwmjoi.jpg" alt="sede2" />
   <h2>Nuestra sede en Tebaida</h2>
  
   <ul>

@@ -32,7 +32,7 @@ export const Register = () => {
     <>
       {/* Header sin barra */}
       <div className="RegisterHeader">
-        <img className="iconoRegistro" src="/agregar-usuario.png" alt="imagen de persona" />
+        <img className="iconoRegistro" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825528/Fresh_Smile_Cmills/agregar-usuario_bzrjrd.png" alt="imagen de persona" />
       </div>
       <div className="Register">
         <section className="RegisterForm">

@@ -23,7 +23,7 @@ export const Informacion1 = () => {
 
 <h2 className="ti1">¿Cuándo puedo volver a tomar café después de un blanqueamiento?</h2>
 <div className="fo1">
-<img src="./public/cafee.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852200/Fresh_Smile_Cmills/cafee_gsalfy.jpg" />
 </div>
 
 
@@ -39,7 +39,7 @@ export const Informacion1 = () => {
 
 <h2 className="ti2">¿Que no hacer cuando te hacen blanqueamiento?</h2>
 <div className="fo2">
-<img src="./public/dientesamarillos.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/dientesamarillos_xrgifl.jpg" />
 </div>
 
 
@@ -55,7 +55,7 @@ Evita todos los alimentos oscuros como Salsas de tomate, de soja, carne roja, ch
 
 <h2 className="ti3">¿Por qué se me ponen los dientes amarillos?</h2>
 <div className="fo3">
-<img src="./public/chata.png"/> 
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852198/Fresh_Smile_Cmills/chata_hszokg.jpg"/> 
 </div>
 
 
@@ -72,7 +72,7 @@ Evita todos los alimentos oscuros como Salsas de tomate, de soja, carne roja, ch
 
 <h2 className="ti4">¿Es bueno blanquearse los dientes con bicarbonato y limón?</h2>
 <div className="fo4">
-<img src="./public/limon.png" /> 
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852211/Fresh_Smile_Cmills/limon_gokjkh.webp" /> 
 </div>
 
 

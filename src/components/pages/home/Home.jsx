@@ -32,21 +32,21 @@ export const Home = () => {
 
       <div className="container-procedimientos">
         <div className="procedimientos">
-          <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825582/Fresh_Smile_Cmills/dise%C3%B1osonrisa_gujlzu.jpg" alt="sede 1" />
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852204/Fresh_Smile_Cmills/dise%C3%B1osonrisa_dqi0j5.jpg" alt="sede 1" />
           <button> 
             <Link to="/Nosotros"><a class="linksprocedimientos" href="#nosotros">Diseño de sonrisa</a>
               </Link></button>
         </div>
 
         <div className="procedimientos">
-          <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825552/Fresh_Smile_Cmills/cards1_ybbajc.jpg" alt="sede 2" />
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852212/Fresh_Smile_Cmills/cards1_s5fs46.jpg" alt="sede 2" />
           <button>
           <Link to="/Nosotros"><a class="linksprocedimientos" href="#nosotros">Blanqueamiento</a>
               </Link></button>
         </div>
 
         <div className="procedimientos">
-          <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825573/Fresh_Smile_Cmills/implantes_cdkanq.jpg" alt="sede 3" />
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantes_keq38a.jpg" alt="sede 3" />
           <button>
           <Link to="/Nosotros"><a class="linksprocedimientos" href="#nosotros">Implantes</a>
               </Link></button>
@@ -66,7 +66,7 @@ export const Home = () => {
       </div>
       <div class="container-wrapper">
         <div className="container-blog">
-          <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/instagram6_tg8dm8.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852211/Fresh_Smile_Cmills/instagram6_ugslal.jpg" alt="" />
           <div className="content">
             <h2>Odontoestetic</h2>
             <p className="p-blog">
@@ -89,7 +89,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="container-blog">
-          <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825568/Fresh_Smile_Cmills/consultorio3_nixjcz.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852200/Fresh_Smile_Cmills/Dentix_i8ecsc.png" alt="" />
           <div className="content">
             <h2>Centro Medico Integral</h2>
             <p className="p-blog">
@@ -101,7 +101,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="container-blog">
-          <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/consultorio2_lg9nnz.jpg" alt="" />
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/consultorio2_mrmmlm.jpg" alt="" />
           <div className="content">
             <h2>Prodentales</h2>
             <p className="p-blog">
@@ -121,7 +121,7 @@ export const Home = () => {
 
 <div className="container-wrapper-2">
   <div className="container-contacto">
-    <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825581/Fresh_Smile_Cmills/nosotros_whoxsf.jpg" alt="" />
+    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg" alt="" />
     <div className="content-contacto">
       {/* <h2>Prodentales</h2> */}
       <p className="p-contacto">
@@ -155,7 +155,7 @@ En Fresh Smile Cmills, comprendemos la importancia de una sonrisa hermosa y salu
     </div>
 
     <div class="sedes-div">
-      <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825564/Fresh_Smile_Cmills/sede2_raukfn.png" alt="sede 2" />
+      <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852195/Fresh_Smile_Cmills/sede2_toewpy.png" alt="sede 2" />
       <h1>Sede Tebaida</h1>
       <button>
         <Link to="/Clinica"><a class="linkssede" href="#clinica">Ingresar</a></Link>
@@ -163,7 +163,7 @@ En Fresh Smile Cmills, comprendemos la importancia de una sonrisa hermosa y salu
     </div>
 
     <div class="sedes-div">
-      <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825564/Fresh_Smile_Cmills/sede3_vkugki.png" alt="sede 3" />
+      <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852196/Fresh_Smile_Cmills/sede3_sotuaw.png" alt="sede 3" />
       <h1>Sede Circasia</h1>
       <button>
         <Link to="/Clinica"><a class="linkssede" href="#clinica">Ingresar</a></Link>

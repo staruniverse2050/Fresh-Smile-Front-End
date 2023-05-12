@@ -17,7 +17,7 @@ export const Nosotros = () => {
 
 
       <div className="post-nosotros">
-  <img className="" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825581/Fresh_Smile_Cmills/nosotros_whoxsf.jpg" alt="" /> 
+  <img className="" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg" alt="" /> 
   <div className="post-nts">
   <h2 className="post-title">Nosotros</h2>
     <p>Nuestros consultorios son un lugar donde los profesionales de la salud dental brindan una amplia gama de servicios de
@@ -36,7 +36,7 @@ export const Nosotros = () => {
 
 
   <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cohete_wdjrsc.png" alt="" /> 
+  <img className="icon-container" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png" alt="" /> 
   <span className="text">Misión</span>
   <span className="subtext">La misión de nuestro consultorio odontológico </span>
   <span className="subtext">ser proporcionar una atención dental  </span>
@@ -47,7 +47,7 @@ export const Nosotros = () => {
 </div>
 
 <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
+  <img className="icon-container" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png" alt="" /> 
   <span className="text">Visión</span>
   <span className="subtext">Ser reconocidos como el consultorio  </span>
   <span className="subtext">odontológico líder en nuestra  </span>
@@ -59,7 +59,7 @@ export const Nosotros = () => {
 
 
 <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
+  <img className="icon-container" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png" alt="" /> 
   <span className="text">Valores</span>
  
   <span className="subtext">Profesionalismo: ofrecer servicios </span>

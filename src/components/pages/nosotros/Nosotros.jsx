@@ -47,7 +47,7 @@ export const Nosotros = () => {
         </a>
       </div>
 
-      <div className="icon-container">
+      <div className="icon-containe">
   <div className="icon-row">
     <img className="icon-img" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png"/>
     <div>
@@ -78,8 +78,8 @@ export const Nosotros = () => {
 
 
 
-  {/* <div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cohete_wdjrsc.png" alt="" /> 
+  {/* <div className="icon-containe">
+  <img className="icon-containe" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cohete_wdjrsc.png" alt="" /> 
   <span className="text">Misión</span>
   <span className="subtext">La misión de nuestro consultorio odontológico </span>
   <span className="subtext">ser proporcionar una atención dental  </span>
@@ -89,8 +89,8 @@ export const Nosotros = () => {
 
 </div>
 
-<div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
+<div className="icon-containe">
+  <img className="icon-containe" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
   <span className="text">Visión</span>
   <span className="subtext">Ser reconocidos como el consultorio  </span>
   <span className="subtext">odontológico líder en nuestra  </span>
@@ -101,8 +101,8 @@ export const Nosotros = () => {
 </div>
 
 
-<div className="icon-container">
-  <img className="icon-container" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
+<div className="icon-containe">
+  <img className="icon-containe" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
   <span className="text">Valores</span>
  
   <span className="subtext">Profesionalismo: ofrecer servicios </span>

@@ -79,7 +79,10 @@ export const Header = () => {
         <div className="icono-inicio-wrapper">
           {isAuthenticated && (
             <div className="dropdown-wrapper" onClick={toggleDropdown}>
-              <img className="icono-inicio" src={user.picture} alt="" />
+              <div className="icon-container">
+                <img className="icono-inicio" src={user.picture} alt="" />
+              </div>
+
               {showDropdown && (
                 <div className="dropdown">
                   <ul>
@@ -101,7 +104,9 @@ export const Header = () => {
 
         <Link to="/Clinica">
           <a href="#clinica">
+          <div className="icon-container">
             <img className="icono-mapa" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
+            </div>
           </a>
         </Link>
       </div>

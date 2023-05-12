@@ -51,7 +51,7 @@ function App() {
         <Route path="/Informacion4" element={<Informacion4 />} />
         <Route path="/Cita" element={<Cita />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

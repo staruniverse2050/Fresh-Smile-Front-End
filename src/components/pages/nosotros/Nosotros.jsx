@@ -111,7 +111,10 @@ export const Nosotros = () => {
 
 </div> */}
 </div>
-<Footer />
+
+
+
+{/* <Footer /> */}
       
     </>
   );

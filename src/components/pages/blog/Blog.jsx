@@ -202,7 +202,7 @@ export const Blog = () => {
           </div>
         </div>
       </footer> */}
-            <Footer />
+            {/* <Footer /> */}
 
     </>
   );

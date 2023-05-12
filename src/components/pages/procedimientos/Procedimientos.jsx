@@ -16,7 +16,7 @@ export const Procedimientos = () => {
                 <div className="card-container">
 
                     <div className="image-container">
-                    <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825573/Fresh_Smile_Cmills/dientes_zcwmpd.jpg" /> 
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/dientes_zqji6a.jpg" /> 
                     </div>
 
                     <div className="card-content">
@@ -40,7 +40,7 @@ export const Procedimientos = () => {
                 <div className="card-container2">
 
                     <div className="image-container2">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825550/Fresh_Smile_Cmills/card2_yy2764.jpg"/>
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/card2_fadzq5.jpg"/>
                     </div>
 
                     <div className="card-content2">
@@ -67,7 +67,7 @@ export const Procedimientos = () => {
                 <div className="card-container3">
 
                     <div className="image-container3">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/muela-del-juicio-3_pm63sl.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852213/Fresh_Smile_Cmills/muela-del-juicio-3_kbhmxa.jpg" /> 
                     </div>
 
                     <div className="card-content3">
@@ -93,7 +93,7 @@ export const Procedimientos = () => {
                   <div className="card-container4">
 
                     <div className="image-container4">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cariesni%C3%B1o_g7r06o.webp"/> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852198/Fresh_Smile_Cmills/cariesni%C3%B1o_y5ohrg.webp"/> 
                     </div>
 
                     <div className="card-content4">
@@ -120,7 +120,7 @@ export const Procedimientos = () => {
                  <div className="card-container5">
 
                     <div className="image-container5">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/fractura_zbhiv0.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/fractura_xtyyhc.jpg" /> 
                     </div>
 
                     <div className="card-content5">
@@ -151,7 +151,7 @@ export const Procedimientos = () => {
                   <div className="card-container6">
 
                     <div className="image-container6">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/implantesss_rykxgn.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantesss_deur5s.jpg" /> 
                     </div>
 
                     <div className="card-content6">
@@ -183,7 +183,7 @@ export const Procedimientos = () => {
                   <div className="card-container7">
 
                     <div className="image-container7">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825574/Fresh_Smile_Cmills/invisible_ofkqdk.jpg"/>
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852211/Fresh_Smile_Cmills/invisible_x9gjmc.jpg"/>
                     </div>
 
                     <div className="card-content7">
@@ -216,7 +216,7 @@ export const Procedimientos = () => {
                   <div className="card-container8">
 
                     <div className="image-container8">
-                        <img src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825566/Fresh_Smile_Cmills/sonrisa_xg60tc.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/sonrisa_ci42oe.jpg" /> 
                     </div>
 
                     <div className="card-content8">

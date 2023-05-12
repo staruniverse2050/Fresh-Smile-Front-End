@@ -8,7 +8,7 @@ export const Informacion3 = () => {
 
 <h2 className="tit">¿Que son las muelas del juicio?</h2>
 <div className="fot">
-<img src="./public/mueladeljuicio.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852213/Fresh_Smile_Cmills/mueladeljuicio_voi9it.jpg" />
 </div>
 
 
@@ -22,7 +22,7 @@ export const Informacion3 = () => {
 
 <h2 className="tit1">¿Debería extraerme las muelas del juicio?</h2>
 <div className="fot1">
-<img src="./public/extraccionjuicio.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/extraccionjuicio_oeza3f.jpg" />
 </div>
 
 
@@ -38,7 +38,7 @@ export const Informacion3 = () => {
 
 <h2 className="tit2">¿Que no puedes comer cuando te sacan las muelas del juicio?</h2>
 <div className="fot2">
-<img src="./public/comer.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852204/Fresh_Smile_Cmills/comer_cyruaq.jpg" />
 </div>
 
 
@@ -54,7 +54,7 @@ Otro tipo de alimento que no debes comer si te acaban de quitar una muela del ju
 
 <h2 className="tit3">¿Cuánto tiempo dura el dolor?</h2>
 <div className="fot3">
-<img src="./public/dolor.png"/> 
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/dolor_jqwk6e.jpg"/> 
 </div>
 
 
@@ -71,7 +71,7 @@ Otro tipo de alimento que no debes comer si te acaban de quitar una muela del ju
 
 <h2 className="tit4">¿Cuando te sacan las muelas se adelgaza la cara?</h2>
 <div className="fot4">
-<img src="./public/mandibula.png" /> 
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852213/Fresh_Smile_Cmills/mandibula_dcg3ti.webp" /> 
 </div>
 
 

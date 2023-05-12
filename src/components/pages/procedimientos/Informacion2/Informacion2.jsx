@@ -8,7 +8,7 @@ export const Informacion2 = () => {
 
 <h2 className="letra">¿Por que es importante usar brackets?</h2>
 <div className="imgg">
-<img src="./public/prueba1.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/prueba1_x5bojg.jpg" />
 </div>
 
 
@@ -25,7 +25,7 @@ Desplazamiento de uno de los dos maxilares, etc.</p>
 
 <h2 className="letra1">Dientes torcidos</h2>
 <div className="img1">
-<img src="./public/torcido.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852196/Fresh_Smile_Cmills/torcido_h5eg7n.jpg" />
 </div>
 
 
@@ -41,7 +41,7 @@ Desplazamiento de uno de los dos maxilares, etc.</p>
 
 <h2 className="letra2">Exceso de espacio entre los dientes</h2>
 <div className="img2">
-<img src="./public/separados.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852198/Fresh_Smile_Cmills/separados_d6ccbb.jpg" />
 </div>
 
 
@@ -56,7 +56,7 @@ Desplazamiento de uno de los dos maxilares, etc.</p>
 
 <h2 className="letra3">obremordida</h2>
 <div className="img3">
-<img src="./public/sobremordida.png"/> 
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/sobremordida_fp5nmf.png"/> 
 </div>
 
 
@@ -73,7 +73,7 @@ Desplazamiento de uno de los dos maxilares, etc.</p>
 
 <h2 className="letra4">Submordida</h2>
 <div className="img4">
-<img src="./public/submordida.png" /> 
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852198/Fresh_Smile_Cmills/submordida_vt9eje.jpg" /> 
 </div>
 
 

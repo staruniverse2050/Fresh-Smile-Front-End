@@ -1,6 +1,6 @@
 import React from "react";
 import './Clinica.css'
-// import { Footer } from "../../layouts/footer/Footer";
+import { Footer } from "../../layouts/footer/Footer";
 
 export const Clinica = () => {
   return (
@@ -49,7 +49,7 @@ export const Clinica = () => {
   </ul>
   <button className="botton-sede">Agendar tu Cita</button>
 </div>
-      {/* <Footer /> */}
+      <Footer />
       
     </>
 

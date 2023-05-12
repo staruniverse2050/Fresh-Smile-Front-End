@@ -7,19 +7,19 @@ export const Nosotros = () => {
   return (
     <>
       
-      <div className="container_banner1">
+      <div className="container_banner1A">
         {/* <img className="" src="./public/banner.jpg" alt="" /> */}
-        <div className="container_home1">
+        <div className="container_home1A">
           <h1>¡Sobre Nosotros!</h1>
          
         </div>
       </div>
 
-<div className="container-us">
-      <div className="post-nosotros">
+<div className="container-usN">
+      <div className="post-nosotrosN">
   <img className="" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852193/Fresh_Smile_Cmills/imagen15.jpg_gg3f9o.jpg" alt="" /> 
-  <div className="post-nts">
-  <h2 className="post-title">Nosotros</h2> 
+  <div className="post-ntsP">
+  <h2 className="post-titleT">Nosotros</h2> 
     <p className="text-us">
     Nuestro equipo de profesionales altamente capacitados y especializados trabaja de la mano con cada paciente para diseñar un plan de tratamiento 
     individualizado, teniendo en cuenta sus necesidades y objetivos específicos. Utilizamos las últimas tecnologías y técnicas en ortodoncia para 
@@ -47,29 +47,29 @@ export const Nosotros = () => {
         </a>
       </div>
 
-      <div className="icon-container">
-  <div className="icon-row">
-    <img className="icon-img" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png"/>
+      <div className="icon-containerA">
+  <div className="icon-rowB">
+    <img className="icon-imgCM" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png"/>
     <div>
-      <h2 className="icon-text">Misión</h2>
-      <p className="icon-subtext">
+      <h2 className="icon-textDM">Misión</h2>
+      <p className="icon-subtextEM">
       La misión de nuestro consultorio odontológico es proporcionar una atención dental de alta calidad y personalizada a los pacientes
       promoviendo la salud oral y mejorando la salud de nuestros pacientes</p>
     </div>
   </div>
-  <div className="icon-row">
-    <img className="icon-img" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png"/>
+  <div className="icon-rowB">
+    <img className="icon-imgC" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png"/>
     <div>
-      <h2 className="icon-text">Visión</h2>
-      <p className="icon-subtext">
+      <h2 className="icon-textD">Visión</h2>
+      <p className="icon-subtextE">
       Ser reconocidos como el consultorio odontológico líder en nuestra comunidad, brindando una atención</p>
     </div>
     </div>
-    <div className="icon-row">
-    <img className="icon-img" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852200/Fresh_Smile_Cmills/diamante_nyvce1.png"/>
+    <div className="icon-rowB">
+    <img className="icon-imgC" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852200/Fresh_Smile_Cmills/diamante_nyvce1.png"/>
     <div>
-      <h2 className="icon-text">Valores</h2>
-      <p className="icon-subtext">
+      <h2 className="icon-textD">Valores</h2>
+      <p className="icon-subtextE">
       Profesionalismo: ofrecer servicios odontológicos de alta calidad basados en conocimientos científicos</p>
     </div>
     </div>
@@ -111,9 +111,6 @@ export const Nosotros = () => {
 
 </div> */}
 </div>
-
-
-
 <Footer />
       
     </>

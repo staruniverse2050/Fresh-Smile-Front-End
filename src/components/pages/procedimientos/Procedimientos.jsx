@@ -135,11 +135,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn5">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                    <Link to={'/Informacion5'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
@@ -166,11 +162,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn6">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                    <Link to={'/Informacion6'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
@@ -198,11 +190,7 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn7">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                    <Link to={'/Informacion7'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
@@ -231,16 +219,36 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn8">
-                        <button>
-                            <a>
-                                ver mas
-                            </a>
-                        </button>
+                    <Link to={'/Informacion8'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
 
 
+                {/* novena card */}
+
+  <div className="card-container9">
+
+                    <div className="image-container9">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683929523/images_qkdvah.jpg" /> 
+                    </div>
+
+                    <div className="card-content9">
+
+                        <div className="title9">
+                            <h2>Coronas dentales</h2>
+                        </div>
+                        <div className="text9">
+                            <p>Una corona es una cofia con forma de diente que reemplaza su diente normal sobre la encía</p>
+                        </div>
+
+                    </div>
+
+                    <div className="btn9">
+                    <Link to={'/Informacion9'}><button><a>ver más</a></button></Link>
+                    </div>
+
+                </div>
                 
                 {/* <Footer /> */}
            

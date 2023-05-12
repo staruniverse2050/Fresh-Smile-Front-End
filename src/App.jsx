@@ -15,6 +15,11 @@ import { Informacion1 } from "./components/pages/procedimientos/Informacion1/Inf
 import { Informacion2 } from "./components/pages/procedimientos/Informacion2/Informacion2";
 import { Informacion3 } from "./components/pages/procedimientos/Informacion3/Informacion3";
 import { Informacion4 } from "./components/pages/procedimientos/Informacion4/Informacion4";
+import { Informacion5 } from "./components/pages/procedimientos/Informacion5/Informacion5";
+import { Informacion6 } from "./components/pages/procedimientos/Informacion6/Informacion6";
+import { Informacion7 } from "./components/pages/procedimientos/Informacion7/Informacion7";
+import { Informacion8 } from "./components/pages/procedimientos/Informacion8/Informacion8";
+import { Informacion9 } from "./components/pages/procedimientos/Informacion9/Informacion9";
 
 function App() {
   const { isAuthenticated, user } = useAuth0();
@@ -49,6 +54,11 @@ function App() {
         <Route path="/Informacion2" element={<Informacion2 />} />
         <Route path="/Informacion3" element={<Informacion3 />} />
         <Route path="/Informacion4" element={<Informacion4 />} />
+        <Route path="/Informacion5" element={<Informacion5 />} />
+        <Route path="/Informacion6" element={<Informacion6 />} />
+        <Route path="/Informacion7" element={<Informacion7 />} />
+        <Route path="/Informacion8" element={<Informacion8 />} />
+        <Route path="/Informacion9" element={<Informacion9 />} />
         <Route path="/Cita" element={<Cita />} />
       </Routes>
       <Footer />

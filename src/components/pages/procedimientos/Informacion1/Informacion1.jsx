@@ -9,7 +9,7 @@ export const Informacion1 = () => {
 
 <h2 className="ti">¿Qué es el blanqueamiento dental?</h2>
 <div className="fo">
-<img src="./public/blanqueamientoss.png" />
+<img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852196/Fresh_Smile_Cmills/blanqueamientoss_ue1xbw.jpg" />
 </div>
 
 

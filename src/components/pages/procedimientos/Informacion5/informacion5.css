@@ -1,4 +1,4 @@
-.caja{
+.cajass{
   width: 50%;
   height: 150px;
   padding: 100px;
@@ -26,49 +26,50 @@ overflow: hidden;
   }
 }
 
-.caja:hover{
+.cajass:hover{
   transform: scale(1.1);
 }
 
-.parra{
+.parraf{
  
-  width: 80%;
+  width: 83%;
   position: relative;
-  left:30%;
-  bottom: 180%;
+  left:25%;
+  bottom: 160%;
   text-align:center;
-  font-size: 17px;
+  font-size: 18px;
   color:#000000b2;
   font-family: 'Noto Sans Khojki';
   
 }
 
-.letra{
+.titut{
  position: relative;
- left: 39%;
+ width: 80%;
+ left: 45%;
  bottom: 80px;
  color: #00bef5;
-font-size: 33px;
+font-size: 30px;
 font-family: 'Noto Sans Khojki';
 }
 
-.imgg img{
-  width: 35%;
+.fotos img{
+  width: 30%;
   position: relative;
-  right: 80px;
+  right: 75px;
   bottom: 80px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.imgg:hover img{
+.fotos:hover img{
   transform: scale(1.1);
 }
 
 /* container1 */
 
-.caja1{
+.cajass1{
   width: 50%;
   height: 150px;
   padding: 100px;
@@ -96,43 +97,45 @@ overflow: hidden;
   }
 }
 
-.caja1:hover{
+.cajass1:hover{
   transform: scale(1.1);
 }
 
 
-.parra1{
-  width: 70%;
+.parraf1{
+  width: 80%;
   position: relative;
-  left:35%;
-  bottom: 340px;
+  left:27%;
+  bottom: 230px;
   text-align:center;
-  font-size: 21px;
+  font-size: 18px;
   color:#000000b2;
   font-family: 'Noto Sans Khojki';
   
 }
 
-.letra1{
+.titut1{
+  width: 80%;
  position: relative;
- left: 52%;
- bottom: 90px;
+ left: 25%;
+ bottom: 70px;
  color: #00bef5;
-font-size: 45px;
+font-size: 25px;
+text-align: center;
 font-family: 'Noto Sans Khojki';
 }
 
-.img1 img{
-  width: 35%;
+.fotos1 img{
+  width: 30%;
   position: relative;
-  right: 60px;
-  bottom: 130px;
+  right: 80px;
+  bottom: 50px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.img1:hover img{
+.fotos1:hover img{
   transform: scale(1.1);
 }
 
@@ -140,7 +143,7 @@ font-family: 'Noto Sans Khojki';
 /* container2 */
 
 
-.caja2{
+.cajass2{
   width: 50%;
   height: 210px;
   padding: 100px;
@@ -168,15 +171,16 @@ overflow: hidden;
   }
 }
 
-.caja2:hover{
+.cajass2:hover{
   transform: scale(1.1);
 }
 
-.parra2{
-  width:70%;
+.parraf2{
+  height:1px;
+  width: 70%;
   position: relative;
   left:35%;
-  bottom: 270px;
+  bottom: 230px;
   text-align:center;
   margin-left:0%;
   font-size: 19px;
@@ -185,33 +189,35 @@ overflow: hidden;
   
 }
 
-.letra2{
+.titut2{
  position: relative;
- left: 40%;
- bottom: 60px;
+ width: 100%;
+ left: 20%;
+ bottom: 40px;
  color: #00bef5;
-font-size: 35px;
+font-size: 30px;
+text-align: center;
 font-family: 'Noto Sans Khojki';
 }
 
-.img2 img{
-  width: 36%;
+.fotos2 img{
+  width: 33%;
   position: relative;
-  right: 75px;
+  right: 60px;
   bottom: 50px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.img2:hover img{
+.fotos2:hover img{
   transform: scale(1.1);
 }
 
 /* container3 */
 
 
-.caja3{
+.cajass3{
   width: 50%;
   height: 150px;
   padding: 100px;
@@ -239,49 +245,52 @@ overflow: hidden;
   }
 }
 
-.caja3:hover{
+.cajass3:hover{
   transform: scale(1.1);
 }
 
-.parra3{
-  width: 65%;
+.parraf3{
+  height:1px;
+  width: 75%;
   position: relative;
-  left:40%;
-  bottom: 290px;
+  left:33%;
+  bottom: 250px;
   text-align:center;
-  font-size: 19px;
+  font-size: 20px;
   color:#000000b2;
   font-family: 'Noto Sans Khojki';
   
 }
 
-.letra3{
+.titut3{
  position: relative;
- left: 62%;
- bottom: 100px;
+ width: 80%;
+ text-align: center;
+ left: 30%;
+ bottom: 60px;
  color: #00bef5;
-font-size: 36px;
+font-size: 30px;
 font-family: 'Noto Sans Khojki';
 }
 
-.img3 img{
-  width: 37%;
+.fotos3 img{
+  width: 32%;
   position: relative;
-  right: 40px;
+  right:70px;
   bottom: 80px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.img3:hover img{
+.fotos3:hover img{
   transform: scale(1.1);
 }
 
 /* conteiner4 */
 
 
-.caja4{
+.cajass4{
   width: 50%;
   height: 170px;
   padding: 100px;
@@ -309,42 +318,45 @@ overflow: hidden;
   }
 }
 
-.caja4:hover{
+.cajass4:hover{
   transform: scale(1.1);
 }
 
-.parra4{
+.parraf4{
+  
   width: 80%;
   position: relative;
-  left:25%;
-  bottom: 370px;
+  left:28%;
+  bottom: 220%;
   text-align:center;
-  font-size: 18px;
+  font-size: 19px;
   color:#000000b2;
   font-family: 'Noto Sans Khojki';
   
 }
 
-.letra4{
+.titut4{
  position: relative;
- left: 60%;
- bottom: 90px;
+ text-align: center;
+ width: 80%;
+ left: 30%;
+ bottom: 80px;
  color: #00bef5;
-font-size: 33px;
+font-size: 29px;
 font-family: 'Noto Sans Khojki';
 }
 
-.img4 img{
+.fotos4 img{
   width: 32%;
   position: relative;
   right: 80px;
-  bottom: 100px;
+  bottom: 120px;
   object-fit: cover;
   transition: transform 0.8s;
   cursor: pointer;
 
 }
-.image4:hover img{
+.fotos4:hover img{
   transform: scale(1.1);
 }
 

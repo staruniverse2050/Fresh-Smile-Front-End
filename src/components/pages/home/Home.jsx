@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
-import { fill } from "@cloudinary/url-gen/actions/resize";
-import { CloudinaryImage } from "@cloudinary/url-gen";
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import {CloudinaryImage} from '@cloudinary/url-gen';
 // import { Footer } from "../../layouts/footer/Footer";
-const myImage = new CloudinaryImage("sample", {
-  cloudName: "dfvxujvf8",
-}).resize(fill().width(100).height(150));
+const myImage = new CloudinaryImage('sample', {cloudName: 'dfvxujvf8'}).resize(fill().width(100).height(150));
+
 
 export const Home = () => {
   return (

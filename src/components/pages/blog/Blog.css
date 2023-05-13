@@ -4,11 +4,9 @@
 }
 
 #fond-blog img {
-  width: 220%; /* Ajustar el ancho de la imagen */
-  
- 
+  width: 100%; /* Ajustar el ancho de la imagen */
   display: block; /* Establecer la imagen como un elemento en bloque */
-  margin: 55px auto 0; /* Centrar la imagen horizontalmente y agregar un margen superior */
+  margin: 45px auto 0; /* Centrar la imagen horizontalmente y agregar un margen superior */
 }
 
 
@@ -26,13 +24,13 @@
 
 
 
-.cards-blog {
+.cards-blogBC {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.posteo-blog {
+.posteo-blogBC1 {
   /* position: relative; */
   width: 400px;
   height: 300px;
@@ -41,7 +39,7 @@
   margin-top: -5em;
 }
 
-.image-card {
+.image-cardBC2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -49,7 +47,7 @@
   
 }
 
-.posteo-blog:hover left-blog.image-card {
+.posteo-blogBC1:hover left-blog.image-cardBC2 {
   transform: scale(1.2);
 }
 
@@ -112,18 +110,18 @@
 /* -------------------container blog title----------- */
 
 .container-titleB {
-  width: 98%;
+  width: 100%;
   padding-top: 30px;
-  margin: 12em auto;
+  margin: 10em auto;
   /* border: 2px solid #000; */
-  border-radius: 5px;
-  padding: 30px;
+  border-radius: 1px;
+  padding: 10px;
   background-color: #000000;
   text-align: center;
 }
 
 .container-titleB h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Noto Sans Khojki';
   color: #ffffff;
 }
@@ -135,12 +133,12 @@
   border-bottom: 2px solid rgb(221, 221, 221);
   padding: 40px 1px;
  margin-left: 70px;
-padding-top: 20px;
-margin-right: 90em;
+padding-top: 10px;
+margin-right: 20em;
 }
 
 .left-blog {
-margin-top: 10px;
+margin-top: 8px;
 
 }
 
@@ -156,7 +154,7 @@ padding: 20px 10px;
 }
 
 h4 {
-  line-height: 26px;
+  line-height: 20px;
   font-family: 'Noto Sans Khojki';
   display: block;
   }
@@ -167,19 +165,11 @@ color:#7DC3E8;
 
 .post1-img {
 display: inline-block;
-width: 400px;
+width: 270px;
 height: 300px;
-padding: 100px 20px;
+padding: 10px 10px;
 margin-right: 15px;
 }
-.post1-img1{
-  display: inline-block;
-width: 390px;
-height: 390px;
-padding: 20px 20px;
-margin-right: 15px;
-}
-
 img {
 max-width: 112%;
 display: block;

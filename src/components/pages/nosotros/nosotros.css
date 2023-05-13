@@ -1,10 +1,15 @@
-.container_banner1 {
+.container_banner1A {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
   /* background: url('https://images.pexels.com/photos/4269492/pexels-photo-4269492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/banner_fjy0jl.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/banner_fjy0jl.jpg");
   /* opacity: 0.8;  */
   /* background-position: cover; */
   background-size: cover;
@@ -14,35 +19,35 @@
   padding: 20px;
 }
 
-.container_home1 {
+.container_home1A {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.container_home1 h1 {
+.container_home1A h1 {
   /* line-height: 1.5; */
   color: #ffffff;
   text-align: center;
   font-size: 3em;
   text-decoration: none;
-  font-family: 'Noto Sans Khojki';
+  font-family: Noto Sans Khojki;
   /* float: left; */
 }
-.container-us{
+.container-usN {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 30px;
 }
-.post-nosotros {
+.post-nosotrosN {
   display: flex;
   align-items: center;
   padding: 20px;
   width: 100%;
 }
 
-.post-nosotros img {
+.post-nosotrosN img {
   max-width: 600px;
   border-radius: 5px;
   margin-right: 20px; /* Aumenta el margen derecho para separar la imagen del borde */
@@ -51,30 +56,29 @@
   margin-top: 152px;
 }
 
-.post-nts {
+.post-ntsP {
   flex-grow: 1;
   max-width: 900px;
 }
-.post-nts p {
+.post-ntsP p {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 7px;
   text-align: justify;
-  font-family: 'Noto Sans Khojki';
+  font-family: Noto Sans Khojki;
   position: relative;
   left: 170px;
   top: 10px;
 }
 
-.post-title {
+.post-titleT {
   text-align: center;
   font-size: 60px;
   font-weight: bold;
   margin-left: 300px;
   margin-bottom: 20px;
-  font-family: 'Noto Sans Khojki';
+  font-family: Noto Sans Khojki;
 }
-
 
 /* .post-nosotros {
   display: flex;
@@ -103,7 +107,7 @@
   font-family: 'Noto Sans Khojki';
 } */
 
-/*icones de las misiones*/ 
+/*icones de las misiones*/
 /* .container-icons {
   display: flex;
   flex-direction: row;
@@ -113,14 +117,14 @@
   left: 20px;
 } */
 
-.icon-container {
+.icon-containerA {
   width: 100%;
-  padding-top: 10%;
+  padding-top: 7%;
   /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; */
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: Noto Sans Khojki;
 
   /* width: 100%; */
   display: flex;
@@ -128,16 +132,16 @@
   align-items: center;
 }
 
-.icon-containe img {
+.icon-containerA img {
   height: 150px;
   margin-bottom: 30px;
   margin-left: 150px;
 }
 
-.icon-text {
+.icon-textD {
   font-size: 25px;
   text-align: center;
-  font-family: 'Noto Sans Khojki';
+  font-family: Noto Sans Khojki;
 }
 
 /* .icon-subtext {
@@ -149,22 +153,38 @@
   line-height: 1.5;
   margin-bottom: 9px;
 } */
-.icon-subtext {
+.icon-subtextE {
   display: block;
   font-size: 20px;
   text-align: center;
   align-items: center;
-  font-family: 'Noto Sans Khojki';
+  font-family: Noto Sans Khojki;
   line-height: 1.5;
   max-width: 454px;
   margin-bottom: 9px;
-
+}
+.icon-rowB .icon-imgCM {
+  height: 150px;
+  margin-bottom: 30px;
+  margin-left: 255px;
 }
 
+.icon-textDM {
+  font-size: 25px;
+  text-align: center;
+  font-family: Noto Sans Khojki;
+}
 
-
-
-
+.icon-subtextEM {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  font-family: Noto Sans Khojki;
+  line-height: 1.5;
+  max-width: 660px;
+  margin-bottom: 9px;
+}
 
 /* .icon-container {
 display: flex;

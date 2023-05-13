@@ -66,21 +66,16 @@ export const Footer = () => {
       </ul>
     {/* </div> */}
         </div>
-        </div>
-      </div>
-      </div>
-    </div>
  </div>
-</div>
-  
-  {/* <!-- --------footer contacts-------- --> */}
-  
+ </div>
+ </div>
+ </div>
+ </div>
   <h6> 
 Los mejores servicios te lo brinda nuestro consultorio.
   </h6>
-  </footer>
-              
-            
+</div>
+  </footer>     
               
   );
 };

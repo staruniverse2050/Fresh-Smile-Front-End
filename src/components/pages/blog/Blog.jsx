@@ -1,6 +1,6 @@
 import React from "react";
 import "./Blog.css";
-// import { Footer } from "../../layouts/footer/Footer";
+import { Footer } from "../../layouts/footer/Footer";
 
 export const Blog = () => {
   return (
@@ -24,18 +24,18 @@ export const Blog = () => {
 
       {/* -------------------cards hover------------------------- */}
 
-      <div className="cards-blog">
-        <div className="posteo-blog">
-          <img className="image-card" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852209/Fresh_Smile_Cmills/cards4_r5phfs.jpg" alt="" />
+      <div className="cards-blogBC">
+        <div className="posteo-blogBC1">
+          <img className="image-cardBC2" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852209/Fresh_Smile_Cmills/cards4_r5phfs.jpg" alt="" />
         </div>
-        <div className="posteo-blog">
+        <div className="posteo-blogBC1">
           <img
-            className="image-card"
+            className="image-cardBC2"
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852209/Fresh_Smile_Cmills/IMPLANTES-DENTALES_no3n0n.jpg" alt=""/>
         </div>
-        <div className="posteo-blog">
+        <div className="posteo-blogBC1">
           <img
-            className="image-card"
+            className="image-cardBC2"
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852203/Fresh_Smile_Cmills/cards5_zik6lu.jpg" alt=""/>
         </div>
       </div>

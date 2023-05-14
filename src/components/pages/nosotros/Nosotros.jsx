@@ -47,29 +47,29 @@ export const Nosotros = () => {
         </a>
       </div>
 
-      <div className="icon-container">
-  <div className="icon-row">
-    <img className="icon-img" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png"/>
+      <div className="icon-containerA">
+  <div className="icon-rowB">
+    <img className="icon-imgCM" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png"/>
     <div>
-      <h2 className="icon-textDM">Misión</h2>
-      <p className="icon-subtextEM">
+      <h2 className="icon-textD">Misión</h2>
+      <p className="icon-subtextE">
       La misión de nuestro consultorio odontológico es proporcionar una atención dental de alta calidad y personalizada a los pacientes
       promoviendo la salud oral y mejorando la salud de nuestros pacientes</p>
     </div>
   </div>
   <div className="icon-rowB">
-    <img className="icon-imgC" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png"/>
+    <img className="icon-imgCM1" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png"/>
     <div>
-      <h2 className="icon-textD">Visión</h2>
-      <p className="icon-subtextE">
+      <h2 className="icon-textDM">Visión</h2>
+      <p className="icon-subtextEM">
       Ser reconocidos como el consultorio odontológico líder en nuestra comunidad, brindando una atención</p>
     </div>
     </div>
     <div className="icon-rowB">
     <img className="icon-imgC" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852200/Fresh_Smile_Cmills/diamante_nyvce1.png"/>
     <div>
-      <h2 className="icon-textD">Valores</h2>
-      <p className="icon-subtextE">
+      <h2 className="icon-textDM">Valores</h2>
+      <p className="icon-subtextEM">
       Profesionalismo: ofrecer servicios odontológicos de alta calidad basados en conocimientos científicos</p>
     </div>
     </div>
@@ -112,9 +112,7 @@ export const Nosotros = () => {
 </div> */}
 </div>
 
-
-
-{/* <Footer /> */}
+<Footer />
       
     </>
   );

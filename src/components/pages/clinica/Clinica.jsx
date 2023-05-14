@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Clinica.css";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {CloudinaryImage} from '@cloudinary/url-gen';
-// import { Footer } from "../../layouts/footer/Footer";
+import { Footer } from "../../layouts/footer/Footer";
 const myImage = new CloudinaryImage('sample', {cloudName: 'dfvxujvf8'}).resize(fill().width(100).height(150));
 
 export const Clinica = () => {
@@ -178,12 +178,9 @@ export const Clinica = () => {
               </Link>
             </button>
           </div>
-        </div>
-        
-        
-        
+        </div>    
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

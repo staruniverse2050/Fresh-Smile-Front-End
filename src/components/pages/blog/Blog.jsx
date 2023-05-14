@@ -170,40 +170,7 @@ export const Blog = () => {
           </a>
         </div>
       </div>
-
-      {/* ----------------------------------footer-------------------------------------- */}
-
-      {/* <footer>
-        <div className="footer-area">
-          <div className="container1">
-            <div className="footer-contacts">
-              <div classname="icono">
-                <p>
-                  <i className="fa-solid fa-location-dot"></i>
-                  <span>Dirección:</span>Cra 21a, calle 9na #099
-                </p>
-              </div>
-              <div classname="icono">
-                <p>
-                  <i class="fa-solid fa-envelope-open-text"></i>
-                  <span>Email:</span>freshsmilecmills@gmail.com
-                </p>
-              </div>
-            </div>
-
-            <div class="footer-head">
-              <h4>Contáctanos:</h4>
-              <div className="flicker-img">
-                <a href="#">
-                  <img src="./public/logo.png" rel="icon" alt="logo"></img>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer> */}
-            {/* <Footer /> */}
-
+      <Footer />
     </>
   );
 };

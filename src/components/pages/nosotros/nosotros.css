@@ -160,13 +160,19 @@
   align-items: center;
   font-family: Noto Sans Khojki;
   line-height: 1.5;
-  max-width: 454px;
+  max-width: 610px;
   margin-bottom: 9px;
 }
 .icon-rowB .icon-imgCM {
   height: 150px;
   margin-bottom: 30px;
-  margin-left: 255px;
+  margin-left: 230px;
+}
+.icon-rowB .icon-imgC {
+  margin-left: 160px;
+}
+.icon-rowB .icon-imgCM1 {
+  margin-left: 167px;
 }
 
 .icon-textDM {
@@ -182,7 +188,7 @@
   align-items: center;
   font-family: Noto Sans Khojki;
   line-height: 1.5;
-  max-width: 660px;
+  max-width: 480px;
   margin-bottom: 9px;
 }
 

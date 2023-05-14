@@ -52,6 +52,7 @@
   color: #4fafd2;
   align-content: center;
   font-weight: bold;
+  font-family: "Noto Sans Khojki";
 }
 
 .p-sede {
@@ -59,8 +60,8 @@
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
+  font-family: "Noto Sans Khojki";
 }
-
 .btn-sede {
   padding: 10px 20px;
   font-size: 16px;

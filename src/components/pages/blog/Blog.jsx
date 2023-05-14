@@ -61,11 +61,10 @@ export const Blog = () => {
               <p>
                Dentix es una empresa española de servicios dentales fundada en 2010
                por Ángel Lorenzo. Es una empresa familiar cuyo modelo de negocio se 
-               basa en clínicas propias, no en acuerdos de franquicia.<br>
-               </br>
+               basa en clínicas propias, no en acuerdos de franquicia.</p>
+               <p className="pst-content">
                Sede central: Calle de la Ribera del Loira, 56, 28042; 
-               Madrid, Comunidad de Madrid, España
-               </p>
+               Madrid, Comunidad de Madrid, España.</p>
               <a href="#" className="button">
                 Leer más
               </a>
@@ -84,8 +83,8 @@ export const Blog = () => {
               Odontoestetic es una clínica privada prestadora de servicios de salud oral,
                con mas de 15 años de experiencia, especializada en áreas de educación, 
                promoción y prevención de salud bucal, rehabilitación oral, endodoncia, 
-               periodoncia, ortodoncia y estética dental.<br>
-               </br>
+               periodoncia, ortodoncia y estética dental.</p>
+               <p className="pst-content">
                Sede central: Carrera 12 #1A Norte, Armenia 630004
               </p>
               <a href="#" className="button">
@@ -107,8 +106,8 @@ export const Blog = () => {
               El Dr.Oscar Zapata ofrece odontología general y especializada 
               para pacientes de todas las edades. Sus servicios abarcan la 
               prevención, el diagnóstico y el tratamiento de condiciones 
-              especiales o enfermedades que afectan a los dientes.<br>
-              </br>
+              especiales o enfermedades que afectan a los dientes.</p>
+              <p className="pst-content">
                Sede central: Cl 3 N 12-05 Armenia - Quindío, Colombia
               </p>
               <a href="#" className="button">

@@ -63,9 +63,9 @@ export const Blog = () => {
                por Ángel Lorenzo. Es una empresa familiar cuyo modelo de negocio se 
                basa en clínicas propias, no en acuerdos de franquicia.</p>
                <p className="pst-content">
-               Sede central: Calle de la Ribera del Loira, 56, 28042; 
+               <span>Sede central:</span> Calle de la Ribera del Loira, 56, 28042; 
                Madrid, Comunidad de Madrid, España.</p>
-              <a href="#" className="button">
+              <a href="#" className="button-blog">
                 Leer más
               </a>
             </div>
@@ -85,9 +85,9 @@ export const Blog = () => {
                promoción y prevención de salud bucal, rehabilitación oral, endodoncia, 
                periodoncia, ortodoncia y estética dental.</p>
                <p className="pst-content">
-               Sede central: Carrera 12 #1A Norte, Armenia 630004
+               <span>Sede central:</span> Carrera 12 #1A Norte, Armenia 630004
               </p>
-              <a href="#" className="button">
+              <a href="#" className="button-blog">
                 Leer más
               </a>
             </div>
@@ -108,9 +108,9 @@ export const Blog = () => {
               prevención, el diagnóstico y el tratamiento de condiciones 
               especiales o enfermedades que afectan a los dientes.</p>
               <p className="pst-content">
-               Sede central: Cl 3 N 12-05 Armenia - Quindío, Colombia
+               <span>Sede central:</span> Cl 3 N 12-05 Armenia - Quindío, Colombia
               </p>
-              <a href="#" className="button">
+              <a href="#" className="button-blog">
                 Leer más
               </a>
             </div>
@@ -138,32 +138,32 @@ export const Blog = () => {
       {/* -----------------------post--------------------------------------- */}
 
       <div className="container-post">
-        <div className="post1-img1">
+        <div className="post1-img">
           <a href="#">
             <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852215/Fresh_Smile_Cmills/cards6_xf13bb.jpg" alt="clinica_4" />
           </a>
         </div>
-        <div className="post1-img1">
+        <div className="post1-img">
           <a href="#">
             <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852215/Fresh_Smile_Cmills/cards6_xf13bb.jpg" alt="clinica_5" />
           </a>
         </div>
-        <div className="post1-img1">
+        <div className="post1-img">
           <a href="#">
             <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852215/Fresh_Smile_Cmills/cards6_xf13bb.jpg" alt="clinica_6" />
           </a>
         </div>
-        <div className="post1-img1">
+        <div className="post1-img">
           <a href="#">
             <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852215/Fresh_Smile_Cmills/cards6_xf13bb.jpg" alt="clinica_7" />
           </a>
         </div>
-        <div className="post1-img1">
+        <div className="post1-img">
           <a href="#">
             <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852215/Fresh_Smile_Cmills/cards6_xf13bb.jpg" alt="clinica_8" />
           </a>
         </div>
-        <div className="post1-img1">
+        <div className="post1-img">
           <a href="#">
             <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852215/Fresh_Smile_Cmills/cards6_xf13bb.jpg" alt="clinica_9" />
           </a>

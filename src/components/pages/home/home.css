@@ -240,9 +240,11 @@ body {
 
 .p-blog {
   color: #000000;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 1px 1px 1px;
   margin-bottom: 20px;
   text-align: justify;
+  font-family: 'Noto Sans Khojki';
 }
 
 .btn-blog {

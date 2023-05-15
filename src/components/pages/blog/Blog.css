@@ -134,12 +134,12 @@
   border-bottom: 2px solid rgb(221, 221, 221);
   padding: 30px 1px;
  margin-left: 70px;
-padding-top: 50px;
-margin-right: 280px;
+padding-top: 40px;
+margin-right: 450px;
 }
 
 .left-blog {
-margin-top: 2px;
+margin-top: 50px;
 
 }
 
@@ -195,15 +195,6 @@ font-family: 'Noto Sans Khojki';
   font-weight: 600;
 }
 .button-blog {
-/* display: inline-block;
-background-color: #6595c7;
-color: #fff;
-padding: 20px 20px;
-border-radius: 2px;
-text-decoration: none;
-margin-top: 2px;
-margin-left: 520px;
-font-size: 25px; */
 padding: 10px 20px;
 font-size: 16px;
 background-color: #249bad;
@@ -297,7 +288,7 @@ font-family: 'Noto Sans Khojki';
 } */
 .search-option input {
   border: medium none;
-  padding: 17px 112px;
+  padding: 17px 147px;
 }
 .search-option input, input[type="text"]{
 box-shadow: none !important;

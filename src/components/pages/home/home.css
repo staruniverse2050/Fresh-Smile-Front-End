@@ -11,28 +11,40 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852191/Fresh_Smile_Cmills/Ordotoncia_bdubi2.webp");
   background-size: cover;
   width: 100%;
-  height: 100em;
-  min-height: 100%;
+  height: 30em;
+  min-height: 50%;
   padding: 20px;
   margin-top: 50px;
 }
 
 
-.linksinicio1{
+.linksinicio1 {
   text-decoration: none;
   color: #ffffff;
   padding: 0.5rem;
   position: relative;
-  left:40px;
+  left: 10px;
+  display: inline-block;
+  text-align: center;
+  display: flex; /* Añade esta propiedad */
+  align-items: center; /* Añade esta propiedad */
+  line-height: 100%; /* Ajusta el valor según sea necesario */
 }
+
 
 .linksinicio2{
   text-decoration: none;
   color: #ffffff;
   padding: 0.5rem;
   position: relative;
-  left:35px;
+  left: 10px;
+  display: inline-block;
+  text-align: center;
+  display: flex; /* Añade esta propiedad */
+  align-items: center; /* Añade esta propiedad */
+  line-height: 100%; /* Ajusta el valor según sea necesario */
 }
+
 .container_home {
   flex-direction: column;
   align-items: center;
@@ -59,13 +71,13 @@ body {
 .boton-home {
   display: flex;
   align-items: center;
-  width: 30%;
-  height: 10%;
+  width: 200px; /* Ajusta el ancho del botón según tus necesidades */
+  height: 70px; /* Ajusta la altura del botón según tus necesidades */
   background-color: #249bad;
   color: white;
-  padding: 10px 24px;
+  padding: 10px 20px;
   text-align: center;
-  font-size: 25px;
+  font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
   margin: 50px;
   position: relative;
   top: 74px;
@@ -155,14 +167,6 @@ body {
   font-family: 'Noto Sans Khojki', sans-serif;
 }
 
-@media screen and (max-width :700px ){
-
-  .container-procedimientos{
-    display: inline-block;
-  }
-
-}
-
 
 .procedimientos {
   width: 450px;
@@ -230,7 +234,7 @@ body {
   background: linear-gradient(90deg, rgba(125,195,232,1) 0%, rgba(183,222,242,1) 35%, rgba(131,205,245,1) 100%);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px 20px 0;
-  outline: none; /* Agregado para eliminar el outline */
+  /* outline: none; Agregado para eliminar el outline */
 }
 
 .container-blog img {
@@ -365,12 +369,7 @@ body {
   margin-top: 20px;
 }
 
-@media screen and (max-width :800px ){
 
-  .container-wrapper-2{
-    display: inline-block;
-  }
-}
 
 .container-contacto {
   display: flex;
@@ -379,19 +378,12 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width :700px ){
-
-  .container-contacto{
-    display: inline-block;
-  }
-}
-
 .container-contacto img {
   max-width: 600px;
   border-radius: 10px;
   margin-right: 20px; /* Aumenta el margen derecho para separar la imagen del borde */
   position: relative;
-  left: 224px;
+  left: 80; /* Ajusta el valor izquierdo para alinear la imagen a la izquierda */
 }
 
 
@@ -416,14 +408,9 @@ body {
   text-align: justify;
   font-family: 'Noto Sans Khojki', sans-serif;
   position: relative;
-  left: 210px;
-  top: 20px;
+  left: 0; /* Ajusta el valor izquierdo para alinear el texto a la izquierda */
+  top: 0; /* Ajusta el valor top según tus necesidades */
 }
-
-
-  
-
-
 
 
 .linkscontacto{
@@ -437,10 +424,80 @@ body {
   font-size: 16px;
   border-radius: 4px;
   position: relative;
-  left: 680px;
+  left: 450px;
   top:34px;
 }
 
 .btn-contacto:hover {
   background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);}
 
+
+
+  @media (max-width: 768px) {
+    .container-procedimientos {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 500px; /* Reducir el ancho máximo del contenedor */
+      padding: 20px; /* Agregar márgenes internos */
+      font-size: 14px; /* Reducir el tamaño de fuente */
+      flex-wrap: nowrap; /* Evitar que los elementos se envuelvan en varias líneas */
+      
+    }
+
+    .btn-blog{
+    
+          font-size: 14px; /* Reducir el tamaño de fuente en dispositivos más pequeños */
+          padding: 8px 16px; /* Ajustar el padding del botón */
+          left: 0; /* Reiniciar la posición izquierda */
+        }
+
+        .container-blog {
+          width: 90%; /* Reducir aún más el ancho del contenedor en dispositivos más pequeños */
+          padding: 10px; /* Ajustar el padding del contenedor en dispositivos más pequeños */
+          margin: 10px 10px 0; /* Ajustar los márgenes en dispositivos más pequeños */
+        }
+        .container-blog img {
+          width: 80%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
+          max-height: auto; /* Ajustar la altura automáticamente */
+          margin-right: 0; /* Eliminar el margen derecho en dispositivos más pequeños */
+        }
+
+        .slick-carousel {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          max-width: 500px; /* Reducir el ancho máximo del contenedor */
+          padding: 20px; /* Agregar márgenes internos */
+          font-size: 14px; /* Reducir el tamaño de fuente */
+          flex-wrap: nowrap; /* Evitar que los elementos se envuelvan en varias líneas */
+        }
+
+        .container_banner {
+          height: 40em; /* Ajusta la altura en dispositivos más pequeños */
+        }
+        
+        
+        .boton-home {
+          width: 50%; /* Ajusta el ancho en dispositivos más pequeños */
+          height: auto; /* Ajusta la altura automáticamente en dispositivos más pequeños */
+          font-size: 20px; /* Ajusta el tamaño de fuente en dispositivos más pequeños */
+          margin: 20px; /* Ajusta el margen en dispositivos más pequeños */
+          top: 0; /* Elimina el desplazamiento vertical */
+        }
+        
+        
+        .linksinicio1 {
+          font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
+          left: 5px; /* Ajusta el desplazamiento hacia la izquierda para dispositivos más pequeños */
+        }
+        
+        .linksinicio2 {
+          font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
+          left: 5px; /* Ajusta el desplazamiento hacia la izquierda para dispositivos más pequeños */
+        }
+}
+ 
+    
+  
+  

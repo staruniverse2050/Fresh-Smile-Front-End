@@ -96,7 +96,6 @@ export const Header = () => {
               )}
             </div>
           )}
-
           {!isAuthenticated && (
             <img className="icono-inicio" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png" alt="Inicio" onClick={handleLogin} />
           )}

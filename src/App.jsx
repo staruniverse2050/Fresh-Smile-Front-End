@@ -7,6 +7,7 @@ import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import { Register } from "./components/layouts/Register/Register";
+import { AgendaCita } from "./components/layouts/agendacita/AgendaCita";
 import { Blog } from "./components/pages/blog/Blog";
 import Contacto from "./components/pages/contacto/Contacto";
 import { Clinica } from "./components/pages/clinica/Clinica";
@@ -49,6 +50,7 @@ function App() {
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Clinica" element={<Clinica />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/AgendaCita" element={<AgendaCita />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/Informacion1" element={<Informacion1 />} />
         <Route path="/Informacion2" element={<Informacion2 />} />

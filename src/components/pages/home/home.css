@@ -210,7 +210,7 @@ body {
 .procedimientos button:hover {
   background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);}
 
-/* Block */
+/* Blog*/
 .container-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -261,7 +261,7 @@ body {
   color: #000000;
   font-size: 20px;
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: center;
 }
 
 .btn-blog {

@@ -1,6 +1,6 @@
 import React from "react";
- import './procedimientos.css'
-//  import { Footer } from "../../layouts/footer/Footer";
+import './procedimientos.css'
+ import { Footer } from "../../layouts/footer/Footer";
 import { Link } from "react-router-dom";
 
 
@@ -10,13 +10,104 @@ import { Link } from "react-router-dom";
 export const Procedimientos = () => {
     return (
         <>
-            <body className="mio">
-                
-           
+            <div className="barra5">
+                <h2>Nuestros Procedimientos</h2>
+            </div>
+            <div className="container-procedimientos">
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Blanqueamiento Dental</h3>
+                        <p class="card-description">
+                            El blanqueamiento dental es un procedimiento de odontología estética que busca aclarar el color de los dientes para obtener una sonrisa más blanca y brillante. </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268611/Fresh_Smile_Cmills/enis-yavuz-iGf7CfWgjTI-unsplash_zktstf.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Brackets</h3>
+                        <p class="card-description">El tratamiento de brackets es un procedimiento ortodóntico utilizado para corregir la alineación y posición de los dientes. </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Extracción de Cordales</h3>
+                        <p class="card-description">La extracción de las cordales es un procedimiento común y seguro, y suele ser necesario cuando las muelas del juicio causan dolor o pueden afectar la salud bucal en general </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="container-procedimientos">
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852212/Fresh_Smile_Cmills/cards1_s5fs46.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Diseño de Sonrisa</h3>
+                        <p class="card-description">
+                            El diseño de sonrisa es un proceso estético y personalizado en odontología que busca mejorar la apariencia de la sonrisa de una persona. </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684269175/Fresh_Smile_Cmills/umanoide-KeVKEs1_RDU-unsplash_lh8obx.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Fractura Dental</h3>
+                        <p class="card-description">El tratamiento de fractura dental en odontología es un procedimiento que se realiza para reparar un diente dañado debido a una fractura o una fisura. </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684270420/Fresh_Smile_Cmills/peter-kasprzyk-U1gvhqVQ2kQ-unsplash_db0rfk.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Implantes Dentales</h3>
+                        <p class="card-description">El tratamiento de implantes dentales es un procedimiento odontológico utilizado para reemplazar dientes perdidos o extraídos. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container-procedimientos">
+
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Caries</h3>
+                        <p class="card-description">El tratamiento de caries es un procedimiento dental utilizado para eliminar y tratar las cavidades o deterioro de los dientes causados por la caries dental. </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684270398/Fresh_Smile_Cmills/yingpis-kalayom-By1szZOVpHg-unsplash_wvbwd5.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Frenos Dentales</h3>
+                        <p class="card-description">
+                            Los frenos dentales son dispositivos utilizados en odontología para corregir la posición y alineación de los dientes. </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684269551/Fresh_Smile_Cmills/caroline-lm-8BkF0sTC6Uo-unsplash_efkumb.jpg" alt="Imagen de la tarjeta" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">Cirugia de Encias</h3>
+                        <p class="card-description">La cirugía de encías es un procedimiento dental que se realiza para tratar y corregir problemas en las encías y estructuras de soporte de los dientes. </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {/* <body className="mio">
+
+
                 <div className="card-container">
 
                     <div className="image-container">
-                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/dientes_zqji6a.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/dientes_zqji6a.jpg" />
                     </div>
 
                     <div className="card-content">
@@ -36,11 +127,11 @@ export const Procedimientos = () => {
 
                 </div>
 
-                {/* segunda card */}
+
                 <div className="card-container2">
 
                     <div className="image-container2">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/card2_fadzq5.jpg"/>
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/card2_fadzq5.jpg" />
                     </div>
 
                     <div className="card-content2">
@@ -61,13 +152,10 @@ export const Procedimientos = () => {
 
                 </div>
 
-
-                {/* tercera card */}
-
                 <div className="card-container3">
 
                     <div className="image-container3">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852213/Fresh_Smile_Cmills/muela-del-juicio-3_kbhmxa.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852213/Fresh_Smile_Cmills/muela-del-juicio-3_kbhmxa.jpg" />
                     </div>
 
                     <div className="card-content3">
@@ -87,13 +175,10 @@ export const Procedimientos = () => {
 
                 </div>
 
-                  
-                  {/* cuarta card */}
-
-                  <div className="card-container4">
+                <div className="card-container4">
 
                     <div className="image-container4">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852198/Fresh_Smile_Cmills/cariesni%C3%B1o_y5ohrg.webp"/> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852198/Fresh_Smile_Cmills/cariesni%C3%B1o_y5ohrg.webp" />
                     </div>
 
                     <div className="card-content4">
@@ -114,13 +199,10 @@ export const Procedimientos = () => {
                 </div>
 
 
-                {/* quinta card */}
-
-
-                 <div className="card-container5">
+                <div className="card-container5">
 
                     <div className="image-container5">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/fractura_xtyyhc.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/fractura_xtyyhc.jpg" />
                     </div>
 
                     <div className="card-content5">
@@ -135,19 +217,17 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn5">
-                    <Link to={'/Informacion5'}><button><a>ver más</a></button></Link>
+                        <Link to={'/Informacion5'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
 
 
-                {/* sexta card */}
 
-
-                  <div className="card-container6">
+                <div className="card-container6">
 
                     <div className="image-container6">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantesss_deur5s.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantesss_deur5s.jpg" />
                     </div>
 
                     <div className="card-content6">
@@ -162,20 +242,16 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn6">
-                    <Link to={'/Informacion6'}><button><a>ver más</a></button></Link>
+                        <Link to={'/Informacion6'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
 
 
-
-                 {/* septima card */}
-
-
-                  <div className="card-container7">
+                <div className="card-container7">
 
                     <div className="image-container7">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852211/Fresh_Smile_Cmills/invisible_x9gjmc.jpg"/>
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852211/Fresh_Smile_Cmills/invisible_x9gjmc.jpg" />
                     </div>
 
                     <div className="card-content7">
@@ -190,21 +266,17 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn7">
-                    <Link to={'/Informacion7'}><button><a>ver más</a></button></Link>
+                        <Link to={'/Informacion7'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
 
 
 
-                
-                 {/* octava card */}
-
-
-                  <div className="card-container8">
+                <div className="card-container8">
 
                     <div className="image-container8">
-                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/sonrisa_ci42oe.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/sonrisa_ci42oe.jpg" />
                     </div>
 
                     <div className="card-content8">
@@ -219,18 +291,15 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn8">
-                    <Link to={'/Informacion8'}><button><a>ver más</a></button></Link>
+                        <Link to={'/Informacion8'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
 
-
-                {/* novena card */}
-
-  <div className="card-container9">
+                <div className="card-container9">
 
                     <div className="image-container9">
-                    <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683929523/images_qkdvah.jpg" /> 
+                        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683929523/images_qkdvah.jpg" />
                     </div>
 
                     <div className="card-content9">
@@ -245,14 +314,13 @@ export const Procedimientos = () => {
                     </div>
 
                     <div className="btn9">
-                    <Link to={'/Informacion9'}><button><a>ver más</a></button></Link>
+                        <Link to={'/Informacion9'}><button><a>ver más</a></button></Link>
                     </div>
 
                 </div>
-                
-                {/* <Footer /> */}
-           
-                </body>
+
+            </body> */}
+            <Footer />
         </>
     );
 };

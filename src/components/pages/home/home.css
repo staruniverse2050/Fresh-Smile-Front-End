@@ -312,6 +312,8 @@ body {
   background-color: #000000;
   text-align: center;
   /* margin: 20px 10px; */
+  top: 25px;
+  position: relative;
 }
 
 .barra-2 h2 {
@@ -458,7 +460,7 @@ body {
           margin: 10px 10px 0; /* Ajustar los márgenes en dispositivos más pequeños */
         }
         .container-blog img {
-          width: 80%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
+          width: 30%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
           max-height: auto; /* Ajustar la altura automáticamente */
           margin-right: 0; /* Eliminar el margen derecho en dispositivos más pequeños */
         }
@@ -474,7 +476,9 @@ body {
         }
 
         .container_banner {
-          height: 40em; /* Ajusta la altura en dispositivos más pequeños */
+          align-items: flex-start; /* Ajusta la alineación vertical al inicio */
+          justify-content: flex-start; /* Ajusta la alineación horizontal al inicio */
+          height: 30em;
         }
         
         
@@ -488,15 +492,65 @@ body {
         
         
         .linksinicio1 {
-          font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
-          left: 5px; /* Ajusta el desplazamiento hacia la izquierda para dispositivos más pequeños */
+          font-size: 14px;
+          float: left; /* Agrega float para ajustar el elemento a la izquierda */
+          left: 5px;
+          align-content: center;
         }
         
         .linksinicio2 {
-          font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
-          left: 5px; /* Ajusta el desplazamiento hacia la izquierda para dispositivos más pequeños */
+          font-size: 12px;
+          float: left; /* Agrega float para ajustar el elemento a la izquierda */
+          left: 4px;
+          align-content: center;
         }
+        
+
+        .barra-2 {
+          width: 700px;
+          margin: 40px auto; /* Centra horizontalmente el elemento */
+          margin-left: 0;
+          padding: 0px;
+          background-color: #000000;
+          text-align: left;
+        }
+        
+        
+        .container_home {
+          flex-direction: row;
+          justify-content: flex-start; /* Ajusta la alineación horizontal al inicio */
+          padding: 10px;
+          left: 4px;
+          float: left;
+        }
+        
+        .container-wrapper-2 {
+          flex-direction: column; /* Cambia la dirección a vertical */
+          align-items: center; /* Centra los elementos verticalmente */
+        }
+       
+        .content-contacto {
+          max-width: 40%; /* Establece el ancho máximo al 40% para ocupar parte del ancho disponible */
+          padding: 0px; /* Añade un poco de espacio interno horizontal */
+          display: flex; /* Utiliza flexbox */
+          flex-direction: column; /* Establece la dirección de los elementos a columna */
+          align-items: center; /* Centra horizontalmente los elementos */
+        }
+        
+
+        .container-wrapper {
+          display: flex;
+          justify-content: center;
+        }
+        
+        .content-contacto p {
+          font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
+          line-height: 1.4; /* Ajusta el espacio entre líneas para dispositivos más pequeños */
+          margin-bottom: 8px; /* Ajusta el margen inferior para dispositivos más pequeños */
+        }
+       
 }
+
  
     
   

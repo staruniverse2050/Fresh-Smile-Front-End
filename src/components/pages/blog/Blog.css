@@ -1,4 +1,3 @@
-
 #fond-blog {
   position: relative; /* Establecer la posición relativa para que el fondo se pueda superponer en la imagen */
 }
@@ -8,20 +7,6 @@
   display: block; /* Establecer la imagen como un elemento en bloque */
   margin: 45px auto 0; /* Centrar la imagen horizontalmente y agregar un margen superior */
 }
-
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 
 
 .cards-blogBC {
@@ -51,62 +36,6 @@
 .posteo-blogBC1:hover{
   transform: scale(1.05);
 }
-
-/* ---------css minjibyung---------- */
-/* -------------container blog img-------------- */
-
-/* .header-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.603)), url('./public/banner.jpg');
-  background-size: cover;
-  width: 101%;
-  height: 880px;
-  padding: 5px;
-  margin-top: 5em;
-}
-
-.container-banner{
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.container-title{
-  color:#ffffff;
-  text-decoration:overline;
-  font-size: 50px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.container_banner h1 {
-  text-decoration: none;
-}
-
-.header-btn{
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.date-btn {
-  background-color: #249bad;
-  color: #ffffff;
-  padding: 16px 24px;
-  width: 220px; 
-  font-size: 20px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 40px;
-  border: none;
-  margin-top: 70%;
-}
-
-.date-btn:hover, .date-btn:focus {
-  background-color: #298697;
-} */
 
 /* -------------------container blog title----------- */
 
@@ -183,6 +112,7 @@ width: 55%;
 height: 60%;
 margin-left: 10px;
 }
+
 .pst-content p {
 color: rgb(68, 68, 68);
 margin: 1px 2px 1px;
@@ -194,6 +124,7 @@ font-family: 'Noto Sans Khojki';
 .pst-content span{
   font-weight: 600;
 }
+
 .button-blog {
 padding: 10px 20px;
 font-size: 16px;
@@ -294,4 +225,72 @@ font-family: 'Noto Sans Khojki';
 box-shadow: none !important;
 font-size: 23px;
 font-family: 'Noto Sans Khojki';
+}
+
+
+@media (max-width: 768px) {
+ 
+  .cards-blogBC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .posteo-blogBC1 {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: auto;
+    margin: 10px;
+    margin-top: 2em;
+  }
+
+  .buscador-blog {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  .recent-single-post1 {
+    margin: 0 20px; /* Ajusta los márgenes laterales */
+    padding: 20px 1px; /* Ajusta el relleno superior e inferior */
+  }
+  
+  .pst-content {
+    display: block; /* Cambia a un bloque para ocupar todo el ancho disponible */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-bottom: 10px; /* Añade un margen inferior para separar los elementos */
+  }
+  
+  
+  .button-blog {
+    padding: 8px 16px; /* Ajusta el relleno superior e inferior */
+    font-size: 14px; /* Ajusta el tamaño de fuente */
+    margin: 10px; /* Agrega un margen alrededor del botón */
+    position: relative;
+    left: 0; /* Ajusta la posición izquierda a cero */
+    display: inline-flex; /* Utiliza flexbox para alinear verticalmente */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
+
+
+  .button-blog:hover {
+    background: #419985; /* Cambia el gradiente radial a un color sólido */
+  }
+
+
+
+
+@media (max-width: 480px) {
+  .left-blog {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+}
 }

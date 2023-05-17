@@ -28,6 +28,7 @@ export const Blog = () => {
         <div className="posteo-blogBC1">
           <img className="image-cardBC2" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852209/Fresh_Smile_Cmills/cards4_r5phfs.jpg" alt="" />
         </div>
+        
         <div className="posteo-blogBC1">
           <img
             className="image-cardBC2"

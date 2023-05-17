@@ -165,17 +165,138 @@ li {
 } 
 
 
+@media screen and (max-width: 768px) {
+  h6 {
+    font-size: 15px;
+    padding: 2px 15px;
+    
+  }
+  
+  .footer-area p {
+    font-size: 10px;
+    
+  }
+  
+  .footer-area p span {
+    font-size: 10px;
+    
+    
+  }
+  .phone,
+  .email
+  .address,
+  .redes {
+    width:10%;
+    padding:10%;
+    margin-top: 15px;
+    
+    display: flex;
 
+  }
 
-@media (max-width: 768px) {
+  .dateT {
+    font-size: 10px;
+  }
+
+  .address {
+    margin-left: 10px;
+  }
+
+  .fa-location-dot {
+    margin-left: 3px;
+  }
+
+  .address-info .dateT {
+    font-size: 8px;
+  }
+
+  .phone {
+    /* margin-left:0px; */
+    justify-content: flex-start;
+  }
+
+  .fa-phone-volume {
+    margin-left: 10px;
+  }
+
+  .phone-info .dateT {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .email {
+    margin-left:10px;
+    justify-content: flex-start;
+  }
+
+  .fa-envelope {
+    margin-left: 0.5em;
+  }
+
+  .email-info .dateT{
+    font-size: 10px;
+  }
+
+  .redes {
+    width: 50%;
+
+    /* justify-content: center; */
+  }
+
+  .redes-info p {
+    margin-left: 15px;
+    
+  }
+
+  .fa-heart {
+    margin-left: 15px;
+  }
+
+  .container i {
+    font-size: 35px;
+    margin-top: 15px;
+    
+  }
+
+  .panel-icons .footer-icons .fa-instagram {
+    margin-left: 5px;
+    
+  }
+
+  .panel-icons .footer-icons i,
+  li {
+    font-size: 10px;
+    margin-left: 10px;
+    
+  }
+
+  .footer-icons li {
+    margin-left: 10px;
+    
+  }
+
+  .footer-icons ul li a {
+    height: 25px;
+    width: 25px;
+    line-height: 22px;
+    margin-top: 5px;
+    margin-left: 5px;
+    
+    
+    
+  }
+}
+
+/* @media screen and (max-width: 480px) {
  
   .h6 {
     font-family: 'Noto Sans Khojki';
     display: inline-block;
     color: #ffffff;
     text-align: center;
-    font-size: 25px;
-    width: 100%;
+    font-size: 5px;
+    min-width: 10px;
     padding: 2px 25px;
   }
   .footer-area {
@@ -316,5 +437,90 @@ li {
   display: inline-block;
 
 }
-}
+} */
+
+/* @media screen and (max-width: 480px) {
+  h6 {
+    font-size: 15px;
+    padding: 2px 10px;
+  }
+  
+  .footer-area p {
+    font-size: 10px;
+  }
+  
+  .footer-area p span {
+    font-size: 20px;
+  }
+
+  .phone,
+  .email,
+  .redes {
+    padding:2px;
+    min-width: 5px;
+    min-height: 5px;
+    
+  }
+
+  .dateT {
+    font-size: 16px;
+    
+  }
+
+  .address {
+    margin-left: 15px;
+    
+  }
+
+  .fa-location-dot {
+    margin-left: 3px;
+  }
+
+  .address-info .dateT {
+    font-size: 16px;
+  }
+
+  .phone-info .dateT {
+    font-size: 16px;
+    margin-left: 3px;
+  }
+
+  .email-info .dateT {
+    font-size: 20px;
+  }
+
+  .redes-info p {
+    margin-left: 10px;
+  }
+
+  .fa-heart {
+    margin-left: 5px;
+  }
+
+  .container i {
+    font-size: 25px;
+    margin-top: 6px;
+  }
+
+  .panel-icons .footer-icons .fa-instagram {
+    margin-left: 4px;
+  }
+
+  .panel-icons .footer-icons i,
+  li {
+    font-size: 20px;
+    margin-left: 3px;
+  }
+
+  .footer-icons li {
+    margin-left: 15px;
+  }
+
+  .footer-icons ul li a {
+    height: 25px;
+    line-height: 22px;
+    margin-top: 8px;
+    width: 25px;
+  }
+} */
 

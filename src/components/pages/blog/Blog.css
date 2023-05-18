@@ -219,7 +219,7 @@ font-family: 'Noto Sans Khojki';
 } */
 .search-option input {
   border: medium none;
-  padding: 17px 147px;
+  padding: 17px 221px;
 }
 .search-option input, input[type="text"]{
 box-shadow: none !important;

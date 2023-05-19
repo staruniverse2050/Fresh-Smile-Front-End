@@ -32,6 +32,7 @@ export const AgendaCita = () => {
   return (
     <>
       <div className="schedule-banner">
+        <div className='contenedor1-box'>
         <div className="schedule-title">
           <h2>Agenda aquí tu cita</h2>
           <p>Llena este formulario para agendar tu cita</p>
@@ -85,6 +86,7 @@ export const AgendaCita = () => {
             </div>
           </form>
         </div>
+      </div>
       </div>
     </>
   );

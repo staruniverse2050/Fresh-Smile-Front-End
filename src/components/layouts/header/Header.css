@@ -1,6 +1,6 @@
 
 .menu {
-	font-family: "Noto Sans Khojki";
+	font-family: 'Times New Roman';
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,7 +13,7 @@
 	z-index: 9999;
 }
 .menu1A {
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,12 +27,12 @@
 }
 
 h1 {
-	font-family: "Noto Sans Khojki";
+	font-family:'Times New Roman';
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	color: var(--font-color);
 	margin: 0;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
   font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--font-color);
@@ -41,7 +41,7 @@ h1 {
 }
 
 h1 span {
-	font-family: "Noto Sans Khojki";
+	font-family: 'Times New Roman';
 	color: #5ffdff;
 }
 
@@ -120,12 +120,12 @@ h1 span {
 
 .menu h1 {
 	text-align: left;
-	font-family: "Noto Sans Khojki";
+	font-family: 'Times New Roman';
 	margin-left: 1rem;
 }
 .menu1A h1 {
   text-align: left;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
   right: 214px;
 
 }

@@ -6,13 +6,13 @@ import './Header.css'
 export const Header = () => {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
-  const [logoImage, setLogoImage] = useState("https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png");
+  const [logoImage, setLogoImage] = useState("https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png");
 
   useEffect(() => {
     if (isAuthenticated) {
       setLogoImage(user.picture);
     } else {
-      setLogoImage("https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png");
+      setLogoImage("https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png");
     }
   }, [isAuthenticated, user]);
 
@@ -35,7 +35,7 @@ export const Header = () => {
       <div className="menu1A">
         <a href="#home"><img className="logo" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png" alt="" /></a>
         <h1>
-          <span>Fresh</span>Smile<span>Cmills</span>
+          <span>Fresh </span> Smile <span> Cmills</span>
         </h1>
         <ul>
           <div className="container2">
@@ -97,17 +97,9 @@ export const Header = () => {
             </div>
           )}
           {!isAuthenticated && (
-            <img className="icono-inicio" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png" alt="Inicio" onClick={handleLogin} />
+            <img className="icono-inicio" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png" alt="Inicio" onClick={handleLogin} />
           )}
         </div>
-
-        <Link to="/Clinica">
-          <a href="#clinica">
-          <div className="icon-container">
-            <img className="icono-mapa" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
-            </div>
-          </a>
-        </Link>
       </div>
     </header>
   );

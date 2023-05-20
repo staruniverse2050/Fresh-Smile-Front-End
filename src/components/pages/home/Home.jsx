@@ -37,7 +37,7 @@ export const Home = () => {
         <h2>Conoce Nuestros Procedimientos</h2>
       </div>
 
-      <div className="container-procedimientos">
+      <div className="container-procedimientos-home">
         <div className="procedimientos">
           <img
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852204/Fresh_Smile_Cmills/dise%C3%B1osonrisa_dqi0j5.jpg"

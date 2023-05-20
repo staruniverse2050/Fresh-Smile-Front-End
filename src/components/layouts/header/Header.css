@@ -1,5 +1,6 @@
-
 .menu {
+
+	font-family: 'Times New Roman';
 	font-family: 'Times New Roman';
 	display: flex;
 	justify-content: center;
@@ -12,35 +13,39 @@
 	height: 8vh;
 	z-index: 9999;
 }
+
 .menu1A {
-  font-family: 'Times New Roman';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  height: 8vh;
-  z-index: 9999;
+	font-family: 'Times New Roman';
+	font-family: 'Times New Roman';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #000000;
+	height: 8vh;
+	z-index: 9999;
 }
 
 h1 {
-	font-family:'Times New Roman';
+	font-family: 'Times New Roman';
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	color: var(--font-color);
 	margin: 0;
-  font-family: 'Times New Roman';
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: var(--font-color);
-  margin: 0;
-  color: #ffffff;
+	font-family: 'Times New Roman';
+	font-family: 'Times New Roman';
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	color: var(--font-color);
+	margin: 0;
+	color: #ffffff;
 }
 
 h1 span {
+	font-family: 'Times New Roman';
 	font-family: 'Times New Roman';
 	color: #5ffdff;
 }
@@ -58,17 +63,18 @@ h1 span {
 .menu li {
 	margin: 0.15rem;
 }
+
 .menu1A ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
 }
 
 .menu1A li {
-  margin: 0.15rem;
+	margin: 0.15rem;
 }
 
 .links {
@@ -82,7 +88,7 @@ h1 span {
 	color: #5ffdff;
 }
 
-.links + .dropdown {
+.links+.dropdown {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -104,6 +110,8 @@ h1 span {
 .icono-inicio {
 	border-radius: 50%;
 	width: 50px;
+	cursor: pointer;
+	filter: invert(100%);
 	height: 50px;
 }
 
@@ -121,12 +129,15 @@ h1 span {
 .menu h1 {
 	text-align: left;
 	font-family: 'Times New Roman';
+
+	font-family: 'Times New Roman';
 	margin-left: 1rem;
 }
+
 .menu1A h1 {
-  text-align: left;
-  font-family: 'Times New Roman';
-  right: 214px;
+	text-align: left;
+	font-family: 'Noto Sans Khojki';
+	right: 214px;
 
 }
 
@@ -137,8 +148,8 @@ h1 span {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-  }
-  
+}
+
 
 
 
@@ -176,12 +187,13 @@ h1 span {
 	margin-top: 0.5rem;
 	box-shadow: 0 0 0;
 }
+
 .icono-inicio-wrapper {
-	margin-left: auto; 
+	margin-left: auto;
 	margin-right: 2rem;
-  }
-  
-  
+}
+
+
 
 @media screen and (max-width: 768px) {
 	.menu {
@@ -206,7 +218,7 @@ h1 span {
 		transform: none;
 	}
 
-	.links + .dropdown {
+	.links+.dropdown {
 		position: static;
 		display: none;
 		margin: 0;
@@ -225,7 +237,7 @@ h1 span {
 		text-decoration: underline;
 	}
 
-	.dropdown-button:hover + .dropdown {
+	.dropdown-button:hover+.dropdown {
 		display: block;
 	}
 

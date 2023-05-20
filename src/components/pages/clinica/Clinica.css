@@ -1,7 +1,7 @@
 .Sedes {
   color: #181818;
   padding-top: 70px;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Times New Roman';
   border-radius: 85px;
   font-size: 60px;
   text-align: center;
@@ -52,7 +52,7 @@
   color: #4fafd2;
   align-content: center;
   font-weight: bold;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Times New Roman';
 }
 
 .p-sede {
@@ -60,7 +60,10 @@
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Times New Roman';
+}
+strong{
+  font-family: 'Times New Roman';
 }
 .btn-sede {
   padding: 10px 20px;
@@ -72,6 +75,7 @@
   cursor: pointer;
   text-align: center;
   position: relative;
+  font-family: 'Times New Roman';
 }
 
 .btn-sede:hover {

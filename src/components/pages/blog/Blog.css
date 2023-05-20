@@ -48,11 +48,12 @@
   padding: 10px;
   background-color: #000000;
   text-align: center;
+  font-family: 'Times New Roman';
 }
 
 .container-titleB h2 {
   font-size: 40px;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
   color: #ffffff;
 }
 
@@ -81,17 +82,19 @@ margin-bottom: 5px;
 text-transform: uppercase;
 border-bottom: 5px solid rgb(221, 221, 221);
 padding: 20px 10px;
+font-family: 'Times New Roman';
 }
 
 h4 {
   line-height: 20px;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
   display: block;
   }
 
 .pst-content h4{
 color:#7DC3E8;
 font-weight: 600;
+font-family: 'Times New Roman';
 }
 
 .post1-img {
@@ -111,6 +114,8 @@ display: inline-block;
 width: 55%;
 height: 60%;
 margin-left: 10px;
+padding-top: 15px;
+
 }
 
 .pst-content p {
@@ -119,7 +124,7 @@ margin: 1px 2px 1px;
 font-size: 23px;
 word-wrap: break-word;
 text-align: justify;
-font-family: 'Noto Sans Khojki';
+font-family: 'Times New Roman';
 }
 .pst-content span{
   font-weight: 600;
@@ -136,7 +141,7 @@ cursor: pointer;
 text-align: center;
 position: relative;
 left: 80px;
-font-family: 'Noto Sans Khojki';
+font-family: 'Times New Roman';
 }
 
 .button-blog:hover {
@@ -157,8 +162,8 @@ font-family: 'Noto Sans Khojki';
 }
 
 .container-titleB1 h2 {
+  font-family: 'Times New Roman';
   font-size: 40px;
-  font-family: 'Noto Sans Khojki';
   color: #ffffff;
 }
 .container-post .post1-img{
@@ -224,7 +229,7 @@ font-family: 'Noto Sans Khojki';
 .search-option input, input[type="text"]{
 box-shadow: none !important;
 font-size: 23px;
-font-family: 'Noto Sans Khojki';
+font-family: 'Times New Roman';
 }
 
 

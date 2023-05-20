@@ -4,7 +4,7 @@ body {
 
 /* Estilos del banner */
 .container_banner {
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@ body {
   text-align: center;
   font-size: 3em;
   text-decoration: none;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
   align-items: center;
 }
 
@@ -84,7 +84,7 @@ body {
   cursor: pointer;
   border-radius: 80px;
   border: none;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 
@@ -98,7 +98,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 
@@ -125,7 +125,7 @@ body {
   margin: 20px 10px;
   text-align: center;
   width: 60%;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 .sedes-div img {
@@ -137,7 +137,7 @@ body {
   color: #000000;
   font-size: 35px;
   margin-bottom: 10px;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 .sedes-div button {
@@ -149,7 +149,7 @@ body {
   font-size: 18px;
   cursor: pointer;
   border-radius: 10px;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 .sedes-div button:hover {
@@ -159,12 +159,12 @@ body {
 
 
 /* Estilos Procedimientos */
-.container-procedimientos {
+.container-procedimientos-home {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 
@@ -173,7 +173,7 @@ body {
   margin: 20px;
   height: 380px;
   text-align: center;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
   position: relative;
   overflow: hidden;
 }
@@ -204,7 +204,7 @@ body {
   top: 20px;
   cursor: pointer;
   border-radius: 10px;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 .procedimientos button:hover {
@@ -255,6 +255,7 @@ body {
   color: #4fafd2;
   align-content: center;
   font-weight: bold;
+  font-family: 'Times New Roman';
 }
 
 .p-blog {
@@ -262,9 +263,11 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
+  font-family: 'Times New Roman';
 }
 
 .btn-blog {
+  font-family: 'Times New Roman';
   padding: 10px 20px;
   font-size: 16px;
   background-color: #249bad;
@@ -299,7 +302,7 @@ body {
 .barra h2{
   font-size: 45px;
   color: #ffffff;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
 }
 
 .barra-2 {
@@ -319,7 +322,7 @@ body {
 .barra-2 h2 {
   font-size: 45px;
   color: #ffffff;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
 }
 
 
@@ -339,7 +342,7 @@ body {
 .barra-3 h2 {
   font-size: 45px;
   color: #5FFDFF;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
 }
 
 
@@ -361,7 +364,7 @@ body {
 .barra5 h2 {
   font-size: 45px;
   color: #ffffff;
-  font-family: 'Noto Sans Khojki';
+  font-family: 'Times New Roman';
 }
 
 .container-wrapper-2 {
@@ -400,7 +403,7 @@ body {
 .content-contacto h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
 }
 
 .content-contacto p {
@@ -408,7 +411,7 @@ body {
   line-height: 1.5;
   margin-bottom: 10px;
   text-align: justify;
-  font-family: 'Noto Sans Khojki', sans-serif;
+  font-family: 'Times New Roman';
   position: relative;
   left: 0; /* Ajusta el valor izquierdo para alinear el texto a la izquierda */
   top: 0; /* Ajusta el valor top según tus necesidades */
@@ -428,6 +431,7 @@ body {
   position: relative;
   left: 450px;
   top:34px;
+  font-family: 'Times New Roman';
 }
 
 .btn-contacto:hover {
@@ -488,6 +492,7 @@ body {
           font-size: 20px; /* Ajusta el tamaño de fuente en dispositivos más pequeños */
           margin: 20px; /* Ajusta el margen en dispositivos más pequeños */
           top: 0; /* Elimina el desplazamiento vertical */
+          font-family: 'Times New Roman';
         }
         
         

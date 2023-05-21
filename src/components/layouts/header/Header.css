@@ -1,42 +1,22 @@
+
 .menu {
-
-	font-family: 'Wix Madefor Display', sans-serif;
-	font-family: 'Wix Madefor Display', sans-serif;
+	font-family: "Noto Sans Khojki";
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	background-color: #000000;
-	height: 8vh;
+	height: 10vh;
 	z-index: 9999;
-}
-
-.menu1A {
-	font-family: '';
-	font-family: 'Times New Roman';
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: #000000;
-	height: 8vh;
-	z-index: 9999;
+	position: relative;
+	padding: 10px;
 }
 
 h1 {
-	font-family: 'Wix Madefor Display', sans-serif;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	color: var(--font-color);
-	margin: 0;
-	font-family: 'Wix Madefor Display', sans-serif;
-	font-family: 'Wix Madefor Display', sans-serif;
+	font-family: "Noto Sans Khojki";
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	color: var(--font-color);
@@ -44,12 +24,13 @@ h1 {
 	color: #ffffff;
 }
 
-h1 span {
-	font-family: 'Wix Madefor Display', sans-serif;
-	font-family: 'Wix Madefor Display', sans-serif;
-	color: #5ffdff;
+img {
+	cursor: pointer;
 }
 
+.menu li {
+	margin: 0.15rem;
+}
 
 .menu ul {
 	margin: 0;
@@ -58,23 +39,6 @@ h1 span {
 	justify-content: center;
 	align-items: center;
 	list-style: none;
-}
-
-.menu li {
-	margin: 0.15rem;
-}
-
-.menu1A ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	list-style: none;
-}
-
-.menu1A li {
-	margin: 0.15rem;
 }
 
 .links {
@@ -88,7 +52,7 @@ h1 span {
 	color: #5ffdff;
 }
 
-.links+.dropdown {
+.links + .dropdown {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -110,8 +74,6 @@ h1 span {
 .icono-inicio {
 	border-radius: 50%;
 	width: 50px;
-	cursor: pointer;
-	filter: invert(100%);
 	height: 50px;
 }
 
@@ -125,22 +87,6 @@ h1 span {
 	height: 35px;
 }
 
-
-.menu h1 {
-	text-align: left;
-	font-family: 'Times New Roman';
-
-	font-family: 'Times New Roman';
-	margin-left: 1rem;
-}
-
-.menu1A h1 {
-	text-align: left;
-	font-family: 'Noto Sans Khojki';
-	right: 214px;
-
-}
-
 .container2 {
 	display: flex;
 	justify-content: center;
@@ -150,20 +96,11 @@ h1 span {
 	padding: 0;
 }
 
-
-
-
 .container2 li {
 	margin-left: 1rem;
 	font-size: medium;
 	margin-right: 10px;
 }
-
-.span {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-}
-
 .dropdown-wrapper {
 	position: relative;
 }
@@ -193,67 +130,68 @@ h1 span {
 	margin-right: 2rem;
 }
 
-
-
+@media screen and (min-width: 769px) {
+	.toggle-menu {
+		display: none;
+	}
+	.icono-mapa2{
+		display: none;
+	}
+}
 @media screen and (max-width: 768px) {
 	.menu {
+		flex-direction: column;
+		justify-content: center;
 		height: auto;
+	}
+	.toggle-menu {
+		width: 40px;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		cursor: pointer;
+		filter: invert(1);
+		width: 40px;
+	}
+	.container2 {
+		display: none;
+	}
+	.container3 {
+		background-color: #0000009a;
+		font-size: small;
+		flex-direction: row-reverse;
+		white-space: nowrap;
+	}
+	.links2{
+		flex-direction: row-reverse;
+		white-space: nowrap;
 	}
 
 	.menu ul {
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 	}
 
 	.menu li {
-		margin: 0.5rem 0;
+		margin: 1rem 0;
 	}
-
-	.links {
-		display: block;
-		padding: 0.5rem 1rem;
+	.icono-inicio {
+		flex-shrink: 0;
 	}
-
-	.links:hover {
-		transform: none;
+	.icono-mapa2 {
+		position: absolute;
+		margin-right:300px ;
+		margin-bottom: 20px;
 	}
-
-	.links+.dropdown {
-		position: static;
+	.icono-inicio-wrapper {
+		margin-left: 290px;
+		margin-bottom: 150px;
+		position: absolute;
+	}
+	.icono-mapa{
 		display: none;
-		margin: 0;
-		padding: 0;
-		border: none;
-		box-shadow: none;
-		background-color: transparent;
-		color: #ffffff;
 	}
-
 	.dropdown-button {
-		display: inline-block;
-		padding: 0;
-		margin-right: 0.5rem;
-		color: #ffffff;
-		text-decoration: underline;
-	}
-
-	.dropdown-button:hover+.dropdown {
-		display: block;
-	}
-
-	.logo {
-		margin-right: auto;
-	}
-
-	.icon-container {
-		display: none;
-	}
-
-	.menu h1 {
-		margin-left: 0;
-	}
-
-	.container2 {
-		display: none;
+		font-size: small;
 	}
 }

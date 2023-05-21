@@ -5,6 +5,7 @@ import './Header.css'
 
 export const Header = () => {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+  const [isOpen, setIsOpen] = useState(false);
 
   const [logoImage, setLogoImage] = useState("https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png");
 
@@ -29,49 +30,96 @@ export const Header = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header>
-      <div className="menu1A">
+    <header className="Header_Header">
+      <div className="menu">
         <a href="#home"><img className="logo" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png" alt="" /></a>
+        <img className="icono-mapa2" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
         <h1>
-          <span>Fresh </span> Smile <span> Cmills</span>
+            <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
         <ul>
+          <div className="toggle-menu">
+            <img onClick={toggleMenu} className="icon-hamburguer" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png" />
+            {isOpen && (
+              <div className="container3">
+                <li>
+                  <Link className="links2" to="/Home">
+                    Inicio
+                  </Link>
+                </li>
+                <li>
+                  <Link className="links2" to="/Nosotros">
+                    Nosotros
+                  </Link>
+                </li>
+                <li>
+                  <Link className="links" to="/Procedimientos">
+                    Procedimientos
+                  </Link>
+                </li>
+                <li>
+                  <Link className="links2" to="/Clinica">
+                    Sedes
+                  </Link>
+                </li>
+                <li>
+                  <Link className="links2" to="/Blog">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link className="links2" to="/Contacto">
+                    Contacto
+                  </Link>
+                </li>
+                <li>
+                  <Link className="links2" to="/Cita">
+                    Mis citas
+                  </Link>
+                </li>
+              </div>
+            )}
+          </div>
           <div className="container2">
+
             <li>
-              <Link to="/Home">
-                <a className="links" href="#home">Inicio</a>
+              <Link className="links" to="/Home">
+                Inicio
               </Link>
             </li>
             <li>
-              <Link to="/Nosotros">
-                <a className="links" href="#about">Nosotros</a>
+              <Link className="links" to="/Nosotros">
+                Nosotros
               </Link>
             </li>
             <li>
-              <Link to="/Procedimientos">
-                <a className="links" href="/#">Procedimientos</a>
+              <Link className="links" to="/Procedimientos">
+                Procedimientos
               </Link>
             </li>
             <li>
-              <Link to="/Clinica">
-                <a className="links" href="/#">Sedes</a>
+              <Link className="links" to="/Clinica">
+                Sedes
               </Link>
             </li>
             <li>
-              <Link to="/Blog">
-                <a className="links" href="/#">Blog</a>
+              <Link className="links" to="/Blog">
+                Blog
               </Link>
             </li>
             <li>
-              <Link to="/Contacto">
-                <a className="links" href="/#">Contacto</a>
+              <Link className="links" to="/Contacto">
+                Contacto
               </Link>
             </li>
             <li>
-              <Link to="/Cita">
-                <a className="links" href="/#">Mis citas</a>
+              <Link className="links" to="/Cita">
+                Mis citas
               </Link>
             </li>
           </div>
@@ -97,10 +145,21 @@ export const Header = () => {
             </div>
           )}
           {!isAuthenticated && (
-            <img className="icono-inicio" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png" alt="Inicio" onClick={handleLogin} />
+            <img className="icono-inicio" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png" alt="Inicio" onClick={handleLogin} />
           )}
         </div>
+
+
+        <Link to="/Clinica">
+          <a href="#clinica">
+            <div className="icon-container">
+              <img className="icono-mapa" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
+            </div>
+          </a>
+        </Link>
       </div>
+
     </header>
+
   );
 };

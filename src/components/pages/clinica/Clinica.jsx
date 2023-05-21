@@ -10,13 +10,30 @@ export const Clinica = () => {
   return (
     <>
 
+
+<div className="container_psedes">
+        {/* <img className="" src="./public/banner.jpg" alt="" /> */}
+        <div className="container_home1A">
+          <h1>¡Sonríe sin límites desde nuestras sedes!</h1>
+         
+        </div>
+        </div>
+
+
+         {/* Chat WhatsAPP */}
+   <div class="space-wpp">
+        <a href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información." class="float" target="_blank ">
+          <i class="fa fa-whatsapp my-float"></i>
+        </a>
+      </div>
+
       <h2 className="Sedes">Nuestras sedes</h2>
 
 
       <div class="container-wrapper-sede">
         <div className="container-sede">
           <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852205/Fresh_Smile_Cmills/SedeArmenia_idugit.png"
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684603288/Fresh_Smile_Cmills/Sede_de_Armenia_Visitanos_y_disfruta_de_nuestros_servicios_snoego.png"
             alt="sede2"
           />
           <div className="content-div">
@@ -43,7 +60,7 @@ export const Clinica = () => {
         </div>
         <div className="container-sede">
           <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852197/Fresh_Smile_Cmills/sedeNeiva_fuo2wn.jpg"
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852196/Fresh_Smile_Cmills/sedeQuimbaya_zprqsj.jpg"
             alt="sede2"
           />
           <div className="content-div">

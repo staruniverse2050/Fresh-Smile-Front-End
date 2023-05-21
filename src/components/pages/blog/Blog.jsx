@@ -72,10 +72,9 @@ export const Blog = () => {
             <div className="pst-content">
               <h4>ODONTOESTETIC</h4>
               <p>
-              Odontoestetic es una clínica privada prestadora de servicios de salud oral,
-               con mas de 15 años de experiencia, especializada en áreas de educación, 
-               promoción y prevención de salud bucal, rehabilitación oral, endodoncia, 
-               periodoncia, ortodoncia y estética dental.</p>
+              Odontoestetic es una clínica privada prestadora de servicios de salud oral, con más de 15 años de experiencia, especializada 
+              en áreas de educación, promoción
+               y prevención de salud bucal, rehabilitación oral, endodoncia, periodoncia, ortodoncia y estética dental.</p>
                <p className="pst-content">
                <span>Sede central:</span> Carrera 12 #1A Norte, Armenia 630004
               </p>
@@ -95,10 +94,9 @@ export const Blog = () => {
             <div className="pst-content">
               <h4>PRODENTALES</h4>
               <p>
-              El Dr.Oscar Zapata ofrece odontología general y especializada 
-              para pacientes de todas las edades. Sus servicios abarcan la 
-              prevención, el diagnóstico y el tratamiento de condiciones 
-              especiales o enfermedades que afectan a los dientes.</p>
+              El Dr. Óscar Zapata ofrece odontología general y especializada para pacientes de todas las edades. 
+              Sus servicios abarcan la prevención, 
+              el diagnóstico y el tratamiento de condiciones especiales o enfermedades que afectan a los dientes.</p>
               <p className="pst-content">
                <span>Sede central:</span> Cl 3 N 12-05 Armenia - Quindío, Colombia
               </p>

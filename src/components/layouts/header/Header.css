@@ -1,7 +1,7 @@
 .menu {
 
-	font-family: 'Times New Roman';
-	font-family: 'Times New Roman';
+	font-family: 'Wix Madefor Display', sans-serif;
+	font-family: 'Wix Madefor Display', sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .menu1A {
-	font-family: 'Times New Roman';
+	font-family: '';
 	font-family: 'Times New Roman';
 	display: flex;
 	justify-content: center;
@@ -30,13 +30,13 @@
 }
 
 h1 {
-	font-family: 'Times New Roman';
+	font-family: 'Wix Madefor Display', sans-serif;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	color: var(--font-color);
 	margin: 0;
-	font-family: 'Times New Roman';
-	font-family: 'Times New Roman';
+	font-family: 'Wix Madefor Display', sans-serif;
+	font-family: 'Wix Madefor Display', sans-serif;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	color: var(--font-color);
@@ -45,8 +45,8 @@ h1 {
 }
 
 h1 span {
-	font-family: 'Times New Roman';
-	font-family: 'Times New Roman';
+	font-family: 'Wix Madefor Display', sans-serif;
+	font-family: 'Wix Madefor Display', sans-serif;
 	color: #5ffdff;
 }
 

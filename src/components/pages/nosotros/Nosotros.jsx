@@ -24,14 +24,7 @@ export const Nosotros = () => {
     Nuestro equipo de profesionales altamente capacitados y especializados trabaja de la mano con cada paciente para diseñar un plan de tratamiento 
     individualizado, teniendo en cuenta sus necesidades y objetivos específicos. Utilizamos las últimas tecnologías y técnicas en ortodoncia para 
     garantizar resultados óptimos y duraderos.</p> 
-    <p className="text-us">
-    En Fresh Smile Cmills, nos enorgullece ofrecer un ambiente acogedor y amigable, donde nuestros pacientes se sientan cómodos y confiados durante 
-    todo su proceso de tratamiento. Nuestro objetivo es crear una experiencia positiva y satisfactoria para cada persona que nos visita, brindando 
-    atención personalizada y cuidado de calidad en cada etapa del camino.</p>
-    <p className="text-us">
-    Además de nuestros servicios de ortodoncia, también brindamos asesoramiento y educación integral sobre higiene oral, para que nuestros pacientes 
-    puedan mantener una sonrisa saludable a largo plazo. Creemos en la importancia de la prevención y el cuidado continuo para lograr y preservar 
-    una salud bucal óptima.</p>
+   
     <p className="text-us">
     Si estás buscando una clínica de ortodoncia comprometida con la excelencia, la innovación y el bienestar de sus pacientes, Fresh Smile Cmills 
     es tu mejor elección. Permítenos ayudarte a transformar tu sonrisa y mejorar tu calidad de vida. ¡Contáctanos hoy mismo y descubre el poder 
@@ -62,7 +55,7 @@ export const Nosotros = () => {
     <div>
       <h2 className="icon-textDM">Visión</h2>
       <p className="icon-subtextEM">
-      Ser reconocidos como el consultorio odontológico líder en nuestra comunidad, brindando una atención</p>
+      Ser reconocidos como el consultorio odontológico líder en nuestra comunidad, brindando una atención al cliente</p>
     </div>
     </div>
     <div className="icon-rowB">
@@ -74,42 +67,6 @@ export const Nosotros = () => {
     </div>
     </div>
 
-
-
-
-
-  {/* <div className="icon-containe">
-  <img className="icon-containe" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825567/Fresh_Smile_Cmills/cohete_wdjrsc.png" alt="" /> 
-  <span className="text">Misión</span>
-  <span className="subtext">La misión de nuestro consultorio odontológico </span>
-  <span className="subtext">ser proporcionar una atención dental  </span>
-  <span className="subtext">de alta calidad y personalizada a los pacientes  </span>
-  <span className="subtext">promoviendo la salud oral y mejorando </span>
-  <span className="subtext">la salud de nuestros pacientes </span>
-
-</div>
-
-<div className="icon-containe">
-  <img className="icon-containe" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
-  <span className="text">Visión</span>
-  <span className="subtext">Ser reconocidos como el consultorio  </span>
-  <span className="subtext">odontológico líder en nuestra  </span>
-  <span className="subtext">comunidad, brindando una atención </span>
-
-
-</div>
-</div>
-
-
-<div className="icon-containe">
-  <img className="icon-containe" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/ojo_imak5s.png" alt="" /> 
-  <span className="text">Valores</span>
- 
-  <span className="subtext">Profesionalismo: ofrecer servicios </span>
-  <span className="subtext"> odontológicos de alta calidad basados  </span>
-  <span className="subtext">en conocimientos científicos </span>
-
-</div> */}
 </div>
 
 <Footer />

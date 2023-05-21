@@ -104,8 +104,7 @@ export const Home = () => {
           <div className="content">
             <h2>Odontoestetic</h2>
             <p className="p-blog">
-              Odontoestetic es una clínica privada prestadora de servicios de
-              salud oral, con mas de 15 años de experiencia.
+            Odontoestétic es una clínica privada prestadora de servicios de salud oral, con más de 15 años de experiencia
             </p>
             <button className="btn-blog">
               <Link to="/Blog">
@@ -124,9 +123,9 @@ export const Home = () => {
           <div className="content">
             <h2>Dentix</h2>
             <p className="p-blog">
-              Dentix es una empresa española de servicios dentales fundada en
-              2010 por Ángel Lorenzo. Es una empresa familiar cuyo modelo de
-              negocio se basa en clínicas propias, no en acuerdos de franquicia.{" "}
+            Dentix es una empresa española de servicios dentales fundada en 2010 por Ángel Lorenzo. Es una empresa familiar 
+            cuyo modelo de negocio se basa en clínicas propias,
+             no en acuerdos de franquicia{" "}
             </p>
             <button className="btn-blog">
               <Link to="/Blog">
@@ -166,10 +165,8 @@ export const Home = () => {
           <div className="content">
             <h2>Prodentales</h2>
             <p className="p-blog">
-              El Dr.Oscar Zapata ofrece odontología general y especializada para
-              pacientes de todas las edades. Sus servicios abarcan la
-              prevención, el diagnóstico y el tratamiento de condiciones
-              especiales o enfermedades que afectan a los dientes.
+            El Dr. Óscar Zapata ofrece odontología general y especializada para pacientes de todas las edades. Sus servicios
+             abarcan la prevención, el diagnóstico y el tratamiento de condiciones especiales o enfermedades que afectan a los dientes.
             </p>
             <button className="btn-blog">
               <Link to="/Blog">

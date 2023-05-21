@@ -464,6 +464,11 @@ body {
           margin: 10px 10px 0; /* Ajustar los márgenes en dispositivos más pequeños */
         }
         .container-blog img {
+          width: 80%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
+          max-height: auto; /* Ajustar la altura automáticamente */
+          margin-right: 0; /* Eliminar el margen derecho en dispositivos más pequeños */
+        }
+        .container-blog img {
           width: 30%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
           max-height: auto; /* Ajustar la altura automáticamente */
           margin-right: 0; /* Eliminar el margen derecho en dispositivos más pequeños */
@@ -515,7 +520,7 @@ body {
           width: 700px;
           margin: 40px auto; /* Centra horizontalmente el elemento */
           margin-left: 0;
-          padding: 0px;
+          padding: 5px;
           background-color: #000000;
           text-align: left;
         }
@@ -554,6 +559,15 @@ body {
           margin-bottom: 8px; /* Ajusta el margen inferior para dispositivos más pequeños */
         }
        
+        .container-procedimientos-home {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .procedimientos {
+          width: 100%;
+          max-width: 450px;
+        }
 }
 
  

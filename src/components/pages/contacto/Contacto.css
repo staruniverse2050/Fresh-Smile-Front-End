@@ -35,7 +35,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
   }
   
 
@@ -44,7 +44,7 @@
 	font-size: 25px;
 	color: #ffffff;
 	margin-top: 15px;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 }
 
 .container {
@@ -88,7 +88,7 @@
 	color: #5ffdff;
 	flex-direction: column;
 	font-weight: 500;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 }
 
 .container .contactInfo .box .text p {
@@ -98,7 +98,7 @@
 	color: rgb(252, 248, 248);
 	flex-direction: column;
 	font-weight: 300;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 }
 
 input,
@@ -116,7 +116,7 @@ textarea {
 
 .contactForm h2 {
 	font-size: 24px;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 	color: rgb(0, 0, 0);
 	font-weight: 500;
 	/* margin-left: 25px; */
@@ -140,7 +140,7 @@ textarea {
 	border-bottom: 2px solid #b1a1a1;
 	outline: none;
 	resize: none;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 	height: 28px;
 	margin-left: 10px;
 }
@@ -151,7 +151,7 @@ input[type="text"] {
 	position: absolute;
 	left: 18px;
 	/* padding: 1px 0; */
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 	/* font-size: 10px; */
 	margin: 14px 0;
 	pointer-events: none;
@@ -167,7 +167,7 @@ input[type="text"] {
 	color: rgb(17, 17, 17);
 	font-size: 13px;
 	transform: translateY(-27px);
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 }
 
 .contactForm .inputBox input[type="submit"] {
@@ -184,7 +184,21 @@ cursor: pointer;
 text-align: center;
 position: relative;
 left: 38%;
-font-family: 'Times New Roman';
+font-family: 'Noto Sans Khojki';
+	/* background-color: #249bad;
+	color: hwb(0 0% 100%);
+	border-radius: 55px;
+	cursor: pointer;
+	padding: 10px 2opx;
+	font-size: 18px;
+	height: 78px;
+	width: 58%;
+	font-family: 'Noto Sans Khojki';
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto; 
+	font-size: 23px;  */
 }
 .contactForm .inputBox input[type="submit"]:hover {
 	background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);
@@ -199,13 +213,66 @@ font-family: 'Times New Roman';
 	text-align: left; /* mover el texto hacia la izquierda */
 	margin-left: 10px; /* agregar un margen izquierdo */
 	color: #000000;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 }
 
 .post-text {
 	text-align: center;
-	font-family: 'Times New Roman';
+	font-family: 'Noto Sans Khojki';
 	padding: 15px;
 	font-size: 22px; /*tamaño de letra del span*/
 }
 
+
+@media screen and (max-width: 767px) {
+  .contact {
+    height: auto;
+    padding: 2px;
+		
+  }
+  
+  .contact .content h2 {
+    font-size: 25px;
+  }
+  
+  .contact .content p {
+    font-size: 15px;
+  }
+
+	.container .contactInfo .box .text h3 {
+    font-size: 20px;
+    
+  }
+	.container .contactInfo .box .text p {
+		font-size: 15px;
+		
+	}
+  .container {
+    flex-direction: column;
+		
+  }
+  
+  .container .contactInfo {
+    width: 50%;
+		padding: 5%;
+  }
+
+	.contactForm {
+    width: 70%;
+    padding: 20px;
+		
+  }
+  
+  .contactForm h2 {
+    font-size: 25px;
+    
+  }
+  
+  .contactForm {
+    width: 80%;
+		margin: 10%;
+		
+    margin-top: 10px;
+  }
+ 
+}

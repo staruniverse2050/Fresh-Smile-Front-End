@@ -43,7 +43,7 @@ export const Home = () => {
             alt="sede 1"
           />
           <button>
-            <Link to="/Nosotros">
+            <Link to="/Procedimientos">
               <a class="linksprocedimientos" href="#nosotros">
                 Diseño de sonrisa
               </a>
@@ -57,7 +57,7 @@ export const Home = () => {
             alt="sede 2"
           />
           <button>
-            <Link to="/Nosotros">
+            <Link to="/Procedimientos">
               <a class="linksprocedimientos" href="#nosotros">
                 Blanqueamiento
               </a>
@@ -71,7 +71,7 @@ export const Home = () => {
             alt="sede 3"
           />
           <button>
-            <Link to="/Nosotros">
+            <Link to="/Procedimientos">
               <a class="linksprocedimientos" href="#nosotros">
                 Implantes
               </a>

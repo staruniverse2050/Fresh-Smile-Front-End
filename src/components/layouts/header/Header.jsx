@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import './Header.css'
+import "./Header.css";
 
 export const Header = () => {
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
 
-  const [logoImage, setLogoImage] = useState("https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png");
+  const [logoImage, setLogoImage] = useState(
+    "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
+  );
 
   useEffect(() => {
     if (isAuthenticated) {
       setLogoImage(user.picture);
     } else {
-      setLogoImage("https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png");
+      setLogoImage(
+        "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
+      );
     }
   }, [isAuthenticated, user]);
 
@@ -29,7 +33,7 @@ export const Header = () => {
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
-  }
+  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -37,14 +41,23 @@ export const Header = () => {
   return (
     <header className="Header_Header">
       <div className="menu">
-        <a href="#home"><img className="logo" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png" alt="" /></a>
-        <img className="icono-mapa2" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
+        <a href="#home">
+          <img
+            className="logo"
+            src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
+            alt=""
+          />
+        </a>
         <h1>
-            <span>Fresh</span>Smile<span>Cmills</span>
+          <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
         <ul>
           <div className="toggle-menu">
-            <img onClick={toggleMenu} className="icon-hamburguer" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png" />
+            <img
+              onClick={toggleMenu}
+              className="icon-hamburguer"
+              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
+            />
             {isOpen && (
               <div className="container3">
                 <li>
@@ -58,7 +71,7 @@ export const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="links" to="/Procedimientos">
+                  <Link className="links2" to="/Procedimientos">
                     Procedimientos
                   </Link>
                 </li>
@@ -86,7 +99,6 @@ export const Header = () => {
             )}
           </div>
           <div className="container2">
-
             <li>
               <Link className="links" to="/Home">
                 Inicio
@@ -135,7 +147,11 @@ export const Header = () => {
                 <div className="dropdown">
                   <ul>
                     <li>
-                      <a className="dropdown-button" href="#" onClick={handleLogout}>
+                      <a
+                        className="dropdown-button"
+                        href="#"
+                        onClick={handleLogout}
+                      >
                         Cerrar sesión
                       </a>
                     </li>
@@ -145,21 +161,18 @@ export const Header = () => {
             </div>
           )}
           {!isAuthenticated && (
-            <img className="icono-inicio" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png" alt="Inicio" onClick={handleLogin} />
+            <img
+              className="icono-inicio"
+              src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
+              alt="Inicio"
+              onClick={handleLogin}
+            />
           )}
         </div>
-
-
         <Link to="/Clinica">
-          <a href="#clinica">
-            <div className="icon-container">
-              <img className="icono-mapa" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_map_ttjewf.png" alt="" />
-            </div>
-          </a>
+          <a href="#clinica"></a>
         </Link>
       </div>
-
     </header>
-
   );
 };

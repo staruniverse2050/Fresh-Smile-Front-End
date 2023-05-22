@@ -1,0 +1,145 @@
+.history-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852207/Fresh_Smile_Cmills/galeria8_g8lbub.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 87.6vh;
+  }
+  .history-title {
+    padding: 25px 150px 35px 35px;
+  }
+  .history-title h2 {
+    font-size: 55px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Times New Roman";
+  }
+  .history-banner .history-title p {
+    text-align: center;
+    font-size: 23px;
+    color: #ffffff;
+    margin-top: 45px;
+    font-weight: 600;
+    font-family: "Times New Roman";
+  }
+  .history-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .history-box1 {
+    width: 25%;
+    padding: 1em;
+    border-radius: 25px;
+    background: rgba(250, 245, 245, 0.5);
+  }
+  .history-box1 .history-input {
+    position: relative;
+    width: 100%;
+    margin-top: 2px;
+  }
+  .history-box1 .history-input input {
+    width: 100%;
+    padding: 7px 0;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid #b1a1a1;
+    outline: none;
+    resize: none;
+    font-family: "Times New Roman";
+    height: 30px;
+  }
+  .history-box1 .history-input,
+  input[type="text"] {
+    font-size: 20px;
+  }
+  .history-box1 .history-input span {
+    position: absolute;
+    left: 10px;
+    font-family: "Times New Roman";
+    margin: 25px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(21, 20, 20);
+    font-size: 16px; 
+  }
+  .history-box1 .history-input input:focus ~ span,
+  .history-box1 .history-input input:valid ~ span {
+    color: rgb(17, 17, 17);
+    font-size: 17px;
+    transform: translateY(-35px);
+    font-family: "Times New Roman";
+  }
+  .history-box1 .history-input button[type="submit"] {
+    font-size: 16px;
+    background-color: #249bad;
+    color: white;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 30%;
+  margin-left: 34%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Times New Roman";
+  }
+  .history-box1 .history-input button[type="submit"]:hover {
+    background: radial-gradient(
+      circle at 81.8% 27.73%,
+      #419985 0,
+      #38998c 6.25%,
+      #309993 12.5%,
+      #279999 18.75%,
+      #2099a0 25%,
+      #1c99a6 31.25%,
+      #1c98ab 37.5%,
+      #2197b0 43.75%,
+      #2996b5 50%,
+      #3395b9 56.25%,
+      #3e93bc 62.5%,
+      #4992bf 68.75%,
+      #5490c0 75%,
+      #5f8ec1 81.25%,
+      #6a8cc1 87.5%,
+      #748ac0 93.75%,
+      #7e87be 100%
+    );
+  }
+  .history-input label {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 10px;
+    color: #000000;
+    font-family: "Times New Roman";
+  }
+  @media screen and (max-width: 768px) {
+      .history-title h2 {
+        font-size: 40px;
+      }
+    
+      .history-title p {
+        font-size: 18px;
+      }
+    
+      .history-box1 {
+        width: 100%;
+      }
+    
+      .history-box1 .history-input button[type="submit"] {
+        width: 80%;
+      }
+  }

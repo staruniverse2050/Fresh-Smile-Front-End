@@ -286,16 +286,12 @@ body {
 /* Estilos Barras */
 .barra {
   width: 100%;
-  /* padding-top: 30px; */
   margin: 20px auto;
-  /* border: 2px solid #000; */
-  /* border-radius: 20px; */
   padding: 10px;
   position: relative;
   bottom: 20px;
   background-color: #000000;
   text-align: center;
-  /* margin: 20px 10px; */
 }
 
 .barra h2{
@@ -306,14 +302,10 @@ body {
 
 .barra-2 {
   width: 100%;
-  /* padding-top: 30px; */
   margin: 20px auto;
-  /* border: 2px solid #000; */
-  /* border-radius: 20px; */
   padding: 10px;
   background-color: #000000;
   text-align: center;
-  /* margin: 20px 10px; */
   top: 25px;
   position: relative;
 }
@@ -329,13 +321,9 @@ body {
   width: 50%;
   padding-top: 30px;
   margin: 20px auto;
-  /* border: 2px solid #000; */
   border-radius: 15px;
   padding: 10px;
-  /* background-color: #8dd1e0; */
-  /* background: rgb(177, 175, 175); */
   text-align: center;
-  /* margin: 20px 10px; */
 }
 
 .barra-3 h2 {
@@ -348,14 +336,10 @@ body {
 /* Estilos del contacto */
 .barra5 {
   width: 100%;
-  /* padding-top: 30px; */
   margin: 20px auto;
-  /* border: 2px solid #000; */
-  /* border-radius: 20px; */
   padding: 10px;
   background-color: #000000;
   text-align: center;
-  /* margin: 20px 10px; */
   top: 25px;
   position: relative;
 }

@@ -8,14 +8,9 @@ export const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="footer-content">
-              {/* <div className="title-info">
-          <h4>Fresh Smile Cmills</h4> */}
-              {/* </div> */}
             </div>
-            {/* </div> */}
 
             <div className="address">
-              {/* <div className="container"> */}
               <div className="footer-content">
                 <div className="address-info">
                   <i className="fa-sharp fa-solid fa-location-dot"></i>
@@ -27,10 +22,8 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
 
           <div className="email">
-            {/* <div className="container"> */}
             <div className="footer-content">
               <div className="email-info">
                 <i className="fa-solid fa-envelope"></i>
@@ -41,10 +34,8 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
 
           <div className="phone">
-            {/* <div className="container"> */}
             <div className="footer-content">
               <div className="phone-info">
                 <i className="fa-solid fa-phone-volume"></i>
@@ -55,10 +46,8 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
 
           <div className="redes">
-            {/* <div className="container"> */}
             <div className="footer-content">
               <div className="redes-info">
                 <i className="fa-sharp fa-solid fa-heart"></i>
@@ -79,7 +68,6 @@ export const Footer = () => {
                         </a>
                       </li>
                     </ul>
-                    {/* </div> */}
                   </div>
                 </div>
               </div>

@@ -1,17 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
-import {fill} from "@cloudinary/url-gen/actions/resize";
-import {CloudinaryImage} from '@cloudinary/url-gen';
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { CloudinaryImage } from '@cloudinary/url-gen';
 import { Footer } from "../../layouts/footer/Footer";
-const myImage = new CloudinaryImage('sample', {cloudName: 'dfvxujvf8'}).resize(fill().width(100).height(150));
+const myImage = new CloudinaryImage('sample', { cloudName: 'dfvxujvf8' }).resize(fill().width(100).height(150));
 
 
 export const Home = () => {
   return (
     <>
       <div className="container_banner">
-        {/* <img className="" src="./public/banner.jpg" alt="" /> */}
         <div className="container_home">
           <h1>¡Bienvenidos a la clinica Fresh Smile Cmills!</h1>
           <div className="container-btn">
@@ -93,7 +92,6 @@ export const Home = () => {
 
       <div className="barra-2">
         <h2>Nuestro Blog</h2>
-        {/* <p>Contenido del contenedor...</p> */}
       </div>
       <div class="container-wrapper">
         <div className="container-blog">
@@ -104,7 +102,7 @@ export const Home = () => {
           <div className="content">
             <h2>Odontoestetic</h2>
             <p className="p-blog">
-            Odontoestétic es una clínica privada prestadora de servicios de salud oral, con más de 15 años de experiencia
+              Odontoestétic es una clínica privada prestadora de servicios de salud oral, con más de 15 años de experiencia
             </p>
             <button className="btn-blog">
               <Link to="/Blog">
@@ -123,9 +121,9 @@ export const Home = () => {
           <div className="content">
             <h2>Dentix</h2>
             <p className="p-blog">
-            Dentix es una empresa española de servicios dentales fundada en 2010 por Ángel Lorenzo. Es una empresa familiar 
-            cuyo modelo de negocio se basa en clínicas propias,
-             no en acuerdos de franquicia{" "}
+              Dentix es una empresa española de servicios dentales fundada en 2010 por Ángel Lorenzo. Es una empresa familiar
+              cuyo modelo de negocio se basa en clínicas propias,
+              no en acuerdos de franquicia{" "}
             </p>
             <button className="btn-blog">
               <Link to="/Blog">
@@ -165,8 +163,8 @@ export const Home = () => {
           <div className="content">
             <h2>Prodentales</h2>
             <p className="p-blog">
-            El Dr. Óscar Zapata ofrece odontología general y especializada para pacientes de todas las edades. Sus servicios
-             abarcan la prevención, el diagnóstico y el tratamiento de condiciones especiales o enfermedades que afectan a los dientes.
+              El Dr. Óscar Zapata ofrece odontología general y especializada para pacientes de todas las edades. Sus servicios
+              abarcan la prevención, el diagnóstico y el tratamiento de condiciones especiales o enfermedades que afectan a los dientes.
             </p>
             <button className="btn-blog">
               <Link to="/Blog">
@@ -190,7 +188,6 @@ export const Home = () => {
             alt=""
           />
           <div className="content-contacto">
-            {/* <h2>Prodentales</h2> */}
             <p className="p-contacto">
               Fresh Smile Cmills es una reconocida clínica de ortodoncia
               comprometida con ofrecer soluciones de alta calidad para la salud
@@ -221,7 +218,6 @@ export const Home = () => {
 
       <div className="barra-2">
         <h2>Clinica Fresh Smile Cmills</h2>
-        {/* <p>Contenido del contenedor...</p> */}
       </div>
 
       <div class="container-sedes-inicio">
@@ -272,12 +268,6 @@ export const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="barra-3">
-        <h2>Conoce nuestros procedimientos</h2>
-        <p>Contenido del contenedor...</p>
-      </div> */}
-
       <Footer />
     </>
   );

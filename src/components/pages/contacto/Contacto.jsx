@@ -7,10 +7,10 @@ const Contacto = () => {
       <section className="contact">
         <div className="container">
           <div className="contactInfo">
-          <div className="content">
-            <h2>Contáctanos</h2>
-            <p>Te brindamos nuestros servicios. Ponte en contacto con nosotros para obtener una sonrisa más saludable y hermosa.</p>
-          </div>
+            <div className="content">
+              <h2>Contáctanos</h2>
+              <p>Te brindamos nuestros servicios. Ponte en contacto con nosotros para obtener una sonrisa más saludable y hermosa.</p>
+            </div>
             <div className="box">
               <div className="icon">
                 <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852208/Fresh_Smile_Cmills/icono-direcci%C3%B3n_h51k4v.png" alt="" />

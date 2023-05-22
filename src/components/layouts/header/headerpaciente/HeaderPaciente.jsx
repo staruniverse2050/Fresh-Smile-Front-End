@@ -1,43 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 import "./Header.css";
 
-export const Header = () => {
-  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const [logoImage, setLogoImage] = useState(
-    "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
-  );
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      setLogoImage(user.picture);
-    } else {
-      setLogoImage(
-        "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
-      );
-    }
-  }, [isAuthenticated, user]);
-
-  const handleLogout = () => {
-    logout({ returnTo: window.location.origin });
-  };
-
-  const handleLogin = () => {
-    loginWithRedirect();
-  };
-
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+export const HeaderPaciente = () => {
   return (
     <header className="Header_Header">
       <div className="menu">
@@ -90,11 +55,11 @@ export const Header = () => {
                     Contacto
                   </Link>
                 </li>
-                {/* <li>
+                <li>
                   <Link className="links2" to="/Cita">
                     Mis citas
                   </Link>
-                </li> */}
+                </li>
               </div>
             )}
           </div>
@@ -129,11 +94,11 @@ export const Header = () => {
                 Contacto
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link className="links" to="/Cita">
                 Mis citas
               </Link>
-            </li> */}
+            </li>
           </div>
         </ul>
         <div className="icono-inicio-wrapper">

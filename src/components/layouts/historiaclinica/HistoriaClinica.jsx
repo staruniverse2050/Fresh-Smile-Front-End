@@ -25,76 +25,76 @@ const HistoriaClinica = () => {
 
   return (
     <>
-    <div className="history-banner">
+      <div className="history-banner">
         <div className="history-box">
           <div className="history-title">
             <h2>Historial Clinica</h2>
             <p>Llena este formulario para brindarte una mayor
-               seguridad y una salud oral impecable.
+              seguridad y una salud oral impecable.
             </p>
           </div>
           <div className="history-box1">
             <form onSubmit={handleSubmit}>
               <div className="history-input">
-              <label htmlFor="history">Fecha de la visita</label>
+                <label htmlFor="history">Fecha de la visita</label>
                 <div className="history-container">
-                <input type="date" value={fechaVisita} onChange={(e) => setFechaVisita(e.target.value)} required
-                />
-                </div>
-              <div className="history-input">
-                <div className="history-container">
-                <textarea value={problema} onChange={(e) => setProblema(e.target.value)} required 
-                />
-                 <span
-                    onClick={() => document.getElementById("problema").focus()}
-                  >
-                  Problema
-                  </span>
-                </div>
-              <div className="history-input">
-                <div className="history-container">
-                <textarea value={tratamiento} onChange={(e) => setTratamiento(e.target.value)} required 
-                />
-                  <span
-                    onClick={() => document.getElementById("tratamiento").focus()}
-                  >
-                  Tratamiento
-                  </span>
-                </div>
-              <div className="history-input">
-              <textarea value={medicamentos} onChange={(e) => setMedicamentos(e.target.value)} required
-                />
-                <span
-                onClick={() => document.getElementById("medicamentos").focus()}
-                >
-                  Medicamentos:
-                </span>
-              </div>
-              <div className="history-input">
-              <label htmlFor="history">Proxima cita</label>
-                <div className="history-container">
-                <input type="date" value={proximaCita} onChange={(e) => setProximaCita(e.target.value)} required
-                />
+                  <input type="date" value={fechaVisita} onChange={(e) => setFechaVisita(e.target.value)} required
+                  />
                 </div>
                 <div className="history-input">
-                <textarea value={notas} onChange={(e) => setNotas(e.target.value)} required
-                />
-                <span
-                onClick={() => document.getElementById("notas").focus()}
-                >
-                  Notas:
-                </span>
+                  <div className="history-container">
+                    <textarea value={problema} onChange={(e) => setProblema(e.target.value)} required
+                    />
+                    <span
+                      onClick={() => document.getElementById("problema").focus()}
+                    >
+                      Problema
+                    </span>
+                  </div>
+                  <div className="history-input">
+                    <div className="history-container">
+                      <textarea value={tratamiento} onChange={(e) => setTratamiento(e.target.value)} required
+                      />
+                      <span
+                        onClick={() => document.getElementById("tratamiento").focus()}
+                      >
+                        Tratamiento
+                      </span>
+                    </div>
+                    <div className="history-input">
+                      <textarea value={medicamentos} onChange={(e) => setMedicamentos(e.target.value)} required
+                      />
+                      <span
+                        onClick={() => document.getElementById("medicamentos").focus()}
+                      >
+                        Medicamentos:
+                      </span>
+                    </div>
+                    <div className="history-input">
+                      <label htmlFor="history">Proxima cita</label>
+                      <div className="history-container">
+                        <input type="date" value={proximaCita} onChange={(e) => setProximaCita(e.target.value)} required
+                        />
+                      </div>
+                      <div className="history-input">
+                        <textarea value={notas} onChange={(e) => setNotas(e.target.value)} required
+                        />
+                        <span
+                          onClick={() => document.getElementById("notas").focus()}
+                        >
+                          Notas:
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit">Guardar historial</button>
+                </div>
               </div>
-</div>
-</div>
-      <button type="submit">Guardar historial</button>
-      </div>
-      </div>
-      </form>
-      </div>
+            </form>
+          </div>
         </div>
       </div>
-      </>
+    </>
   );
 };
 

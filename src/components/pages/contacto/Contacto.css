@@ -1,43 +1,34 @@
 .contact {
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
 	justify-content: center;
-	/* background: url('https://images.pexels.com/photos/4269492/pexels-photo-4269492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-	background-image: linear-gradient(
-			to bottom,
+	background-image: linear-gradient(to bottom,
 			rgba(0, 0, 0, 0.5),
-			rgba(0, 0, 0, 0.5)
-		),
+			rgba(0, 0, 0, 0.5)),
 		url("https://images.pexels.com/photos/6528851/pexels-photo-6528851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-	/* opacity: 0.8;  */
-	/* background-position: cover; */
 	background-size: cover;
-	/* background-repeat: no-repeat; */
 	width: 100%;
 	height: 94.2vh;
 	padding: 60px;
 }
 
-/* .contact .content {
-    max-width: 800px;
-    text-align: center;
-} */
 .content {
-	padding: 25px 25px 35px 25px; /* Ajusta los valores según tus necesidades */
-  }
-  
-  .content h2 {
+	padding: 25px 25px 35px 25px;
+	/* Ajusta los valores según tus necesidades */
+}
+
+.content h2 {
 	font-size: 55px;
 	font-weight: 100;
 	color: #ffffff;
-	margin-bottom: 10px; /* Ajusta el valor según tus necesidades */
+	margin-bottom: 10px;
+	/* Ajusta el valor según tus necesidades */
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	font-family: 'Noto Sans Khojki';
-  }
-  
+}
+
 
 .contact .content p {
 	text-align: center;
@@ -50,7 +41,6 @@
 .container {
 	width: 100%;
 	display: flex;
-    /* flex-direction: ; */
 	justify-content: center;
 	align-items: center;
 	margin-top: 20px;
@@ -63,8 +53,7 @@
 }
 
 .container .contactInfo .box {
-	/* position: relative; */
-    margin-top: 30px;
+	margin-top: 30px;
 	padding: 10px 0;
 	display: flex;
 }
@@ -73,7 +62,6 @@
 	min-width: 50px;
 	height: 70px;
 	width: 60px;
-	/* background: #fff; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -104,11 +92,11 @@
 input,
 textarea {
 	background: rgba(250, 245, 245, 0.5);
-	
+
 }
 
 .contactForm {
-    margin-top: 15vh;
+	margin-top: 15vh;
 	width: 30%;
 	padding: 36px;
 	background: rgba(250, 245, 245, 0.5);
@@ -119,7 +107,6 @@ textarea {
 	font-family: 'Noto Sans Khojki';
 	color: rgb(0, 0, 0);
 	font-weight: 500;
-	/* margin-left: 25px; */
 	text-align: center;
 	padding-bottom: 10px;
 }
@@ -144,26 +131,29 @@ textarea {
 	height: 28px;
 	margin-left: 10px;
 }
+
 input[type="text"] {
-  font-size: 15px; /* Tamaño de letra deseado */
+	font-size: 15px;
+	/* Tamaño de letra deseado */
 }
+
 .contactForm .inputBox span {
 	position: absolute;
 	left: 18px;
-	/* padding: 1px 0; */
 	font-family: 'Noto Sans Khojki';
-	/* font-size: 10px; */
 	margin: 14px 0;
 	pointer-events: none;
 	transition: 0.5s;
-	color: rgb(21, 20, 20); /*color de la letra*/
-	font-size: 15px; /*tamaño de letra del span*/
+	color: rgb(21, 20, 20);
+	/*color de la letra*/
+	font-size: 15px;
+	/*tamaño de letra del span*/
 }
 
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span,
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~ span {
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span,
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span {
 	color: rgb(17, 17, 17);
 	font-size: 13px;
 	transform: translateY(-27px);
@@ -172,46 +162,33 @@ input[type="text"] {
 
 .contactForm .inputBox input[type="submit"] {
 	padding: 1px 5px;
-font-size: 16px;
-background-color: #249bad;
-color: white;
-border: none;
-margin-top: 25px;
-height: 48px;
-width: 25%;
-border-radius: 10px;
-cursor: pointer;
-text-align: center;
-position: relative;
-left: 38%;
-font-family: 'Noto Sans Khojki';
-	/* background-color: #249bad;
-	color: hwb(0 0% 100%);
-	border-radius: 55px;
+	font-size: 16px;
+	background-color: #249bad;
+	color: white;
+	border: none;
+	margin-top: 25px;
+	height: 48px;
+	width: 25%;
+	border-radius: 10px;
 	cursor: pointer;
-	padding: 10px 2opx;
-	font-size: 18px;
-	height: 78px;
-	width: 58%;
+	text-align: center;
+	position: relative;
+	left: 38%;
 	font-family: 'Noto Sans Khojki';
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	margin: 0 auto; 
-	font-size: 23px;  */
 }
+
 .contactForm .inputBox input[type="submit"]:hover {
 	background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);
 }
 
 .inputBox-post input[type="checkbox"] {
-	transform: scale(1.5); /* aumentar tamaño del checkbox */
+	transform: scale(1.5);
 }
 
 .inputBox-post label {
-	font-size: 16px; /* aumentar tamaño de la fuente */
-	text-align: left; /* mover el texto hacia la izquierda */
-	margin-left: 10px; /* agregar un margen izquierdo */
+	font-size: 16px;
+	text-align: left;
+	margin-left: 10px;
 	color: #000000;
 	font-family: 'Noto Sans Khojki';
 }
@@ -220,59 +197,61 @@ font-family: 'Noto Sans Khojki';
 	text-align: center;
 	font-family: 'Noto Sans Khojki';
 	padding: 15px;
-	font-size: 22px; /*tamaño de letra del span*/
+	font-size: 22px;
 }
 
 
 @media screen and (max-width: 767px) {
-  .contact {
-    height: auto;
-    padding: 2px;
-		
-  }
-  
-  .contact .content h2 {
-    font-size: 25px;
-  }
-  
-  .contact .content p {
-    font-size: 15px;
-  }
+	.contact {
+		height: auto;
+		padding: 2px;
+
+	}
+
+	.contact .content h2 {
+		font-size: 25px;
+	}
+
+	.contact .content p {
+		font-size: 15px;
+	}
 
 	.container .contactInfo .box .text h3 {
-    font-size: 20px;
-    
-  }
+		font-size: 20px;
+
+	}
+
 	.container .contactInfo .box .text p {
 		font-size: 15px;
-		
+
 	}
-  .container {
-    flex-direction: column;
-		
-  }
-  
-  .container .contactInfo {
-    width: 50%;
+
+	.container {
+		flex-direction: column;
+
+	}
+
+	.container .contactInfo {
+		width: 50%;
 		padding: 5%;
-  }
+	}
 
 	.contactForm {
-    width: 70%;
-    padding: 20px;
-		
-  }
-  
-  .contactForm h2 {
-    font-size: 25px;
-    
-  }
-  
-  .contactForm {
-    width: 80%;
+		width: 70%;
+		padding: 20px;
+
+	}
+
+	.contactForm h2 {
+		font-size: 25px;
+
+	}
+
+	.contactForm {
+		width: 80%;
 		margin: 10%;
-		
-    margin-top: 10px;
-  }
- 
+
+		margin-top: 10px;
+	}
+
 }

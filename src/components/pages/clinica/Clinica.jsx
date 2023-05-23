@@ -11,16 +11,16 @@ export const Clinica = () => {
     <>
 
 
-<div className="container_psedes">
+      <div className="container_psedes">
         <div className="container_home1A">
           <h1>¡Sonríe sin límites desde nuestras sedes!</h1>
-         
+
         </div>
-        </div>
+      </div>
 
 
-         {/* Chat WhatsAPP */}
-   <div class="space-wpp">
+      {/* Chat WhatsAPP */}
+      <div class="space-wpp">
         <a href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información." class="float" target="_blank ">
           <i class="fa fa-whatsapp my-float"></i>
         </a>

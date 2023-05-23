@@ -9,6 +9,7 @@ import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import { Register } from "./components/layouts/Register/Register";
 import { Login } from "./components/layouts/Login/Login";
 import { AgendaCita } from "./components/layouts/agendacita/AgendaCita";
+// import { HistoriaClinica } from "./components/layouts/historiaclinica/HistoriaClinica";
 import { Blog } from "./components/pages/blog/Blog";
 import Contacto from "./components/pages/contacto/Contacto";
 import { Clinica } from "./components/pages/clinica/Clinica";
@@ -44,6 +45,7 @@ function App() {
         <Route path="/Clinica" element={<Clinica />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/AgendaCita" element={<AgendaCita />} />
+        {/* <Route path="/HistoriaClinica" element={<HistoriaClinica />} /> */}
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/Cita" element={<Cita />} />
       </Routes>

@@ -1,16 +1,13 @@
-// import React from "react";
 import React, { useState } from "react";
 import "./agendacita.css";
 
 export const AgendaCita = () => {
-  const [disease1, setDisease1] = useState("");
-  const [disease2, setDisease2] = useState("");
-  const [allergy1, setAllergy1] = useState("");
-  const [allergy2, setAllergy2] = useState("");
-  const [medicine1, setMedicine1] = useState("");
-  const [medicine2, setMedicine2] = useState("");
-  const [total, setTotal] = useState("");
-  const [date, setDate] = useState("");
+  const [fechaCita, setFechaCita] = useState('');
+  const [horaCita, setHoraCita] = useState('');
+  const [tipoCita, setTipoCita] = useState('');
+  const [estado, setEstado] = useState('');
+  const [sede, setSede] = useState('');
+  const [costo, setCosto] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,14 +15,12 @@ export const AgendaCita = () => {
     // Aquí puedes realizar acciones adicionales, como enviar los datos a un servidor
 
     // Reiniciar los campos del formulario
-    setDisease1("");
-    setDisease2("");
-    setAllergy1("");
-    setAllergy2("");
-    setMedicine1("");
-    setMedicine2("");
-    setTotal("");
-    setDate("");
+    setFechaCita('');
+    setHoraCita('');
+    setTipoCita('');
+    setEstado('');
+    setSede('');
+    setCosto('');
   };
 
   return (
@@ -39,120 +34,67 @@ export const AgendaCita = () => {
           <div className="schedule-box1">
             <form onSubmit={handleSubmit}>
               <div className="schedule-input">
-                <label htmlFor="disease">Enfermedades Previas:</label>
+                <label htmlFor="disease">Fecha de la cita</label>
                 <div className="input-container">
-                  <input
-                    type="text"
-                    id="disease1"
-                    value={disease1}
-                    onChange={(e) => setDisease1(e.target.value)}
-                    required
+                  <input type="date" value={fechaCita} onChange={(e) => setFechaCita(e.target.value)} required
                   />
-                  <span
-                    onClick={() => document.getElementById("disease1").focus()}
-                  >
-                    Enfermedad A
-                  </span>
                 </div>
-                <div className="input-container">
-                  <input
-                    type="text"
-                    id="disease2"
-                    value={disease2}
-                    onChange={(e) => setDisease2(e.target.value)}
-                    required
-                  />
-                  <span
-                    onClick={() => document.getElementById("disease2").focus()}
-                  >
-                    Enfermedad B
-                  </span>
+                <div className="schedule-input">
+                  <label htmlFor="disease">Hora de la cita</label>
+                  <div className="input-container">
+                    <input type="time" value={horaCita} onChange={(e) => setHoraCita(e.target.value)} required
+                    />
+                  </div>
+                  <div className="schedule-input">
+                    <div className="input-container">
+                      <input type="text" value={tipoCita} onChange={(e) => setTipoCita(e.target.value)} required
+                      />
+                      <span
+                        onClick={() => document.getElementById("tipoCita").focus()}
+                      >
+                        Tipo de cita
+                      </span>
+                    </div>
+                    <div className="schedule-input">
+                      <input type="text" value={estado} onChange={(e) => setEstado(e.target.value)} required
+                      />
+                      <span
+                        onClick={() => document.getElementById("estadoCita").focus()}
+                      >
+                        Estado
+                      </span>
+                    </div>
+                    <div className="schedule-option">
+                      <div className="input-container">
+                        <select value={sede} onChange={(e) => setSede(e.target.value)}>
+                          <option value="">Seleccione una sede</option>
+                          <option value="Sede Principal">Sede Principal</option>
+                          <option value="Sede Secundaria">Sede Secundaria</option>
+                          <option value="Sede Terciaria">Sede Terciaria</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="schedule-input">
+                    <input type="number" step="0.001" value={costo} onChange={(e) => setCosto(e.target.value)} required
+                    />
+                    <span
+                      onClick={() => document.getElementById("costoCita").focus()}
+                    >
+                      Costo
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="schedule-input">
-                <label htmlFor="allergy">Alergias:</label>
-                <div className="input-container">
-                  <input
-                    type="text"
-                    id="allergy1"
-                    value={allergy1}
-                    onChange={(e) => setAllergy1(e.target.value)}
-                    required
-                  />
-                  <span
-                    onClick={() => document.getElementById("allergy1").focus()}
-                  >
-                    Alergia A
-                  </span>
+                <div className="schedule-input">
+                  <button type="submit">Agendar Cita</button>
                 </div>
-                <div className="input-container">
-                  <input
-                    type="text"
-                    id="allergy2"
-                    value={allergy2}
-                    onChange={(e) => setAllergy2(e.target.value)}
-                    required
-                  />
-                  <span
-                    onClick={() => document.getElementById("allergy2").focus()}
-                  >
-                    Alergia B
-                  </span>
-                </div>
-              </div>
-              <div className="schedule-input">
-                <label htmlFor="medicine">Medicamentos:</label>
-                <div className="input-container">
-                  <input
-                    type="text"
-                    id="medicine1"
-                    value={medicine1}
-                    onChange={(e) => setMedicine1(e.target.value)}
-                    required
-                  />
-                  <span
-                    onClick={() => document.getElementById("medicine1").focus()}
-                  >
-                    Medicina A
-                  </span>
-                </div>
-                <div className="input-container">
-                  <input
-                    type="text"
-                    id="medicine2"
-                    value={medicine2}
-                    onChange={(e) => setMedicine2(e.target.value)}
-                    required
-                  />
-                  <span
-                    onClick={() => document.getElementById("medicine2").focus()}
-                  >
-                    Medicina B
-                  </span>
-                </div>
-              </div>
-              {/* <div className='schedule-input'>
-              <label htmlFor="email">Total valor:</label>
-              <input type="number" id="total" value={total} onChange={(e) => setTotal(e.target.value)} required/>
-              <span>Valor</span>
-            </div> */}
-              <div className="schedule-input">
-                <label htmlFor="date">Fecha y Hora:</label>
-                <input
-                  type="datetime-local"
-                  id="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="schedule-input">
-                <button type="submit">Agendar Cita</button>
               </div>
             </form>
           </div>
         </div>
       </div>
+
     </>
   );
 };
+export default AgendaCita;

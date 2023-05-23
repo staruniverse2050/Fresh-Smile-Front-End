@@ -9,7 +9,6 @@ export const Cita = () => {
     </div>
     <div className="profile-info">
       <div className="profile-picture">
-        {/* Imagen de perfil */}
       </div>
       <div className="profile-details">
         <h3>{`${paciente.nombres_paciente} ${paciente.apellidos_paciente}`}</h3>

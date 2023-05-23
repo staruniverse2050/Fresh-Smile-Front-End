@@ -15,14 +15,18 @@
 }
 
 h1 {
-  font-family: "Times New Roman";
+  font-family: "Noto Sans Khojki";
   font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--font-color);
   margin: 0;
   color: #ffffff;
+  margin-right: 15%;
 }
 
+span{
+  color: aqua;
+}
 img {
   cursor: pointer;
 }
@@ -67,7 +71,8 @@ img {
 .logo {
   float: left;
   position: relative;
-  margin-right: 1rem;
+  margin-left: 12px;
+  margin-right: 15px;
 }
 
 .icono-inicio {
@@ -78,12 +83,6 @@ img {
 
 .icon-container {
   margin-left: 3rem;
-}
-
-.icono-mapa {
-  margin-right: 1rem;
-  width: 35px;
-  height: 35px;
 }
 
 .container2 {

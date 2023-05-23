@@ -1,19 +1,14 @@
 .container_banner1A {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
-  /* background: url('https://images.pexels.com/photos/4269492/pexels-photo-4269492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
     url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/banner_fjy0jl.jpg");
-  /* opacity: 0.8;  */
-  /* background-position: cover; */
   background-size: cover;
-  /* background-repeat: no-repeat; */
   width: 100%;
   height: 500px;
   padding: 20px;
@@ -26,13 +21,11 @@
 }
 
 .container_home1A h1 {
-  /* line-height: 1.5; */
   color: #ffffff;
   text-align: center;
   font-size: 3em;
   text-decoration: none;
   font-family: 'Times New Roman';
-  /* float: left; */
 }
 .container-usN {
   display: flex;
@@ -43,7 +36,6 @@
 .post-nosotrosN {
   display: flex;
   align-items: center;
-  /* padding: 20px; */
   width: 90%;
 }
 
@@ -63,9 +55,7 @@
 }
 .post-ntsP p {
   font-size: 20px;
-  /* line-height: 1.5; */
   margin-bottom: 7px;
-  /* text-align: justify; */
   font-family: 'Times New Roman';
   position: relative;
   left: 50px;
@@ -74,7 +64,6 @@
 
 
 .post-titleT {
- 
   font-size: 60px;
   font-weight: bold;
   margin-left: 300px;
@@ -86,13 +75,7 @@
 .icon-containerA {
   width: 100%;
   padding-top: 7%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   font-family: 'Times New Roman';
-
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,8 +145,6 @@
   .container_home1A h1 {
     font-size: 2em;
   }
-
-
   
   .icon-containerA {
     flex-direction: column;
@@ -206,14 +187,10 @@
       font-size: 1.5em;
     }
   }
-
-  
   
   .post-nosotrosN {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* text-align: center; */
     width: 100%;
   
   }
@@ -231,7 +208,6 @@
     text-align: center;
   }
   
-
   .post-ntsP {
     max-width: 100%;
     text-align: left;
@@ -240,11 +216,8 @@
     overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
   }
   
-  
   .post-ntsP p {
     left: 0;
     top: 0;
   }
-  
-  
 }

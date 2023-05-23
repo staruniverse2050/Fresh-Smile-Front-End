@@ -12,7 +12,6 @@ export const Clinica = () => {
 
 
 <div className="container_psedes">
-        {/* <img className="" src="./public/banner.jpg" alt="" /> */}
         <div className="container_home1A">
           <h1>¡Sonríe sin límites desde nuestras sedes!</h1>
          

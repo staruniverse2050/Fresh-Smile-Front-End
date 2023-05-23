@@ -1,4 +1,4 @@
-.schedule-banner {
+.history-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,11 +11,11 @@
   height: 87.6vh;
 }
 
-.schedule-title {
+.history-title {
   padding: 25px 150px 35px 35px;
 }
 
-.schedule-title h2 {
+.history-title h2 {
   font-size: 55px;
   font-weight: 600;
   color: #ffffff;
@@ -26,7 +26,7 @@
   font-family: "Times New Roman";
 }
 
-.schedule-banner .schedule-title p {
+.history-banner .history-title p {
   text-align: center;
   font-size: 23px;
   color: #ffffff;
@@ -35,39 +35,27 @@
   font-family: "Times New Roman";
 }
 
-.contenedor1-box {
+.history-box {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.schedule-box1 {
+.history-box1 {
   width: 25%;
   padding: 1em;
   border-radius: 25px;
   background: rgba(250, 245, 245, 0.5);
 }
 
-.schedule-box1 .schedule-input {
+.history-box1 .history-input {
   position: relative;
   width: 100%;
   margin-top: 2px;
 }
 
-.schedule-option {
-  text-align: center;
-}
-
-.schedule-option select,
-option {
-  width: 50%;
-  border-color: #b1a1a1;
-  background-color: rgba(250, 245, 245, 0.5);
-  font-size: 20px;
-}
-
-.schedule-box1 .schedule-input input {
+.history-box1 .history-input input {
   width: 100%;
   padding: 7px 0;
   margin: 15px 0;
@@ -80,12 +68,12 @@ option {
   height: 30px;
 }
 
-.schedule-box1 .schedule-input,
+.history-box1 .history-input,
 input[type="text"] {
   font-size: 20px;
 }
 
-.schedule-box1 .schedule-input span {
+.history-box1 .history-input span {
   position: absolute;
   left: 10px;
   font-family: "Times New Roman";
@@ -96,15 +84,15 @@ input[type="text"] {
   font-size: 16px;
 }
 
-.schedule-box1 .schedule-input input:focus~span,
-.schedule-box1 .schedule-input input:valid~span {
+.history-box1 .history-input input:focus~span,
+.history-box1 .history-input input:valid~span {
   color: rgb(17, 17, 17);
   font-size: 17px;
   transform: translateY(-35px);
   font-family: "Times New Roman";
 }
 
-.schedule-box1 .schedule-input button[type="submit"] {
+.history-box1 .history-input button[type="submit"] {
   font-size: 16px;
   background-color: #249bad;
   color: white;
@@ -119,7 +107,7 @@ input[type="text"] {
   font-family: "Times New Roman";
 }
 
-.schedule-box1 .schedule-input button[type="submit"]:hover {
+.history-box1 .history-input button[type="submit"]:hover {
   background: radial-gradient(circle at 81.8% 27.73%,
       #419985 0,
       #38998c 6.25%,
@@ -140,7 +128,7 @@ input[type="text"] {
       #7e87be 100%);
 }
 
-.schedule-input label {
+.history-input label {
   font-size: 16px;
   text-align: left;
   margin-left: 10px;
@@ -149,19 +137,19 @@ input[type="text"] {
 }
 
 @media screen and (max-width: 768px) {
-  .schedule-title h2 {
+  .history-title h2 {
     font-size: 40px;
   }
 
-  .schedule-title p {
+  .history-title p {
     font-size: 18px;
   }
 
-  .schedule-box1 {
+  .history-box1 {
     width: 100%;
   }
 
-  .schedule-box1 .schedule-input button[type="submit"] {
+  .history-box1 .history-input button[type="submit"] {
     width: 80%;
   }
 }

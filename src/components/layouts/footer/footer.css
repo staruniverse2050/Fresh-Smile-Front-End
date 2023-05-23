@@ -27,6 +27,7 @@ h6 {
   color: #ffffff;
   font-size: 25px;
 }
+
 .phone,
 .email {
   box-sizing: border-box;
@@ -46,9 +47,11 @@ h6 {
   text-align: center;
   font-family: "Noto Sans Khojki";
 }
+
 .fa-location-dot {
   margin-left: 5px;
 }
+
 .address-info .dateT {
   margin-left: 1px;
   font-size: 20px;
@@ -106,9 +109,11 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+
 .redes-info p {
   margin-left: 35px;
 }
+
 .fa-heart {
   margin-left: 20px;
 }
@@ -118,6 +123,7 @@ h6 {
   font-size: 30px;
   margin-top: 8px;
 }
+
 .panel-icons .footer-icons .fa-instagram {
   margin-left: 6px;
 }
@@ -125,6 +131,7 @@ h6 {
 .panel-icons .footer-icons i {
   margin: 5px;
 }
+
 .panel-icons .footer-icons i,
 li {
   font-size: 25px;
@@ -134,9 +141,11 @@ li {
 .footer-icons li {
   margin-left: 20px;
 }
+
 .footer-icons ul li {
   display: inline-block;
 }
+
 .footer-icons ul li a {
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -150,15 +159,18 @@ li {
   width: 35px;
   border-radius: 50%;
 }
+
 .footer-icons a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
 }
+
 .footer-icons a:hover {
   background: #3ec1d5;
   text-shadow: none;
   color: #fff;
 }
+
 .footer-icons ul li a:hover {
   border-color: #3ec1d5;
 }
@@ -176,26 +188,24 @@ li {
   .footer-area p span {
     font-size: 10px;
   }
-  /* .phone,
-  .email
-  .address,
-  .redes {
-  
 
-  } */
 
   .phone {
     margin-right: 40px;
   }
+
   .text_telefono {
     margin-left: 10px;
   }
+
   .dateT {
     font-size: 10px;
   }
+
   .footer-content {
     margin: 50px;
   }
+
   .address {
     margin-left: 10px;
   }
@@ -232,8 +242,6 @@ li {
 
   .redes {
     width: 50%;
-
-    /* justify-content: center; */
   }
 
   .redes-info p {

@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import './Login.css';
-import { Register } from '../Register/Register';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [showRegister, setShowRegister] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const emailParam = searchParams.get('email');
+    const passwordParam = searchParams.get('password');
+    if (emailParam && passwordParam) {
+      setEmail(emailParam);
+      setPassword(passwordParam);
+    }
+  }, [location.search]);
 
   const handleLogin = async () => {
     try {
       const response = await axios.post('/login', { email, password });
       console.log(response.data);
-      // Aquí puedes realizar acciones adicionales, como guardar el token de acceso en el estado o redireccionar a otra página
     } catch (error) {
       setError(error.response.data.message);
     }
@@ -32,28 +40,38 @@ export const Login = () => {
     <>
       {/* Header sin barra */}
       <div className="LoginHeader">
-      <img className="iconoInicio" src={require('./agregar-usuario.png')} alt="imagen de persona" />
-
+        <img className="iconoInicio" src="./public/agregar-usuario.png" alt="imagen de persona" />
       </div>
       <div className="Login">
-        {showRegister ? (
-          // Formulario de registro
-          <Register handleLogin={() => setShowRegister(false)} />
-        ) : (
-          // Formulario de inicio de sesión
-          <section className="LoginForm">
-            {/* Resto del código del formulario de inicio de sesión */}
-          </section>
-        )}
+        <section className="LoginForm">
+          <input
+            className="LoginInput"
+            type="text"
+            placeholder="Ingrese su correo"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            className="LoginInput"
+            type="password"
+            placeholder="Ingrese su contraseña"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="LoginButton" onClick={handleSubmit}>
+            Iniciar Sesion
+          </button>
+        </section>
         <p className="LoginP">
           ¿Aun no eres miembro?{' '}
-          <a href="#" className="LoginA" onClick={() => setShowRegister(true)}>
+          <Link to="/Register" className="LoginA">
             Registrate
-          </a>
+          </Link>
         </p>
         {error && <p>{error}</p>}
       </div>
     </>
   );
-  
 };

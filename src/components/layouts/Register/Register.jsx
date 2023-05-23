@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom'; // Importar Link de React Router
 import './Register.css';
-
+import { Link } from 'react-router-dom';
 
 export const Register = () => {
   const [name, setName] = useState('');
@@ -11,35 +9,46 @@ export const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleRegister = async () => {
-  try {
-    const response = await axios.post('http://127.0.0.1:5173', { name, email, password, confirmPassword });
+  const handleRegister = () => {
+    // Realizar la lógica de registro en el cliente
+    if (name !== '' && email !== '' && password !== '' && password === confirmPassword && isValidEmail(email)) {
+      // Almacenar los datos del usuario en el almacenamiento local
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      // Redireccionar a la página de inicio con los parámetros de correo y contraseña en la URL
+      const searchParams = new URLSearchParams();
+      searchParams.append('email', email);
+      searchParams.append('password', password);
+      window.location.href = '/Login?' + searchParams.toString();
+    } else {
+      setError('Por favor, complete todos los campos correctamente.');
+    }
+  };
 
-    console.log(response.data);
-    // Aquí puedes realizar acciones adicionales, como mostrar un mensaje de éxito o redireccionar a otra página
-  } catch (error) {
-    setError(error.response.data.message);
-  }
-};
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (name === '' || email === '' || password === '' || confirmPassword === '') {
+      setError('Por favor, complete todos los campos.');
+    } else if (password !== confirmPassword) {
+      setError('Las contraseñas no coinciden.');
+    } else if (!isValidEmail(email)) {
+      setError('Por favor, ingrese un correo electrónico válido.');
+    } else {
+      handleRegister();
+    }
+  };
 
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-  if (name === '' || email === '' || password === '' || confirmPassword === '') {
-    setError('Por favor, complete todos los campos.');
-  } else if (password !== confirmPassword) {
-    setError('Las contraseñas no coinciden.');
-  } else {
-    handleRegister();
-  }
-};
-
+  const isValidEmail = (email) => {
+    // Expresión regular para validar el formato del correo electrónico
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   return (
     <>
       {/* Header sin barra */}
       <div className="RegisterHeader">
-        <img className="iconoRegistro" src="/agregar-usuario.png" alt="imagen de persona" />
+        {/* <img className="iconoRegistro" src="/agregar-usuario.png" alt="imagen de persona" /> */}
       </div>
       <div className="Register">
         <section className="RegisterForm">
@@ -80,9 +89,11 @@ const handleSubmit = (event) => {
           </button>
         </section>
         <p className="RegisterP">
-        ¿Ya eres miembro?{' '}
-        <Link to="/login" className="RegisterA">Inicia Sesión</Link> {/* Utilizar Link en lugar de <a> */}
-      </p>
+          ¿Ya eres miembro?{' '}
+          <Link to="/Login" className="RegisterA">
+            Inicia Sesión
+          </Link>
+        </p>
         {error && <p>{error}</p>}
       </div>
     </>

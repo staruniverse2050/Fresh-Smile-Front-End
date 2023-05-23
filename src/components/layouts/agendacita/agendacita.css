@@ -2,9 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 90%),
     url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852207/Fresh_Smile_Cmills/galeria8_g8lbub.jpg");
   background-size: cover;
   width: 100%;
@@ -36,7 +34,7 @@
 }
 
 .contenedor1-box {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +42,8 @@
 
 .schedule-box1 {
   width: 25%;
-  padding: 1em;
-  border-radius: 25px;
+  padding: 2em;
+  /* border-radius: 25px; */
   background: rgba(250, 245, 245, 0.5);
 }
 

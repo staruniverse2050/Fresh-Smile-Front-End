@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./historiaclinica.css";
 
-const HistoriaClinica = () => {
+export const HistoriaClinica = () => {
   const [fechaVisita, setFechaVisita] = useState('');
   const [problema, setProblema] = useState('');
   const [tratamiento, setTratamiento] = useState('');
@@ -25,10 +25,10 @@ const HistoriaClinica = () => {
 
   return (
     <>
-      <div className="history-banner">
+      <div className="history-banner-dating">
         <div className="history-box">
           <div className="history-title">
-            <h2>Historial Clinica</h2>
+            <h2>Historia clínica</h2>
             <p>Llena este formulario para brindarte una mayor
               seguridad y una salud oral impecable.
             </p>
@@ -36,7 +36,7 @@ const HistoriaClinica = () => {
           <div className="history-box1">
             <form onSubmit={handleSubmit}>
               <div className="history-input">
-                <label htmlFor="history">Fecha de la visita</label>
+                <label htmlFor="history">Fecha de la visita:</label>
                 <div className="history-container">
                   <input type="date" value={fechaVisita} onChange={(e) => setFechaVisita(e.target.value)} required
                   />
@@ -48,7 +48,7 @@ const HistoriaClinica = () => {
                     <span
                       onClick={() => document.getElementById("problema").focus()}
                     >
-                      Problema
+                      Problema:
                     </span>
                   </div>
                   <div className="history-input">
@@ -58,7 +58,7 @@ const HistoriaClinica = () => {
                       <span
                         onClick={() => document.getElementById("tratamiento").focus()}
                       >
-                        Tratamiento
+                        Tratamiento:
                       </span>
                     </div>
                     <div className="history-input">
@@ -71,7 +71,7 @@ const HistoriaClinica = () => {
                       </span>
                     </div>
                     <div className="history-input">
-                      <label htmlFor="history">Proxima cita</label>
+                      <label htmlFor="history">Próxima cita:</label>
                       <div className="history-container">
                         <input type="date" value={proximaCita} onChange={(e) => setProximaCita(e.target.value)} required
                         />

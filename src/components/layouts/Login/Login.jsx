@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Login.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -18,12 +19,20 @@ export const Login = () => {
     }
   }, [location.search]);
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post('/login', { email, password });
-      console.log(response.data);
-    } catch (error) {
-      setError(error.response.data.message);
+  const handleLogin = () => {
+    const storedEmail = localStorage.getItem('email');
+    const storedPassword = localStorage.getItem('password');
+  
+    console.log('Stored Email:', storedEmail);
+    console.log('Stored Password:', storedPassword);
+    console.log('Entered Email:', email);
+    console.log('Entered Password:', password);
+
+    if (email === storedEmail && password === storedPassword) {
+      // Inicio de sesión exitoso, redirigir al home
+      navigate('/home');
+    } else {
+      setError('No te has registrado. Por favor, regístrate primero.');
     }
   };
 
@@ -40,7 +49,7 @@ export const Login = () => {
     <>
       {/* Header sin barra */}
       <div className="LoginHeader">
-        <img className="iconoInicio" src="./public/agregar-usuario.png" alt="imagen de persona" />
+        {/* <img className="iconoInicio" src="./public/agregar-usuario.png" alt="imagen de persona" /> */}
       </div>
       <div className="Login">
         <section className="LoginForm">
@@ -61,13 +70,13 @@ export const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className="LoginButton" onClick={handleSubmit}>
-            Iniciar Sesion
+            Iniciar Sesión
           </button>
         </section>
         <p className="LoginP">
-          ¿Aun no eres miembro?{' '}
+          ¿Aún no eres miembro?{' '}
           <Link to="/Register" className="LoginA">
-            Registrate
+            Regístrate
           </Link>
         </p>
         {error && <p>{error}</p>}

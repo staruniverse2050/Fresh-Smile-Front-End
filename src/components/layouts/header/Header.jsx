@@ -116,9 +116,7 @@ export const Header = () => {
             />
           </Link>
         </div>
-        <Link to="/Clinica">
-          <a href="#clinica"></a>
-        </Link>
+
       </div>
     </header>
   );

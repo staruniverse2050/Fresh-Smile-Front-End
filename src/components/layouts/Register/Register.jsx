@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Register = () => {
   const [name, setName] = useState('');
@@ -8,6 +8,7 @@ export const Register = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleRegister = () => {
     // Realizar la lógica de registro en el cliente
@@ -15,11 +16,10 @@ export const Register = () => {
       // Almacenar los datos del usuario en el almacenamiento local
       localStorage.setItem('name', name);
       localStorage.setItem('email', email);
-      // Redireccionar a la página de inicio con los parámetros de correo y contraseña en la URL
-      const searchParams = new URLSearchParams();
-      searchParams.append('email', email);
-      searchParams.append('password', password);
-      window.location.href = '/Login?' + searchParams.toString();
+      localStorage.setItem('password', password);
+
+      // Redireccionar a la página de inicio de sesión
+      navigate('/Login?registered=true');
     } else {
       setError('Por favor, complete todos los campos correctamente.');
     }

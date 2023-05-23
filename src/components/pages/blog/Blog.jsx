@@ -32,14 +32,6 @@ export const Blog = () => {
         </div>
       </div>
 
-      {/* <!-- -------------search------------------ --> */}
-
-      <form className="buscador-blog">
-        <div class="search-option" id="searchform">
-          <input type="text" name="buscador" id="search" placeholder="Buscar..." />
-        </div>
-      </form>
-
       {/* ---------------------cards--------------------------------- */}
 
       <div className="left-blog">

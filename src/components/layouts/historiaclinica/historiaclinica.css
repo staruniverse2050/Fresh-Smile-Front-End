@@ -1,11 +1,9 @@
-.history-banner {
+.history-banner-dating {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)),
-    url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852207/Fresh_Smile_Cmills/galeria8_g8lbub.jpg");
+  background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%),
+    url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852193/Fresh_Smile_Cmills/instagram2_qp1m0z.jpg");
   background-size: cover;
   width: 100%;
   height: 87.6vh;
@@ -16,7 +14,7 @@
 }
 
 .history-title h2 {
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 10px;
@@ -26,9 +24,9 @@
   font-family: "Times New Roman";
 }
 
-.history-banner .history-title p {
+.history-banner-dating .history-title p {
   text-align: center;
-  font-size: 23px;
+  font-size: 25px;
   color: #ffffff;
   margin-top: 45px;
   font-weight: 600;
@@ -36,7 +34,7 @@
 }
 
 .history-box {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +42,8 @@
 
 .history-box1 {
   width: 25%;
-  padding: 1em;
-  border-radius: 25px;
+  padding: 2em;
+  margin-right: 5%;
   background: rgba(250, 245, 245, 0.5);
 }
 
@@ -55,7 +53,7 @@
   margin-top: 2px;
 }
 
-.history-box1 .history-input input {
+.history-box1 .history-input input, textarea {
   width: 100%;
   padding: 7px 0;
   margin: 15px 0;
@@ -69,7 +67,7 @@
 }
 
 .history-box1 .history-input,
-input[type="text"] {
+input, textarea[type="text"] {
   font-size: 20px;
 }
 
@@ -85,7 +83,9 @@ input[type="text"] {
 }
 
 .history-box1 .history-input input:focus~span,
-.history-box1 .history-input input:valid~span {
+.history-box1 .history-input input:valid~span,
+.history-box1 .history-input textarea:focus~span,
+.history-box1 .history-input textarea:valid~span{
   color: rgb(17, 17, 17);
   font-size: 17px;
   transform: translateY(-35px);

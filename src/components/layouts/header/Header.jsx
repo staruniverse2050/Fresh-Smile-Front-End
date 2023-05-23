@@ -1,39 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 import "./Header.css";
 
 export const Header = () => {
-  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
 
-  const [logoImage, setLogoImage] = useState(
-    "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
-  );
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      setLogoImage(user.picture);
-    } else {
-      setLogoImage(
-        "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
-      );
-    }
-  }, [isAuthenticated, user]);
-
-  const handleLogout = () => {
-    logout({ returnTo: window.location.origin });
-  };
-
-  const handleLogin = () => {
-    loginWithRedirect();
-  };
-
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -137,37 +108,13 @@ export const Header = () => {
           </div>
         </ul>
         <div className="icono-inicio-wrapper">
-          {isAuthenticated && (
-            <div className="dropdown-wrapper" onClick={toggleDropdown}>
-              <div className="icon-container">
-                <img className="icono-inicio" src={user.picture} alt="" />
-              </div>
-
-              {showDropdown && (
-                <div className="dropdown">
-                  <ul>
-                    <li>
-                      <a
-                        className="dropdown-button"
-                        href="#"
-                        onClick={handleLogout}
-                      >
-                        Cerrar sesión
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          )}
-          {!isAuthenticated && (
+          <Link to="/Login">
             <img
               className="icono-inicio"
               src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
               alt="Inicio"
-              onClick={handleLogin}
             />
-          )}
+          </Link>
         </div>
         <Link to="/Clinica">
           <a href="#clinica"></a>

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom'; // Importar Link de React Router
 import './Register.css';
+
 
 export const Register = () => {
   const [name, setName] = useState('');
@@ -9,30 +12,34 @@ export const Register = () => {
   const [error, setError] = useState('');
 
   const handleRegister = async () => {
-    try {
-      const response = await axios.post('/register', { name, email, password, confirmPassword });
-      console.log(response.data);
-    } catch (error) {
-      setError(error.response.data.message);
-    }
-  };
+  try {
+    const response = await axios.post('http://127.0.0.1:5173', { name, email, password, confirmPassword });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (name === '' || email === '' || password === '' || confirmPassword === '') {
-      setError('Por favor, complete todos los campos.');
-    } else if (password !== confirmPassword) {
-      setError('Las contraseñas no coinciden.');
-    } else {
-      handleRegister();
-    }
-  };
+    console.log(response.data);
+    // Aquí puedes realizar acciones adicionales, como mostrar un mensaje de éxito o redireccionar a otra página
+  } catch (error) {
+    setError(error.response.data.message);
+  }
+};
+
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  if (name === '' || email === '' || password === '' || confirmPassword === '') {
+    setError('Por favor, complete todos los campos.');
+  } else if (password !== confirmPassword) {
+    setError('Las contraseñas no coinciden.');
+  } else {
+    handleRegister();
+  }
+};
+
 
   return (
     <>
       {/* Header sin barra */}
       <div className="RegisterHeader">
-        <img className="iconoRegistro" src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825528/Fresh_Smile_Cmills/agregar-usuario_bzrjrd.png" alt="imagen de persona" />
+        <img className="iconoRegistro" src="/agregar-usuario.png" alt="imagen de persona" />
       </div>
       <div className="Register">
         <section className="RegisterForm">
@@ -73,11 +80,9 @@ export const Register = () => {
           </button>
         </section>
         <p className="RegisterP">
-          ¿Ya eres miembro?{' '}
-          <a href="../Login" className="RegisterA">
-            Inicia Sesión
-          </a>
-        </p>
+        ¿Ya eres miembro?{' '}
+        <Link to="/login" className="RegisterA">Inicia Sesión</Link> {/* Utilizar Link en lugar de <a> */}
+      </p>
         {error && <p>{error}</p>}
       </div>
     </>

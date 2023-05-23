@@ -4,6 +4,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Header } from "./components/layouts/header/Header";
 import { Footer } from "./components/layouts/footer/Footer";
 import { Home } from "./components/pages/home/Home";
+// import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
+// import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import { Register } from "./components/layouts/Register/Register";
@@ -38,6 +40,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
+        {/* <Route path="/HeaderPaciente" element={<HeaderPaciente />} /> */}
+        {/* <Route path="/HeaderAdministrador" element={<HeaderAdministrador />} /> */}
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Register" element={<Register />} /> {/* Corregido */}
         <Route path="/Login" element={<Login />} /> {/* Corregido */}

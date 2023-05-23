@@ -30,7 +30,7 @@ export const Login = () => {
 
     if (email === storedEmail && password === storedPassword) {
       // Inicio de sesión exitoso, redirigir al home
-      navigate('/home');
+      navigate('/HeaderPaciente');
     } else {
       setError('No te has registrado. Por favor, regístrate primero.');
     }

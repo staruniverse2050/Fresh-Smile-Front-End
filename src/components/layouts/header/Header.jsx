@@ -61,11 +61,16 @@ export const Header = () => {
                     Contacto
                   </Link>
                 </li>
-                {/* <li>
+                <li>
                   <Link className="links2" to="/Cita">
                     Mis citas
                   </Link>
-                </li> */}
+                </li>
+                <li>
+                  <Link className="links2" to="/Cita">
+                  Agendamiento Citas
+                  </Link>
+                </li>
               </div>
             )}
           </div>
@@ -100,11 +105,16 @@ export const Header = () => {
                 Contacto
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link className="links" to="/Cita">
                 Mis citas
               </Link>
-            </li> */}
+            </li>
+            <li>
+              <Link className="links" to="/Cita">
+              Agendamiento Citas
+              </Link>
+            </li>
           </div>
         </ul>
         <div className="icono-inicio-wrapper">

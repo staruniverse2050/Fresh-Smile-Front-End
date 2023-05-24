@@ -11,7 +11,6 @@ export const AgendaCita = () => {
   const [disponibilidad, setDisponibilidad] = useState('');
   const [tipoCita, setTipoCita] = useState('');
   const [sede, setSede] = useState('');
-  const [fechaCreacion, setFechaCreacion] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,7 +27,6 @@ export const AgendaCita = () => {
     setDisponibilidad('');
     setTipoCita('');
     setSede('');
-    setFechaCreacion('');
   };
 
   return (

@@ -16,6 +16,7 @@ import { Blog } from "./components/pages/blog/Blog";
 import Contacto from "./components/pages/contacto/Contacto";
 import { Clinica } from "./components/pages/clinica/Clinica";
 import { Cita } from "./components/pages/cita/Cita";
+import { Agenda} from "./components/pages/agenda/Agenda";
 
 function App() {
   const { isAuthenticated, user } = useAuth0();
@@ -52,6 +53,7 @@ function App() {
         <Route path="/HistoriaClinica" element={<HistoriaClinica />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/Cita" element={<Cita />} />
+        <Route path="/Agenda" element={<Agenda />} />
       </Routes>
     </>
 

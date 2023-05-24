@@ -67,8 +67,8 @@ export const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="links2" to="/Cita">
-                  Agendamiento Citas
+                  <Link className="links2" to="/Agenda">
+                  Agendamiento
                   </Link>
                 </li>
               </div>
@@ -111,8 +111,8 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className="links" to="/Cita">
-              Agendamiento Citas
+              <Link className="links" to="/Agenda">
+              Agendamiento
               </Link>
             </li>
           </div>

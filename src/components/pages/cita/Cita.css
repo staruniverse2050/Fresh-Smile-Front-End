@@ -37,12 +37,12 @@ body {
   background-color: rgb(172, 172, 172);
   color: black;
 }
-.container {
+.agenda-container {
   margin: 90px auto;
   margin-bottom: 50px;
   border-radius: 30px;
   text-align: center;
-  background-color: rgb(142, 224, 218);
+  background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);
   width: 40%;
   padding-bottom: 10px;
 }
@@ -58,7 +58,7 @@ table {
 }
 th {
   color: white;
-  background-color: #000;
+  background-color: #249bad;
 }
 tr {
   background-color: white;

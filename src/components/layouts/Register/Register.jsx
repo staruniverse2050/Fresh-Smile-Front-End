@@ -11,18 +11,32 @@ export const Register = () => {
   const navigate = useNavigate();
 
   const handleRegister = () => {
-    // Realizar la lógica de registro en el cliente
-    if (name !== '' && email !== '' && password !== '' && password === confirmPassword && isValidEmail(email)) {
-      // Almacenar los datos del usuario en el almacenamiento local
-      localStorage.setItem('name', name);
-      localStorage.setItem('email', email);
-      localStorage.setItem('password', password);
+    const userData = {
+      name,
+      email,
+      password,
+    };
 
-      // Redireccionar a la página de inicio de sesión
-      navigate('/Login?registered=true');
-    } else {
-      setError('Por favor, complete todos los campos correctamente.');
-    }
+    fetch('your-api-url/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Registro exitoso
+          navigate('/Login?registered=true');
+        } else {
+          // Error en el registro
+          throw new Error('Error en el registro');
+        }
+      })
+      .catch((error) => {
+        setError('Error en el registro');
+        console.error(error);
+      });
   };
 
   const handleSubmit = (event) => {

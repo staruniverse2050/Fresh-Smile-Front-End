@@ -1,9 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import "./Header.css";
 
 export const Header = () => {
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
+  const [logoImage, setLogoImage] = useState(
+    "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
+  );
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLogoImage(user.picture);
+    } else {
+      setLogoImage(
+        "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
+      );
+    }
+  }, [isAuthenticated, user]);
+
+  const handleLogout = () => {
+    logout({ returnTo: window.location.origin });
+  };
+
+  const handleLogin = () => {
+    loginWithRedirect();
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,15 +39,15 @@ export const Header = () => {
   return (
     <header className="Header_Header">
       <div className="menu">
-        <a href="#home">
+        <Link to="/Home">
           <img
             className="logo"
             src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
             alt=""
           />
-        </a>
+        </Link>
         <h1>
-          <span>Fresh </span> Smile<span> Cmills</span>
+          <span>Fresh</span>Smile<span>Cmills</span>
         </h1>
         <ul>
           <div className="toggle-menu">
@@ -61,16 +88,11 @@ export const Header = () => {
                     Contacto
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link className="links2" to="/Cita">
                     Mis citas
                   </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Agenda">
-                  Agendamiento
-                  </Link>
-                </li>
+                </li> */}
               </div>
             )}
           </div>
@@ -105,28 +127,41 @@ export const Header = () => {
                 Contacto
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className="links" to="/Cita">
                 Mis citas
               </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Agenda">
-              Agendamiento
-              </Link>
-            </li>
+            </li> */}
           </div>
         </ul>
         <div className="icono-inicio-wrapper">
-          <Link to="/Login">
+          {isAuthenticated && (
+            <div className="dropdown-wrapper" onClick={toggleDropdown}>
+              <div className="icon-container">
+                <img className="icono-inicio" src={user.picture} alt="" />
+              </div>
+              {isOpen && (
+                <div className="dropdown">
+                  <ul>
+                    <li>
+                      <button className="dropdown-button" onClick={handleLogout}>
+                        Cerrar sesión
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+          {!isAuthenticated && (
             <img
               className="icono-inicio"
               src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
               alt="Inicio"
+              onClick={handleLogin}
             />
-          </Link>
+          )}
         </div>
-
       </div>
     </header>
   );

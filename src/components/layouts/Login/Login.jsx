@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
@@ -6,34 +6,36 @@ export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [userRole, setUserRole] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const emailParam = searchParams.get('email');
-    const passwordParam = searchParams.get('password');
-    if (emailParam && passwordParam) {
-      setEmail(emailParam);
-      setPassword(passwordParam);
-    }
-  }, [location.search]);
-
   const handleLogin = () => {
-    const storedEmail = localStorage.getItem('email');
-    const storedPassword = localStorage.getItem('password');
-  
-    console.log('Stored Email:', storedEmail);
-    console.log('Stored Password:', storedPassword);
-    console.log('Entered Email:', email);
-    console.log('Entered Password:', password);
+    const userData = {
+      email,
+      password,
+    };
 
-    if (email === storedEmail && password === storedPassword) {
-      // Inicio de sesión exitoso, redirigir al home
-      navigate('/HeaderPaciente');
-    } else {
-      setError('No te has registrado. Por favor, regístrate primero.');
-    }
+    fetch('your-api-url/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Autenticación exitosa
+          setUserRole('admin');
+        } else {
+          // Error de autenticación
+          setError('Credenciales inválidas. Por favor, inténtalo de nuevo.');
+        }
+      })
+      .catch((error) => {
+        setError('Error de autenticación');
+        console.error(error);
+      });
   };
 
   const handleSubmit = (event) => {
@@ -44,6 +46,22 @@ export const Login = () => {
       handleLogin();
     }
   };
+
+  // Determinar la ruta de redirección según el rol del usuario
+  let redirectPath = '/';
+  if (userRole === 'admin') {
+    redirectPath = '/otra-parte'; // Cambia '/otra-parte' a la ruta que deseas redirigir para el usuario administrador
+  }
+
+  // Redirigir a la ruta correspondiente
+  useEffect(() => {
+    if (userRole === 'admin') {
+      const redirectPath = '/otra-parte'; // Cambia '/otra-parte' a la ruta que deseas redirigir para el usuario administrador
+      navigate(redirectPath);
+    } else {
+      setShowForm(true); // Mostrar el formulario si el inicio de sesión no fue exitoso
+    }
+  }, [userRole, navigate]);
 
   return (
     <>

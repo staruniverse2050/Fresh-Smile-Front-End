@@ -40,17 +40,6 @@ export const Agenda = () => {
               <td className="modify">
                 <a name="edit" id="" className="bfix" href="fix.php" role="button">Editar</a>
               </td>
-              {/* <td className="delete">
-                <a
-                  name="id"
-                  id=""
-                  className="bdelete"
-                  href="main/delete.php"
-                  role="button"
-                >
-                  Cancelar
-                </a>
-              </td> */}
             </tr>
           </tbody>
         </table>

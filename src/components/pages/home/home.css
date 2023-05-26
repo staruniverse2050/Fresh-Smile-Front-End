@@ -37,6 +37,7 @@ body {
   padding: 0.5rem;
   position: relative;
   left: 10px;
+  font-size: 22px;
   display: inline-block;
   text-align: center;
   display: flex; /* Añade esta propiedad */
@@ -234,7 +235,7 @@ body {
   padding: 10px;
   background-color: #000000;
   text-align: center;
-  top: 25px;
+  bottom: 20px;
   position: relative;
 }
 

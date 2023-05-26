@@ -57,62 +57,77 @@ export const Header = () => {
               src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
             />
             {isOpen && (
-              <div className="container3">
-                <li>
-                  <Link className="links2" to="/Home">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Nosotros">
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Procedimientos">
-                    Procedimientos
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Contacto">
-                    Contacto
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link className="links2" to="/Cita">
-                    Mis citas
-                  </Link>
-                </li> */}
-              </div>
+             <div className="container3">
+             <ul>
+               <li>
+                 <Link className="links2" to="/Home">
+                   Inicio
+                 </Link>
+               </li>
+               <li>
+                 <Link className="links2" to="/Nosotros">
+                   Nosotros
+                 </Link>
+               </li>
+               <li>
+               <Link className="links" to="/Login">
+                   Agenda cita
+                 </Link>
+               </li>
+               <li>
+                 <Link className="links2" to="/Procedimientos">
+                   Procedimientos
+                 </Link>
+               </li>
+               <li>
+                 <Link className="links2" to="/Contacto">
+                   Contacto
+                 </Link>
+               </li>
+               {/* <li>
+                 <Link className="links2" to="/Cita">
+                   Mis citas
+                 </Link>
+               </li> */}
+             </ul>
+           </div>
+           
             )}
           </div>
           <div className="container2">
-            <li>
-              <Link className="links" to="/Home">
-                Inicio
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Nosotros">
-                Nosotros
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Procedimientos">
-                Procedimientos
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Contacto">
-                Contacto
-              </Link>
-            </li>
-            {/* <li>
-              <Link className="links" to="/Cita">
-                Mis citas
-              </Link>
-            </li> */}
-          </div>
+  <ul>
+    <li>
+      <Link className="links" to="/Home">
+        Inicio
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Nosotros">
+        Nosotros
+      </Link>
+    </li>
+    <li>
+    <Link className="links" to="/Login">
+                   Agenda cita
+                 </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Procedimientos
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Contacto">
+        Contacto
+      </Link>
+    </li>
+    {/* <li>
+      <Link className="links" to="/Cita">
+        Mis citas
+      </Link>
+    </li> */}
+  </ul>
+</div>
         </ul>
         <div className="icono-inicio-wrapper">
           {isAuthenticated && (

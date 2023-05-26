@@ -48,6 +48,9 @@ img {
   text-decoration: none;
   color: #ffffff;
   padding: 0.5rem;
+  font-size: 22px;
+  position: relative;
+  left: 183px;
   transition: transform 0.3s ease;
 }
 

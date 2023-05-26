@@ -39,23 +39,8 @@ export const HeaderAdministrador = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="links2" to="/Clinica">
-                        Sedes
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="links2" to="/Blog">
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="links2" to="/Contacto">
-                        Contacto
-                      </Link>
-                    </li>
-                    <li>
                       <Link className="links2" to="/Cita">
-                        Agendamiento Citas
+                        Agenda
                       </Link>
                     </li>
                   </div>
@@ -78,23 +63,13 @@ export const HeaderAdministrador = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="links" to="/Clinica">
-                    Sedes
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/Blog">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/Contacto">
-                    Contacto
+                  <Link className="links" to="/Cita">
+                  Agenda
                   </Link>
                 </li>
                 <li>
                   <Link className="links" to="/Cita">
-                  Agendamiento Citas
+                  Valoraciones
                   </Link>
                 </li>
               </div>

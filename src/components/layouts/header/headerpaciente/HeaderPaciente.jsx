@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import "../Header.css";
+import "../headerpaciente/HeaderPaciente.css";
 
 
 export const HeaderPaciente  = () => {
@@ -58,81 +58,105 @@ export const HeaderPaciente  = () => {
             />
             {isOpen && (
               <div className="container3">
-                <li>
-                  <Link className="links2" to="/Home">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Nosotros">
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Procedimientos">
-                    Procedimientos
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Clinica">
-                    Sedes
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Blog">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Contacto">
-                    Contacto
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Cita">
-                    Mis citas
-                  </Link>
-                </li>
-              </div>
+                 <ul>
+    <li>
+      <Link className="links" to="/Home">
+        Inicio
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Nosotros">
+        Nosotros
+      </Link>
+    </li>
+    <li>
+    <Link className="links" to="/Login">
+                   Agenda cita
+                 </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Procedimientos
+      </Link>
+    </li>
+    <li>
+        <Link className="links" to="/DoctorCard">
+          Nuestros especialistas
+        </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Mi ranking
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Mis citas
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Contacto">
+        Contacto
+      </Link>
+    </li>
+    {/* <li>
+      <Link className="links" to="/Cita">
+        Mis citas
+      </Link>
+    </li> */}
+  </ul>
+</div>
             )}
           </div>
           <div className="container2">
-            <li>
-              <Link className="links" to="/Home">
-                Inicio
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Nosotros">
-                Nosotros
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Procedimientos">
-                Procedimientos
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Clinica">
-                Sedes
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Blog">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Contacto">
-                Contacto
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Cita">
-                Mis citas
-              </Link>
-            </li>
-          </div>
+          <ul>
+    <li>
+      <Link className="links" to="/Home">
+        Inicio
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Nosotros">
+        Nosotros
+      </Link>
+    </li>
+    <li>
+    <Link className="links" to="/Login">
+                   Agenda cita
+                 </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Procedimientos
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Mis citas
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Mi ranking
+      </Link>
+    </li>
+    <li>
+        <Link className="links" to="/DoctorCard">
+          Nuestros especialistas
+        </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Contacto">
+        Contacto
+      </Link>
+    </li>
+    {/* <li>
+      <Link className="links" to="/Cita">
+        Mis citas
+      </Link>
+    </li> */}
+  </ul>
+</div>
         </ul>
         <div className="icono-inicio-wrapper">
           {isAuthenticated && (

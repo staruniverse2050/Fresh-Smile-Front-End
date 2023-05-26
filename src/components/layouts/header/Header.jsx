@@ -74,16 +74,6 @@ export const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="links2" to="/Clinica">
-                    Sedes
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links2" to="/Blog">
-                    Blog
-                  </Link>
-                </li>
-                <li>
                   <Link className="links2" to="/Contacto">
                     Contacto
                   </Link>
@@ -110,16 +100,6 @@ export const Header = () => {
             <li>
               <Link className="links" to="/Procedimientos">
                 Procedimientos
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Clinica">
-                Sedes
-              </Link>
-            </li>
-            <li>
-              <Link className="links" to="/Blog">
-                Blog
               </Link>
             </li>
             <li>
@@ -156,7 +136,7 @@ export const Header = () => {
           {!isAuthenticated && (
             <img
               className="icono-inicio"
-              src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
+              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"
               alt="Inicio"
               onClick={handleLogin}
             />

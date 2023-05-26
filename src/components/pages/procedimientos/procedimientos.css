@@ -19,23 +19,6 @@
 	padding: 20px;
   }
   
-.container_proce1{
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-
-
-.container-procedimientos {
-	width: 100%;
-	padding-top: 10%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: 'Times New Roman';
-}
 
 .barra-procedimientos {
 	width: 100%;
@@ -58,50 +41,65 @@
 	font-family: 'Times New Roman';
 }
 
-.card {
-	width: 350px;
-	height: 500px;
-	background-color: #ffffff;
-	margin-right: 20px;
-	border-radius: 30px;
-	box-shadow: 15px 15px 30px #858484,
-		-15px -15px 30px #ffffff;
-	transition: 0.2s ease-in-out;
+.container-blog {
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(125,195,232,1) 0%, rgba(183,222,242,1) 35%, rgba(131,205,245,1) 100%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px 0;
+  /* outline: none; Agregado para eliminar el outline */
 }
 
-.card:hover {
-	cursor: pointer;
-	box-shadow: 0px 10px 20px rgba(68, 67, 67, 0.774);
+.container-blog img {
+  width: 40%;
+  max-height: 200px;
+  margin-right: 20px;
 }
 
-.card-image {
-	margin: auto;
-	padding-top: 10px;
-	width: 90%;
-	border-radius: 20px;
+.container-blog .content {
+  width: 60%;
 }
 
-.card-content {
-	font-family: 'Times New Roman';
-	padding: 20px;
+.container-blog .content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #4fafd2;
+  align-content: center;
+  font-weight: bold;
+  font-family: 'Times New Roman';
 }
 
-.card-title {
-	font-family: 'Times New Roman';
-	font-size: 25px;
-	margin-bottom: 10px;
-	color: #4fafd2;
-	text-align: center;
-	font-weight: bold;
+.p-blog {
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Times New Roman';
 }
 
-.card-description {
-	font-family: 'Times New Roman';
-	color: #000000;
-	font-size: 18px;
-	margin-bottom: 20px;
-	text-align: center;
+.btn-blog {
+  font-family: 'Times New Roman';
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #249bad;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  left: 100px;
 }
+
+.btn-blog:hover {
+  background:#1e6d79;
+}
+
 
 
 @media screen and (max-width: 768px) {

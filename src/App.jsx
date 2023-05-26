@@ -6,10 +6,7 @@ import { HeaderPaciente } from "./components/layouts/header/headerpaciente/Heade
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
-import { Clinica } from "./components/pages/clinica/Clinica";
-import { Blog } from "./components/pages/blog/Blog";
 import Contacto from "./components/pages/contacto/Contacto";
-import { Cita } from "./components/pages/cita/Cita";
 
 
 
@@ -40,10 +37,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
-        <Route path="/Clinica" element={<Clinica />} />
-        <Route path="/Blog" element={<Blog />} />
         <Route path="/Contacto" element={<Contacto />} />
-        <Route path="/Cita" element={<Cita />} />
       </Routes>
     </>
   );

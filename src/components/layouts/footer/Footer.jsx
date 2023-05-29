@@ -55,13 +55,17 @@ export const Footer = () => {
                   <span>Redes Sociales</span>
                 </p>
                 <div className="panel-icons">
-                  <div className="footer-icons">
+                  <div className="footer-iconsf">
                     <ul>
                       <li>
                         <a href="#">
                           <i className="fa fa-facebook"></i>
                         </a>
                       </li>
+                      </ul>
+                      </div>
+                      <div className="footer-iconsi">
+                      <ul>
                       <li>
                         <a href="#">
                           <i className="fa fa-instagram"></i>

@@ -31,6 +31,33 @@ body {
   line-height: 100%; /* Ajusta el valor según sea necesario */
 }
 
+.space-wpp {
+  position: fixed;
+  bottom: 110px;
+  right: 60px;
+  z-index: 9999;
+}
+
+.float {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.float:hover {
+  background-color: #128c7e;
+}
+
+.my-float {
+  margin-top: 18px;
+}
 
 .linksinicio2{
   text-decoration: none;

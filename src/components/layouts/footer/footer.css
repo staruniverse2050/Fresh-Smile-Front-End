@@ -115,11 +115,30 @@ h6 {
 
 .redes-info p {
   margin-left: 35px;
+  position: relative;
+  top: 26px;
 }
-
 .fa-heart {
   margin-left: 20px;
+  position: relative;
+  top: 23px;
 }
+.fa-location-dot:hover {
+  color: red;
+}
+
+.fa-envelope:hover {
+  color: blue;
+}
+
+.fa-phone-volume:hover {
+  color: green;
+}
+
+.fa-heart:hover {
+  color: rgb(214, 44, 72);
+}
+
 
 .container i {
   color: #ffffff;
@@ -127,29 +146,29 @@ h6 {
   margin-top: 8px;
 }
 
-.panel-icons .footer-icons .fa-instagram {
+.panel-icons .footer-iconsi .fa-instagram {
   margin-left: 6px;
 }
 
-.panel-icons .footer-icons i {
+.panel-icons .footer-iconsf i {
   margin: 5px;
 }
 
-.panel-icons .footer-icons i,
+.panel-icons .footer-iconsf i,
 li {
   font-size: 25px;
   margin-left: 5px;
 }
 
-.footer-icons li {
+.footer-iconsf li {
   margin-left: 20px;
 }
 
-.footer-icons ul li {
+.footer-iconsf ul li {
   display: inline-block;
 }
 
-.footer-icons ul li a {
+.footer-iconsf ul li a {
   border: 1px solid #ffffff;
   color: #ffffff;
   display: block;
@@ -161,22 +180,66 @@ li {
   margin-right: 2px;
   width: 35px;
   border-radius: 50%;
+  right: 20px;  
+  top:  26px;
+
+  position: relative;
 }
 
-.footer-icons a {
+.footer-iconsf {
   transition: all 0.3s ease 0s;
   text-decoration: none;
+  background-color: transparent; /* Agrega esta línea */
 }
 
-.footer-icons a:hover {
-  background: #3ec1d5;
-  text-shadow: none;
-  color: #fff;
+.footer-iconsf a:hover {
+  background-color: #3b5998;
 }
 
-.footer-icons ul li a:hover {
-  border-color: #3ec1d5;
+.panel-icons .footer-iconsi i {
+  margin: 5px;
 }
+
+.panel-icons .footer-iconsi i,
+li {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.footer-iconsi li {
+  margin-left: 20px;
+}
+
+.footer-iconsi ul li {
+  display: inline-block;
+}
+
+.footer-iconsi ul li a {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  display: block;
+  font-size: 15px;
+  height: 35px;
+  margin-top: 12px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 32px;
+  margin-right: 2px;
+  width: 35px;
+  border-radius: 50%;
+  position: relative;
+  left: 30px;
+  bottom: 23px;}
+
+.footer-iconsi {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  background-color: transparent; /* Agrega esta línea */
+}
+
+.footer-iconsi a:hover {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
 
 @media screen and (max-width: 768px) {
   h6 {

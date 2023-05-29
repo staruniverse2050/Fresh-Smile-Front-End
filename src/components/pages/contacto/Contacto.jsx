@@ -88,8 +88,11 @@ setMotivo('');
   
     // Crea un objeto con los valores del formulario
     const formData = {
-      ...templateParams,
-      from_email: event.target.from_email.value, // Utiliza el valor del correo ingresado en el formulario
+      to_email: 'freshsmilecmills@gmail.com', // Correo de destino
+      from_name: nombre, // Nombre del remitente obtenido del formulario
+      from_email: correo, // Correo del remitente obtenido del formulario
+      from_telefono: telefono,
+      message: motivo, // Mensaje obtenido del formulario
     };
   
     emailjs
@@ -102,16 +105,6 @@ setMotivo('');
         console.error('Error al enviar el correo electrónico:', error);
         // Manejo de errores
       });
-      const subject = encodeURIComponent('Me gustaría comunicarme con ustedes Fresh Smile Cmills');
-      const body = encodeURIComponent(`
-      Mi nombre es : ${nombre}
-      Mi número de contacto: Teléfono: ${telefono}
-      El motivo de mi mensaje es : ${motivo}
-      `);
-  
-      const mailtoLink = `mailto:freshsmilecmills@gmail.com?subject=${subject}&body=${body}`;
-  
-      window.open(mailtoLink);
   
     // Limpia los campos del formulario
     setNombre('');

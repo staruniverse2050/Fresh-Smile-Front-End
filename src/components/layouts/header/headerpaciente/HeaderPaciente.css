@@ -1,5 +1,5 @@
 .menu {
-  font-family: "Times New Roman";
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,10 +12,12 @@
   z-index: 9999;
   position: relative;
   padding: 10px;
+  position: fixed;
+
 }
 
 h1 {
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--font-color);

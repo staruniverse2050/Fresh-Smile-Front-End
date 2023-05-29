@@ -1,10 +1,11 @@
 body {
   overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Estilos del banner */
 .container_banner {
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +37,7 @@ body {
   color: #ffffff;
   padding: 0.5rem;
   position: relative;
-  left: 10px;
+  left: 4px;
   font-size: 22px;
   display: inline-block;
   text-align: center;
@@ -58,8 +59,11 @@ body {
   text-align: center;
   font-size: 3em;
   text-decoration: none;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
   align-items: center;
+  position: relative;
+  left: 123px;
+  top: 73px;
 }
 
 .container-btn {
@@ -80,11 +84,11 @@ body {
   font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
   margin: 50px;
   position: relative;
-  top: 74px;
+  top: 60px;
   cursor: pointer;
   border-radius: 80px;
   border: none;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -103,6 +107,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 40px;
 }
 .linksblog{
   text-decoration: none;
@@ -117,7 +122,7 @@ body {
   width: 80%;
   max-width: 600px;
   display: flex;
-  padding: 20px;
+  padding: 420px;
   border-radius: 10px;
   background: linear-gradient(90deg, rgba(125,195,232,1) 0%, rgba(183,222,242,1) 35%, rgba(131,205,245,1) 100%);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -145,7 +150,7 @@ body {
   color: #4fafd2;
   align-content: center;
   font-weight: bold;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .p-blog {
@@ -153,11 +158,11 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn-blog {
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #249bad;
@@ -192,7 +197,7 @@ body {
 .barra h2{
   font-size: 45px;
   color: #ffffff;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .barra-2 {
@@ -208,7 +213,7 @@ body {
 .barra-2 h2 {
   font-size: 45px;
   color: #ffffff;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -224,7 +229,7 @@ body {
 .barra-3 h2 {
   font-size: 45px;
   color: #5FFDFF;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -242,7 +247,7 @@ body {
 .barra5 h2 {
   font-size: 45px;
   color: #ffffff;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container-wrapper-2 {
@@ -257,8 +262,10 @@ body {
 .container-contacto {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 50px;
   width: 100%;
+  justify-content: center;
+
 }
 
 .container-contacto img {
@@ -281,7 +288,7 @@ body {
 .content-contacto h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .content-contacto p {
@@ -289,7 +296,7 @@ body {
   line-height: 1.5;
   margin-bottom: 10px;
   text-align: justify;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   left: 0; /* Ajusta el valor izquierdo para alinear el texto a la izquierda */
   top: 0; /* Ajusta el valor top según tus necesidades */
@@ -307,9 +314,9 @@ body {
   font-size: 16px;
   border-radius: 4px;
   position: relative;
-  left: 450px;
+  left: 490px;
   top:34px;
-  font-family: 'Times New Roman';
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn-contacto:hover {
@@ -377,7 +384,7 @@ body {
           font-size: 20px; /* Ajusta el tamaño de fuente en dispositivos más pequeños */
           margin: 20px; /* Ajusta el margen en dispositivos más pequeños */
           top: 0; /* Elimina el desplazamiento vertical */
-          font-family: 'Times New Roman';
+          font-family: 'Open Sans', sans-serif;
         }
         
         

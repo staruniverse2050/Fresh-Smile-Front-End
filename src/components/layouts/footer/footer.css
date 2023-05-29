@@ -1,29 +1,32 @@
 h6 {
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   display: inline-block;
   color: #ffffff;
   text-align: center;
   font-size: 25px;
   width: 100%;
   padding: 2px 25px;
+  margin-top: 40px; /* Ajusta el valor según tu necesidad */
+  margin-bottom: 20px;
 }
 
 .footer-area {
   background: #000000;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 50px; /* Ajusta el valor según tu necesidad */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+
 .footer-area p {
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
 }
 
 .footer-area p span {
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   color: #ffffff;
   font-size: 25px;
 }
@@ -37,7 +40,7 @@ h6 {
 
 .dateT {
   color: #ffffff;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
 
@@ -45,7 +48,7 @@ h6 {
   margin-left: 30px;
   margin-top: 10px;
   text-align: center;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
 }
 
 .fa-location-dot {
@@ -55,7 +58,7 @@ h6 {
 .address-info .dateT {
   margin-left: 1px;
   font-size: 20px;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
 }
 
 .phone {
@@ -72,7 +75,7 @@ h6 {
 .phone-info .dateT {
   font-size: 20px;
   margin-top: 10px;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   margin-left: 05px;
 }
 
@@ -91,19 +94,19 @@ h6 {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
 }
 
 .email-info .dateT {
   margin-right: 0.5em;
   font-size: 25px;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
 }
 
 .redes {
   padding-top: 10px;
   text-align: center;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   width: 15%;
   display: flex;
   align-items: center;
@@ -153,7 +156,7 @@ li {
   font-size: 15px;
   height: 35px;
   margin-top: 12px;
-  font-family: "Noto Sans Khojki";
+  font-family: 'Open Sans', sans-serif;
   line-height: 32px;
   margin-right: 2px;
   width: 35px;

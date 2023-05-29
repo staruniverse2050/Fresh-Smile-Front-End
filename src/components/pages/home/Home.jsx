@@ -15,11 +15,11 @@ export const Home = () => {
           <h1>¡Bienvenidos a la clinica Fresh Smile Cmills!</h1>
           <div className="container-btn">
             <button className="boton-home">
-              <Link to="/Clinica">
-                <a class="linksinicio2" href="#clinica">
-                  Buscar Clinica
-                </a>
-              </Link>
+            <Link to="/OdontologiasArmenia">
+  <a className="linksinicio2" href="#clinica">
+    Buscar Clínica
+  </a>
+</Link>
             </button>
           </div>
         </div>

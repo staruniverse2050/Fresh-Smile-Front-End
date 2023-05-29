@@ -5,9 +5,10 @@ import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
-import {Agenda} from "./components/pages/agendacita/Agenda";
+import { Agenda } from "./components/pages/agendacita/Agenda";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
-import {DoctorCard} from "./components/pages/Especialistas/DoctorCard";
+import OdontologiasArmenia from './components/pages/mapaArmenia/OdontologiasArmenia'; // Corrección aquí
+import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
 import Contacto from "./components/pages/contacto/Contacto";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Agenda" element={<Agenda />} />
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
+        <Route path="/OdontologiasArmenia" element={<OdontologiasArmenia />} /> // Corrección aquí
         <Route path="/DoctorCard" element={<DoctorCard />} />
         <Route path="/Contacto" element={<Contacto />} />
       </Routes>

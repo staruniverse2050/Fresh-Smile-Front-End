@@ -26,10 +26,11 @@ function App() {
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Mapa" element={<OdontologiasArmenia />} />
+        <Route path="/Agendar" element={<AgendaCita />} />
         <Route path="/Especialistas" element={<DoctorCard />} />
         <Route path="/Contacto" element={<Contacto />} />
       </Routes>
-      <AgendaCita />
+      {/* <AgendaCita /> */}
       <Chatbot />
     </>
   );

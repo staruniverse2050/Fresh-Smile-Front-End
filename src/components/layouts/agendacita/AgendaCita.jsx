@@ -52,7 +52,7 @@ const AgendaCita = () => {
 
   return (
     <div className="man-container">
-      <img src="https://cdn-icons-png.flaticon.com/512/5498/5498914.png" alt="Hombre" className="man-image" />
+      <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685471545/5498914_qaxqmq.png" alt="Hombre" className="man-image" />
       <div className="agenda-form-container">
         <h2>Agenda tu cita</h2>
         <form onSubmit={handleSubmit}>

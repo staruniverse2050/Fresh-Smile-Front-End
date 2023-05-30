@@ -5,7 +5,7 @@ import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
-import { Agenda } from "./components/pages/agendacita/Agenda";
+import  AgendaCita  from "./components/layouts/agendacita/AgendaCita";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import OdontologiasArmenia from './components/pages/mapaArmenia/OdontologiasArmenia';
 import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
@@ -22,14 +22,14 @@ function App() {
       {isPaciente ? <HeaderPaciente /> : <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Agenda" element={<Agenda />} />
+        <Route path="/Inicio" element={<Home />} />
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
-        <Route path="/OdontologiasArmenia" element={<OdontologiasArmenia />} />
-        <Route path="/DoctorCard" element={<DoctorCard />} />
+        <Route path="/Mapa" element={<OdontologiasArmenia />} />
+        <Route path="/Especialistas" element={<DoctorCard />} />
         <Route path="/Contacto" element={<Contacto />} />
       </Routes>
+      <AgendaCita />
       <Chatbot />
     </>
   );

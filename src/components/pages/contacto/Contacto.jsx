@@ -4,11 +4,14 @@ import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
 
-const Contacto = () => {
+export const Contacto = () => {
   const [nombre, setNombre] = useState('');
   const [telefono, setTelefono] = useState('');
   const [correo, setCorreo] = useState('');
   const [motivo, setMotivo] = useState('');
+  const [checkbox, setcheckbox] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
+
 
   const templateID = 'template_cd9lwaf';
   const userID = 'Zll8cDWW_JZg7WZMt';
@@ -17,8 +20,10 @@ const Contacto = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
     setIsModalOpen(!isModalOpen);
   };
+
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -39,16 +44,42 @@ const Contacto = () => {
   const handleMotivoChange = (event) => {
     setMotivo(event.target.value);
   };
+
+  
 const handleother = (event) => {
   event.preventDefault();
-  if (!nombre || !telefono || !correo || !motivo) {
+    if (!nombre || !telefono || !correo || !motivo) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Campos incompletos',
+        text: 'Por favor, complete todos los campos obligatorios.',
+      });
+      return;
+    }
+  
+    // if (!isChecked) {
+    //   Swal.fire({
+    //     icon: 'warning',
+    //     title: 'Oops...',
+    //     text: 'Debes aceptar los términos y condiciones.',
+    //   });
+    //   return;
+    // }
     Swal.fire({
-      icon: 'error',
-      title: 'Campos incompletos',
-      text: 'Por favor, complete todos los campos obligatorios.',
+      title: 'Cargando',
+      text: 'Espere un momento',
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
     });
-    return;
-  }
+    
+    setTimeout(() => {
+      Swal.close(); // Cierra la alerta después de 6 segundos
+      // Continúa con el resto del código aquí
+    }, 2000);
+    
   const subject = encodeURIComponent('Me gustaría comunicarme con ustedes Fresh Smile Cmills');
   const body = encodeURIComponent(`
   Mi nombre es : ${nombre}
@@ -65,6 +96,10 @@ setNombre('');
 setTelefono('');
 setCorreo('');
 setMotivo('');
+setIsChecked(false); // Restablecer el estado de isChecked a false
+
+
+
 };
 
   const handleSubmit = (event) => {
@@ -78,41 +113,70 @@ setMotivo('');
       });
       return;
     }
-    const templateParams = {
-      to_email: 'freshsmilecmills@gmail.com', // Correo de destino
+  
+    // if (!isChecked) {
+    //   Swal.fire({
+    //     icon: 'warning',
+    //     title: 'Oops...',
+    //     text: 'Debes aceptar los términos y condiciones.',
+    //   });
+    //   return;
+    // }
+
+
+// Variable para almacenar el correo de la empresa
+const correoEmpresa = "freshsmilecmills@gmail.com";
+
+// Crea un objeto con los valores del formulario
+const formData = {
+  from_email: correo, // Correo del remitente obtenido del formulario
+  to_email: correoEmpresa, // Correo de la empresa (remitente en el correo)
+  from_telefono: telefono,
+  from_name: nombre,
+  message: motivo, // Mensaje obtenido del formulario
+};
+
+// Ahora puedes utilizar el objeto 'formData' en tu código para enviar el correo electrónico utilizando EmailJS
+emailjs
+  .send("service_s74e77b", "template_cd9lwaf", formData, "Zll8cDWW_JZg7WZMt")
+  .then((response) => {
+    console.log("Correo electrónico enviado:", response.status, response.text);
+    // Aquí puedes realizar cualquier acción adicional después de enviar el correo
+  })
+  .catch((error) => {
+    console.error("Error al enviar el correo electrónico:", error);
+    // Manejo de errores
+  });
+
+
+    
+    
+    const formDataUser = {
+      to_email: correo, // Correo de destino
       from_name: nombre, // Nombre del remitente obtenido del formulario
       from_email: correo, // Correo del remitente obtenido del formulario
-      from_telefono: telefono,
-      message: motivo, // Mensaje obtenido del formulario
     };
-  
-    // Crea un objeto con los valores del formulario
-    const formData = {
-      to_email: 'freshsmilecmills@gmail.com', // Correo de destino
-      from_name: nombre, // Nombre del remitente obtenido del formulario
-      from_email: correo, // Correo del remitente obtenido del formulario
-      from_telefono: telefono,
-      message: motivo, // Mensaje obtenido del formulario
-    };
-  
-    emailjs
-      .send('service_s74e77b', 'template_cd9lwaf', formData, 'Zll8cDWW_JZg7WZMt')
-      .then((response) => {
-        console.log('Correo electrónico enviado:', response.status, response.text);
-        // Aquí puedes realizar cualquier acción adicional después de enviar el correo
-      })
-      .catch((error) => {
-        console.error('Error al enviar el correo electrónico:', error);
-        // Manejo de errores
-      });
-  
+    
+    
+      emailjs
+        .send('service_6s4b2r3', 'template_h2omu0a', formDataUser, 'Zll8cDWW_JZg7WZMt')
+        .then((response) => {
+          console.log('Correo electrónico enviado:', response.status, response.text);
+          // Aquí puedes realizar cualquier acción adicional después de enviar el correo
+        })
+        .catch((error) => {
+          console.error('Error al enviar el correo electrónico:', error);
+          // Manejo de errores
+        });
+    
     // Limpia los campos del formulario
     setNombre('');
     setTelefono('');
     setCorreo('');
     setMotivo('');
+    setIsChecked(false); // Restablecer el estado de isChecked a false
+
   };
-  
 
   return (
     <section className="contact">
@@ -153,7 +217,7 @@ setMotivo('');
         <div className="contactForm">
         <form>
             <div className="inputBox">
-              <input type="text" value={nombre} onChange={handleNombreChange} required />
+              <input type="text" name="nombre" value={nombre} onChange={handleNombreChange} required />
               <span>Nombre completo</span>
             </div>
             <div className="inputBox">
@@ -161,7 +225,7 @@ setMotivo('');
               <span>Teléfono</span>
             </div>
             <div className="inputBox">
-              <input type="text" name="from_email" value={correo} onChange={handleCorreoChange} required />
+              <input type="text" name="correo" value={correo} onChange={handleCorreoChange} onClick={handleSubmit}required />
               <span>Correo electrónico</span>
             </div>
             <div className="inputBox">
@@ -171,7 +235,7 @@ setMotivo('');
 
             
             <div className="inputBox-post">
-                <input type="checkbox" id="terms" required onChange={handleCheckboxChange} />
+                <input type="checkbox" value={checkbox} id="terms" required onChange={handleCheckboxChange} />
                 <label htmlFor="terms">Acepto los términos y condiciones</label>
               </div>
               {isModalOpen && (

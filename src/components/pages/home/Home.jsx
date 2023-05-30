@@ -15,7 +15,7 @@ export const Home = () => {
           <h1>¡Bienvenidos a la clinica Fresh Smile Cmills!</h1>
           <div className="container-btn">
             <button className="boton-home">
-            <Link to="/OdontologiasArmenia">
+            <Link to="/Mapa">
   <a className="linksinicio2" href="#clinica">
     Buscar Clínica
   </a>

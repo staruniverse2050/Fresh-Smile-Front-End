@@ -60,7 +60,7 @@ export const HeaderPaciente  = () => {
               <div className="container3">
                  <ul>
     <li>
-      <Link className="links" to="/Home">
+      <Link className="links" to="/Inicio">
         Inicio
       </Link>
     </li>
@@ -70,7 +70,7 @@ export const HeaderPaciente  = () => {
       </Link>
     </li>
     <li>
-    <Link className="links" to="/Login">
+    <Link className="links" to="/Agendar">
                    Agenda cita
                  </Link>
     </li>
@@ -80,7 +80,7 @@ export const HeaderPaciente  = () => {
       </Link>
     </li>
     <li>
-        <Link className="links" to="/DoctorCard">
+        <Link className="links" to="/Especialistas">
           Nuestros especialistas
         </Link>
     </li>
@@ -111,7 +111,7 @@ export const HeaderPaciente  = () => {
           <div className="container2">
           <ul>
     <li>
-      <Link className="links" to="/Home">
+      <Link className="links" to="/Inicio">
         Inicio
       </Link>
     </li>
@@ -121,7 +121,7 @@ export const HeaderPaciente  = () => {
       </Link>
     </li>
     <li>
-    <Link className="links" to="/Login">
+    <Link className="links" to="/Agendar">
                    Agenda cita
                  </Link>
     </li>
@@ -141,8 +141,8 @@ export const HeaderPaciente  = () => {
       </Link>
     </li>
     <li>
-        <Link className="links" to="/DoctorCard">
-          Nuestros especialistas
+        <Link className="links" to="/Especialistas">
+          Especialistas
         </Link>
     </li>
     <li>

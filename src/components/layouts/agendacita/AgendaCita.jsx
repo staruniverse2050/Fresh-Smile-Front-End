@@ -1,161 +1,154 @@
 import React, { useState } from "react";
 import "./agendacita.css";
+import axios from "axios";
 
-export const AgendaCita = () => {
-  const [tipoDocumento, setTipoDocumento] = useState('');
-  const [numeroDocumento, setNumeroDocumento] = useState('');
-  const [nombresPaciente, setNombresPaciente] = useState('');
-  const [telefonoPaciente, setTelefonoPaciente] = useState('');
-  const [correoPaciente, setCorreoPaciente] = useState('');
-  const [fechaNacimiento, setFechaNacimiento] = useState('');
-  const [disponibilidad, setDisponibilidad] = useState('');
-  const [tipoCita, setTipoCita] = useState('');
-  const [sede, setSede] = useState('');
+
+const AgendaCita = () => {
+  const [tipoDocumento, setTipoDocumento] = useState("");
+  const [numeroDocumento, setNumeroDocumento] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [email, setEmail] = useState("");
+  const [tipoCita, setTipoCita] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedHour, setSelectedHour] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Aquí puedes realizar acciones adicionales, como enviar los datos a un servidor
-
-    // Reiniciar los campos del formulario
-    setTipoDocumento('');
-    setNumeroDocumento('');
-    setNombresPaciente('');
-    setTelefonoPaciente('');
-    setCorreoPaciente('');
-    setFechaNacimiento('');
-    setDisponibilidad('');
-    setTipoCita('');
-    setSede('');
+  
+    // Crear el objeto de datos a enviar al backend
+    const data = {
+      tipoDocumento,
+      numeroDocumento,
+      nombre,
+      telefono,
+      email,
+      tipoCita,
+      selectedHour
+    };
+  
+    // Realizar la solicitud POST al backend
+    axios.post("URL_DE_TU_API", data)
+      .then((response) => {
+        // Manejar la respuesta del backend si es necesario
+        console.log(response.data);
+        // Restablecer los campos del formulario después de enviar los datos
+        setTipoDocumento("");
+        setNumeroDocumento("");
+        setNombre("");
+        setTelefono("");
+        setEmail("");
+        setTipoCita("");
+        setSelectedHour("");
+      })
+      .catch((error) => {
+        // Manejar el error si la solicitud no se completa correctamente
+        console.error(error);
+      });
+  };
+  const handleHourSelect = (hour) => {
+    setSelectedHour(hour);
   };
 
   return (
-    <>
-      <div className="schedule-banner">
-        <div className="contenedor1-box">
-          <div className="schedule-title">
-            <h2>Agenda aquí tu cita</h2>
-            <p>Llena este formulario para agendar tu cita</p>
+    <div className="man-container">
+      <img src="https://cdn-icons-png.flaticon.com/512/5498/5498914.png" alt="Hombre" className="man-image" />
+      <div className="agenda-form-container">
+        <h2>Agenda tu cita</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="tipoDocumento">Tipo de documento:</label>
+            <input
+              type="text"
+              id="tipoDocumento"
+              value={tipoDocumento}
+              onChange={(e) => setTipoDocumento(e.target.value)}
+              required
+            />
           </div>
-          <div className="schedule-box1">
-            <form onSubmit={handleSubmit}>
-              <div className="schedule-input">
-                <div className="input-container">
-                  <input
-                    type="text"
-                    value={tipoDocumento}
-                    onChange={(e) => setTipoDocumento(e.target.value)}
-                    required
-                  />
-                  <span onClick={() => document.getElementById("tipoDocumento").focus()}>
-                    Tipo de documento:
-                  </span>
-                </div>
-              </div>
-              <div className="schedule-input">
-                <input
-                  type="number"
-                  value={numeroDocumento}
-                  onChange={(e) => setNumeroDocumento(e.target.value)}
-                  required
-                />
-                <span onClick={() => document.getElementById("numeroDocumento").focus()}>
-                  Numero de documento:
-                </span>
-              </div>
-              <div className="schedule-input">
-                <div className="input-container">
-                  <input
-                    type="text"
-                    value={nombresPaciente}
-                    onChange={(e) => setNombresPaciente(e.target.value)}
-                    required
-                  />
-                  <span onClick={() => document.getElementById("nombresPaciente").focus()}>
-                    Nombres Completos:
-                  </span>
-                </div>
-              </div>
-              <div className="schedule-input">
-                <div className="input-container">
-                  <input
-                    type="number"
-                    value={telefonoPaciente}
-                    onChange={(e) => setTelefonoPaciente(e.target.value)}
-                    required
-                  />
-                  <span onClick={() => document.getElementById("telefonoPaciente").focus()}>
-                    Telefono:
-                  </span>
-                </div>
-              </div>
-              <div className="schedule-input">
-                <div className="input-container">
-                  <input
-                    type="text"
-                    value={correoPaciente}
-                    onChange={(e) => setCorreoPaciente(e.target.value)}
-                    required
-                  />
-                  <span onClick={() => document.getElementById("correoPaciente").focus()}>
-                    Correo electronico:
-                  </span>
-                </div>
-                <div className="schedule-input">
-                <label htmlFor="history">Fecha de nacimiento:</label>
-                  <div className="input-container">
-                  <input 
-                  type="date" 
-                  value={fechaNacimiento} 
-                  onChange={(e) => setFechaNacimiento(e.target.value)}
-                  required
-                  />
-                  </div>
-                </div>
-                <div className="schedule-input">
-                <label htmlFor="history">Disponibilidad:</label>
-                <div className="input-container">
-                <input
-            type="datetime-local"
-            id="date"
-            value={disponibilidad}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-                </div>
-                </div>
-              <div className="schedule-input">
-                <div className="input-container">
-                  <input
-                    type="text"
-                    value={tipoCita}
-                    onChange={(e) => setTipoCita(e.target.value)}
-                    required
-                  />
-                  <span onClick={() => document.getElementById("tipoCita").focus()}>
-                    Tipo de cita:
-                  </span>
-                </div>
-              </div>
-              </div>
-              <div className="schedule-option">
-                <div className="input-container">
-                  <select value={sede} onChange={(e) => setSede(e.target.value)}>
-                    <option value="">Seleccione una sede</option>
-                    <option value="Sede Principal">Sede Armenia</option>
-                    <option value="Sede Secundaria">Sede Tebaida</option>
-                    <option value="Sede Terciaria">Sede Circasia</option>
-                  </select>
-                </div>
-              </div>
-              <div className="schedule-input">
-                <button type="submit">Agendar Cita</button>
-              </div>
-            </form>
+          <div className="form-group">
+            <label htmlFor="numeroDocumento">Número de documento:</label>
+            <input
+              type="text"
+              id="numeroDocumento"
+              value={numeroDocumento}
+              onChange={(e) => setNumeroDocumento(e.target.value)}
+              required
+            />
           </div>
-        </div>
+          <div className="form-group">
+            <label htmlFor="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="telefono">Teléfono:</label>
+            <input
+              type="text"
+              id="telefono"
+              value={telefono}
+              onChange={(e) => setTelefono(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="tipoCita">Tipo de cita:</label>
+            <select
+              id="tipoCita"
+              value={tipoCita}
+              onChange={(e) => setTipoCita(e.target.value)}
+              required
+            >
+              <option value="">Seleccione un tipo de cita</option>
+              <option value="Consulta">Consulta</option>
+              <option value="Control">Control</option>
+              <option value="Emergencia">Emergencia</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label>Horas disponibles:</label>
+            <div className="hour-grid">
+              <button
+                className={`hour-button ${selectedHour === "9:00 AM" ? "selected" : ""}`}
+                onClick={() => handleHourSelect("9:00 AM")}
+              >
+                9:00 AM
+              </button>
+              <button
+                className={`hour-button ${selectedHour === "10:00 AM" ? "selected" : ""}`}
+                onClick={() => handleHourSelect("10:00 AM")}
+              >
+                10:00 AM
+              </button>
+              <button
+                className={`hour-button ${selectedHour === "11:00 AM" ? "selected" : ""}`}
+                onClick={() => handleHourSelect("11:00 AM")}
+              >
+                11:00 AM
+              </button>
+              {/* Agrega más botones de hora según tu necesidad */}
+            </div>
+          </div>
+          <div className="form-group">
+            <button type="submit">Agendar cita</button>
+          </div>
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 

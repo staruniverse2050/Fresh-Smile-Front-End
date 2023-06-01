@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
+import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador"; // Importa el componente HeaderAdministrador
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
-import  AgendaCita  from "./components/layouts/agendacita/AgendaCita";
+import AgendaCita from "./components/layouts/agendacita/AgendaCita";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import OdontologiasArmenia from './components/pages/mapaArmenia/OdontologiasArmenia';
 import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
 import Contacto from "./components/pages/contacto/Contacto";
-import Chatbot from './components/layouts/chatbot/Chatbot'; // Corrección aquí
+import Chatbot from './components/layouts/chatbot/Chatbot';
+import RegistroFormulario from "./components/layouts/Register/RegistroFormulario";
+import Login from "./components/layouts/Login/Login"; // Importa el componente Login
 
 function App() {
-  const { isAuthenticated } = useAuth0();
-
-  const isPaciente = isAuthenticated; // Cambiar esto según la lógica de autenticación de pacientes
+  const [rol, setRol] = useState(""); // Estado para almacenar el rol actual del usuario
 
   return (
     <>
-      {isPaciente ? <HeaderPaciente /> : <Header />}
+      {rol === "administrador" ? (
+        <HeaderAdministrador />
+      ) : (
+        <HeaderPaciente />
+      )}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Inicio" element={<Home />} />
@@ -29,8 +34,9 @@ function App() {
         <Route path="/Agendar" element={<AgendaCita />} />
         <Route path="/Especialistas" element={<DoctorCard />} />
         <Route path="/Contacto" element={<Contacto />} />
+        <Route path="/Registro" element={<RegistroFormulario />} />
+        <Route path="/Login" element={<Login setRol={setRol} />} />
       </Routes>
-      {/* <AgendaCita /> */}
       <Chatbot />
     </>
   );

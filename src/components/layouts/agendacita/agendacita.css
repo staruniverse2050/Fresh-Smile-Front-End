@@ -1,110 +1,82 @@
-.agenda-form-container {
-  width: 500px; /* Ancho deseado para el contenedor principal */
-  margin: 0 auto;
-  position: relative;
-  top: 160px;
-  padding: 20px;
-  left:358px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.agenda-form-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 .man-container {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .man-image {
-  position: absolute;
-  top: 75%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  /* Ajusta el tamaño de la imagen según tus necesidades */
+  width: 200px;
+  height: 200px;
 }
-.hour-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Cambia el número de columnas según el diseño deseado */
-  gap: 10px; /* Espacio entre los botones */
-}
-
-.hour-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f5f5f5;
-  color: #333;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.hour-button.selected {
-  background-color: #007bff;
-  color: #fff;
-}
-
-
 
 .agenda-form-container {
-  /* Estilos del formulario */
-  width: 500px;
-  margin: 0 auto;
+  background-color: #f2f2f2;
   padding: 20px;
-  background-color: #f5f5f5;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.agenda-form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-label {
+.agenda-form-container label {
   display: block;
-  font-weight: bold;
   margin-bottom: 5px;
-  color: #555;
-  position: relative;
-  left: 34px;
 }
-input[type="text"],
-input[type="email"],
-select {
-  width: 80%;
-  max-width: 600px; /* Ancho máximo deseado para las casillas de entrada y selección */
+
+.agenda-form-container .form-input {
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
-  position: relative;
-  left: 34px;
-}
-select{
-  width: 85%;
-
 }
 
-button[type="submit"] {
-  width: 40%;
+.agenda-form-container .form-select {
+  width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  color: #fff;
-  font-size: 16px;
-  position: relative;
-  left:156px;
+}
+
+.hour-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.hour-button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
   cursor: pointer;
-  top: 14px;
   transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.hour-button.selected {
+  background-color: #ccc;
+}
+
+.Agendar {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Agendar:hover {
   background-color: #0056b3;
 }

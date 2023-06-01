@@ -1,32 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import "./Header.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 export const Header = () => {
-  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const [isOpen, setIsOpen] = useState(false);
-  const [logoImage, setLogoImage] = useState(
-    "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
-  );
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      setLogoImage(user.picture);
-    } else {
-      setLogoImage(
-        "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
-      );
-    }
-  }, [isAuthenticated, user]);
-
-  const handleLogout = () => {
-    logout({ returnTo: window.location.origin });
-  };
-
-  const handleLogin = () => {
-    loginWithRedirect();
-  };
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -55,107 +32,78 @@ export const Header = () => {
               onClick={toggleMenu}
               className="icon-hamburguer"
               src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
+              alt=""
             />
             {isOpen && (
-             <div className="container3">
-             <ul>
-               <li>
-                 <Link className="links2" to="/Inicio">
-                   Inicio
-                 </Link>
-               </li>
-               <li>
-                 <Link className="links2" to="/Nosotros">
-                   Nosotros
-                 </Link>
-               </li>
-               <li>
-               <Link className="links" to="/Agendar">
-                   Agenda tu cita
-                 </Link>
-               </li>
-               <li>
-                 <Link className="links2" to="/Procedimientos">
-                   Procedimientos
-                 </Link>
-               </li>
-               <li>
-                 <Link className="links2" to="/Contacto">
-                   Contacto
-                 </Link>
-               </li>
-               {/* <li>
-                 <Link className="links2" to="/Cita">
-                   Mis citas
-                 </Link>
-               </li> */}
-             </ul>
-           </div>
-           
+              <div className="container3">
+                <ul>
+                  <li>
+                    <Link className="links2" to="/Inicio">
+                      Inicio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="links2" to="/Nosotros">
+                      Nosotros
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="links" to="/Agendar">
+                      Agenda tu cita
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="links2" to="/Procedimientos">
+                      Procedimientos
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="links2" to="/Contacto">
+                      Contacto
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             )}
           </div>
           <div className="container2">
-  <ul>
-    <li>
-      <Link className="links" to="/Inicio">
-        Inicio
-      </Link>
-    </li>
-    <li>
-      <Link className="links" to="/Nosotros">
-        Nosotros
-      </Link>
-    </li>
-    <li>
-    <Link className="links" to="/Agendar">
-                   Agenda cita
-                 </Link>
-    </li>
-    <li>
-      <Link className="links" to="/Procedimientos">
-        Procedimientos
-      </Link>
-    </li>
-    <li>
-      <Link className="links" to="/Contacto">
-        Contacto
-      </Link>
-    </li>
-    {/* <li>
-      <Link className="links" to="/Cita">
-        Mis citas
-      </Link>
-    </li> */}
-  </ul>
-</div>
+            <ul>
+              <li>
+                <Link className="links" to="/Inicio">
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link className="links" to="/Nosotros">
+                  Nosotros
+                </Link>
+              </li>
+              <li>
+                <Link className="links" to="/Agendar">
+                  Agenda cita
+                </Link>
+              </li>
+              <li>
+                <Link className="links" to="/Procedimientos">
+                  Procedimientos
+                </Link>
+              </li>
+              <li>
+                <Link className="links" to="/Contacto">
+                  Contacto
+                </Link>
+              </li>
+            </ul>
+          </div>
         </ul>
         <div className="icono-inicio-wrapper">
-          {isAuthenticated && (
-            <div className="dropdown-wrapper" onClick={toggleDropdown}>
-              <div className="icon-container">
-                <img className="icono-inicio" src={user.picture} alt="" />
-              </div>
-              {isOpen && (
-                <div className="dropdown">
-                  <ul>
-                    <li>
-                      <button className="dropdown-button" onClick={handleLogout}>
-                        Cerrar sesión
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          )}
-          {!isAuthenticated && (
+          <Link to="/Registro">
             <img
               className="icono-inicio"
               src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"
               alt="Inicio"
-              onClick={handleLogin}
             />
-          )}
+          </Link>
         </div>
       </div>
     </header>

@@ -1,104 +1,99 @@
-import React, { useState } from 'react';
-import './Login.css';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import Swal from "sweetalert2";
+import "./Login.css"; // Importa el archivo CSS específico para este componente
 
 export const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [userRole, setUserRole] = useState('');
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
 
-  const handleLogin = () => {
-    const userData = {
-      email,
-      password,
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let url;
+      if (role === "paciente") {
+        url = "https://backfresh.azurewebsites.net/FreshSmile/loginPaciente";
+      } else if (role === "administrador") {
+        url = "https://backfresh.azurewebsites.net/FreshSmile/loginAdministrador";
+      } else {
+        throw new Error("Rol no válido");
+      }
 
-    fetch('your-api-url/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          // Autenticación exitosa
-          setUserRole('admin');
-        } else {
-          // Error de autenticación
-          setError('Credenciales inválidas. Por favor, inténtalo de nuevo.');
-        }
-      })
-      .catch((error) => {
-        setError('Error de autenticación');
-        console.error(error);
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          correo: email,
+          contraseña: password,
+        }),
       });
-  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (email === '' || password === '') {
-      setError('Por favor, complete todos los campos.');
-    } else {
-      handleLogin();
+      if (response.ok) {
+        // Inicio de sesión exitoso
+        const data = await response.text();
+        Swal.fire({
+          icon: "success",
+          title: "Inicio de sesión exitoso",
+          text: data,
+        });
+      } else {
+        // Las credenciales son incorrectas
+        throw new Error("Correo o contraseña incorrectos");
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: error.message,
+      });
     }
   };
-
-  // Determinar la ruta de redirección según el rol del usuario
-  let redirectPath = '/';
-  if (userRole === 'admin') {
-    redirectPath = '/otra-parte'; // Cambia '/otra-parte' a la ruta que deseas redirigir para el usuario administrador
-  }
-
-  // Redirigir a la ruta correspondiente
-  useEffect(() => {
-    if (userRole === 'admin') {
-      const redirectPath = '/otra-parte'; // Cambia '/otra-parte' a la ruta que deseas redirigir para el usuario administrador
-      navigate(redirectPath);
-    } else {
-      setShowForm(true); // Mostrar el formulario si el inicio de sesión no fue exitoso
-    }
-  }, [userRole, navigate]);
 
   return (
-    <>
-      {/* Header sin barra */}
-      <div className="LoginHeader">
-        {/* <img className="iconoInicio" src="./public/agregar-usuario.png" alt="imagen de persona" /> */}
-      </div>
-      <div className="Login">
-        <section className="LoginForm">
+    <div className="login-container">
+      <h1 className="login-title">Login</h1>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label className="login-label">
+          Correo:
           <input
-            className="LoginInput"
             type="text"
-            placeholder="Ingrese su correo"
-            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="login-input"
           />
+        </label>
+        <br />
+        <label className="login-label">
+          Contraseña:
           <input
-            className="LoginInput"
             type="password"
-            placeholder="Ingrese su contraseña"
-            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="login-input"
           />
-          <button className="LoginButton" onClick={handleSubmit}>
-            Iniciar Sesión
-          </button>
-        </section>
-        <p className="LoginP">
-          ¿Aún no eres miembro?{' '}
-          <Link to="/Register" className="LoginA">
-            Regístrate
-          </Link>
-        </p>
-        {error && <p>{error}</p>}
-      </div>
-    </>
+        </label>
+        <br />
+        <label className="login-label">
+          Rol:
+          <select
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            className="login-select"
+          >
+            <option value="">Seleccione un rol</option>
+            <option value="paciente">Paciente</option>
+            <option value="administrador">Administrador</option>
+          </select>
+        </label>
+        <br />
+        <button type="submit" className="login-button">
+          Iniciar sesión
+        </button>
+      </form>
+    </div>
   );
 };
+
+export default Login;

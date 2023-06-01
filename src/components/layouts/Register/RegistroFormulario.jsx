@@ -103,12 +103,12 @@ const RegistroFormulario = () => {
     } else if (rol === 'Paciente') {
       apiEndpoint = 'https://backfresh.azurewebsites.net/FreshSmile/CrearPacientes';
       datosFormulario = {
-        tipo_documento: tipoDocumento,
-        numero_documento: numeroDocumento,
-        nombres: nombres,
-        apellidos: apellidos,
-        direccion: direccion,
-        telefono: telefono,
+        tipo_documento_paciente: tipoDocumento,
+        numero_documento_paciente: numeroDocumento,
+        nombres_paciente: nombres,
+        apellidos_paciente: apellidos,
+        direccion_paciente: direccion,
+        telefono_paciente: telefono,
         correo: correo,
         contraseña: contraseña,
       };

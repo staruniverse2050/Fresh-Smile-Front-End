@@ -77,3 +77,12 @@
 	text-align: center;
 	text-decoration: none;
 }
+.custom-swal-button {
+	background-color: #249bad;
+	color: white;
+	border: none;
+	/* Añade otros estilos según tus necesidades */
+  }
+  .custom-swal-button:hover{
+	background-color: #1e6d79;
+  }

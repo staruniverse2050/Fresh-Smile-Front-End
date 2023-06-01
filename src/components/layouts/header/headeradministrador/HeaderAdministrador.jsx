@@ -1,116 +1,158 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import "../headerpaciente/HeaderPaciente.css";
 
-export const HeaderAdministrador = () => {
-    return (
-        <header className="Header_Header">
-          <div className="menu">
-            <a href="#home">
-              <img
-                className="logo"
-                src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
-                alt=""
-              />
-            </a>
-            <h1>
-              <span>Fresh</span>Smile<span>Cmills</span>
-            </h1>
-            <ul>
-              <div className="toggle-menu">
-                <img
-                  onClick={toggleMenu}
-                  className="icon-hamburguer"
-                  src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
-                />
-                {isOpen && (
-                  <div className="container3">
-                    <li>
-                      <Link className="links2" to="/Home">
-                        Inicio
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="links2" to="/Nosotros">
-                        Nosotros
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="links2" to="/Procedimientos">
-                        Procedimientos
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="links2" to="/Cita">
-                        Agenda
-                      </Link>
-                    </li>
-                  </div>
-                )}
+
+export const HeaderAdministrador  = () => {
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+  const [isOpen, setIsOpen] = useState(false);
+  const [logoImage, setLogoImage] = useState(
+    "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
+  );
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLogoImage(user.picture);
+    } else {
+      setLogoImage(
+        "https://res.cloudinary.com/dexfjrgyw/image/upload/v1684535602/Fresh_Smile_Cmills/acceso_o3o3dp.png"
+      );
+    }
+  }, [isAuthenticated, user]);
+
+  const handleLogout = () => {
+    logout({ returnTo: window.location.origin });
+  };
+
+  const handleLogin = () => {
+    loginWithRedirect();
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <header className="Header_Header">
+      <div className="menu">
+        <a href="#home">
+          <img
+            className="logo"
+            src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
+            alt=""
+          />
+        </a>
+        <h1>
+          <span>Fresh </span> Smile<span> Cmills</span>
+        </h1>
+        <ul>
+          <div className="toggle-menu">
+            <img
+              onClick={toggleMenu}
+              className="icon-hamburguer"
+              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
+            />
+            {isOpen && (
+              <div className="container3">
+                 <ul>
+    <li>
+      <Link className="links" to="/Inicio">
+        Inicio
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Nosotros">
+        Nosotros
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Procedimientos
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Agenda
+      </Link>
+    </li>
+    {/* <li>
+      <Link className="links" to="/Cita">
+        Mis citas
+      </Link>
+    </li> */}
+  </ul>
+</div>
+            )}
+          </div>
+          <div className="container2">
+          <ul>
+    <li>
+      <Link className="links" to="/Inicio">
+        Inicio
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Nosotros">
+        Nosotros
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Procedimientos
+      </Link>
+    </li>
+    <li>
+      <Link className="links" to="/Procedimientos">
+        Agenda
+      </Link>
+    </li>
+    <li>
+        <Link className="links" to="/Especialistas">
+          Mi valoración
+        </Link>
+    </li>
+
+    {/* <li>
+      <Link className="links" to="/Cita">
+        Mis citas
+      </Link>
+    </li> */}
+  </ul>
+</div>
+        </ul>
+        <div className="icono-inicio-wrapper">
+          {isAuthenticated && (
+            <div className="dropdown-wrapper" onClick={toggleDropdown}>
+              <div className="icon-container">
+                <img className="icono-inicio" src={user.picture} alt="" />
               </div>
-              <div className="container2">
-                <li>
-                  <Link className="links" to="/Home">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/Nosotros">
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/Procedimientos">
-                    Procedimientos
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/Cita">
-                  Agenda
-                  </Link>
-                </li>
-                <li>
-                  <Link className="links" to="/Cita">
-                  Valoraciones
-                  </Link>
-                </li>
-              </div>
-            </ul>
-            <div className="icono-inicio-wrapper">
-              {isAuthenticated && (
-                <div className="dropdown-wrapper" onClick={toggleDropdown}>
-                  <div className="icon-container">
-                    <img className="icono-inicio" src={user.picture} alt="" />
-                  </div>
-    
-                  {showDropdown && (
-                    <div className="dropdown">
-                      <ul>
-                        <li>
-                          <a
-                            className="dropdown-button"
-                            href="#"
-                            onClick={handleLogout}
-                          >
-                            Cerrar sesión
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  )}
+              {isOpen && (
+                <div className="dropdown">
+                  <ul>
+                    <li>
+                      <button className="dropdown-button" onClick={handleLogout}>
+                        Cerrar sesión
+                      </button>
+                    </li>
+                  </ul>
                 </div>
               )}
-              {!isAuthenticated && (
-                <img
-                  className="icono-inicio"
-                  src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
-                  alt="Inicio"
-                  onClick={handleLogin}
-                />
-              )}
             </div>
-            <Link to="/Clinica">
-              <a href="#clinica"></a>
-            </Link>
-          </div>
-        </header>
-      );
-    };
+          )}
+          {!isAuthenticated && (
+            <img
+              className="icono-inicio"
+              src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
+              alt="Inicio"
+              onClick={handleLogin}
+            />
+          )}
+        </div>
+      </div>
+    </header>
+  );
+};

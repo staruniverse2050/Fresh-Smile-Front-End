@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 const RegistroFormulario = () => {
   const [tipoDocumento, setTipoDocumento] = useState('');
@@ -19,15 +21,24 @@ const RegistroFormulario = () => {
   };
 
   const handleNumeroDocumentoChange = (event) => {
-    setNumeroDocumento(event.target.value);
+    const value = event.target.value;
+    if (/^\d*$/.test(value)) {
+      setNumeroDocumento(value);
+    }
   };
 
   const handleNombresChange = (event) => {
-    setNombres(event.target.value);
+    const value = event.target.value;
+    if (/^[a-zA-Z\s]*$/.test(value)) {
+      setNombres(value);
+    }
   };
 
   const handleApellidosChange = (event) => {
-    setApellidos(event.target.value);
+    const value = event.target.value;
+    if (/^[a-zA-Z\s]*$/.test(value)) {
+      setApellidos(value);
+    }
   };
 
   const handleDireccionChange = (event) => {
@@ -81,6 +92,10 @@ const RegistroFormulario = () => {
         icon: 'error',
         title: 'Correo electrónico inválido',
         text: 'La dirección de correo electrónico no es válida.',
+        customClass: {
+          confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
+        },
+        buttonsStyling: false, // Desactivar estilos de botón predeterminados de SweetAlert
       });
       return;
     }
@@ -145,6 +160,10 @@ const RegistroFormulario = () => {
           icon: 'error',
           title: 'Error en el registro',
           text: 'Ha ocurrido un error durante el registro. Por favor, inténtalo de nuevo.',
+          customClass: {
+            confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
+          },
+          buttonsStyling: false, // Desactivar estilos de botón predeterminados de SweetAlert
         });
       }
     } catch (error) {
@@ -152,6 +171,10 @@ const RegistroFormulario = () => {
         icon: 'error',
         title: 'Error en el registro',
         text: 'Ha ocurrido un error durante el registro. Por favor, inténtalo de nuevo.',
+        customClass: {
+          confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
+        },
+        buttonsStyling: false, // Desactivar estilos de botón predeterminados de SweetAlert
       });
       console.error(error);
     }
@@ -234,4 +257,3 @@ const RegistroFormulario = () => {
 };
 
 export default RegistroFormulario;
-// Registro

@@ -40,4 +40,61 @@
 	border: none;
 	cursor: pointer;
   }
+  .loading-animation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+  }
   
+  #animation-container {
+	width: 300px;
+	height: 200px;
+  }
+  .modal {
+	/* Ajusta el tamaño de la ventana modal */
+	width: 500px;
+	height: 400px;
+  
+	/* Añade estilos de posición y centrado */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  
+	/* Añade estilos de fondo y bordes */
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius:10px;
+  
+	/* Añade estilos de sombra */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+	/* Añade estilos de texto y alineación */
+	text-align: center;
+	padding: 20px;
+  }
+  
+  .modal-overlay {
+	/* Ajusta el tamaño y los estilos del fondo superpuesto */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+  
+	/* Añade estilos de superposición */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .custom-swal-button {
+	background-color: #249bad;
+	color: white;
+	border: none;
+	/* Añade otros estilos según tus necesidades */
+  }
+  .custom-swal-button:hover{
+	background-color: #1e6d79;
+  }

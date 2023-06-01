@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import "./agendacita.css";
 import axios from "axios";
 
+const tiposDocumento = [
+  "Cédula de ciudadanía",
+  "Tarjeta de identidad",
+  "Cédula de extranjería",
+  "Pasaporte",
+];
+
 const AgendaCita = () => {
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [numeroDocumento, setNumeroDocumento] = useState("");
@@ -22,11 +29,12 @@ const AgendaCita = () => {
       telefono,
       email,
       tipoCita,
-      selectedHour
+      selectedHour,
     };
 
     // Realizar la solicitud POST al backend
-    axios.post("URL_DE_TU_API", data)
+    axios
+      .post("URL_DE_TU_API", data)
       .then((response) => {
         // Manejar la respuesta del backend si es necesario
         console.log(response.data);
@@ -61,14 +69,20 @@ const AgendaCita = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="tipoDocumento">Tipo de documento:</label>
-            <input
-              type="text"
+            <select
               id="tipoDocumento"
-              className="form-input"
+              className="select"
               value={tipoDocumento}
               onChange={(e) => setTipoDocumento(e.target.value)}
               required
-            />
+            >
+              <option value="">Seleccione un tipo de documento</option>
+              {tiposDocumento.map((tipo) => (
+                <option key={tipo} value={tipo}>
+                  {tipo}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="form-group">
             <label htmlFor="numeroDocumento">Número de documento:</label>
@@ -118,7 +132,7 @@ const AgendaCita = () => {
             <select
               id="tipoCita"
               value={tipoCita}
-              className="form-select"
+              className="select"
               onChange={(e) => setTipoCita(e.target.value)}
               required
             >

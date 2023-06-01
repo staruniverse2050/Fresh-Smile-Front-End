@@ -234,3 +234,4 @@ const RegistroFormulario = () => {
 };
 
 export default RegistroFormulario;
+Registro

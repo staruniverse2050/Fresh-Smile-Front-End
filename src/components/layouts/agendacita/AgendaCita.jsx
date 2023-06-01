@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AgendaCita.css";
+import "./agendacita.css";
 import axios from "axios";
 
 const AgendaCita = () => {

@@ -1,7 +1,7 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const { createMemoryRouter } = require('react-router-dom');
+import express from 'express';
+import bodyParser from 'body-parser';
+import nodemailer from 'nodemailer';
+import { createMemoryRouter } from 'react-router-dom';
 
 const app = express();
 const PORT = 3000;

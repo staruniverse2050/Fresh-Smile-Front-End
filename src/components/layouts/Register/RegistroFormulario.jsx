@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
 
 const RegistroFormulario = () => {
   const [tipoDocumento, setTipoDocumento] = useState('');

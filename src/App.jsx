@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes, Navigate, Link } from "react-router-dom";
+import { Route, Routes, Navigate} from "react-router-dom";
 import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
 import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador";

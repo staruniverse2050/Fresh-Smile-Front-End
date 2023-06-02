@@ -26,9 +26,9 @@ export const Login = ({ setRol }) => {
     try {
       let url;
       if (role === "paciente") {
-        url = "https://backfresh.azurewebsites.net/FreshSmile/loginPaciente";
+        url = "https://freshsmile.azurewebsites.net/FreshSmile/loginPaciente";
       } else if (role === "administrador") {
-        url = "https://backfresh.azurewebsites.net/FreshSmile/loginAdministrador";
+        url = "https://freshsmile.azurewebsites.net/FreshSmile/loginAdministrador";
       } else {
         throw new Error("Rol no válido");
       }

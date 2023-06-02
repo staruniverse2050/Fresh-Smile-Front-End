@@ -102,7 +102,7 @@ const RegistroFormulario = () => {
     let datosFormulario = {};
 
     if (rol === 'Administrador') {
-      apiEndpoint = 'https://backfresh.azurewebsites.net/FreshSmile/CrearAdministradores';
+      apiEndpoint = 'https://freshsmile.azurewebsites.net/FreshSmile/CrearAdministradores';
       datosFormulario = {
         tipo_documento_uadministrador: tipoDocumento,
         numero_documento_uadministrador: numeroDocumento,
@@ -114,7 +114,7 @@ const RegistroFormulario = () => {
         contraseña: contraseña,
       };
     } else if (rol === 'Paciente') {
-      apiEndpoint = 'https://backfresh.azurewebsites.net/FreshSmile/CrearPacientes';
+      apiEndpoint = 'https://freshsmile.azurewebsites.net/FreshSmile/CrearPacientes';
       datosFormulario = {
         tipo_documento_paciente: tipoDocumento,
         numero_documento_paciente: numeroDocumento,

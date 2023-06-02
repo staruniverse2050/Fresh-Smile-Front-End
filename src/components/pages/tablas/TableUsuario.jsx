@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "./tables.css";
+import swal from 'sweetalert';
 import axios from 'axios';
 
-const TableUsuario = () => {
+const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -11,7 +12,7 @@ const TableUsuario = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('URL_DE_TU_API'); // Reemplaza 'URL_DE_TU_API' con la URL de tu API real
+      const response = await axios.get('https://freshsmile.azurewebsites.net/FreshSmile/paciente'); // Reemplaza 'URL_DE_TU_API' con la URL de tu API real
       setData(response.data);
     } catch (error) {
       console.error('Error al obtener los datos:', error);
@@ -23,11 +24,24 @@ const TableUsuario = () => {
       await axios.delete(`URL_DE_TU_API/${id}`); // Reemplaza 'URL_DE_TU_API' con la URL de tu API real
       fetchData();
     } catch (error) {
-      console.error('Error al eliminar el registro:', error);
+swal({
+  title: "Eliminar cita",
+  text: "¿Esta seguro que deseas eliminar esta cita?",
+  icon: "warning",
+  buttons: ["No", "Si"]
+}).then(respuesta=>{
+  if(respuesta){
+    swal({
+    text: "Tu cita se ha eliminado correctamente",
+    icon: "success"})
+  }
+});
+      console.error(error);
     }
   };
 
   return (
+    <>
     <div className="table-structure">
     <h1 className="structure-title">Mis citas</h1>
     <table>
@@ -52,14 +66,15 @@ const TableUsuario = () => {
             <td>{item.hora}</td>
             <td>{item.email}</td>
             <td>
-              <button onClick={() => handleDelete(item.id)}>Eliminar</button>
+              <button onClick={() => handleDelete(item.id)}>Eliminar cita</button>
             </td>
           </tr>
         ))}
       </tbody>
     </table>
     </div>
+    </>
   );
 };
 
-export default TableUsuario;
+export default App;

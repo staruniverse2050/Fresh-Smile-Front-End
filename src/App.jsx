@@ -13,6 +13,7 @@ import Contacto from "./components/pages/contacto/Contacto";
 import Chatbot from "./components/layouts/chatbot/Chatbot";
 import RegistroFormulario from "./components/layouts/Register/RegistroFormulario";
 import Login from "./components/layouts/Login/Login";
+import TableUsuario from "./components/pages/tablas/TableUsuario";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -58,6 +59,7 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
         <Route path="/Login" element={<Login setRol={setRol} />} />
+        <Route path="/TableUsuario" element={<TableUsuario />} />
       </Routes>
       <Chatbot />
     </>

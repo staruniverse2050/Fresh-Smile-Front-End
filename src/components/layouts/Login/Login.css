@@ -2,44 +2,61 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	height: 100vh;
-  }
-  
-  .login-title {
-	font-size: 24px;
-	margin-bottom: 16px;
-  }
-  
-  .login-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	padding: 50px;
+	margin-top: 100px;
+	background-color: #aebfd2;
+	margin: 700px; /* Ajusta el valor según tu necesidad */
+	margin-top: 300px;
   }
   
   .login-label {
-	margin-bottom: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* Añade esta línea */
+	align-items: center; /* Añade esta línea */
+	margin-bottom: 10px;
+	font-weight: bold;
+	padding: 15px;
   }
   
   .login-input {
 	width: 200px;
-	padding: 8px;
-	margin-bottom: 8px;
+	padding: 18px;
+	margin-bottom: 18px;
+	background-color: #184b78;
+	border: none;
+	color: #fff;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block; /* Agrega esta línea */
   }
   
   .login-select {
 	width: 200px;
 	padding: 8px;
 	margin-bottom: 8px;
+	background-color: #3074ab;
+	border: none;
+	color: #fff;
+	margin: 45px;
+	align-items: center;
   }
   
   .login-button {
-	padding: 8px 16px;
+	width: 200px;
+	padding: 8px;
 	background-color: #007bff;
-	color: white;
 	border: none;
+	color: #fff;
 	cursor: pointer;
+	align-items: center;
   }
+  
+  .login-button:hover {
+	background-color: #0056b3;
+  }
+  
   .loading-animation {
 	display: flex;
 	justify-content: center;
@@ -51,6 +68,7 @@
 	width: 300px;
 	height: 200px;
   }
+  
   .modal {
 	/* Ajusta el tamaño de la ventana modal */
 	width: 500px;
@@ -63,38 +81,9 @@
 	transform: translate(-50%, -50%);
   
 	/* Añade estilos de fondo y bordes */
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius:10px;
+	background-color: #c96161;
+	border: 1px solid #542828;
+	border-radius: 10px;
   
 	/* Añade estilos de sombra */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  
-	/* Añade estilos de texto y alineación */
-	text-align: center;
-	padding: 20px;
-  }
-  
-  .modal-overlay {
-	/* Ajusta el tamaño y los estilos del fondo superpuesto */
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-  
-	/* Añade estilos de superposición */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  }
-  .custom-swal-button {
-	background-color: #249bad;
-	color: white;
-	border: none;
-	/* Añade otros estilos según tus necesidades */
-  }
-  .custom-swal-button:hover{
-	background-color: #1e6d79;
-  }
+  }  

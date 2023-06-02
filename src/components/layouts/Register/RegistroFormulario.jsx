@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Swal from 'sweetalert2';
-import './Register.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import Swal from "sweetalert2";
+import "./Register.css";
+import { useNavigate } from "react-router-dom";
 
 const RegistroFormulario = () => {
-  const [tipoDocumento, setTipoDocumento] = useState('');
-  const [numeroDocumento, setNumeroDocumento] = useState('');
-  const [nombres, setNombres] = useState('');
-  const [apellidos, setApellidos] = useState('');
-  const [direccion, setDireccion] = useState('');
-  const [telefono, setTelefono] = useState('');
-  const [correo, setCorreo] = useState('');
-  const [contraseña, setContraseña] = useState('');
-  const [rol, setRol] = useState('');
+  const [tipoDocumento, setTipoDocumento] = useState("");
+  const [numeroDocumento, setNumeroDocumento] = useState("");
+  const [nombres, setNombres] = useState("");
+  const [apellidos, setApellidos] = useState("");
+  const [direccion, setDireccion] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [contraseña, setContraseña] = useState("");
+  const [rol, setRol] = useState("");
 
   const handleTipoDocumentoChange = (event) => {
     setTipoDocumento(event.target.value);
@@ -58,9 +58,9 @@ const RegistroFormulario = () => {
       setContraseña(contraseña);
     } else {
       Swal.fire({
-        icon: 'error',
-        title: 'Contraseña inválida',
-        text: 'La contraseña no puede tener más de 8 caracteres.',
+        icon: "error",
+        title: "Contraseña inválida",
+        text: "La contraseña no puede tener más de 8 caracteres.",
       });
     }
   };
@@ -70,16 +70,16 @@ const RegistroFormulario = () => {
   };
 
   const opcionesTipoDocumento = [
-    { value: 'Cédula de ciudadanía', label: 'Cédula de ciudadanía' },
-    { value: 'Tarjeta de identidad', label: 'Tarjeta de identidad' },
-    { value: 'Cédula de extranjería', label: 'Cédula de extranjería' },
+    { value: "Cédula de ciudadanía", label: "Cédula de ciudadanía" },
+    { value: "Tarjeta de identidad", label: "Tarjeta de identidad" },
+    { value: "Cédula de extranjería", label: "Cédula de extranjería" },
     // Agrega más opciones según tus necesidades
   ];
 
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/Login');
+    navigate("/Login");
   };
 
   const handleSubmit = async (event) => {
@@ -87,9 +87,9 @@ const RegistroFormulario = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(correo)) {
       Swal.fire({
-        icon: 'error',
-        title: 'Correo electrónico inválido',
-        text: 'La dirección de correo electrónico no es válida.',
+        icon: "error",
+        title: "Correo electrónico inválido",
+        text: "La dirección de correo electrónico no es válida.",
         customClass: {
           confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
         },
@@ -98,11 +98,12 @@ const RegistroFormulario = () => {
       return;
     }
 
-    let apiEndpoint = '';
+    let apiEndpoint = "";
     let datosFormulario = {};
 
-    if (rol === 'Administrador') {
-      apiEndpoint = 'https://freshsmile.azurewebsites.net/FreshSmile/CrearAdministradores';
+    if (rol === "Administrador") {
+      apiEndpoint =
+        "https://freshsmile.azurewebsites.net/FreshSmile/CrearAdministradores";
       datosFormulario = {
         tipo_documento_uadministrador: tipoDocumento,
         numero_documento_uadministrador: numeroDocumento,
@@ -113,8 +114,9 @@ const RegistroFormulario = () => {
         correo: correo,
         contraseña: contraseña,
       };
-    } else if (rol === 'Paciente') {
-      apiEndpoint = 'https://freshsmile.azurewebsites.net/FreshSmile/CrearPacientes';
+    } else if (rol === "Paciente") {
+      apiEndpoint =
+        "https://freshsmile.azurewebsites.net/FreshSmile/CrearPacientes";
       datosFormulario = {
         tipo_documento_paciente: tipoDocumento,
         numero_documento_paciente: numeroDocumento,
@@ -129,35 +131,35 @@ const RegistroFormulario = () => {
 
     try {
       const response = await fetch(apiEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(datosFormulario),
       });
 
       if (response.ok) {
         Swal.fire({
-          icon: 'success',
-          title: 'Registro exitoso',
-          text: '¡Se ha registrado correctamente!',
+          icon: "success",
+          title: "Registro exitoso",
+          text: "¡Se ha registrado correctamente!",
         }).then(() => {
-          setTipoDocumento('');
-          setNumeroDocumento('');
-          setNombres('');
-          setApellidos('');
-          setDireccion('');
-          setTelefono('');
-          setCorreo('');
-          setContraseña('');
-          setRol('');
-          navigate('/Login');
+          setTipoDocumento("");
+          setNumeroDocumento("");
+          setNombres("");
+          setApellidos("");
+          setDireccion("");
+          setTelefono("");
+          setCorreo("");
+          setContraseña("");
+          setRol("");
+          navigate("/Login");
         });
       } else {
         Swal.fire({
-          icon: 'error',
-          title: 'Error en el registro',
-          text: 'Ha ocurrido un error durante el registro. Por favor, inténtalo de nuevo.',
+          icon: "error",
+          title: "Error en el registro",
+          text: "Ha ocurrido un error durante el registro. Por favor, inténtalo de nuevo.",
           customClass: {
             confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
           },
@@ -166,9 +168,9 @@ const RegistroFormulario = () => {
       }
     } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'Error en el registro',
-        text: 'Ha ocurrido un error durante el registro. Por favor, inténtalo de nuevo.',
+        icon: "error",
+        title: "Error en el registro",
+        text: "Ha ocurrido un error durante el registro. Por favor, inténtalo de nuevo.",
         customClass: {
           confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
         },
@@ -179,76 +181,195 @@ const RegistroFormulario = () => {
   };
 
   return (
+    // <div className="Registro">
+    //   <form className="form-input-container" onSubmit={handleSubmit}>
+    //     <div className="form-group">
+    //       <label htmlFor="tipoDocumento">Tipo de documento</label>
+    //       <select id="tipoDocumento" className="form-input-select" value={tipoDocumento} onChange={handleTipoDocumentoChange}>
+    //         <option value="">Seleccione un tipo de documento</option>
+    //         {opcionesTipoDocumento.map((opcion) => (
+    //           <option key={opcion.value} value={opcion.value}>
+    //             {opcion.label}
+    //           </option>
+    //         ))}
+    //       </select>
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="numeroDocumento">Número de documento</label>
+    //       <input
+    //         type="text"
+    //         id="numeroDocumento"
+    //         value={numeroDocumento}
+    //         onChange={handleNumeroDocumentoChange}
+    //         required
+    //       />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="nombres">Nombres</label>
+    //       <input type="text" id="nombres" value={nombres} onChange={handleNombresChange} required />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="apellidos">Apellidos</label>
+    //       <input type="text" id="apellidos" value={apellidos} onChange={handleApellidosChange} required />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="direccion">Dirección</label>
+    //       <input type="text" id="direccion" value={direccion} onChange={handleDireccionChange} required />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="telefono">Teléfono</label>
+    //       <input type="text" id="telefono" value={telefono} onChange={handleTelefonoChange} required />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="correo">Correo electrónico</label>
+    //       <input type="email" id="correo" value={correo} onChange={handleCorreoChange} required />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="contraseña">Contraseña</label>
+    //       <input
+    //         type="password"
+    //         id="contraseña"
+    //         value={contraseña}
+    //         onChange={handleContraseñaChange}
+    //         required
+    //       />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="rol">Rol</label>
+    //       <select id="rol" value={rol} onChange={handleRolChange} className="form-input-select">
+    //         <option value="">Seleccione un rol</option>
+    //         <option value="Administrador">Administrador</option>
+    //         <option value="Paciente">Paciente</option>
+    //       </select>
+    //     </div>
+    //     <button className="BotonRegistro" type="submit">
+    //       Registrar
+    //     </button>
+    //   </form>
+    //   <div className="login-link">
+    //     <p>¿Ya tienes una cuenta?</p>
+    //     <button className="btn btn-link" onClick={handleLoginClick}>
+    //       Iniciar sesión
+    //     </button>
+    //   </div>
+    // </div>
+
     <div className="Registro">
-      <form className="form-input-container" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="tipoDocumento">Tipo de documento</label>
-          <select id="tipoDocumento" className="form-input-select" value={tipoDocumento} onChange={handleTipoDocumentoChange}>
-            <option value="">Seleccione un tipo de documento</option>
-            {opcionesTipoDocumento.map((opcion) => (
-              <option key={opcion.value} value={opcion.value}>
-                {opcion.label}
-              </option>
-            ))}
-          </select>
+      <div className="left-side">
+        <h1>Título</h1>
+        <button>Botón</button>
+      </div>
+      <div class="right-side">
+        <form className="form-input-container" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="tipoDocumento">Tipo de documento</label>
+            <select
+              id="tipoDocumento"
+              className="form-input-select"
+              value={tipoDocumento}
+              onChange={handleTipoDocumentoChange}
+            >
+              <option value="">Seleccione un tipo de documento</option>
+              {opcionesTipoDocumento.map((opcion) => (
+                <option key={opcion.value} value={opcion.value}>
+                  {opcion.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="numeroDocumento">Número de documento</label>
+            <input
+              type="text"
+              id="numeroDocumento"
+              value={numeroDocumento}
+              onChange={handleNumeroDocumentoChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="nombres">Nombres</label>
+            <input
+              type="text"
+              id="nombres"
+              value={nombres}
+              onChange={handleNombresChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              value={apellidos}
+              onChange={handleApellidosChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="direccion">Dirección</label>
+            <input
+              type="text"
+              id="direccion"
+              value={direccion}
+              onChange={handleDireccionChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="telefono">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              value={telefono}
+              onChange={handleTelefonoChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              value={correo}
+              onChange={handleCorreoChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="contraseña">Contraseña</label>
+            <input
+              type="password"
+              id="contraseña"
+              value={contraseña}
+              onChange={handleContraseñaChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="rol">Rol</label>
+            <select
+              id="rol"
+              value={rol}
+              onChange={handleRolChange}
+              className="form-input-select"
+            >
+              <option value="">Seleccione un rol</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Paciente">Paciente</option>
+            </select>
+          </div>
+          <button className="BotonRegistro" type="submit">
+            Registrar
+          </button>
+        </form>
+        <div className="login-link">
+          <p>¿Ya tienes una cuenta?</p>
+          <button className="btn btn-link" onClick={handleLoginClick}>
+            Iniciar sesión
+          </button>
         </div>
-        <div className="form-group">
-          <label htmlFor="numeroDocumento">Número de documento</label>
-          <input
-            type="text"
-            id="numeroDocumento"
-            value={numeroDocumento}
-            onChange={handleNumeroDocumentoChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="nombres">Nombres</label>
-          <input type="text" id="nombres" value={nombres} onChange={handleNombresChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="apellidos">Apellidos</label>
-          <input type="text" id="apellidos" value={apellidos} onChange={handleApellidosChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="direccion">Dirección</label>
-          <input type="text" id="direccion" value={direccion} onChange={handleDireccionChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="telefono">Teléfono</label>
-          <input type="text" id="telefono" value={telefono} onChange={handleTelefonoChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="correo">Correo electrónico</label>
-          <input type="email" id="correo" value={correo} onChange={handleCorreoChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="contraseña">Contraseña</label>
-          <input
-            type="password"
-            id="contraseña"
-            value={contraseña}
-            onChange={handleContraseñaChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="rol">Rol</label>
-          <select id="rol" value={rol} onChange={handleRolChange} className="form-input-select">
-            <option value="">Seleccione un rol</option>
-            <option value="Administrador">Administrador</option>
-            <option value="Paciente">Paciente</option>
-          </select>
-        </div>
-        <button className="BotonRegistro" type="submit">
-          Registrar
-        </button>
-      </form>
-      <div className="login-link">
-        <p>¿Ya tienes una cuenta?</p>
-        <button className="btn btn-link" onClick={handleLoginClick}>
-          Iniciar sesión
-        </button>
       </div>
     </div>
   );

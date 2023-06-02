@@ -68,7 +68,7 @@ const AgendaCita = () => {
         <h2>Agenda tu cita</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="tipoDocumento">Tipo de documento:</label>
+            <label className="label-agendacita" htmlFor="tipoDocumento">Tipo de documento:</label>
             <select
               id="tipoDocumento"
               className="select"
@@ -85,7 +85,7 @@ const AgendaCita = () => {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="numeroDocumento">Número de documento:</label>
+            <label className="label-agendacita" htmlFor="numeroDocumento">Número de documento:</label>
             <input
               type="text"
               id="numeroDocumento"
@@ -96,7 +96,7 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="nombre">Nombre:</label>
+            <label className="label-agendacita" htmlFor="nombre">Nombre:</label>
             <input
               type="text"
               id="nombre"
@@ -107,7 +107,7 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="telefono">Teléfono:</label>
+            <label className="label-agendacita" htmlFor="telefono">Teléfono:</label>
             <input
               type="text"
               id="telefono"
@@ -118,8 +118,8 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input
+            <label className="label-agendacita" htmlFor="email">Email:</label>
+            <input 
               type="email"
               id="email"
               className="form-input"
@@ -128,7 +128,7 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="tipoCita">Tipo de cita:</label>
+            <label className="label-agendacita" htmlFor="tipoCita">Tipo de cita:</label>
             <select
               id="tipoCita"
               value={tipoCita}

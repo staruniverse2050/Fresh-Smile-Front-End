@@ -1,28 +1,23 @@
 import React, { useState, useEffect } from "react";
-import Modal from "react-modal";
 import "./Login.css";
-import Swal from 'sweetalert2';
-import Lottie from "react-lottie";
-import animationData from "./Aniki Hamster.json";
-
-Modal.setAppElement("#root");
+import Swal from "sweetalert2";
 
 export const Login = ({ setRol }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
   const [loading, setLoading] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
   const [modalText, setModalText] = useState("");
   const [modalType, setModalType] = useState("success");
 
   useEffect(() => {
-    if (modalOpen) {
+    if (modalType === "success") {
       setTimeout(() => {
-        setModalOpen(false);
+        setModalText("");
+        setModalType("");
       }, 5000);
     }
-  }, [modalOpen]);
+  }, [modalType]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,36 +49,29 @@ export const Login = ({ setRol }) => {
         const data = await response.text();
         setModalText(data);
         setModalType("success");
-        setModalOpen(true);
         setRol(role); // Actualizar el rol en el componente App
       } else {
         throw new Error("Correo o contraseña incorrectos");
       }
     } catch (error) {
+      setModalText(error.message);
+      setModalType("error");
+    }
+  };
+
+  useEffect(() => {
+    if (modalType === "error") {
       Swal.fire({
         icon: "error",
         title: "Error",
-        text: error.message,
+        text: modalText,
         customClass: {
           confirmButton: "custom-swal-button", // Clase CSS personalizada para el botón
         },
         buttonsStyling: false, // Desactivar estilos de botón predeterminados de SweetAlert
       });
     }
-  };
-
-  const handleModalClose = () => {
-    setModalOpen(false);
-  };
-
-  const lottieOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  }, [modalType]);
 
   return (
     <div className="login-container">
@@ -126,29 +114,6 @@ export const Login = ({ setRol }) => {
           Iniciar sesión
         </button>
       </form>
-
-      <Modal
-        isOpen={modalOpen}
-        onRequestClose={handleModalClose}
-        className="modal"
-        overlayClassName="modal-overlay"
-      >
-        <div className="modal-content">
-          {modalType === "success" && (
-            <>
-              <h2>Te estamos redirigiendo al inicio</h2>
-              <p>{modalText}</p>
-              <Lottie options={lottieOptions} height={200} width={300} />
-            </>
-          )}
-          {modalType === "error" && (
-            <>
-              <h2>Error</h2>
-              <p>{modalText}</p>
-            </>
-          )}
-        </div>
-      </Modal>
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const Header = () => {
   return (
     <header className="Header_Header">
       <div className="menu">
-        <Link to="/Home">
+        <Link to="/Inicio">
           <img
             className="logo"
             src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"

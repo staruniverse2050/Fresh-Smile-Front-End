@@ -256,12 +256,13 @@ const RegistroFormulario = () => {
 
     <div className="Registro">
       <div className="left-side">
-        <h1>Título</h1>
-        <button>Botón</button>
+        {/* <img className="img-left-side" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/equipo_ychejy.png" alt="" /> */}
+        <h1 className="title-left">Fresh Smile Cmills</h1>
       </div>
       <div class="right-side">
         <form className="form-input-container" onSubmit={handleSubmit}>
           <div className="form-group">
+          <h1 className="registro-h1">Registro</h1>
             <label htmlFor="tipoDocumento">Tipo de documento</label>
             <select
               id="tipoDocumento"
@@ -363,13 +364,14 @@ const RegistroFormulario = () => {
           <button className="BotonRegistro" type="submit">
             Registrar
           </button>
-        </form>
+        
         <div className="login-link">
           <p>¿Ya tienes una cuenta?</p>
           <button className="btn btn-link" onClick={handleLoginClick}>
             Iniciar sesión
           </button>
         </div>
+        </form>
       </div>
     </div>
   );

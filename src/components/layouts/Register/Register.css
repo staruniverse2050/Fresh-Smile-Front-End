@@ -11,9 +11,18 @@
 } */
 
 .left-side {
+	padding-top: 30%;
+	margin-left: 50px;
 	flex: 1;
 	padding: 20px;
-	background-color: #249bad;
+	background-image: url('https://res.cloudinary.com/dexfjrgyw/image/upload/v1685764736/Fresh_Smile_Cmills/3969587_pmgfnk.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 40%;
+	height: 870px;
+	text-align: center;
+	/* background-color: #D3D3D3; */
 }
 
 .right-side {
@@ -21,13 +30,47 @@
 	padding: 20px;
 }
 
-h1 {
-	margin-top: 0;
+.img-left-side {
+	/* width: 30%;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40%; */
+	width: 50%;
+	/* Ajusta el ancho al 100% del contenedor */
+	max-width: 500px;
+	/* Define un ancho máximo para evitar que la imagen se haga demasiado grande */
 }
 
-.Registro h1 {
+.form-input-container {
+	flex: 1;
+	padding: 20px;
+	/* background-color: #249bad; */
+	width: 60%;
+	/* background-color: #D3D3D3; */
+	height: 870px;
+}
+
+.registro-h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px;
 	text-align: center;
-	margin-bottom: 20px;
+	/* font-weight: bold; */
+	/* font-family: 'Open Sans', sans-serif; */
+	/* font-size: 30px; */
+	color: #4fafd2;
+}
+
+/* h1 {
+	margin-top: 0;
+} */
+
+.title-left {
+	/* padding-top: 50%; */
+	text-align: center;
+	/* margin-bottom: 20px; */
 }
 
 .form-group {
@@ -68,6 +111,11 @@ h1 {
 	cursor: pointer;
 }
 
+.BotonRegistro:hover,
+.BotonRegistro:focus {
+	background: #1e6d79;
+}
+
 .login-link {
 	margin-top: 20px;
 	text-align: center;
@@ -90,12 +138,14 @@ h1 {
 	text-align: center;
 	text-decoration: none;
 }
+
 .custom-swal-button {
 	background-color: #249bad;
 	color: white;
 	border: none;
 	/* Añade otros estilos según tus necesidades */
-  }
-  .custom-swal-button:hover{
+}
+
+.custom-swal-button:hover {
 	background-color: #1e6d79;
-  }
+}

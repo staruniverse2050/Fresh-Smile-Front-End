@@ -4,7 +4,7 @@
   padding: 6em ;
   font-family: 'Open Sans', sans-serif;
 }
- h1 {
+.table-structure h1 {
   color: #000000;
   margin-bottom: 1em;
   text-align: center;
@@ -18,7 +18,7 @@ table {
 th,
 td {
   padding: 10px;
-  border: 1px solid #249bad;
+  border: 1px solid #ccc;
 }
 
 th {

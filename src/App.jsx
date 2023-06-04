@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Route, Routes, Navigate} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
 import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador";
@@ -10,46 +10,74 @@ import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import OdontologiasArmenia from "./components/pages/mapaArmenia/OdontologiasArmenia";
 import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
 import Contacto from "./components/pages/contacto/Contacto";
-// import Chatbot from "./components/layouts/chatbot/Chatbot";
+import Chatbot from "./components/layouts/chatbot/Chatbot";
 import RegistroFormulario from "./components/layouts/Register/RegistroFormulario";
 import Login from "./components/layouts/Login/Login";
-import TableUsuario from "./components/pages/tablas/TableUsuario";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [redirectTo, setRedirectTo] = useState("");
   const [headerComponent, setHeaderComponent] = useState(<Header />);
 
+  useEffect(() => {
+    // Verificar si el usuario está autenticado al cargar la página
+    const loggedIn = localStorage.getItem("loggedIn");
+    const rol = localStorage.getItem("rol");
+
+    if (loggedIn) {
+      // Establecer el rol en el estado de la aplicación
+      // Esto es opcional, puedes usar el valor de "rol" donde sea necesario
+      setRol(rol);
+
+      // Actualizar el estado de autenticación
+      setIsAuthenticated(true);
+
+      // Actualizar el componente de encabezado
+      setHeaderComponent(
+        rol === "administrador" ? (
+          <HeaderAdministrador />
+        ) : (
+          <HeaderPaciente isAuthenticated={true} />
+        )
+      );
+    } else {
+      // Redireccionar al usuario a la página de inicio sin autenticación
+      setRedirectTo("/Inicio");
+    }
+  }, []); // No hay dependencias, solo se ejecuta una vez al cargar la página
+
   const setRol = (rol) => {
     if (rol === "administrador") {
       setHeaderComponent(<HeaderAdministrador />);
       setIsAuthenticated(true);
-      setRedirectTo("/"); // Redirigir a la página de inicio
-
+      setRedirectTo("/Inicio"); // Redirigir a la página de inicio
     } else if (rol === "paciente") {
-      setHeaderComponent(<HeaderPaciente />);
+      setHeaderComponent(<HeaderPaciente isAuthenticated={true} />);
       setIsAuthenticated(true);
-      setRedirectTo("/"); // Redirigir a la página de inicio
+      setRedirectTo("/Inicio"); // Redirigir a la página de inicio
     } else {
       setHeaderComponent(<Header />);
       setIsAuthenticated(false);
     }
   };
 
-  const handleRedirect = (path) => {
-    setRedirectTo(path);
+  const handleLogout = () => {
+    // Eliminar la información de inicio de sesión del almacenamiento local
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("rol");
+
+    // Actualizar el estado de autenticación
+    setIsAuthenticated(false);
+
+    // Redireccionar al usuario a la página de inicio sin autenticación
+    setRedirectTo("/Inicio");
   };
 
   return (
     <>
-      {redirectTo && <Navigate to={redirectTo} />}
       {headerComponent}
       <Routes>
-        {isAuthenticated ? (
-          <Route path="/" element={<Home />} />
-        ) : (
-          <Route path="/" element={<Login setRol={setRol} />} />
-        )}
+        <Route path="/" element={<Home />} />
         <Route path="/Inicio" element={<Home />} />
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
@@ -59,9 +87,8 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
         <Route path="/Login" element={<Login setRol={setRol} />} />
-        <Route path="/TableUsuario" element={<TableUsuario />} />
       </Routes>
-      {/* <Chatbot /> */}
+      <Chatbot />
     </>
   );
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 
 export const Login = ({ setRol }) => {
   const [email, setEmail] = useState("");
@@ -9,6 +11,8 @@ export const Login = ({ setRol }) => {
   const [loading, setLoading] = useState(false);
   const [modalText, setModalText] = useState("");
   const [modalType, setModalType] = useState("success");
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     if (modalType === "success") {
@@ -44,12 +48,15 @@ export const Login = ({ setRol }) => {
         }),
       });
       setLoading(false);
-
       if (response.ok) {
         const data = await response.text();
         setModalText(data);
         setModalType("success");
         setRol(role); // Actualizar el rol en el componente App
+        navigate("/Inicio"); // Redirigir al usuario a la página de Inicio
+         // Guardar el correo en el almacenamiento local
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("rol", role);
       } else {
         throw new Error("Correo o contraseña incorrectos");
       }

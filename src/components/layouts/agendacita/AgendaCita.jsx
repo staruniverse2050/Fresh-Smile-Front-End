@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./agendacita.css";
 import axios from "axios";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { es } from "date-fns/locale";
+
 
 const tiposDocumento = [
   "Cédula de ciudadanía",
@@ -17,6 +21,24 @@ const AgendaCita = () => {
   const [email, setEmail] = useState("");
   const [tipoCita, setTipoCita] = useState("");
   const [selectedHour, setSelectedHour] = useState(null);
+  const [calendarOpen, setCalendarOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  // Función para filtrar las fechas disponibles
+  const filterDates = (date) => {
+    // Aquí debes implementar tu lógica para determinar si la fecha está disponible o no
+    // Puedes usar una lista de fechas disponibles o una API para verificar la disponibilidad
+    const availableDates = [
+      new Date(2023, 6, 4),
+      new Date(2023, 6, 5),
+      new Date(2023, 6, 6),
+    ];
+
+    // Retorna true si la fecha está en la lista de fechas disponibles
+    return availableDates.some((availableDate) =>
+      isSameDay(date, availableDate)
+    );
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +52,7 @@ const AgendaCita = () => {
       email,
       tipoCita,
       selectedHour,
+      selectedDate,
     };
 
     // Realizar la solicitud POST al backend
@@ -45,7 +68,8 @@ const AgendaCita = () => {
         setTelefono("");
         setEmail("");
         setTipoCita("");
-        setSelectedHour("");
+        setSelectedHour(null);
+        setSelectedDate(null);
       })
       .catch((error) => {
         // Manejar el error si la solicitud no se completa correctamente
@@ -55,6 +79,14 @@ const AgendaCita = () => {
 
   const handleHourSelect = (hour) => {
     setSelectedHour(hour);
+  };
+
+  const isSameDay = (date1, date2) => {
+    return (
+      date1.getFullYear() === date2.getFullYear() &&
+      date1.getMonth() === date2.getMonth() &&
+      date1.getDate() === date2.getDate()
+    );
   };
 
   return (
@@ -68,7 +100,7 @@ const AgendaCita = () => {
         <h2>Agenda tu cita</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label className="label-agendacita" htmlFor="tipoDocumento">Tipo de documento:</label>
+            <label htmlFor="tipoDocumento">Tipo de documento:</label>
             <select
               id="tipoDocumento"
               className="select"
@@ -85,7 +117,7 @@ const AgendaCita = () => {
             </select>
           </div>
           <div className="form-group">
-            <label className="label-agendacita" htmlFor="numeroDocumento">Número de documento:</label>
+            <label htmlFor="numeroDocumento">Número de documento:</label>
             <input
               type="text"
               id="numeroDocumento"
@@ -96,7 +128,7 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label className="label-agendacita" htmlFor="nombre">Nombre:</label>
+            <label htmlFor="nombre">Nombre:</label>
             <input
               type="text"
               id="nombre"
@@ -107,7 +139,7 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label className="label-agendacita" htmlFor="telefono">Teléfono:</label>
+            <label htmlFor="telefono">Teléfono:</label>
             <input
               type="text"
               id="telefono"
@@ -118,8 +150,8 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label className="label-agendacita" htmlFor="email">Email:</label>
-            <input 
+            <label htmlFor="email">Email:</label>
+            <input
               type="email"
               id="email"
               className="form-input"
@@ -128,7 +160,7 @@ const AgendaCita = () => {
             />
           </div>
           <div className="form-group">
-            <label className="label-agendacita" htmlFor="tipoCita">Tipo de cita:</label>
+            <label htmlFor="tipoCita">Tipo de cita:</label>
             <select
               id="tipoCita"
               value={tipoCita}
@@ -143,28 +175,42 @@ const AgendaCita = () => {
             </select>
           </div>
           <div className="form-group">
+            <label>Fecha disponible:</label>
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              dateFormat="dd/MM/yyyy"
+              className="datepicker"
+              required
+              filterDate={filterDates}
+              locale={es}
+              open={calendarOpen} // Estado para controlar si el calendario está abierto o cerrado
+              onClickOutside={() => setCalendarOpen(false)} // Cierra el calendario al hacer clic fuera de él
+              onFocus={() => setCalendarOpen(true)} // Abre el calendario al hacer foco en él
+            />
+
+
+          </div>
+          <div className="form-group">
             <label>Horas disponibles:</label>
             <div className="hour-grid">
               <button
-                className={`hour-button ${
-                  selectedHour === "9:00 AM" ? "selected" : ""
-                }`}
+                className={`hour-button ${selectedHour === "9:00 AM" ? "selected" : ""
+                  }`}
                 onClick={() => handleHourSelect("9:00 AM")}
               >
                 9:00 AM
               </button>
               <button
-                className={`hour-button ${
-                  selectedHour === "10:00 AM" ? "selected" : ""
-                }`}
+                className={`hour-button ${selectedHour === "10:00 AM" ? "selected" : ""
+                  }`}
                 onClick={() => handleHourSelect("10:00 AM")}
               >
                 10:00 AM
               </button>
               <button
-                className={`hour-button ${
-                  selectedHour === "11:00 AM" ? "selected" : ""
-                }`}
+                className={`hour-button ${selectedHour === "11:00 AM" ? "selected" : ""
+                  }`}
                 onClick={() => handleHourSelect("11:00 AM")}
               >
                 11:00 AM

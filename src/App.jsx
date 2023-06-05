@@ -8,6 +8,7 @@ import { Procedimientos } from "./components/pages/procedimientos/Procedimientos
 import AgendaCita from "./components/layouts/agendacita/AgendaCita";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import OdontologiasArmenia from "./components/pages/mapaArmenia/OdontologiasArmenia";
+import { Ranking } from "./components/pages/Ranking/Ranking";
 import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
 import Contacto from "./components/pages/contacto/Contacto";
 import Chatbot from "./components/layouts/chatbot/Chatbot";
@@ -83,6 +84,7 @@ function App() {
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Mapa" element={<OdontologiasArmenia />} />
         <Route path="/Agendar" element={<AgendaCita />} />
+        <Route path="/Ranking" element={<Ranking/>} />
         <Route path="/Especialistas" element={<DoctorCard />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />

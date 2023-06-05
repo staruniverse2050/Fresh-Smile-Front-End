@@ -5,7 +5,7 @@ import "./HeaderAdministrador.css";
 export const HeaderAdministrador = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
-
+  const location = useLocation();
   useEffect(() => {
     generateAvatar();
   }, []);
@@ -37,6 +37,9 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
     // Redireccionar al usuario a la página de registro
     history.push("/Inicio");
   };
+  const isActiveRoute = (route) => {
+    return location.pathname === route;
+  };
 
 
   return (
@@ -65,7 +68,7 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                 <ul>
                   <li>
                     <NavLink
-                      className="links"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
                       to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -75,8 +78,8 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Nosotros"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -85,8 +88,8 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Agendar"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -95,8 +98,8 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Procedimientos"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -105,8 +108,8 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Especialistas"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -115,8 +118,8 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Especialistas"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -130,23 +133,26 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
           <div className="container2">
             <ul>
               <li>
-                <NavLink className="links" to="/Inicio" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                  to="/Inicio" activeClassName="active">
                   Inicio
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Nosotros" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
+                  to="/Nosotros" activeClassName="active">
                   Nosotros
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Agendar" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/Agendar') ? 'active' : ''}`}
+                  to="/Agendar" activeClassName="active">
                   Agenda
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  className="links"
+                  className={`links ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
                   to="/Procedimientos"
                   activeClassName="active"
                 >
@@ -154,53 +160,56 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Especialistas" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/DoctorCard') ? 'active' : ''}`}
+                  to="/DoctorCard" activeClassName="active">
                   Especialistas
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Especialistas" activeClassName="active">
-                 Disponibilidad
+                <NavLink className={`links ${isActiveRoute('/Especialista') ? 'active' : ''}`}
+                  to="/Especialista" activeClassName="active">
+                  Disponibilidad
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Contacto" activeClassName="active">
-                 Mis valoraciones
+                <NavLink className={`links ${isActiveRoute('/Contacto') ? 'active' : ''}`}
+                  to="/Contacto" activeClassName="active">
+                  Mis valoraciones
                 </NavLink>
               </li>
             </ul>
           </div>
         </ul>
         <div className="icono-inicio-wrapper">
-      <div className="dropdown-wrapper" onClick={toggleDropdown}>
-        <div className="icon-container">
-          {avatarUrl ? (
-            <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
-          ) : (
-            <img
-              className="icono-inicio"
-              src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
-              alt=""
-            />
-          )}
-        </div>
-        {isOpen && (
-          <nav className="dropdown">
-            <ul>
-              <li>
-                <Link className="dropdown-link" to="/Inicio" onClick={handleLogoutClick}>
-                  Cerrar sesión
-                </Link>
-              </li>
-              {isAuthenticated && (
-                <li>
-                  <NavLink className="dropdown-link" to="/Perfil">
-                    Ver perfil
-                  </NavLink>
-                </li>
+          <div className="dropdown-wrapper" onClick={toggleDropdown}>
+            <div className="icon-container">
+              {avatarUrl ? (
+                <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
+              ) : (
+                <img
+                  className="icono-inicio"
+                  src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
+                  alt=""
+                />
               )}
-            </ul>
-          </nav>
+            </div>
+            {isOpen && (
+              <nav className="dropdown">
+                <ul>
+                  <li>
+                    <Link className="dropdown-link" to="/Inicio" onClick={handleLogoutClick}>
+                      Cerrar sesión
+                    </Link>
+                  </li>
+                  {isAuthenticated && (
+                    <li>
+                      <NavLink className="dropdown-link" to="/Perfil">
+                        Ver perfil
+                      </NavLink>
+                    </li>
+                  )}
+                </ul>
+              </nav>
             )}
           </div>
         </div>

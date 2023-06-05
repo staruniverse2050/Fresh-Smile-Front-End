@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation  } from "react-router-dom";
 import "../headerpaciente/HeaderPaciente.css";
 
 export const HeaderPaciente = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     generateAvatar();
@@ -37,6 +38,9 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
     // Redireccionar al usuario a la página de registro
     history.push("/Inicio");
   };
+  const isActiveRoute = (route) => {
+    return location.pathname === route;
+  };
 
 
   return (
@@ -65,8 +69,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                 <ul>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Inicio"
+                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                  to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -75,8 +79,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Nosotros"
+                      className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
+                  to="/Nosotros"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -85,8 +89,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Agendar"
+                      className={`links ${isActiveRoute('/AgendaCita') ? 'active' : ''}`}
+                  to="/AgendaCita"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -95,8 +99,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Procedimientos"
+                      className={`links ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
+                  to="/Procedimientos"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -105,8 +109,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Especialistas"
+                      className={`links ${isActiveRoute('/DoctorCard') ? 'active' : ''}`}
+                  to="/DoctorCard"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -117,8 +121,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                     <>
                       <li>
                         <NavLink
-                          className="links"
-                          to="/MiRanking"
+                          className={`links ${isActiveRoute('/Ranking') ? 'active' : ''}`}
+                  to="/Ranking"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >
@@ -127,8 +131,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                       </li>
                       <li>
                         <NavLink
-                          className="links"
-                          to="/MisCitas"
+                          className={`links ${isActiveRoute('/MisCitas') ? 'active' : ''}`}
+                  to="/MisCitas"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >
@@ -139,8 +143,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   )}
                   <li>
                     <NavLink
-                      className="links"
-                      to="/Contacto"
+                      className={`links ${isActiveRoute('/Contacto') ? 'active' : ''}`}
+                  to="/Contacto"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -154,17 +158,20 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
           <div className="container2">
             <ul>
               <li>
-                <NavLink className="links" to="/Inicio" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                  to="/Inicio" activeClassName="active">
                   Inicio
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Nosotros" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
+                  to="/Nosotros" activeClassName="active">
                   Nosotros
                 </NavLink>
               </li>
               <li>
-                <NavLink className="links" to="/Agendar" activeClassName="active">
+                <NavLink className={`links ${isActiveRoute('/Agendar') ? 'active' : ''}`}
+                  to="/Agendar" activeClassName="active">
                   Agenda cita
                 </NavLink>
               </li>
@@ -205,35 +212,35 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
           </div>
         </ul>
         <div className="icono-inicio-wrapper">
-      <div className="dropdown-wrapper" onClick={toggleDropdown}>
-        <div className="icon-container">
-          {avatarUrl ? (
-            <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
-          ) : (
-            <img
-              className="icono-inicio"
-              src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
-              alt=""
-            />
-          )}
-        </div>
-        {isOpen && (
-          <nav className="dropdown">
-            <ul>
-              <li>
-                <Link className="dropdown-link" to="/Inicio" onClick={handleLogoutClick}>
-                  Cerrar sesión
-                </Link>
-              </li>
-              {isAuthenticated && (
-                <li>
-                  <NavLink className="dropdown-link" to="/Perfil">
-                    Ver perfil
-                  </NavLink>
-                </li>
+          <div className="dropdown-wrapper" onClick={toggleDropdown}>
+            <div className="icon-container">
+              {avatarUrl ? (
+                <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
+              ) : (
+                <img
+                  className="icono-inicio"
+                  src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
+                  alt=""
+                />
               )}
-            </ul>
-          </nav>
+            </div>
+            {isOpen && (
+              <nav className="dropdown">
+                <ul>
+                  <li>
+                    <Link className="dropdown-link" to="/Inicio" onClick={handleLogoutClick}>
+                      Cerrar sesión
+                    </Link>
+                  </li>
+                  {isAuthenticated && (
+                    <li>
+                      <NavLink className="dropdown-link" to="/Perfil">
+                        Ver perfil
+                      </NavLink>
+                    </li>
+                  )}
+                </ul>
+              </nav>
             )}
           </div>
         </div>

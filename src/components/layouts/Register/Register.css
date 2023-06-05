@@ -24,7 +24,54 @@
 	text-align: center;
 	/* background-color: #D3D3D3; */
 }
+.custom-modal {
+	width: 300px; /* Ajusta el ancho de la ventana modal según tus preferencias */
+	max-width: 90%;
+	margin: 0 auto;
+  }
+  
+  .custom-modal .modal-content {
+	border: none; /* Elimina el borde */
+	border-radius: 10px; /* Agrega esquinas redondeadas */
+	background-color: #fff; /* Cambia el color de fondo a blanco o el color deseado */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+  }
+  
+  .custom-modal .modal-header {
+	border-bottom: none; /* Elimina el borde inferior del encabezado */
+  }
+  
+  .custom-modal .modal-footer {
+	border-top: none; /* Elimina el borde superior del pie de página */
+  }
+  
+  .custom-modal .modal-title {
+	font-size: 1.2rem; /* Ajusta el tamaño de fuente del título según tus preferencias */
+	font-weight: bold;
+  }
 
+  
+  .custom-modal .BotonModalCancelar,
+  .custom-modal .BotonModalGuardar {
+	/* Ajusta los estilos de los botones según tus preferencias */
+	padding: 10px 20px;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: #ccc;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+  .custom-modal .BotonModalCancelar {
+	background-color: #e74c3c; /* Cambia el color de fondo del botón Cancelar */
+  }
+  
+  .custom-modal .BotonModalGuardar {
+	background-color: #2ecc71; /* Cambia el color de fondo del botón Guardar */
+  }
+  
 .right-side {
 	flex: 1;
 	padding: 20px;

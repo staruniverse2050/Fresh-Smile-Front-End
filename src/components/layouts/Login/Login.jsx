@@ -81,8 +81,13 @@ export const Login = ({ setRol }) => {
   }, [modalType]);
 
   return (
+     
     <div className="login-container">
-      <h1 className="login-title">Login</h1>
+    <div className="left-login">
+      <img src="https://i.pinimg.com/736x/a4/8c/b2/a48cb248e8b5886a8843daf3dbb1fa15.jpg" alt="Imagen de inicio de sesión" className="login-image" />
+    </div>
+    <div className="right-login">
+      <h1 className="login-title">Iniciar Sesión</h1>
       <form className="login-form" onSubmit={handleSubmit}>
         <label className="login-label">
           Correo:
@@ -122,6 +127,7 @@ export const Login = ({ setRol }) => {
         </button>
       </form>
     </div>
+  </div>
   );
 };
 

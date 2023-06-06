@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./agendacita.css";
 import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { es } from "date-fns/locale";
-
 
 const tiposDocumento = [
   "Cédula de ciudadanía",
@@ -12,6 +11,8 @@ const tiposDocumento = [
   "Cédula de extranjería",
   "Pasaporte",
 ];
+
+
 
 const AgendaCita = () => {
   const [tipoDocumento, setTipoDocumento] = useState("");
@@ -23,36 +24,29 @@ const AgendaCita = () => {
   const [selectedHour, setSelectedHour] = useState(null);
   const [calendarOpen, setCalendarOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [showModal, setShowModal] = useState(false); // Estado para controlar la ventana modal
+  const [fieldsDisabled, setFieldsDisabled] = useState(false); // Estado para controlar si los campos están bloqueados o no
 
-  // Función para filtrar las fechas disponibles
-  const filterDates = (date) => {
-    // Aquí debes implementar tu lógica para determinar si la fecha está disponible o no
-    // Puedes usar una lista de fechas disponibles o una API para verificar la disponibilidad
-    const availableDates = [
-      new Date(2023, 6, 4),
-      new Date(2023, 6, 5),
-      new Date(2023, 6, 6),
-    ];
+  useEffect(() => {
+    setShowModal(true); // Abrir la ventana modal al cargar el componente
+  }, []);
 
-    // Retorna true si la fecha está en la lista de fechas disponibles
-    return availableDates.some((availableDate) =>
-      isSameDay(date, availableDate)
-    );
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Crear el objeto de datos a enviar al backend
     const data = {
-      tipoDocumento,
-      numeroDocumento,
-      nombre,
-      telefono,
-      email,
-      tipoCita,
-      selectedHour,
-      selectedDate,
+      tipo_documento_acompañante: tipoDocumento,
+      identificacion_acompañante: numeroDocumento,
+      nombre_completo: nombre,
+      parentesco: parentesco,
+      fecha: selectedDate,
+      hora: selectedHour,
+      id_paciente: 1,
+      id_especialista: 1,
+      id_procedimiento: 1,
+      estado_cita: "Confirmada",
     };
 
     // Realizar la solicitud POST al backend
@@ -70,6 +64,7 @@ const AgendaCita = () => {
         setTipoCita("");
         setSelectedHour(null);
         setSelectedDate(null);
+        setParentesco("");
       })
       .catch((error) => {
         // Manejar el error si la solicitud no se completa correctamente
@@ -89,6 +84,36 @@ const AgendaCita = () => {
     );
   };
 
+  const filterDates = (date) => {
+    // Aquí debes implementar tu lógica para determinar si la fecha está disponible o no
+    // Puedes usar una lista de fechas disponibles o una API para verificar la disponibilidad
+    const availableDates = [
+      new Date(2023, 6, 4),
+      new Date(2023, 6, 5),
+      new Date(2023, 6, 6),
+    ];
+
+    // Retorna true si la fecha está en la lista de fechas disponibles
+    return availableDates.some((availableDate) =>
+      isSameDay(date, availableDate)
+    );
+  };
+
+  const handleModalButtonClick = (forMe) => {
+    setShowModal(false); // Cerrar la ventana modal al hacer clic en un botón
+    // Realizar acciones según el botón seleccionado (para mí o para otra persona)
+    if (forMe) {
+      // Aquí puedes establecer los valores predeterminados para tu propia cita
+      // utilizando los datos del usuario actual o algún valor por defecto
+      setTipoDocumento(""); // Limpiar los campos para evitar valores incorrectos
+      setNumeroDocumento("");
+      setNombre("");
+      setFieldsDisabled(true); // Bloquear los campos
+    } else {
+      // Realizar acciones para permitir al usuario ingresar los datos de otra persona
+      setFieldsDisabled(false); // Desbloquear los campos
+    }
+  };
   return (
     <div className="man-container">
       <img
@@ -107,6 +132,8 @@ const AgendaCita = () => {
               value={tipoDocumento}
               onChange={(e) => setTipoDocumento(e.target.value)}
               required
+              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
+
             >
               <option value="">Seleccione un tipo de documento</option>
               {tiposDocumento.map((tipo) => (
@@ -125,10 +152,11 @@ const AgendaCita = () => {
               value={numeroDocumento}
               onChange={(e) => setNumeroDocumento(e.target.value)}
               required
+              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
             />
           </div>
           <div className="form-group">
-            <label htmlFor="nombre">Nombre:</label>
+            <label htmlFor="nombre">Nombre completo:</label>
             <input
               type="text"
               id="nombre"
@@ -136,27 +164,7 @@ const AgendaCita = () => {
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
               required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="telefono">Teléfono:</label>
-            <input
-              type="text"
-              id="telefono"
-              className="form-input"
-              value={telefono}
-              onChange={(e) => setTelefono(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              className="form-input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
             />
           </div>
           <div className="form-group">
@@ -165,7 +173,6 @@ const AgendaCita = () => {
               id="tipoCita"
               value={tipoCita}
               className="select"
-              onChange={(e) => setTipoCita(e.target.value)}
               required
             >
               <option value="">Seleccione un tipo de cita</option>
@@ -188,29 +195,30 @@ const AgendaCita = () => {
               onClickOutside={() => setCalendarOpen(false)} // Cierra el calendario al hacer clic fuera de él
               onFocus={() => setCalendarOpen(true)} // Abre el calendario al hacer foco en él
             />
-
-
           </div>
           <div className="form-group">
             <label>Horas disponibles:</label>
             <div className="hour-grid">
               <button
-                className={`hour-button ${selectedHour === "9:00 AM" ? "selected" : ""
-                  }`}
+                className={`hour-button ${
+                  selectedHour === "9:00 AM" ? "selected" : ""
+                }`}
                 onClick={() => handleHourSelect("9:00 AM")}
               >
                 9:00 AM
               </button>
               <button
-                className={`hour-button ${selectedHour === "10:00 AM" ? "selected" : ""
-                  }`}
+                className={`hour-button ${
+                  selectedHour === "10:00 AM" ? "selected" : ""
+                }`}
                 onClick={() => handleHourSelect("10:00 AM")}
               >
                 10:00 AM
               </button>
               <button
-                className={`hour-button ${selectedHour === "11:00 AM" ? "selected" : ""
-                  }`}
+                className={`hour-button ${
+                  selectedHour === "11:00 AM" ? "selected" : ""
+                }`}
                 onClick={() => handleHourSelect("11:00 AM")}
               >
                 11:00 AM
@@ -225,6 +233,25 @@ const AgendaCita = () => {
           </div>
         </form>
       </div>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <h3>¿Para quién es la cita?</h3>
+            <button
+              type="button"
+              onClick={() => handleModalButtonClick(true)}
+            >
+              Para mí
+            </button>
+            <button
+              type="button"
+              onClick={() => handleModalButtonClick(false)}
+            >
+              Para otra persona
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

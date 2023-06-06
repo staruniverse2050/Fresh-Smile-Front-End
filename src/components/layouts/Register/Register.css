@@ -22,11 +22,11 @@
 	width: 40%;
 	height: 870px;
 	text-align: center;
-	/* background-color: #D3D3D3; */
 }
 .custom-modal {
 	width: 300px; /* Ajusta el ancho de la ventana modal según tus preferencias */
-	max-width: 90%;
+	max-width: 20%;
+	max-height: 20%;
 	margin: 0 auto;
   }
   
@@ -34,7 +34,8 @@
 	border: none; /* Elimina el borde */
 	border-radius: 10px; /* Agrega esquinas redondeadas */
 	background-color: #fff; /* Cambia el color de fondo a blanco o el color deseado */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+	margin-right: 25px;/* Agrega una sombra */
   }
   
   .custom-modal .modal-header {
@@ -196,3 +197,71 @@
 .custom-swal-button:hover {
 	background-color: #1e6d79;
 }
+.custom-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+  padding: 20px;
+}
+
+.custom-modal .modal-dialog {
+  width: 400px; /* Ajusta el ancho del modal según tus preferencias */
+  max-width: 90%;
+
+}
+
+.custom-modal .modal-content {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+	width: 100%;
+	padding: 15%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-modal .modal-header {
+  border-bottom: none;
+}
+
+.custom-modal .modal-footer {
+  border-top: none;
+}
+
+.custom-modal .modal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.custom-modal .InputCodigo {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-modal .BotonModalCancelar,
+.custom-modal .BotonModalGuardar {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #ccc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-modal .BotonModalCancelar {
+  background-color: #e74c3c;
+}
+
+.custom-modal .BotonModalGuardar {
+  background-color: #2ecc71;
+}
+
+
+

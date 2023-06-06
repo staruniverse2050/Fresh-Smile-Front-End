@@ -275,7 +275,7 @@ const RegistroFormulario = () => {
         {/* <img className="img-left-side" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/equipo_ychejy.png" alt="" /> */}
         <h1 className="title-left">Fresh Smile Cmills</h1>
       </div>
-      <div class="right-side">
+      <div className="right-side">
         <form className="form-input-container" onSubmit={handleSubmit}>
           <div className="form-group">
             <h1 className="registro-h1">Registro</h1>
@@ -390,12 +390,19 @@ const RegistroFormulario = () => {
           </div>
         </form>
         {rol === "Administrador" && (
-  <Modal show={showModal} onHide={handleCloseModal} backdrop="static" keyboard={false}>
-    <Modal.Header closeButton>
-      <Modal.Title>Ingresar código</Modal.Title>
+  <Modal
+    show={showModal}
+    onHide={handleCloseModal}
+    backdrop="static"
+    keyboard={false}
+    className="custom-modal" // Aplica una clase CSS personalizada a la ventana modal
+  >
+    <Modal.Header>
+      <Modal.Title className="ModalTitle">Ingresar código</Modal.Title>
     </Modal.Header>
     <Modal.Body>
       <input
+        className="InputCodigo"
         type="text"
         value={codigo}
         onChange={handleCodigoChange}

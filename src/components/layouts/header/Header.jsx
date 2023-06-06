@@ -30,7 +30,7 @@ export const Header = () => {
           />
         </Link>
         <h1>
-          <span>Fresh</span>Smile<span>Cmills</span>
+          <span>Fresh </span>Smile<span> Cmills</span>
         </h1>
         <ul>
           <div className="toggle-menu">
@@ -172,9 +172,9 @@ export const Header = () => {
               <li>
                 <Link
                   className={`links ${
-                    isActiveRoute("/Contacto") ? "active" : ""
+                    isActiveRoute("/PerfilAdministrador") ? "active" : ""
                   }`}
-                  to="/Contacto"
+                  to="/PerfilAdministrador"
                 >
                   Perfil Administrador
                 </Link>
@@ -182,9 +182,9 @@ export const Header = () => {
               <li>
                 <Link
                   className={`links ${
-                    isActiveRoute("/Contacto") ? "active" : ""
+                    isActiveRoute("/PerfilUsuario") ? "active" : ""
                   }`}
-                  to="/Contacto"
+                  to="/PerfilUsuario"
                 >
                   Perfil Usuario
                 </Link>

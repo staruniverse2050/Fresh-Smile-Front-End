@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 // import { useLocation } from 'react-router-dom';
 
-import './Header.css';
+import "./Header.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,35 +44,75 @@ export const Header = () => {
               <div className="container3">
                 <ul>
                   <li>
-                    <Link  className={`links2 ${isActiveRoute('/Inicio') ? 'active' : ''}`}
-                  to="/Inicio">
+                    <Link
+                      className={`links2 ${
+                        isActiveRoute("/Inicio") ? "active" : ""
+                      }`}
+                      to="/Inicio"
+                    >
                       Inicio
                     </Link>
                   </li>
                   <li>
-                    <Link className={`links2 ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
-                  to="/Nosotros">
+                    <Link
+                      className={`links2 ${
+                        isActiveRoute("/Nosotros") ? "active" : ""
+                      }`}
+                      to="/Nosotros"
+                    >
                       Nosotros
                     </Link>
                   </li>
                   <li>
-                    <Link className={`links2 ${isActiveRoute('/Agendar') ? 'active' : ''}`}
-                  to="/Agendar">
+                    <Link
+                      className={`links2 ${
+                        isActiveRoute("/Agendar") ? "active" : ""
+                      }`}
+                      to="/Agendar"
+                    >
                       Agenda tu cita
                     </Link>
                   </li>
                   <li>
-                    <Link className={`links2 ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
-                  to="/Procedimientos">
+                    <Link
+                      className={`links2 ${
+                        isActiveRoute("/Procedimientos") ? "active" : ""
+                      }`}
+                      to="/Procedimientos"
+                    >
                       Procedimientos
                     </Link>
                   </li>
                   <li>
-                    <Link className={`links2 ${isActiveRoute('/Contacto') ? 'active' : ''}`}
-                  to="/Contacto">
+                    <Link
+                      className={`links2 ${
+                        isActiveRoute("/Contacto") ? "active" : ""
+                      }`}
+                      to="/Contacto"
+                    >
                       Contacto
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      className={`links ${
+                        isActiveRoute("/Contacto") ? "active" : ""
+                      }`}
+                      to="/Contacto"
+                    >
+                      Perfil Administrador
+                    </Link>
+                  </li>
+                  <li>
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Contacto") ? "active" : ""
+                  }`}
+                  to="/Contacto"
+                >
+                  Perfil Usuario
+                </Link>
+              </li>
                 </ul>
               </div>
             )}
@@ -81,35 +121,72 @@ export const Header = () => {
             <ul>
               <li>
                 <Link
-                  className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                  className={`links ${
+                    isActiveRoute("/Inicio") ? "active" : ""
+                  }`}
                   to="/Inicio"
                 >
                   Inicio
                 </Link>
-
               </li>
               <li>
-                <Link className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
-                  to="/Nosotros">
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Nosotros") ? "active" : ""
+                  }`}
+                  to="/Nosotros"
+                >
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link className={`links ${isActiveRoute('/Agendar') ? 'active' : ''}`}
-                  to="/Agendar">
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Agendar") ? "active" : ""
+                  }`}
+                  to="/Agendar"
+                >
                   Agenda cita
                 </Link>
               </li>
               <li>
-                <Link className={`links ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
-                  to="/Procedimientos">
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Procedimientos") ? "active" : ""
+                  }`}
+                  to="/Procedimientos"
+                >
                   Procedimientos
                 </Link>
               </li>
               <li>
-                <Link className={`links ${isActiveRoute('/Contacto') ? 'active' : ''}`}
-                  to="/Contacto">
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Contacto") ? "active" : ""
+                  }`}
+                  to="/Contacto"
+                >
                   Contacto
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Contacto") ? "active" : ""
+                  }`}
+                  to="/Contacto"
+                >
+                  Perfil Administrador
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`links ${
+                    isActiveRoute("/Contacto") ? "active" : ""
+                  }`}
+                  to="/Contacto"
+                >
+                  Perfil Usuario
                 </Link>
               </li>
             </ul>

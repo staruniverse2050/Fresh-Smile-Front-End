@@ -24,55 +24,6 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="barra5">
-        <h2>¿Quiénes Somos?</h2>
-      </div>
-
-      <div className="container-wrapper-2">
-        <div className="container-contacto">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg"
-            alt=""
-          />
-          <div className="content-contacto">
-            <p className="p-contacto">
-              Fresh Smile Cmills es una reconocida clínica de ortodoncia
-              comprometida con ofrecer soluciones de alta calidad para la salud
-              dental de nuestros pacientes. Con una amplia experiencia y
-              conocimientos en el campo de la ortodoncia, nos hemos ganado la
-              confianza de numerosos individuos y familias que buscan mejorar su
-              sonrisa y salud bucal.
-            </p>
-            <p className="p-contacto">
-              En Fresh Smile Cmills, comprendemos la importancia de una sonrisa
-              hermosa y saludable, no solo en términos estéticos, sino también
-              en cuanto a la función y el bienestar general de nuestros
-              pacientes. Por ello, nos enfocamos en brindar tratamientos
-              personalizados y eficientes para corregir una amplia variedad de
-              problemas dentales y maxilofaciales.
-            </p>
-
-            <button className="btn-contacto">
-              <Link to="/Nosotros">
-                <a class="linkscontacto" href="#nosotros">
-                  Leer más
-                </a>
-              </Link>
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* Chat WhatsAPP */}
-      <div class="space-wpp">
-        <a
-          href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información."
-          class="float"
-          target="_blank "
-        >
-          <i class="fa fa-whatsapp my-float"></i>
-        </a>
-      </div>
-
       <div className="barra-2">
   <h2>Nuestros procedimientos</h2>
 </div>
@@ -141,8 +92,59 @@ export const Home = () => {
       </button>
     </div>
   </div>
+  </div>
  
-</div>
+      <div className="barra5">
+        <h2>¿Quiénes Somos?</h2>
+      </div>
+
+      <div className="container-wrapper-2">
+        <div className="container-contacto">
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg"
+            alt=""
+          />
+          <div className="content-contacto">
+            <p className="p-contacto">
+              Fresh Smile Cmills es una reconocida clínica de ortodoncia
+              comprometida con ofrecer soluciones de alta calidad para la salud
+              dental de nuestros pacientes. Con una amplia experiencia y
+              conocimientos en el campo de la ortodoncia, nos hemos ganado la
+              confianza de numerosos individuos y familias que buscan mejorar su
+              sonrisa y salud bucal.
+            </p>
+            <p className="p-contacto">
+              En Fresh Smile Cmills, comprendemos la importancia de una sonrisa
+              hermosa y saludable, no solo en términos estéticos, sino también
+              en cuanto a la función y el bienestar general de nuestros
+              pacientes. Por ello, nos enfocamos en brindar tratamientos
+              personalizados y eficientes para corregir una amplia variedad de
+              problemas dentales y maxilofaciales.
+            </p>
+
+            <button className="btn-contacto">
+              <Link to="/Nosotros">
+                <a class="linkscontacto" href="#nosotros">
+                  Leer más
+                </a>
+              </Link>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Chat WhatsAPP */}
+      <div class="space-wpp">
+        <a
+          href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información."
+          class="float"
+          target="_blank "
+        >
+          <i class="fa fa-whatsapp my-float"></i>
+        </a>
+      </div>
+
+      
+
       <Footer />
     </>
   );

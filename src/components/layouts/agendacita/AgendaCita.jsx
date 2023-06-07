@@ -237,13 +237,13 @@ const AgendaCita = () => {
         <div className="modal">
           <div className="modal-content">
             <h3>¿Para quién es la cita?</h3>
-            <button
+            <button className="BotonParaMi"
               type="button"
               onClick={() => handleModalButtonClick(true)}
             >
               Para mí
             </button>
-            <button
+            <button className="BotonParaOtraPersona"
               type="button"
               onClick={() => handleModalButtonClick(false)}
             >

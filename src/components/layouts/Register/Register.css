@@ -208,7 +208,7 @@
 
 .custom-modal .modal-dialog {
   width: 400px; /* Ajusta el ancho del modal según tus preferencias */
-  max-width: 90%;
+  max-width: 105%;
 
 }
 
@@ -218,6 +218,8 @@
   background-color: #fff;
 	width: 100%;
 	padding: 15%;
+	margin: -2em;
+	margin-top: -2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -246,6 +248,8 @@
 .custom-modal .BotonModalCancelar,
 .custom-modal .BotonModalGuardar {
   padding: 10px 20px;
+	margin-top: 1em;
+	margin-left: 50px;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
@@ -256,12 +260,14 @@
 }
 
 .custom-modal .BotonModalCancelar {
-  background-color: #e74c3c;
+  background-color:#ccc;
 }
 
 .custom-modal .BotonModalGuardar {
-  background-color: #2ecc71;
+  background-color:#249bad;
 }
-
+.custom-modal button:hover {
+  opacity: 0.8;
+}
 
 

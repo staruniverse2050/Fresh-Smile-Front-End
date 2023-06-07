@@ -1,15 +1,21 @@
-.container_banner1A {
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.932) 100%), url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/banner_fjy0jl.jpg");
-  background-size: cover;
+.barra-nost1 {
   width: 100%;
-  height: 30em;
-  min-height: 50%;
-  padding: 20px;
+  margin: 80px auto 20px; /* Ajusta el valor de margin-top según sea necesario */
+  padding: 50px;
+  background-color: #7DC3E8;
+  text-align: center;
+  position: relative;
+  top: 10px; /* Ajusta el valor según sea necesario */
 }
+
+
+
+.barra-nost1 h2 {
+  font-size: 45px;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .container_home1A {
   flex-direction: column;
   align-items: center;
@@ -37,7 +43,7 @@
 .post-nosotrosN {
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 .post-nosotrosN img {
   max-width: 500px;
@@ -124,75 +130,58 @@
 .specialist-container {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .specialist-card {
   width: 300px;
-  background-color: #f5f5f5;
+  background-color: #D3D3D3;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
   left: 745px;
   bottom: 490px;
+ 
 }
 
 .specialist-card2 {
   width: 300px;
-  background-color: #f5f5f5;
+  background-color: #D3D3D3;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
   left: 745px;
   bottom: 490px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 
 .specialist-card3 {
   width: 300px;
-  background-color: #f5f5f5;
+  background-color: #D3D3D3;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
   position: relative;
-  left: 740px;
-  bottom: 490px;
-  margin-left: 35px;
+  left: -40px; /* Ajusta el valor según sea necesario */
+  bottom: 50px;
+  margin-bottom: 20px; /* Espacio adicional entre tarjetas */
 }
+
+
 
 .specialist-card4 {
   width: 300px;
-  background-color: #f5f5f5;
+  background-color:#D3D3D3;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 200px; */
   position: relative;
-  right: 240px;
-  bottom: 130px;
+  left:-40px;
+  bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.specialist-card5 {
-  width: 300px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  bottom: 130px;
-  right: 210px;
-}
-
-.specialist-card6 {
-  width: 300px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  right: 184px;
-  bottom: 130px;
-}
 
 
 .specialist-image {
@@ -200,7 +189,7 @@
   height: 100px;
   margin-bottom: 10px;
   position: relative;
-  left: 74px;
+  left: 100px;
 }
 
 

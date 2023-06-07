@@ -25,15 +25,15 @@ export const Home = () => {
         </div>
       </div>
       <div className="barra-2">
-  <h2>Nuestros procedimientos</h2>
+  <h2>Nuestros Procedimientos</h2>
 </div>
-<div className="container-wrapper">
-  <div className="container-blog">
+<div className="container-wrapper-Home">
+  <div className="container-procedimientos-Home">
     <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685124831/ortodoncista_tlq9k3.png"
+      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg"
       alt=""
     />
-    <div className="content">
+    <div className="content-procedimientos-home">
       <h2>Ortodoncia</h2>
       <button className="btn-blog">
         <Link to="/Procedimientos">
@@ -44,13 +44,13 @@ export const Home = () => {
       </button>
     </div>
   </div>
-  <div className="container-blog">
+  <div className="container-procedimientos-Home">
     <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685125116/cepillo-de-dientes_1_d1q7ii.png"
+      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
       alt=""
     />
-    <div className="content">
-      <h2>Limpieza dental</h2>
+    <div className="content-procedimientos-home">
+      <h2>Limpieza Dental</h2>
       <button className="btn-blog">
         <Link to="/Procedimientos">
           <a className="linksblog" href="#Procedimientos">
@@ -60,12 +60,12 @@ export const Home = () => {
       </button>
     </div>
   </div>
-  <div className="container-blog">
+  <div className="container-procedimientos-Home">
     <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685125346/endodoncia_n5itxb.png"
+      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg"
       alt=""
     />
-    <div className="content">
+    <div className="content-procedimientos-home">
       <h2>Endodoncia</h2>
       <button className="btn-blog">
         <Link to="/Procedimientos">
@@ -76,13 +76,13 @@ export const Home = () => {
       </button>
     </div>
   </div>
-  <div className="container-blog">
+  <div className="container-procedimientos-Home">
     <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685125180/extraccion_jn5wxt.png"
+      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg"
       alt=""
     />
-    <div className="content">
-      <h2>Extracción dental</h2>
+    <div className="content-procedimientos-home">
+      <h2>Extracción Dental</h2>
       <button className="btn-blog">
       <Link to="/Procedimientos">
       <a className="linksblog" href="#extraccion-dental">
@@ -104,7 +104,7 @@ export const Home = () => {
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg"
             alt=""
           />
-          <div className="content-contacto">
+          <div className="content-procedimientos-home">
             <p className="p-contacto">
               Fresh Smile Cmills es una reconocida clínica de ortodoncia
               comprometida con ofrecer soluciones de alta calidad para la salud

@@ -15,19 +15,19 @@
 	position: fixed;
 }
 
-h1 {
+.menu h1 {
 	font-family: "Open Sans", sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	text-transform: uppercase;
-	color: var(--font-color);
 	margin: 0;
 	color: #ffffff;
-	margin-right: 15%;
+	margin-right: 10%;
 }
 
-span {
+.menu h1 span {
 	color: aqua;
 }
+
 img {
 	cursor: pointer;
 }
@@ -75,8 +75,8 @@ img {
 .logo {
 	float: left;
 	position: relative;
-	margin-left: 12px;
-	margin-right: 15px;
+	margin-left: 28px;
+	margin-right: 35px;
 }
 
 .icono-inicio {
@@ -103,10 +103,13 @@ img {
 }
 
 .container2 li {
-	margin-left: 1rem;
-	font-size: medium;
+	align-items: center;
+	text-align: center;
+	/* margin-left: 1rem; */
 	margin-right: 10px;
+	padding-right: 10px;
 }
+
 .dropdown-wrapper {
 	position: relative;
 }
@@ -137,7 +140,7 @@ img {
 }
 
 .icono-inicio-wrapper {
-	margin-left: auto;
+	margin-left: 11%;
 	margin-right: 2rem;
 }
 .links.active {
@@ -173,7 +176,6 @@ img {
 		top: 1rem;
 		left: 1rem;
 		cursor: pointer;
-
 		width: 40px;
 	}
 	.container2 {

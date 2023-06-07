@@ -15,7 +15,7 @@ export const Footer = () => {
                 <div className="address-info">
                   <i className="fa-sharp fa-solid fa-location-dot"></i>
                   <p>
-                    <span>Direccion</span>
+                    <span>Dirección</span>
                     <p className="dateT">Cra 21a, calle 9na #099</p>
                   </p>
                 </div>
@@ -40,7 +40,7 @@ export const Footer = () => {
               <div className="phone-info">
                 <i className="fa-solid fa-phone-volume"></i>
                 <p>
-                  <span className="text_telefono">Telefono</span>
+                  <span className="text_telefono">Teléfono</span>
                   <p className="dateT">3204415807</p>
                 </p>
               </div>

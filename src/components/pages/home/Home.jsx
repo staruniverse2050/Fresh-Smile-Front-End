@@ -25,7 +25,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="barra-2">
-  <h2>Nuestros Procedimientos</h2>
+  <h2>Procedimientos</h2>
 </div>
 <div className="container-wrapper-Home">
   <div className="container-procedimientos-Home">

@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import { fill } from "@cloudinary/url-gen/actions/resize";
-import { CloudinaryImage } from '@cloudinary/url-gen';
+import { CloudinaryImage } from "@cloudinary/url-gen";
 import { Footer } from "../../layouts/footer/Footer";
-const myImage = new CloudinaryImage('sample', { cloudName: 'dfvxujvf8' }).resize(fill().width(100).height(150));
-
+const myImage = new CloudinaryImage("sample", {
+  cloudName: "dfvxujvf8",
+}).resize(fill().width(100).height(150));
 
 export const Home = () => {
   return (
@@ -15,85 +16,86 @@ export const Home = () => {
           <h1>¡Bienvenidos a la clinica Fresh Smile Cmills!</h1>
           <div className="container-btn">
             <button className="boton-home">
-            <Link to="/Mapa">
-  <a className="linksinicio2" href="#clinica">
-    Buscar Clínica
-  </a>
-</Link>
+              <a
+                className="linksinicio2"
+                href="https://www.google.com/search?rlz=1C1ALOY_esCO991CO991&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=APwXEdeISbLcVD7S1A3ujeXFkJTEClR6Mg:1686163849408&q=odont%C3%B3logos+armenia&rflfq=1&num=10&rllag=4532772,-75675916,1962&sa=X&ved=2ahUKEwi7qpvq6bH_AhXrjLAFHeWsCO0QjGp6BAgPEAE&biw=1920&bih=937&dpr=1#rlfi=hd:;si:;mv:[[4.567563,-75.6476871],[4.5190079,-75.6952613]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2"
+              >
+                Buscar Clínica
+              </a>
             </button>
           </div>
         </div>
       </div>
       <div className="barra-2">
-  <h2>Nuestros Procedimientos</h2>
-</div>
-<div className="container-wrapper-Home">
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Ortodoncia</h2>
-      <button className="btn-blog">
-        <Link to="/Procedimientos">
-          <a className="linksblog" href="#Procedimientos">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Limpieza Dental</h2>
-      <button className="btn-blog">
-        <Link to="/Procedimientos">
-          <a className="linksblog" href="#Procedimientos">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Endodoncia</h2>
-      <button className="btn-blog">
-        <Link to="/Procedimientos">
-          <a className="linksblog" href="#procedimientos">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Extracción Dental</h2>
-      <button className="btn-blog">
-      <Link to="/Procedimientos">
-      <a className="linksblog" href="#extraccion-dental">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  </div>
- 
+        <h2>Nuestros Procedimientos</h2>
+      </div>
+      <div className="container-wrapper-Home">
+        <div className="container-procedimientos-Home">
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg"
+            alt=""
+          />
+          <div className="content-procedimientos-home">
+            <h2>Ortodoncia</h2>
+            <button className="btn-blog">
+              <Link to="/Procedimientos">
+                <a className="linksblog" href="#Procedimientos">
+                  Leer más
+                </a>
+              </Link>
+            </button>
+          </div>
+        </div>
+        <div className="container-procedimientos-Home">
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
+            alt=""
+          />
+          <div className="content-procedimientos-home">
+            <h2>Limpieza Dental</h2>
+            <button className="btn-blog">
+              <Link to="/Procedimientos">
+                <a className="linksblog" href="#Procedimientos">
+                  Leer más
+                </a>
+              </Link>
+            </button>
+          </div>
+        </div>
+        <div className="container-procedimientos-Home">
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg"
+            alt=""
+          />
+          <div className="content-procedimientos-home">
+            <h2>Endodoncia</h2>
+            <button className="btn-blog">
+              <Link to="/Procedimientos">
+                <a className="linksblog" href="#procedimientos">
+                  Leer más
+                </a>
+              </Link>
+            </button>
+          </div>
+        </div>
+        <div className="container-procedimientos-Home">
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg"
+            alt=""
+          />
+          <div className="content-procedimientos-home">
+            <h2>Extracción Dental</h2>
+            <button className="btn-blog">
+              <Link to="/Procedimientos">
+                <a className="linksblog" href="#extraccion-dental">
+                  Leer más
+                </a>
+              </Link>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="barra5">
         <h2>¿Quiénes Somos?</h2>
       </div>
@@ -142,8 +144,6 @@ export const Home = () => {
           <i class="fa fa-whatsapp my-float"></i>
         </a>
       </div>
-
-      
 
       <Footer />
     </>

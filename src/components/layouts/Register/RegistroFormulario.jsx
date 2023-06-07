@@ -8,8 +8,7 @@ import { useNavigate } from "react-router-dom";
 const RegistroFormulario = () => {
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [numeroDocumento, setNumeroDocumento] = useState("");
-  const [nombres, setNombres] = useState("");
-  const [apellidos, setApellidos] = useState("");
+  const [nombrescompletos, setNombrescompletos] = useState("");
   const [direccion, setDireccion] = useState("");
   const [telefono, setTelefono] = useState("");
   const [correo, setCorreo] = useState("");
@@ -32,16 +31,10 @@ const RegistroFormulario = () => {
   const handleNombresChange = (event) => {
     const value = event.target.value;
     if (/^[a-zA-Z\s]*$/.test(value)) {
-      setNombres(value);
+      setNombrescompletos(value);
     }
   };
 
-  const handleApellidosChange = (event) => {
-    const value = event.target.value;
-    if (/^[a-zA-Z\s]*$/.test(value)) {
-      setApellidos(value);
-    }
-  };
 
   const handleDireccionChange = (event) => {
     setDireccion(event.target.value);
@@ -187,7 +180,7 @@ const RegistroFormulario = () => {
       datosFormulario = {
         tipo_documento_uadministrador: tipoDocumento,
         numero_documento_uadministrador: numeroDocumento,
-        nombres_uadministrador: nombres,
+        nombres_uadministrador: nombrescompletos,
         apellidos_uadministrador: apellidos,
         direccion_uadministrador: direccion,
         telefono_uadministrador: telefono,
@@ -210,7 +203,7 @@ const RegistroFormulario = () => {
       datosFormulario = {
         tipo_documento_paciente: tipoDocumento,
         numero_documento_paciente: numeroDocumento,
-        nombres_paciente: nombres,
+        nombres_paciente: nombrescompletos,
         apellidos_paciente: apellidos,
         direccion_paciente: direccion,
         telefono_paciente: telefono,
@@ -236,7 +229,7 @@ const RegistroFormulario = () => {
         }).then(() => {
           setTipoDocumento("");
           setNumeroDocumento("");
-          setNombres("");
+          setNombrescompletos("");
           setApellidos("");
           setDireccion("");
           setTelefono("");
@@ -305,22 +298,12 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="nombres">Nombres</label>
+            <label htmlFor="nombrescompletos">Nombre completo</label>
             <input
               type="text"
-              id="nombres"
-              value={nombres}
+              id="nombrescompletos"
+              value={nombrescompletos}
               onChange={handleNombresChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="apellidos">Apellidos</label>
-            <input
-              type="text"
-              id="apellidos"
-              value={apellidos}
-              onChange={handleApellidosChange}
               required
             />
           </div>

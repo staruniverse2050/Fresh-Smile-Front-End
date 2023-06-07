@@ -16,29 +16,53 @@
   color: #333;
 }
 /* CSS para la ventana modal */
-.modal {
+/* .modal  {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscurecido */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-}
+} */
 
-.modal-content {
-  background-color: #fff;
+.modal .modal-content {
+  /* background-color: #fff;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 5px; */
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+	width: 100%;
+  height: 16em;
+	padding: 15%;
+	margin: -1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .modal h3 {
-  margin-top: 0;
+  text-align: center;
+  margin-top: 4rem;
 }
-
+.modal-content .BotonParaMi,
+.modal-content .BotonParaOtraPersona {
+  padding: 10px 20px;
+	margin-top: 2em;
+	margin-left: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color:#249bad;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-content button:hover {
+  opacity: 0.8;
+}
 .modal button {
   margin-right: 10px;
 }

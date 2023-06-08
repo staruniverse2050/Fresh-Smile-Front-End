@@ -1,0 +1,38 @@
+.tabla-perfilad {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  float: left;
+}
+
+.perfil-tablaad {
+  margin-right: 29%;
+  width: 150%;
+  border-collapse: collapse;
+  /* margin-top: 220px; */
+}
+
+.perfil-tablaad td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.perfil-tablaad td:first-child {
+  font-weight: bold;
+  width: 50%;
+}
+
+.perfil-input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  /* border-radius: 4px; */
+  color: #333;
+  background-color: #ffffff;
+}
+
+.perfil-input:focus {
+  outline: none;
+  border-color: #a7c1d8;
+  box-shadow: 0 0 5px rgba(167, 193, 216, 0.5);
+}

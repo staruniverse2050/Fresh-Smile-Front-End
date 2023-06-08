@@ -16,6 +16,7 @@ const RegistroFormulario = () => {
   const [rol, setRol] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [codigo, setCodigo] = useState("");
+  const [especialidad, setEspecialidad] = useState("");
 
   const handleTipoDocumentoChange = (event) => {
     setTipoDocumento(event.target.value);
@@ -34,7 +35,6 @@ const RegistroFormulario = () => {
       setNombrescompletos(value);
     }
   };
-
 
   const handleDireccionChange = (event) => {
     setDireccion(event.target.value);
@@ -75,21 +75,26 @@ const RegistroFormulario = () => {
     setCodigo(event.target.value);
   };
 
+  const handleEspecialidadChange = (event) => {
+    setEspecialidad(event.target.value);
+  };
+
   const handleRolChange = (event) => {
     setRol(event.target.value);
-    if (event.target.value === "Administrador") {
+    if (event.target.value === "Especialista") {
       setShowModal(true);
     } else {
       setShowModal(false);
     }
   };
-  
+
   const opcionesTipoDocumento = [
     { value: "Cédula de ciudadanía", label: "Cédula de ciudadanía" },
     { value: "Tarjeta de identidad", label: "Tarjeta de identidad" },
     { value: "Cédula de extranjería", label: "Cédula de extranjería" },
-    // Agrega más opciones según tus necesidades
+    // Add more options as needed
   ];
+
 
   const navigate = useNavigate();
 
@@ -102,10 +107,10 @@ const RegistroFormulario = () => {
       const response = await axios.get(
         "https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCodigo"
       );
-  
+
       const codigos = response.data; // Arreglo de objetos de códigos
       const codigoValido = codigos.some((obj) => obj.codigo === codigo);
-  
+
       return codigoValido;
     } catch (error) {
       console.error("Error al validar el código:", error);
@@ -113,28 +118,31 @@ const RegistroFormulario = () => {
       throw error; // Opcionalmente, puedes lanzar el error para que se maneje en otro lugar
     }
   };
-  
+
   const validarCorreo = async (correo, rol) => {
     let apiEndpoint = "";
-    
-    if (rol === "Administrador") {
-      apiEndpoint = "https://freshsmile.azurewebsites.net/FreshSmile/ConsultarAdministradores";
+
+    if (rol === "Especialista") {
+      apiEndpoint =
+        "https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/ConsultarEspecialista";
     } else if (rol === "Paciente") {
-      apiEndpoint = "https://freshsmile.azurewebsites.net/FreshSmile/ConsultarPacientes";
+      apiEndpoint =
+        "https://freshsmile.azurewebsites.net/FreshSmile/ConsultarPacientes";
     }
-    
+
     try {
       const response = await axios.get(apiEndpoint);
       const usuarios = response.data;
-      const correoRegistrado = usuarios.some((usuario) => usuario.correo === correo);
+      const correoRegistrado = usuarios.some(
+        (usuario) => usuario.correo === correo
+      );
       return correoRegistrado;
     } catch (error) {
       console.error("Error al validar el correo:", error);
       throw error;
     }
   };
-  
-  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -150,13 +158,13 @@ const RegistroFormulario = () => {
       });
       return;
     }
-  
+
     let apiEndpoint = "";
     let datosFormulario = {};
-  
-    if (rol === "Administrador") {
+
+    if (rol === "Especialista") {
       const codigoValido = await validarCodigo();
-  
+
       if (!codigoValido) {
         Swal.fire({
           icon: "error",
@@ -165,7 +173,7 @@ const RegistroFormulario = () => {
         });
         return;
       }
-  
+
       const correoRegistrado = await validarCorreo(correo, rol);
       if (correoRegistrado) {
         Swal.fire({
@@ -176,19 +184,18 @@ const RegistroFormulario = () => {
         return;
       }
       apiEndpoint =
-        "https://freshsmile.azurewebsites.net/FreshSmile/CrearAdministradores";
+        "https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/ConsultarEspecialista";
       datosFormulario = {
-        tipo_documento_uadministrador: tipoDocumento,
-        numero_documento_uadministrador: numeroDocumento,
-        nombres_uadministrador: nombrescompletos,
-        apellidos_uadministrador: apellidos,
-        direccion_uadministrador: direccion,
-        telefono_uadministrador: telefono,
+        identificacion_especialista: numeroDocumento,
+        tipo_documento: tipoDocumento,
+        nombre_completo: nombrescompletos,
+        telefono: telefono,
+        direccion: direccion,
+        especialidad: especialidad,
         correo: correo,
         contraseña: contraseña,
       };
     } else if (rol === "Paciente") {
-  
       const correoRegistrado = await validarCorreo(correo, rol);
       if (correoRegistrado) {
         Swal.fire({
@@ -201,17 +208,16 @@ const RegistroFormulario = () => {
       apiEndpoint =
         "https://freshsmile.azurewebsites.net/FreshSmile/CrearPacientes";
       datosFormulario = {
-        tipo_documento_paciente: tipoDocumento,
-        numero_documento_paciente: numeroDocumento,
-        nombres_paciente: nombrescompletos,
-        apellidos_paciente: apellidos,
-        direccion_paciente: direccion,
-        telefono_paciente: telefono,
+        tipo_documento: tipoDocumento,
+        identificacion_paciente: numeroDocumento,
+        nombre_completo: nombrescompletos,
+        direccion: direccion,
+        telefono: telefono,
         correo: correo,
         contraseña: contraseña,
       };
     }
-  
+
     try {
       const response = await fetch(apiEndpoint, {
         method: "POST",
@@ -220,7 +226,7 @@ const RegistroFormulario = () => {
         },
         body: JSON.stringify(datosFormulario),
       });
-  
+
       if (response.ok) {
         Swal.fire({
           icon: "success",
@@ -233,6 +239,7 @@ const RegistroFormulario = () => {
           setApellidos("");
           setDireccion("");
           setTelefono("");
+          setEspecialidad("");
           setCorreo("");
           setContraseña("");
           setRol("");
@@ -307,6 +314,26 @@ const RegistroFormulario = () => {
               required
             />
           </div>
+          {rol === "Especialista" && (
+            <div className="form-group">
+            <label>Especialidad</label>
+            <select
+              className="form-control"
+              value={especialidad}
+              onChange={handleEspecialidadChange}
+            >
+              <option value="">Seleccionar especialidad</option>
+              <option value="Ortodoncia">Ortodoncia</option>
+              <option value="Endodoncia">Endodoncia</option>
+              <option value="Periodoncia">Periodoncia</option>
+              <option value="Implantología">Implantología</option>
+              <option value="Odontopediatría">Odontopediatría</option>
+              <option value="Cirugía Oral">Cirugía Oral</option>
+              {/* Agrega más opciones de especialidades según tus necesidades */}
+            </select>
+          </div>
+        )}
+
           <div className="form-group">
             <label htmlFor="direccion">Dirección</label>
             <input
@@ -356,14 +383,17 @@ const RegistroFormulario = () => {
               className="form-input-select"
             >
               <option value="">Seleccione un rol</option>
-              <option value="Administrador" >Administrador</option>
+              <option value="Especialista">Especialista</option>
               <option value="Paciente">Paciente</option>
             </select>
           </div>
-          <button className="BotonRegistro" type="submit" onClick={handleOpenModal} >
+          <button
+            className="BotonRegistro"
+            type="submit"
+            onClick={handleOpenModal}
+          >
             Registrar
           </button>
-
 
           <div className="login-link">
             <p>¿Ya tienes una cuenta?</p>
@@ -372,36 +402,36 @@ const RegistroFormulario = () => {
             </button>
           </div>
         </form>
-        {rol === "Administrador" && (
-  <Modal
-    show={showModal}
-    onHide={handleCloseModal}
-    backdrop="static"
-    keyboard={false}
-    className="custom-modal" // Aplica una clase CSS personalizada a la ventana modal
-  >
-    <Modal.Header>
-      <Modal.Title className="ModalTitle">Ingresar código</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-      <input
-        className="InputCodigo"
-        type="text"
-        value={codigo}
-        onChange={handleCodigoChange}
-        placeholder="Ingrese el código"
-      />
-    </Modal.Body>
-    <Modal.Footer>
-      <button className="BotonModalCancelar" onClick={handleCloseModal}>
-        Cancelar
-      </button>
-      <button className="BotonModalGuardar" onClick={handleSubmit}>
-        Guardar
-      </button>
-    </Modal.Footer>
-  </Modal>
-)}
+        {rol === "Especialista" && (
+          <Modal
+            show={showModal}
+            onHide={handleCloseModal}
+            backdrop="static"
+            keyboard={false}
+            className="custom-modal" // Aplica una clase CSS personalizada a la ventana modal
+          >
+            <Modal.Header>
+              <Modal.Title className="ModalTitle">Ingresar código</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <input
+                className="InputCodigo"
+                type="text"
+                value={codigo}
+                onChange={handleCodigoChange}
+                placeholder="Ingrese el código"
+              />
+            </Modal.Body>
+            <Modal.Footer>
+              <button className="BotonModalCancelar" onClick={handleCloseModal}>
+                Cancelar
+              </button>
+              <button className="BotonModalGuardar" onClick={handleSubmit}>
+                Guardar
+              </button>
+            </Modal.Footer>
+          </Modal>
+        )}
       </div>
     </div>
   );

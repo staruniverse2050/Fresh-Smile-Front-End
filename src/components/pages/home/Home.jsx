@@ -26,78 +26,8 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="barra-2">
-<<<<<<< HEAD
-  <h2>Procedimientos</h2>
-</div>
-<div className="container-wrapper-Home">
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Ortodoncia</h2>
-      <button className="btn-blog">
-        <Link to="/Procedimientos">
-          <a className="linksblog" href="#Procedimientos">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Limpieza Dental</h2>
-      <button className="btn-blog">
-        <Link to="/Procedimientos">
-          <a className="linksblog" href="#Procedimientos">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Endodoncia</h2>
-      <button className="btn-blog">
-        <Link to="/Procedimientos">
-          <a className="linksblog" href="#procedimientos">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  <div className="container-procedimientos-Home">
-    <img
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg"
-      alt=""
-    />
-    <div className="content-procedimientos-home">
-      <h2>Extracción Dental</h2>
-      <button className="btn-blog">
-      <Link to="/Procedimientos">
-      <a className="linksblog" href="#extraccion-dental">
-            Leer más
-          </a>
-        </Link>
-      </button>
-    </div>
-  </div>
-  </div>
- 
-=======
+
+  <div className="barra-2">
         <h2>Nuestros Procedimientos</h2>
       </div>
       <div className="container-wrapper-Home">
@@ -167,7 +97,7 @@ export const Home = () => {
         </div>
       </div>
 
->>>>>>> 065f81cc5a5b42a47aff6ae55ba4b52d6be8e072
+
       <div className="barra5">
         <h2>¿Quiénes Somos?</h2>
       </div>

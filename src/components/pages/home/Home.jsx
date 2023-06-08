@@ -26,12 +26,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div className="barra-2">
-=======
-
-  <div className="barra-2">
->>>>>>> 3a41825fdee2279ff5e1d0d4b4cf62fc6ebe0f69
         <h2>Nuestros Procedimientos</h2>
       </div>
       <div className="container-wrapper-Home">
@@ -101,10 +96,6 @@ export const Home = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a41825fdee2279ff5e1d0d4b4cf62fc6ebe0f69
       <div className="barra5">
         <h2>¿Quiénes Somos?</h2>
       </div>

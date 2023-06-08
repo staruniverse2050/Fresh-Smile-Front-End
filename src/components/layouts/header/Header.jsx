@@ -180,7 +180,7 @@ export const Header = () => {
                   Perfil Administrador
                 </Link>
               </li> */}
-              {/* <li>
+              <li>
                 <Link
                   className={`links ${
                     isActiveRoute("/PerfilUsuario") ? "active" : ""
@@ -189,7 +189,7 @@ export const Header = () => {
                 >
                   Perfil Usuario
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
         </ul>

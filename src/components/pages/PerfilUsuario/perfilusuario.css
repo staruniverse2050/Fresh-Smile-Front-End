@@ -1,0 +1,39 @@
+.container-usuario {
+    padding-top: 130px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+  }
+  
+  /* .banner {
+    width: 100%;
+    display: flex;
+  } */
+  
+  .tarjeta-perfil {
+    width: 350px;
+    height: 210px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+  }
+  
+  .banner {
+    display: flex;
+    background: linear-gradient(to right, #1890ff, #00a2ff);
+    width: 100%; /* Ancho del banner-2 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perfil-titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .perfil-info {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }

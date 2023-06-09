@@ -30,6 +30,22 @@ export const Home = () => {
         <h2>Nuestros Procedimientos</h2>
       </div>
       <div className="container-wrapper-Home">
+        <div className="card-procedimientos-home">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852212/Fresh_Smile_Cmills/cards1_s5fs46.jpg" alt="Título de la tarjeta 1" class="card-image-proce" />
+          <h2 className="card-title">Blanqueamiento Dental</h2>
+        </div>
+
+        <div className="card-procedimientos-home">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Título de la tarjeta 2" class="card-image-proce" />
+          <h2 className="card-title">Diseño de Sonrisa</h2>
+        </div>
+
+        <div className="card-procedimientos-home">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Título de la tarjeta 3" class="card-image-proce" />
+          <h2 className="card-title">Implante Dental</h2>
+        </div>
+      </div>
+      {/* <div className="container-wrapper-Home">
         <div className="container-procedimientos-Home">
           <img
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg"
@@ -45,8 +61,8 @@ export const Home = () => {
               </Link>
             </button>
           </div>
-        </div>
-        <div className="container-procedimientos-Home">
+        </div> */}
+      {/* <div className="container-procedimientos-Home">
           <img
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
             alt=""
@@ -94,7 +110,7 @@ export const Home = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="barra5">
         <h2>¿Quiénes Somos?</h2>

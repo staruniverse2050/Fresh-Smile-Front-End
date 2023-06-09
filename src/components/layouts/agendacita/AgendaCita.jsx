@@ -12,8 +12,6 @@ const tiposDocumento = [
   "Pasaporte",
 ];
 
-
-
 const AgendaCita = () => {
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [numeroDocumento, setNumeroDocumento] = useState("");
@@ -31,45 +29,45 @@ const AgendaCita = () => {
     setShowModal(true); // Abrir la ventana modal al cargar el componente
   }, []);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Crear el objeto de datos a enviar al backend
     const data = {
-      tipo_documento_acompañante: tipoDocumento,
-      identificacion_acompañante: numeroDocumento,
+      identificacion_citas: numeroDocumento,
+      numero_documento,
       nombre_completo: nombre,
-      parentesco: parentesco,
-      fecha: selectedDate,
+      tipo_documento: tipoDocumento,
+      fecha: selectedDate, 
       hora: selectedHour,
-      id_paciente: 1,
-      id_especialista: 1,
-      id_procedimiento: 1,
       estado_cita: "Confirmada",
     };
 
-    // Realizar la solicitud POST al backend
-    axios
-      .post("URL_DE_TU_API", data)
-      .then((response) => {
-        // Manejar la respuesta del backend si es necesario
-        console.log(response.data);
-        // Restablecer los campos del formulario después de enviar los datos
-        setTipoDocumento("");
-        setNumeroDocumento("");
-        setNombre("");
-        setTelefono("");
-        setEmail("");
-        setTipoCita("");
-        setSelectedHour(null);
-        setSelectedDate(null);
-        setParentesco("");
-      })
-      .catch((error) => {
-        // Manejar el error si la solicitud no se completa correctamente
-        console.error(error);
-      });
+    // Verificar si la opción seleccionada es "BotonParaOtraPersona"
+    if (!fieldsDisabled) {
+      // Realizar la solicitud POST al backend
+      axios
+        .post("https://freshsmile.azurewebsites.net/FreshSmile/CrearCita", data)
+        .then((response) => {
+          // Manejar la respuesta del backend si es necesario
+          console.log(response.data);
+          // Restablecer los campos del formulario después de enviar los datos
+          setTipoDocumento("");
+          setNumeroDocumento("");
+          setNombre("");
+          setTelefono("");
+          setEmail("");
+          setTipoCita("");
+          setSelectedHour(null);
+          setSelectedDate(null);
+          // Mostrar una alerta de cita creada con éxito
+          alert("Cita creada con éxito");
+        })
+        .catch((error) => {
+          // Manejar el error si la solicitud no se completa correctamente
+          console.error(error);
+        });
+    }
   };
 
   const handleHourSelect = (hour) => {
@@ -133,7 +131,6 @@ const AgendaCita = () => {
               onChange={(e) => setTipoDocumento(e.target.value)}
               required
               disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
-
             >
               <option value="">Seleccione un tipo de documento</option>
               {tiposDocumento.map((tipo) => (
@@ -174,6 +171,7 @@ const AgendaCita = () => {
               value={tipoCita}
               className="select"
               required
+              onChange={(e) => setTipoCita(e.target.value)}
             >
               <option value="">Seleccione un tipo de cita</option>
               <option value="Consulta">Consulta</option>
@@ -237,13 +235,15 @@ const AgendaCita = () => {
         <div className="modal">
           <div className="modal-content">
             <h3>¿Para quién es la cita?</h3>
-            <button className="BotonParaMi"
+            <button
+              className="BotonParaMi"
               type="button"
               onClick={() => handleModalButtonClick(true)}
             >
               Para mí
             </button>
-            <button className="BotonParaOtraPersona"
+            <button
+              className="BotonParaOtraPersona"
               type="button"
               onClick={() => handleModalButtonClick(false)}
             >

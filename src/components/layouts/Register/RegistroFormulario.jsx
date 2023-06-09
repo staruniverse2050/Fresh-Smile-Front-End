@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import Swal from "sweetalert2";
 import { Modal } from "react-bootstrap";
 import axios from "axios";
@@ -16,6 +16,7 @@ const RegistroFormulario = () => {
   const [rol, setRol] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [codigo, setCodigo] = useState("");
+  const [procedimientos, setProcedimientos] = useState([]);
   const [especialidad, setEspecialidad] = useState("");
 
   const handleTipoDocumentoChange = (event) => {
@@ -28,7 +29,19 @@ const RegistroFormulario = () => {
       setNumeroDocumento(value);
     }
   };
-
+  useEffect(() => {
+    // Realizar la solicitud HTTP para obtener los procedimientos
+    axios.get('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
+      .then(response => {
+        // Guardar los procedimientos en el estado
+        setProcedimientos(response.data);
+      })
+      .catch(error => {
+        // Manejar el error en caso de que la solicitud falle
+        console.error('Error al obtener los procedimientos:', error);
+      });
+  }, []);
+  
   const handleNombresChange = (event) => {
     const value = event.target.value;
     if (/^[a-zA-Z\s]*$/.test(value)) {
@@ -174,17 +187,8 @@ const RegistroFormulario = () => {
         return;
       }
 
-      const correoRegistrado = await validarCorreo(correo, rol);
-      if (correoRegistrado) {
-        Swal.fire({
-          icon: "error",
-          title: "Correo ya registrado",
-          text: "Este correo electrónico ya está registrado en la base de datos.",
-        });
-        return;
-      }
       apiEndpoint =
-        "https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/ConsultarEspecialista";
+        "https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/CrearEspecialista";
       datosFormulario = {
         identificacion_especialista: numeroDocumento,
         tipo_documento: tipoDocumento,
@@ -195,16 +199,7 @@ const RegistroFormulario = () => {
         correo: correo,
         contraseña: contraseña,
       };
-    } else if (rol === "Paciente") {
-      const correoRegistrado = await validarCorreo(correo, rol);
-      if (correoRegistrado) {
-        Swal.fire({
-          icon: "error",
-          title: "Correo ya registrado",
-          text: "Este correo electrónico ya está registrado en la base de datos.",
-        });
-        return;
-      }
+    
       apiEndpoint =
         "https://freshsmile.azurewebsites.net/FreshSmile/CrearPacientes";
       datosFormulario = {
@@ -226,24 +221,24 @@ const RegistroFormulario = () => {
         },
         body: JSON.stringify(datosFormulario),
       });
-
+  
       if (response.ok) {
         Swal.fire({
           icon: "success",
           title: "Registro exitoso",
           text: "¡Se ha registrado correctamente!",
         }).then(() => {
+          // Resetear los valores de los campos
           setTipoDocumento("");
           setNumeroDocumento("");
           setNombrescompletos("");
-          setApellidos("");
           setDireccion("");
           setTelefono("");
           setEspecialidad("");
           setCorreo("");
           setContraseña("");
           setRol("");
-          navigate("/Login");
+          setCodigo("");
         });
       } else {
         Swal.fire({
@@ -315,24 +310,22 @@ const RegistroFormulario = () => {
             />
           </div>
           {rol === "Especialista" && (
-            <div className="form-group">
-            <label>Especialidad</label>
-            <select
-              className="form-control"
-              value={especialidad}
-              onChange={handleEspecialidadChange}
-            >
-              <option value="">Seleccionar especialidad</option>
-              <option value="Ortodoncia">Ortodoncia</option>
-              <option value="Endodoncia">Endodoncia</option>
-              <option value="Periodoncia">Periodoncia</option>
-              <option value="Implantología">Implantología</option>
-              <option value="Odontopediatría">Odontopediatría</option>
-              <option value="Cirugía Oral">Cirugía Oral</option>
-              {/* Agrega más opciones de especialidades según tus necesidades */}
-            </select>
-          </div>
-        )}
+  <div className="form-group">
+    <label>Especialidad</label>
+    <select
+      className="form-control"
+      value={especialidad}
+      onChange={handleEspecialidadChange}
+    >
+      <option value="">Seleccionar especialidad</option>
+      {procedimientos.map(procedimiento => (
+        <option key={procedimiento.id} value={procedimiento.nombre}>
+          {procedimiento.nombre}
+        </option>
+      ))}
+    </select>
+  </div>
+)}
 
           <div className="form-group">
             <label htmlFor="direccion">Dirección</label>

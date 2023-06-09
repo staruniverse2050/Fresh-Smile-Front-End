@@ -3,13 +3,16 @@
   max-width: 500px;
   margin: 0 auto;
   float: left;
+  
+
 }
 
 .perfil-tablaad {
-  margin-right: 29%;
+  /* margin-right: 29%; */
   width: 150%;
   border-collapse: collapse;
   /* margin-top: 220px; */
+  
 }
 
 .perfil-tablaad td {

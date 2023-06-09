@@ -27,22 +27,59 @@ export const Home = () => {
         </div>
       </div>
       <div className="barra-2">
-        <h2>Nuestros Procedimientos</h2>
+        <h2 className="">Nuestros Procedimientos</h2>
       </div>
       <div className="container-wrapper-Home">
         <div className="card-procedimientos-home">
-          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852212/Fresh_Smile_Cmills/cards1_s5fs46.jpg" alt="Título de la tarjeta 1" class="card-image-proce" />
-          <h2 className="card-title">Blanqueamiento Dental</h2>
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
+            alt="Título de la tarjeta 1"
+            class="card-image-proce"
+          />
+          <button className="card-button">
+            <Link to="/Procedimientos">
+              <h2 className="card-title">Blanqueamiento Dental</h2>
+            </Link>
+          </button>
         </div>
 
         <div className="card-procedimientos-home">
-          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Título de la tarjeta 2" class="card-image-proce" />
-          <h2 className="card-title">Diseño de Sonrisa</h2>
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/carillas_hbazmk.jpg"
+            alt="Título de la tarjeta 2"
+            class="card-image-proce"
+          />
+          <button className="card-button">
+            <Link to="/Procedimientos">
+              <h2 className="card-title">Diseño de Sonrisa</h2>
+            </Link>
+          </button>
         </div>
 
         <div className="card-procedimientos-home">
-          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Título de la tarjeta 3" class="card-image-proce" />
-          <h2 className="card-title">Implante Dental</h2>
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantes_keq38a.jpg"
+            alt="Título de la tarjeta 3"
+            class="card-image-proce"
+          />
+          <button className="card-button">
+            <Link to="/Procedimientos">
+              <h2 className="card-title">Implante Dental</h2>
+            </Link>
+          </button>
+        </div>
+
+        <div className="card-procedimientos-home">
+          <img
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684270420/Fresh_Smile_Cmills/peter-kasprzyk-U1gvhqVQ2kQ-unsplash_db0rfk.jpg"
+            alt="Título de la tarjeta 3"
+            class="card-image-proce"
+          />
+          <button className="card-button">
+            <Link to="/Procedimientos">
+              <h2 className="card-title">Prótesis Dental</h2>
+            </Link>
+          </button>
         </div>
       </div>
       {/* <div className="container-wrapper-Home">
@@ -112,11 +149,26 @@ export const Home = () => {
         </div>
       </div> */}
 
-      <div className="barra5">
-        <h2>¿Quiénes Somos?</h2>
+      {/* <div className="barra5"> */}
+      <h2 className="title-barra">Sobre Nosotros</h2>
+      {/* </div> */}
+
+      <div class="container-nosotros-home">
+        <div className="card-nosotros-home">
+          <img src="ruta-de-la-imagen.jpg" alt="Imagen 1" />
+          <h3>Título 1</h3>
+        </div>
+        <div className="card-nosotros-home">
+          <img src="ruta-de-la-imagen.jpg" alt="Imagen 2" />
+          <h3>Título 2</h3>
+        </div>
+        <div className="card-nosotros-home">
+          <img src="ruta-de-la-imagen.jpg" alt="Imagen 3" />
+          <h3>Título 3</h3>
+        </div>
       </div>
 
-      <div className="container-wrapper-2">
+      {/* <div className="container-wrapper-2">
         <div className="container-contacto">
           <img
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg"
@@ -149,7 +201,7 @@ export const Home = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Chat WhatsAPP */}
       <div class="space-wpp">
         <a

@@ -27,9 +27,12 @@ body {
   left: 10px;
   display: inline-block;
   text-align: center;
-  display: flex; /* Añade esta propiedad */
-  align-items: center; /* Añade esta propiedad */
-  line-height: 100%; /* Ajusta el valor según sea necesario */
+  display: flex;
+  /* Añade esta propiedad */
+  align-items: center;
+  /* Añade esta propiedad */
+  line-height: 100%;
+  /* Ajusta el valor según sea necesario */
 }
 
 .space-wpp {
@@ -60,7 +63,7 @@ body {
   margin-top: 18px;
 }
 
-.linksinicio2{
+.linksinicio2 {
   text-decoration: none;
   color: #ffffff;
   padding: 0.5rem;
@@ -69,9 +72,12 @@ body {
   font-size: 22px;
   display: inline-block;
   text-align: center;
-  display: flex; /* Añade esta propiedad */
-  align-items: center; /* Añade esta propiedad */
-  line-height: 100%; /* Ajusta el valor según sea necesario */
+  display: flex;
+  /* Añade esta propiedad */
+  align-items: center;
+  /* Añade esta propiedad */
+  line-height: 100%;
+  /* Ajusta el valor según sea necesario */
 }
 
 .container_home {
@@ -110,7 +116,8 @@ body {
   color: white;
   /* padding: 10px 20px; */
   text-align: center;
-  font-size: 13px; /* Ajusta el tamaño de fuente según tus necesidades */
+  font-size: 13px;
+  /* Ajusta el tamaño de fuente según tus necesidades */
   /* margin: 50px; */
   position: relative;
   top: 80px;
@@ -123,13 +130,14 @@ body {
 
 .boton-home:hover,
 .boton-home:focus {
-    background:#1e6d79;
-  }
+  background: #1e6d79;
+}
 
 
 
 .procedimientos button:hover {
-  background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);}
+  background: radial-gradient(circle at 81.8% 27.73%, #419985 0, #38998c 6.25%, #309993 12.5%, #279999 18.75%, #2099a0 25%, #1c99a6 31.25%, #1c98ab 37.5%, #2197b0 43.75%, #2996b5 50%, #3395b9 56.25%, #3e93bc 62.5%, #4992bf 68.75%, #5490c0 75%, #5f8ec1 81.25%, #6a8cc1 87.5%, #748ac0 93.75%, #7e87be 100%);
+}
 
 /* Blog*/
 .container-wrapper-Home {
@@ -140,12 +148,17 @@ body {
 }
 
 .card-procedimientos-home {
-  width: 360px;
-  background-color: #7DC3E8;
-  padding: 10px;
-  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 380px;
+  background-color: #D3D3D3;
+  padding: 7px;
+  margin: 30px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 9px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -157,18 +170,37 @@ body {
 }
 
 .card-title {
-  color: white;
+  color: #ffffff;
   margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  align-items: center;
+  /* font-weight: bold; */
 }
-.linksblog{
+
+.card-button {
+  background-color: #249bada2;
+  width: 100%;
+  /* padding: 0; */
+  /* border: none; */
+  /* padding: 10px 20px; */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #1e6d79;
+}
+
+.linksblog {
   text-decoration: none;
   color: #ffffff;
   padding: 0.5rem;
   position: relative;
-  left:1px;
+  left: 1px;
 }
+
 .container-procedimientos-Home {
   align-items: center;
   justify-content: center;
@@ -183,6 +215,7 @@ body {
   /* outline: none; Agregado para eliminar el outline */
 
 }
+
 .container-procedimientos-Home:hover {
   transform: scale(1.05);
 }
@@ -237,7 +270,7 @@ body {
   text-align: center;
 }
 
-.barra h2{
+.barra h2 {
   font-size: 45px;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
@@ -259,6 +292,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.title-barra {
+  padding-top: 15px;
+  font-size: 45px;
+  color: #7DC3E8;
+  font-family: 'Open Sans', sans-serif;
+}
 
 .barra-3 {
   width: 50%;
@@ -314,9 +353,11 @@ body {
 .container-contacto img {
   max-width: 600px;
   border-radius: 10px;
-  margin-right: 20px; /* Aumenta el margen derecho para separar la imagen del borde */
+  margin-right: 20px;
+  /* Aumenta el margen derecho para separar la imagen del borde */
   position: relative;
-  left: 80; /* Ajusta el valor izquierdo para alinear la imagen a la izquierda */
+  left: 80;
+  /* Ajusta el valor izquierdo para alinear la imagen a la izquierda */
 }
 
 
@@ -341,16 +382,19 @@ body {
   text-align: justify;
   font-family: 'Open Sans', sans-serif;
   position: relative;
-  left: 0; /* Ajusta el valor izquierdo para alinear el texto a la izquierda */
-  top: 0; /* Ajusta el valor top según tus necesidades */
+  left: 0;
+  /* Ajusta el valor izquierdo para alinear el texto a la izquierda */
+  top: 0;
+  /* Ajusta el valor top según tus necesidades */
 }
 
 
-.linkscontacto{
+.linkscontacto {
   color: white;
 }
+
 .btn-contacto {
-  background-color:#1c98ab;
+  background-color: #1c98ab;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -358,149 +402,211 @@ body {
   border-radius: 4px;
   position: relative;
   left: 490px;
-  top:34px;
+  top: 34px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .btn-contacto:hover {
-  background:#1e6d79;
-}
-  
-
-
-
-  @media (max-width: 768px) {
-    .container-procedimientos {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 500px; /* Reducir el ancho máximo del contenedor */
-      padding: 20px; /* Agregar márgenes internos */
-      font-size: 14px; /* Reducir el tamaño de fuente */
-      flex-wrap: nowrap; /* Evitar que los elementos se envuelvan en varias líneas */
-      
-    }
-
-    .btn-blog{
-    
-          font-size: 14px; /* Reducir el tamaño de fuente en dispositivos más pequeños */
-          padding: 8px 16px; /* Ajustar el padding del botón */
-          left: 0; /* Reiniciar la posición izquierda */
-        }
-
-        .container-procedimientos-Home {
-          width: 90%; /* Reducir aún más el ancho del contenedor en dispositivos más pequeños */
-          padding: 10px; /* Ajustar el padding del contenedor en dispositivos más pequeños */
-          margin: 10px 10px 0; /* Ajustar los márgenes en dispositivos más pequeños */
-        }
-        .container-procedimientos-Home img {
-          width: 80%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
-          max-height: auto; /* Ajustar la altura automáticamente */
-          margin-right: 0; /* Eliminar el margen derecho en dispositivos más pequeños */
-        }
-        .container-procedimientos-Home img {
-          width: 30%; /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
-          max-height: auto; /* Ajustar la altura automáticamente */
-          margin-right: 0; /* Eliminar el margen derecho en dispositivos más pequeños */
-        }
-
-        .slick-carousel {
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          max-width: 500px; /* Reducir el ancho máximo del contenedor */
-          padding: 20px; /* Agregar márgenes internos */
-          font-size: 14px; /* Reducir el tamaño de fuente */
-          flex-wrap: nowrap; /* Evitar que los elementos se envuelvan en varias líneas */
-        }
-
-        .container_banner {
-          align-items: flex-start; /* Ajusta la alineación vertical al inicio */
-          justify-content: flex-start; /* Ajusta la alineación horizontal al inicio */
-          height: 30em;
-        }
-        
-        
-        .boton-home {
-          width: 50%; /* Ajusta el ancho en dispositivos más pequeños */
-          height: auto; /* Ajusta la altura automáticamente en dispositivos más pequeños */
-          font-size: 20px; /* Ajusta el tamaño de fuente en dispositivos más pequeños */
-          margin: 20px; /* Ajusta el margen en dispositivos más pequeños */
-          top: 0; /* Elimina el desplazamiento vertical */
-          font-family: 'Open Sans', sans-serif;
-        }
-        
-        
-        .linksinicio1 {
-          font-size: 14px;
-          float: left; /* Agrega float para ajustar el elemento a la izquierda */
-          left: 5px;
-          align-content: center;
-        }
-        
-        .linksinicio2 {
-          font-size: 12px;
-          float: left; /* Agrega float para ajustar el elemento a la izquierda */
-          left: 4px;
-          align-content: center;
-        }
-        
-
-        .barra-2 {
-          width: 700px;
-          margin: 40px auto; /* Centra horizontalmente el elemento */
-          margin-left: 0;
-          padding: 5px;
-          background-color: #000000;
-          text-align: left;
-        }
-        
-        
-        .container_home {
-          flex-direction: row;
-          justify-content: flex-start; /* Ajusta la alineación horizontal al inicio */
-          padding: 10px;
-          left: 4px;
-          float: left;
-        }
-        
-        .container-wrapper-2 {
-          flex-direction: column; /* Cambia la dirección a vertical */
-          align-items: center; /* Centra los elementos verticalmente */
-        }
-       
-        .content-contacto {
-          max-width: 40%; /* Establece el ancho máximo al 40% para ocupar parte del ancho disponible */
-          padding: 0px; /* Añade un poco de espacio interno horizontal */
-          display: flex; /* Utiliza flexbox */
-          flex-direction: column; /* Establece la dirección de los elementos a columna */
-          align-items: center; /* Centra horizontalmente los elementos */
-        }
-        
-
-        .container-wrapper-Home {
-          display: flex;
-          justify-content: center;
-        }
-        
-        .content-contacto p {
-          font-size: 14px; /* Ajusta el tamaño de fuente para dispositivos más pequeños */
-          line-height: 1.4; /* Ajusta el espacio entre líneas para dispositivos más pequeños */
-          margin-bottom: 8px; /* Ajusta el margen inferior para dispositivos más pequeños */
-        }
-       
-        .container-procedimientos-home {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .procedimientos {
-          width: 100%;
-          max-width: 450px;
-        }
+  background: #1e6d79;
 }
 
- 
+.container-nosotros-home {
+  display: flex;
+  justify-content: center;
+}
 
-  
-  
+.card-nosotros-home {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-nosotros-home img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.card-nosotros-home h3 {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .container-procedimientos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    /* Reducir el ancho máximo del contenedor */
+    padding: 20px;
+    /* Agregar márgenes internos */
+    font-size: 14px;
+    /* Reducir el tamaño de fuente */
+    flex-wrap: nowrap;
+    /* Evitar que los elementos se envuelvan en varias líneas */
+
+  }
+
+  .btn-blog {
+
+    font-size: 14px;
+    /* Reducir el tamaño de fuente en dispositivos más pequeños */
+    padding: 8px 16px;
+    /* Ajustar el padding del botón */
+    left: 0;
+    /* Reiniciar la posición izquierda */
+  }
+
+  .container-procedimientos-Home {
+    width: 90%;
+    /* Reducir aún más el ancho del contenedor en dispositivos más pequeños */
+    padding: 10px;
+    /* Ajustar el padding del contenedor en dispositivos más pequeños */
+    margin: 10px 10px 0;
+    /* Ajustar los márgenes en dispositivos más pequeños */
+  }
+
+  .container-procedimientos-Home img {
+    width: 80%;
+    /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
+    max-height: auto;
+    /* Ajustar la altura automáticamente */
+    margin-right: 0;
+    /* Eliminar el margen derecho en dispositivos más pequeños */
+  }
+
+  .container-procedimientos-Home img {
+    width: 30%;
+    /* Hacer que la imagen ocupe el ancho completo del contenedor en dispositivos más pequeños */
+    max-height: auto;
+    /* Ajustar la altura automáticamente */
+    margin-right: 0;
+    /* Eliminar el margen derecho en dispositivos más pequeños */
+  }
+
+  .slick-carousel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    /* Reducir el ancho máximo del contenedor */
+    padding: 20px;
+    /* Agregar márgenes internos */
+    font-size: 14px;
+    /* Reducir el tamaño de fuente */
+    flex-wrap: nowrap;
+    /* Evitar que los elementos se envuelvan en varias líneas */
+  }
+
+  .container_banner {
+    align-items: flex-start;
+    /* Ajusta la alineación vertical al inicio */
+    justify-content: flex-start;
+    /* Ajusta la alineación horizontal al inicio */
+    height: 30em;
+  }
+
+
+  .boton-home {
+    width: 50%;
+    /* Ajusta el ancho en dispositivos más pequeños */
+    height: auto;
+    /* Ajusta la altura automáticamente en dispositivos más pequeños */
+    font-size: 20px;
+    /* Ajusta el tamaño de fuente en dispositivos más pequeños */
+    margin: 20px;
+    /* Ajusta el margen en dispositivos más pequeños */
+    top: 0;
+    /* Elimina el desplazamiento vertical */
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+  .linksinicio1 {
+    font-size: 14px;
+    float: left;
+    /* Agrega float para ajustar el elemento a la izquierda */
+    left: 5px;
+    align-content: center;
+  }
+
+  .linksinicio2 {
+    font-size: 12px;
+    float: left;
+    /* Agrega float para ajustar el elemento a la izquierda */
+    left: 4px;
+    align-content: center;
+  }
+
+
+  .barra-2 {
+    width: 700px;
+    margin: 40px auto;
+    /* Centra horizontalmente el elemento */
+    margin-left: 0;
+    padding: 5px;
+    background-color: #000000;
+    text-align: left;
+  }
+
+
+  .container_home {
+    flex-direction: row;
+    justify-content: flex-start;
+    /* Ajusta la alineación horizontal al inicio */
+    padding: 10px;
+    left: 4px;
+    float: left;
+  }
+
+  .container-wrapper-2 {
+    flex-direction: column;
+    /* Cambia la dirección a vertical */
+    align-items: center;
+    /* Centra los elementos verticalmente */
+  }
+
+  .content-contacto {
+    max-width: 40%;
+    /* Establece el ancho máximo al 40% para ocupar parte del ancho disponible */
+    padding: 0px;
+    /* Añade un poco de espacio interno horizontal */
+    display: flex;
+    /* Utiliza flexbox */
+    flex-direction: column;
+    /* Establece la dirección de los elementos a columna */
+    align-items: center;
+    /* Centra horizontalmente los elementos */
+  }
+
+
+  .container-wrapper-Home {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-contacto p {
+    font-size: 14px;
+    /* Ajusta el tamaño de fuente para dispositivos más pequeños */
+    line-height: 1.4;
+    /* Ajusta el espacio entre líneas para dispositivos más pequeños */
+    margin-bottom: 8px;
+    /* Ajusta el margen inferior para dispositivos más pequeños */
+  }
+
+  .container-procedimientos-home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .procedimientos {
+    width: 100%;
+    max-width: 450px;
+  }
+}

@@ -77,7 +77,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       <img
-        src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685387974/chat_tiohnk.png"
+        src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686506674/chat_gll3en.png"
         alt="Chatbot"
         onClick={toggleChat}
         className="imagen"

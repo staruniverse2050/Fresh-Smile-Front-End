@@ -26,7 +26,7 @@
   .tarjeta-perfil {
     width: 450px;
     height: 300px;
-    background-color:#1c98ab;
+    background-color:#3b5e63;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -72,7 +72,7 @@
   border-collapse: collapse;
   margin-bottom: 20px;
   margin-left: 650px;
-  margin-top: -200px;
+  margin-top: -600px;
   
   
 }
@@ -93,4 +93,19 @@
   width: 90%;
   padding: 8px;
   border: 1px solid #fffdfd;
+}
+
+
+.editarU-boton {
+  background-color: #7DC3E8;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.editarU-boton:hover {
+  background-color: #8fccd6;
 }

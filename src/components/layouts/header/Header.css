@@ -161,14 +161,25 @@ img {
 	}
 }
 @media screen and (max-width: 768px) {
+
 	.menu {
 		flex-direction: column;
 		justify-content: center;
 		height: auto;
 	}
+	.menu h1 {
+		font-family: "Open Sans", sans-serif;
+		font-size: 1.7rem;
+		text-transform: uppercase;
+		margin: 0;
+		color: #ffffff;
+		margin-right: 10%;
+	}
 
 	.icon-hamburguer {
 		filter: invert(1);
+		/* margin-top: 60px; */
+		width: 30px;
 	}
 	.toggle-menu {
 		width: 40px;

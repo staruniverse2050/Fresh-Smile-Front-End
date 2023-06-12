@@ -115,7 +115,7 @@ const AgendaCita = () => {
   return (
     <div className="man-container">
       <img
-        src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685471545/5498914_qaxqmq.png"
+        src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686448002/agendarcita_obeh4x.jpg"
         alt="Hombre"
         className="man-image"
       />

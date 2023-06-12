@@ -2,18 +2,19 @@
   width: 500px; /* Ancho deseado para el contenedor principal */
   margin: 0 auto;
   position: relative;
-  top: 160px;
-  padding: 20px;
+  top: 90px;
+  padding: 10px;
   left:358px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* background-color: #ffffff; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  
 }
 
 .agenda-form-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #34cfe7;
 }
 /* CSS para la ventana modal */
 /* .modal  {
@@ -69,15 +70,21 @@
 
 .man-container {
   position: relative;
+  /* background-color: #0056b3; */
+ 
 }
 
 .man-image {
+  width: 40%; /* Ajusta el valor según tus necesidades */
+  height: auto; /* Esto permite mantener la proporción de la imagen */
   position: absolute;
-  top: 75%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  /* Ajusta el tamaño de la imagen según tus necesidades */
+  top: 65%; /* Ajusta el valor según tus necesidades */
+  right: 850px; /* Ajusta el valor según tus necesidades y asegúrate de incluir las unidades (por ejemplo, px para píxeles) */
+  transform: translate(0, -50%);
 }
+
+
+
 .hour-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Cambia el número de columnas según el diseño deseado */
@@ -88,7 +95,7 @@
   width: 100%;
   padding: 10px;
   border: none;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   background-color: #f5f5f5;
   color: #333;
   font-size: 16px;
@@ -96,33 +103,25 @@
 }
 
 .hour-button.selected {
-  background-color: #007bff;
+  background-color: #249bad;
   color: #fff;
-}
-
-
-
-.agenda-form-container {
-  /* Estilos del formulario */
-  width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
   margin-bottom: 20px;
+  /* color: #0056b3; */
+  padding: 5px;
+  
 }
 
 .label-agendacita {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #555;
+  /* color: #555; */
   position: relative;
   left: 34px;
+
 }
 .agenda-form-container input[type="text"],
 .agenda-form-container input[type="email"],
@@ -134,20 +133,22 @@
   border-radius: 4px;
   font-size: 16px;
   position: relative;
-  left: 34px;
+  margin-right: 54px;
+  /* color: #0056b3; */
+  
 }
 .agenda-form-container .select{
   width: 85%;
-
+/* background-color: #0056b3; */
 }
 
 .Agendar {
   width: 40%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #34cfe7;
   border: none;
   border-radius: 4px;
-  color: #fff;
+  color: #000000;
   font-size: 16px;
   position: relative;
   left:156px;

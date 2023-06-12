@@ -181,11 +181,11 @@ textarea {
   resize: none;
   font-family: 'Open Sans', sans-serif;
   height: 48px;
-  margin-left: 10px;
   font-size: 15px;
   position: relative;
-  left: 300px;
-  top: 30px;
+  left: 250px;
+  top: 25px;
+  margin-right: 80px;
 }
 
 .contactForm .inputBox1 input[type="submit"]:hover {

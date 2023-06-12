@@ -14,6 +14,7 @@
   border-radius: 50%;
 }
 .chatbotpreguntas{
+  
   font-size: 15px;
 }
 /* Estilos del chat */
@@ -28,14 +29,16 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: slide-in 0.3s ease-out;
   overflow-y: auto;
+  
 }
 .chat-header {
   padding: 10px;
   background-color: #2196f3;
   color: #fff;
   font-weight: bold;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  /* border-top-left-radius: 10px; */
+  /* border-top-right-radius: 10px; */
+  align-items: center;
 }
 
 .chat-body {
@@ -71,21 +74,25 @@ ul{
   position: fixed;
   bottom: 30px;
   right: 65px;
-  background-color: #ccc;
-  border-radius: 50%;
+  /* background-color: #ccc; */
+  /* border-radius: 50%; */
 }
 
 .chatbot-questions {
   font-size: 13px;
+  /* margin-left: 25px; */
 }
 .chatbot-questions li {
   font-size: 15px;
   margin-bottom: 5px;
+  padding: 10px;
+  /* background-color: #2196f3; */
+  border-radius: 45px;
 }
 .chatbot-response {
   background-color: #fff;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }

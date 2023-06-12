@@ -1,182 +1,153 @@
 import React, { useState } from 'react';
-import "./perfiladministrador.css";
+import './perfiladministrador.css';
 
 export const PerfilAdministrador = () => {
-  const [nombre, setNombre] = useState("");
-  const [fechaRegistro, setFechaRegistro] = useState("");
-  const [identificación, setidentificación] = useState("");
-  const [TipoDocumento, setTipoDocumento] = useState("");
-  const [Telefono, setTefono] = useState("");
-  const [Dirección, setTDirección] = useState("");
-  const [Especialidad, setEspecialidad] = useState("");
-  const [Descripción, setDescripción] = useState("");
-  const [Fotoperfil, setFoto_perfil] = useState("");
-  const [Correo, setTCorreo] = useState("");
-  const [Contraseña, setContraseña] = useState("");
-  const [Registro, setFecha_Registro] = useState("");
+  const [Documento, setTipoDocumento] = useState('');
+  const [nombre, setNombre] = useState('');
+  const [Telefono, setTelefono] = useState('');
+  const [Dirección, setdirección] = useState('');
+  const [Especialidad, setEspecialidad] = useState('');
+  const [Descripción, setDescripción] = useState('');
+  const [Foto_perfil, setFoto_perfil] = useState('');
+  const [Correo, setCorreo] = useState('');
+  const [Contraseña, setdContraseña] = useState('');
+  const [fechaRegistro, setFechaRegistro] = useState('');
 
   return (
-<div className="container-usuario">
-          <div className="tarjeta-perfil">
-            <img
-              className="image-perfilUsuario"
-              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
-              alt="Inicio"
-            />
-            <h2 className="perfil-titulo">Mi Perfil</h2>
-            <p className="perfil-info">Nombre: John Doe</p>
-            <p className="perfil-info">Email: johndoe@example.com</p>
-            <p className="perfil-info">Fecha de registro: 01/01/2023</p>
-          </div>
-        {/* <div className="banner-principal">
-          <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1>
-        </div>
-      */}
-    
-    <div className="tabla-perfilad">
-      <table className="perfil-tablaad">
+    <>
+     <div className="container-usuario">
+  <div className="tarjeta-perfilU">
+    <img
+      className="image-perfilUsuario"
+      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
+      alt="Inicio"
+    />
+    <h2 className="perfil-titulo">Mi Perfil</h2>
+    <p className="perfil-info">freshSmileCmills</p>
+    <p className="perfil-info">Revisa tu perfil</p>
+    {/* <p className="perfil-info">Fecha de registro: 01/01/2023</p> */}
+    <button className="editar-boton">Editar</button>
+  </div>
+  <div className="banner-principalAd">
+    <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1>
+  </div>
+</div>
+
+
+      <table className="perfil-tabla">
         <tbody>
         <tr>
-            <td>Identifición:</td>
-            <td>
+            <td className="perfil-descripcion">Tipo de documento:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
-                value={identificación}
-                onChange={(e) => setidentificación(e.target.value)}
-                className="perfil-input"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>Tipo de documento:</td>
-            <td>
-              <input
-                type="text"
-                value={TipoDocumento}
+                type="Documento"
+                value={Documento}
                 onChange={(e) => setTipoDocumento(e.target.value)}
-                className="perfil-input"
               />
             </td>
           </tr>
-
-
+          
           <tr>
-            <td>Nombre:</td>
-            <td>
+            <td className="perfil-descripcion">Nombre:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                className="perfil-input"
               />
             </td>
           </tr>
-         
-
 
           <tr>
-            <td>Telefono:</td>
-            <td>
+            <td className="perfil-descripcion">Telefono:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
+                type="Telefono"
                 value={Telefono}
-                onChange={(e) => setTefono(e.target.value)}
-                className="perfil-input"
+                onChange={(e) => setTelefono(e.target.value)}
               />
             </td>
           </tr>
-          <tr>
-         </tr>
 
-         
-         <tr>
-            <td>Dirección:</td>
-            <td>
+          <tr>
+            <td className="perfil-descripcion">Dirección:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
+                type="Dirección"
                 value={Dirección}
-                onChange={(e) => setTDirección(e.target.value)}
-                className="perfil-input"
+                onChange={(e) => setdirección(e.target.value)}
               />
             </td>
           </tr>
-        
+
           <tr>
-            <td>Especialidad:</td>
-            <td>
+            <td className="perfil-descripcion">Especialidad:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
+                type="Especialidad"
                 value={Especialidad}
                 onChange={(e) => setEspecialidad(e.target.value)}
-                className="perfil-input"
               />
             </td>
           </tr>
 
           <tr>
-            <td>Descripción:</td>
-            <td>
+            <td className="perfil-descripcion">Descripción:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
+                type="Descripción"
                 value={Descripción}
                 onChange={(e) => setDescripción(e.target.value)}
-                className="perfil-input"
-              />
-            </td>
-          </tr>
-
-         
-
-          <tr>
-            <td>Foto de perfil:</td>
-            <td>
-              <input
-                type="text"
-                value={Fotoperfil}
-                onChange={(e) => setFoto_perfil(e.target.value)}
-                className="perfil-input"
               />
             </td>
           </tr>
 
           <tr>
-            <td>Correo:</td>
-            <td>
+            <td className="perfil-descripcion">Foto de perfil:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
+                type="Foto_perfil"
+                value={Foto_perfil}
+                onChange={(e) =>  setFoto_perfil(e.target.value)}
+              />
+            </td>
+          </tr>
+          
+          <tr>
+            <td className="perfil-descripcion">Correo:</td>
+            <td className="perfil-valor">
+              <input
+                type="Correo"
                 value={Correo}
-                onChange={(e) => setTCorreo(e.target.value)}
-                className="perfil-input"
+                onChange={(e) =>  setCorreo(e.target.value)}
               />
             </td>
           </tr>
 
           <tr>
-            <td>Contraseña:</td>
-            <td>
+            <td className="perfil-descripcion">Contraseña:</td>
+            <td className="perfil-valor">
               <input
-                type="text"
+                type="Contraseña"
                 value={Contraseña}
-                onChange={(e) => setContraseña(e.target.value)}
-                className="perfil-input"
+                onChange={(e) =>  setdContraseña(e.target.value)}
               />
             </td>
           </tr>
-
+          
+          
           <tr>
-            <td>Fecha de registro:</td>
-            <td>
+            <td className="perfil-descripcion">Fecha de registro:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
                 value={fechaRegistro}
                 onChange={(e) => setFechaRegistro(e.target.value)}
-                className="perfil-input"
               />
             </td>
           </tr>
         </tbody>
       </table>
-    </div>
-    </div>
+    </>
   );
 };

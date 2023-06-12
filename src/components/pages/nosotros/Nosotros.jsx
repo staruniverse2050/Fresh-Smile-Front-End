@@ -71,23 +71,23 @@ export const Nosotros = () => {
 </div>
 <div className="specialist-container">
       <div className="specialist-card">
-        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685325361/cuidado-dental_wmiath.png" />
+        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505008/doctora1_ng31ar.jpg" />
         <h3 className="specialist-name">Karen Sanchez</h3>
         <p className="specialist-description">Con más de 10 años de experiencia en el campo de la odontología, Karen Sanchez es una profesional altamente capacitada y apasionada por brindar atención dental de calidad.</p>
       </div>
       <div className="specialist-card2">
-        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685325361/dentista_1_rr7agx.png" />
+        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505071/doctor4_qet252.jpg" />
         <h3 className="specialist-name">Juan González</h3>
         <p className="specialist-description">Juan González es un destacado especialista en odontología con una sólida experiencia de más de 15 años en el campo. Se distingue por su enfoque integral y su dedicación para brindar una atención dental de calidad a sus pacientes. </p>
       </div>
      
       <div className="specialist-card3">
-        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685326579/dentista_4_wa8js1.png" />
+        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505033/doctora3_x4tvyn.jpg" />
         <h3 className="specialist-name">María Rodríguez</h3>
         <p className="specialist-description">María Rodríguez es una odontóloga altamente capacitada y comprometida con la salud bucal de sus pacientes. Con más de 10 años de experiencia en el campo de la odontología restauradora, se especializa en tratamientos de rehabilitación oral y prótesis dentales.</p>
       </div>
       <div className="specialist-card4">
-        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685326579/dentista_3_tdg21p.png" />
+        <img className="specialist-image" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505021/doctora2_ldgdmn.jpg" />
         <h3 className="specialist-name">Alejandro López</h3>
         <p className="specialist-description">Alejandro López es un reconocido ortodoncista con una pasión por crear sonrisas perfectas. Con una formación sólida y más de 15 años de experiencia en ortodoncia, Alejandro se dedica a corregir problemas de maloclusión y alineación dental. </p>
       </div>

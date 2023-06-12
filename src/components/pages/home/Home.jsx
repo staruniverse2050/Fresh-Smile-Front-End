@@ -26,7 +26,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="barra-2">
+      <div className="barra">
         <h2 className="">Nuestros Procedimientos</h2>
       </div>
       <div className="container-wrapper-Home">
@@ -69,7 +69,7 @@ export const Home = () => {
           </button>
         </div>
 
-        <div className="card-procedimientos-home">
+        {/* <div className="card-procedimientos-home">
           <img
             src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684270420/Fresh_Smile_Cmills/peter-kasprzyk-U1gvhqVQ2kQ-unsplash_db0rfk.jpg"
             alt="Título de la tarjeta 3"
@@ -80,7 +80,7 @@ export const Home = () => {
               <h2 className="card-title">Prótesis Dental</h2>
             </Link>
           </button>
-        </div>
+        </div> */}
       </div>
       {/* <div className="container-wrapper-Home">
         <div className="container-procedimientos-Home">
@@ -149,22 +149,46 @@ export const Home = () => {
         </div>
       </div> */}
 
-      {/* <div className="barra5"> */}
-      <h2 className="title-barra">Sobre Nosotros</h2>
-      {/* </div> */}
+      <div className="barra-2">
+      <h2 className="">Sobre Nosotros</h2>
+      </div>
 
       <div class="container-nosotros-home">
         <div className="card-nosotros-home">
-          <img src="ruta-de-la-imagen.jpg" alt="Imagen 1" />
-          <h3>Título 1</h3>
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505008/doctora1_ng31ar.jpg" alt="Imagen 1" />
+          <h3>Karen Sanchez</h3>
         </div>
         <div className="card-nosotros-home">
-          <img src="ruta-de-la-imagen.jpg" alt="Imagen 2" />
-          <h3>Título 2</h3>
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505071/doctor4_qet252.jpg" alt="Imagen 2" />
+          <h3>Juan González</h3>
         </div>
         <div className="card-nosotros-home">
-          <img src="ruta-de-la-imagen.jpg" alt="Imagen 3" />
-          <h3>Título 3</h3>
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505033/doctora3_x4tvyn.jpg" alt="Imagen 3" />
+          <h3>María Rodríguez</h3>
+        </div>
+      </div>
+
+
+      {/* <h2 className="title-barra">¿Quiénes Somos?</h2> */}
+      <div className="container-nosotros-home2">
+        <div className="image-nosotros">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg" alt="Imagen" />
+        </div>
+        <div className="content-nosotros">
+          {/* <h2>¿Quiénes Somos?</h2> */}
+          <p>Fresh Smile Cmills es una reconocida clínica de ortodoncia
+              comprometida con ofrecer soluciones de alta calidad para la salud
+              dental de nuestros pacientes. Con una amplia experiencia y
+              conocimientos en el campo de la ortodoncia, nos hemos ganado la
+              confianza de numerosos individuos y familias que buscan mejorar su
+              sonrisa y salud bucal.</p>
+            <p>Comprendemos la importancia de una sonrisa
+              hermosa y saludable, no solo en términos estéticos, sino también
+              en cuanto a la función y el bienestar general de nuestros
+              pacientes. Por ello, nos enfocamos en brindar tratamientos
+              personalizados y eficientes para corregir una amplia variedad de
+              problemas dentales y maxilofaciales.</p>
+          <button>Conocer más</button>
         </div>
       </div>
 

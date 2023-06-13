@@ -19,7 +19,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
       // Manejar el caso en el que no se encuentre el userId, por ejemplo, redirigir al usuario a una página de inicio de sesión
       return;
     }
-  
+
     fetch(`https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${userId}`)
       .then((response) => response.json())
       .then((data) => {
@@ -27,13 +27,13 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
         const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
         const firstName = names[0]; // Obtener el primer nombre
         const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
-  
+
         setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
-  
+
         const avatarStyle = "set4";
         const size = 600;
         const apiUrl = `https://robohash.org/${encodeURIComponent(firstName)}?set=${avatarStyle}&size=${size}x${size}`;
-  
+
         fetch(apiUrl)
           .then((response) => {
             if (!response.ok) {
@@ -54,12 +54,12 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
         // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
       });
   };
-  
 
 
-  
-  
-  
+
+
+
+
   function toggleDropdown() {
     setIsOpen(!isOpen);
   }
@@ -114,7 +114,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
-                  to="/Inicio"
+                      to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -124,7 +124,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
-                  to="/Nosotros"
+                      to="/Nosotros"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -134,7 +134,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${isActiveRoute('/AgendaCita') ? 'active' : ''}`}
-                  to="/AgendaCita"
+                      to="/AgendaCita"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -144,7 +144,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
-                  to="/Procedimientos"
+                      to="/Procedimientos"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -154,7 +154,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${isActiveRoute('/DoctorCard') ? 'active' : ''}`}
-                  to="/DoctorCard"
+                      to="/DoctorCard"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -166,7 +166,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                       <li>
                         <NavLink
                           className={`links ${isActiveRoute('/Ranking') ? 'active' : ''}`}
-                  to="/Ranking"
+                          to="/Ranking"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >
@@ -176,7 +176,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                       <li>
                         <NavLink
                           className={`links ${isActiveRoute('/MisCitas') ? 'active' : ''}`}
-                  to="/MisCitas"
+                          to="/MisCitas"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >
@@ -188,7 +188,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${isActiveRoute('/Contacto') ? 'active' : ''}`}
-                  to="/Contacto"
+                      to="/Contacto"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -252,7 +252,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   Contacto
                 </NavLink>
               </li>
-              
+
             </ul>
             <p className="Bienvenida">Hola, {name.split(' ')[0]} {name.split(' ')[1]}</p>
 
@@ -261,7 +261,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
         <div className="icono-inicio-wrapper">
           <div className="dropdown-wrapper" onClick={toggleDropdown}>
             <div className="icon-container">
-            {avatarUrl ? (
+              {avatarUrl ? (
                 <div>
                   <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
                 </div>

@@ -90,7 +90,7 @@ export const Home = () => {
           </button>
         </div>
 
-       </div>
+      </div>
 
       <div className="barra-2">
       <h2 className="">Nuestros Especialistas</h2>
@@ -112,7 +112,7 @@ export const Home = () => {
       </div>
       
       <div className="barra-2">
-      <h2 className="">Sobre Nosotros</h2>
+        <h2 className="">Sobre Nosotros</h2>
       </div>
       {/* <h2 className="title-barra">¿Quiénes Somos?</h2> */}
       <div className="container-nosotros-home2">
@@ -144,7 +144,7 @@ export const Home = () => {
         </div>
       </div>
 
-     
+
       {/* Chat WhatsAPP */}
       <div class="space-wpp">
         <a

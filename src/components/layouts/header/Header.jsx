@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import { useLocation } from 'react-router-dom';
 
 import "./Header.css";
 
@@ -45,9 +44,8 @@ export const Header = () => {
                 <ul>
                   <li>
                     <Link
-                      className={`links2 ${
-                        isActiveRoute("/Inicio") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Inicio") ? "active" : ""
+                        }`}
                       to="/Inicio"
                     >
                       Inicio
@@ -55,9 +53,8 @@ export const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`links2 ${
-                        isActiveRoute("/Nosotros") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Nosotros") ? "active" : ""
+                        }`}
                       to="/Nosotros"
                     >
                       Nosotros
@@ -65,9 +62,8 @@ export const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`links2 ${
-                        isActiveRoute("/Agendar") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Agendar") ? "active" : ""
+                        }`}
                       to="/Agendar"
                     >
                       Agenda tu cita
@@ -75,9 +71,8 @@ export const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`links2 ${
-                        isActiveRoute("/Procedimientos") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Procedimientos") ? "active" : ""
+                        }`}
                       to="/Procedimientos"
                     >
                       Procedimientos
@@ -85,9 +80,8 @@ export const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`links2 ${
-                        isActiveRoute("/Contacto") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Contacto") ? "active" : ""
+                        }`}
                       to="/Contacto"
                     >
                       Contacto
@@ -101,9 +95,8 @@ export const Header = () => {
             <ul>
               <li>
                 <Link
-                  className={`links ${
-                    isActiveRoute("/Inicio") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Inicio") ? "active" : ""
+                    }`}
                   to="/Inicio"
                 >
                   Inicio
@@ -111,9 +104,8 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  className={`links ${
-                    isActiveRoute("/Nosotros") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Nosotros") ? "active" : ""
+                    }`}
                   to="/Nosotros"
                 >
                   Nosotros
@@ -121,9 +113,8 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  className={`links ${
-                    isActiveRoute("/Agendar") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Agendar") ? "active" : ""
+                    }`}
                   to="/Agendar"
                 >
                   Agenda cita
@@ -131,9 +122,8 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  className={`links ${
-                    isActiveRoute("/Procedimientos") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Procedimientos") ? "active" : ""
+                    }`}
                   to="/Procedimientos"
                 >
                   Procedimientos
@@ -141,9 +131,8 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  className={`links ${
-                    isActiveRoute("/Contacto") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Contacto") ? "active" : ""
+                    }`}
                   to="/Contacto"
                 >
                   Contacto

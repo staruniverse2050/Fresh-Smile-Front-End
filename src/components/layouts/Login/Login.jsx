@@ -37,11 +37,7 @@ const Login = ({ setRol }) => {
       }
 
       const accessToken = localStorage.getItem("accessToken"); // Obtener el token de acceso del almacenamiento local
-      const response = await axios.post(url, { email, password }, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
-        }
-      });
+      const response = await axios.post(url, { email, password })
 
       setLoading(false);
 
@@ -51,6 +47,7 @@ const Login = ({ setRol }) => {
         setModalType("success");
         setRol(role);
         navigate("/Inicio");
+        localStorage.setItem("accessToken",response.data.token);
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("rol", role);
       } else {

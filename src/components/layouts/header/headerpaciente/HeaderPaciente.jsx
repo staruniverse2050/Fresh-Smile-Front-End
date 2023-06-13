@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink, useNavigate, useLocation  } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 import "../headerpaciente/HeaderPaciente.css";
 
 export const HeaderPaciente = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
+  const [name, setName] = useState(""); // Estado para almacenar el nombre de la persona
   const location = useLocation();
 
   useEffect(() => {
@@ -12,10 +14,26 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
   }, []);
 
   const generateAvatar = () => {
-    const name = "John Doe"; // Puedes reemplazar esto con el nombre del usuario o alguna lógica para obtener el nombre
+    const accessToken = localStorage.getItem("accessToken"); // Obtener el token de acceso del localStorage
+    const decodedToken = jwt_decode(accessToken); // Decodificar el token
+
+    const id = decodedToken.id; // Obtener el ID de la persona
+
+    fetch(`https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const name = data.nombre; // Obtener el nombre de la persona desde la respuesta de la API
+        setName(name); // Actualizar el estado del nombre
+      })
+      .catch((error) => {
+        console.error("Error fetching patient data:", error);
+      });
+
     const apiUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}`;
     setAvatarUrl(apiUrl);
   };
+
+  
   function toggleDropdown() {
     setIsOpen(!isOpen);
   }
@@ -94,7 +112,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
-                      Agenda cita
+                      Agendar
                     </NavLink>
                   </li>
                   <li>
@@ -172,7 +190,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
               <li>
                 <NavLink className={`links ${isActiveRoute('/Agendar') ? 'active' : ''}`}
                   to="/Agendar" activeClassName="active">
-                  Agenda cita
+                  Agendar
                 </NavLink>
               </li>
               <li>
@@ -188,12 +206,12 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                 <>
                   <li>
                     <NavLink className="links" to="/MisCitas" activeClassName="active">
-                      Mis citas
+                      Citas
                     </NavLink>
                   </li>
                   <li>
                     <NavLink className="links" to="/MiRanking" activeClassName="active">
-                      Mi ranking
+                      Ranking
                     </NavLink>
                   </li>
                 </>

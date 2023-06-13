@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 import "./Header.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const history = useHistory();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -14,8 +15,13 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   const isActiveRoute = (route) => {
     return location.pathname === route;
+  };
+
+  const handleAgendarClick = () => {
+    history.push("/Registro"); // Redirige a la página de registro al hacer clic en "Agenda tu cita"
   };
 
   return (
@@ -65,6 +71,7 @@ export const Header = () => {
                       className={`links2 ${isActiveRoute("/Agendar") ? "active" : ""
                         }`}
                       to="/Agendar"
+                      onClick={handleAgendarClick}
                     >
                       Agenda tu cita
                     </Link>
@@ -116,6 +123,7 @@ export const Header = () => {
                   className={`links ${isActiveRoute("/Agendar") ? "active" : ""
                     }`}
                   to="/Agendar"
+                  onClick={handleAgendarClick}
                 >
                   Agenda cita
                 </Link>

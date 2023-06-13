@@ -90,10 +90,14 @@ export const Home = () => {
           </button>
         </div>
 
-       </div>
+      </div>
 
       <div className="barra-2">
+<<<<<<< HEAD
       <h2 className="">Nuestros Especialistas</h2>
+=======
+        <h2 className="">Nuestros Especialistas</h2>
+>>>>>>> c3eb635408af7a2935d1ef40cf8a59bb80a884b2
       </div>
 
       <div class="container-nosotros-home">
@@ -110,9 +114,13 @@ export const Home = () => {
           <h3 className="card-title-nosotros">María Rodríguez</h3>
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> c3eb635408af7a2935d1ef40cf8a59bb80a884b2
       <div className="barra-2">
-      <h2 className="">Sobre Nosotros</h2>
+        <h2 className="">Sobre Nosotros</h2>
       </div>
       {/* <h2 className="title-barra">¿Quiénes Somos?</h2> */}
       <div className="container-nosotros-home2">
@@ -122,6 +130,7 @@ export const Home = () => {
         <div className="content-nosotros">
           {/* <h2>¿Quiénes Somos?</h2> */}
           <p>Fresh Smile Cmills es una reconocida clínica de ortodoncia
+<<<<<<< HEAD
               comprometida con ofrecer soluciones de alta calidad para la salud
               dental de nuestros pacientes. Con una amplia experiencia y
               conocimientos en el campo de la ortodoncia, nos hemos ganado la
@@ -140,11 +149,31 @@ export const Home = () => {
                 </a>
           </Link>
          
+=======
+            comprometida con ofrecer soluciones de alta calidad para la salud
+            dental de nuestros pacientes. Con una amplia experiencia y
+            conocimientos en el campo de la ortodoncia, nos hemos ganado la
+            confianza de numerosos individuos y familias que buscan mejorar su
+            sonrisa y salud bucal.</p>
+          <p>Comprendemos la importancia de una sonrisa
+            hermosa y saludable, no solo en términos estéticos, sino también
+            en cuanto a la función y el bienestar general de nuestros
+            pacientes. Por ello, nos enfocamos en brindar tratamientos
+            personalizados y eficientes para corregir una amplia variedad de
+            problemas dentales y maxilofaciales.</p>
+          <button className="btn-nosotros-home">
+            <Link to="/Nosotros">
+              <a className="linksblog" href="#procedimientos">
+                Conocer más
+              </a>
+            </Link>
+
+>>>>>>> c3eb635408af7a2935d1ef40cf8a59bb80a884b2
           </button>
         </div>
       </div>
 
-     
+
       {/* Chat WhatsAPP */}
       <div class="space-wpp">
         <a

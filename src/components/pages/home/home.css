@@ -342,6 +342,10 @@ body {
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+<<<<<<< HEAD
+=======
+  align-items: center;
+>>>>>>> c3eb635408af7a2935d1ef40cf8a59bb80a884b2
 }
 
 /*Sobre Nosotros*/

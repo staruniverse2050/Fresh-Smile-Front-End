@@ -1,3 +1,23 @@
+.container_pronotr {
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852207/Fresh_Smile_Cmills/galeria6_bk1cfa.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 30em;
+	min-height: 50%;
+	padding: 20px;
+  }
+
+  .container_nosotr h1 {
+    color: #fefbfb;
+    font-size: 54px; /* Tamaño de fuente deseado */
+    margin-left: 45px;
+  }
+  
+
 .barra-nost1 {
   width: 100%;
   margin: 80px auto 20px; /* Ajusta el valor de margin-top según sea necesario */
@@ -38,13 +58,17 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 30px;
+  
 }
+
+
 .post-nosotrosN {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-top: -95px; /* Valor negativo para subir el elemento */
 }
+
 .post-nosotrosN img {
   max-width: 500px;
   border-radius: 5px;
@@ -128,6 +152,9 @@
   margin-bottom: 10px;
   
 }
+
+/*tarjetas especialistas*/
+
 .specialist-container {
   display: flex;
   justify-content: space-between;
@@ -188,8 +215,8 @@
 
 
 .specialist-image {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 70px;
   margin-bottom: 10px;
   position: relative;
   left: 100px;
@@ -212,6 +239,8 @@
 }
 
 
+/*Responsive*/
+
 @media screen and (max-width: 768px) {
   .container_banner1A {
     height: 500px;
@@ -226,31 +255,71 @@
     font-size: 2em;
   }
   
-  .icon-containerA {
-    flex-direction: column;
-    align-items: center;
+  .specialist-container {
+    justify-content: center; /* Centrar los elementos */
+    flex-direction: column; /* Cambiar a una dirección de columna */
+    align-items: center; /* Centrar verticalmente los elementos */
   }
-
-  .icon-containerA img {
-    margin-left: 0;
+  
+  
+  .specialist-card {
+    margin-left: auto; /* Reiniciar la propiedad 'left' */
+    margin-right: auto; /* Reiniciar la propiedad 'left' */
+    left: auto; /* Reiniciar la propiedad 'left' */
+    bottom: auto; /* Reiniciar la propiedad 'bottom' */
+    margin-top: 250px;
   }
+ 
 
-  .icon-rowB {
-    display: flex;
-    justify-content: center;
+  .specialist-card2 {
+    margin-left: auto; /* Reiniciar la propiedad 'left' */
+    margin-right: auto; /* Reiniciar la propiedad 'left' */
+    left: auto; /* Reiniciar la propiedad 'left' */
+    bottom: auto; /* Reiniciar la propiedad 'bottom' */
+    
   }
-
-  .icon-rowB .icon-imgCM,
-  .icon-rowB .icon-imgC,
-  .icon-rowB .icon-imgCM1 {
-    margin-left: 0;
-    margin-right: 10px;
+  
+  .specialist-card3 {
+    margin-left: auto; /* Reiniciar la propiedad 'left' */
+    margin-right: auto; /* Reiniciar la propiedad 'left' */
+    left: auto; /* Reiniciar la propiedad 'left' */
+    bottom: auto; /* Reiniciar la propiedad 'bottom' */
   }
 
   
+  .specialist-card4 {
+    margin-left: auto; /* Reiniciar la propiedad 'left' */
+    margin-right: auto; /* Reiniciar la propiedad 'left' */
+    left: auto; /* Reiniciar la propiedad 'left' */
+    bottom: auto; /* Reiniciar la propiedad 'bottom' */
+}
+
+  .container_nosotr h1 {
+  font-size: 36px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+  margin-left: 0; 
+  padding: 45px;
+  margin-top: 50px;
+  margin-right: 14px;/* Ajustar el margen izquierdo para pantallas más pequeñas */
+  
+}
+
+.container_pronotr {
+  height: 220px; /* Altura automática según el contenido */
+  min-height: 50; /* Reiniciar la altura mínima */
+ 
+}
+
+.icon-textD,
+.icon-textDM {
+  font-size: 18px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+  margin-bottom: 5px; /* Ajustar el margen inferior para pantallas más pequeñas */
+}
+
+
 @media screen and (max-width: 480px) {
   .icon-rowB {
     flex-wrap: wrap;
+    width: 245px;
   }
 
   .icon-rowB .icon-imgCM,
@@ -258,28 +327,32 @@
   .icon-rowB .icon-imgCM1 {
     margin-bottom: 20px;
     margin-right: 0;
-    width: 45%;
+    width: 85%;
+    margin-left: 20px;
+    
   }
 }
 
-  @media screen and (max-width: 480px) {
+  
     .container_home1A h1 {
       font-size: 1.5em;
     }
-  }
   
   .post-nosotrosN {
     display: flex;
     flex-direction: column;
     width: 100%;
-  
+    padding: 45px;
+    justify-content: flex-end; /* Ajusta el contenido hacia la parte inferior */
   }
+  
   
   .post-nosotrosN img {
     max-width: 180%;
     height: auto;
-    float: left;
-    width: 580px; /* Ajusta el ancho según tus necesidades */
+    /* float: left; */
+    margin-left: 50px;
+    width: 280px; /* Ajusta el ancho según tus necesidades */
   }
   
   .post-titleT {
@@ -293,8 +366,10 @@
     text-align: left;
     width: 100%;
     font-size: 18px;
+    margin-top: 110px; /* Ajusta la cantidad de espacio que deseas agregar debajo del texto */
     overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
   }
+  
   
   .post-ntsP p {
     left: 0;

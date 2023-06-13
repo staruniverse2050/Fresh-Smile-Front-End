@@ -224,6 +224,8 @@ input[type="text"] {
 
 
 
+
+/*checkbox*/
 .inputBox-post input[type="checkbox"] {
 	transform: scale(1.5);
 	top: 19px;
@@ -303,8 +305,8 @@ input[type="text"] {
 		margin-top: 10px;
 	}
 
-}
-.modal {
+	
+    .modal {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -338,5 +340,42 @@ input[type="text"] {
 	text-align: justify;
 	line-height: 1.20; /* Ajusta el valor según tus preferencias */
   }
+
+  .inputBox-post input[type="checkbox"] {
+    transform: scale(1.2);
+    top: 10px;
+    left: 0;
+	margin-left: 45px;
+  }
+
+  .inputBox-post label {
+    font-size: 14px;
+    left: 0;
+	margin-top: 14px;
+  }
+
+  .post-text {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .contactForm .inputBox1 input[type="submit"] {
+    width: 80%;
+    left: 0;
+    margin-left: 145px;
+	/* padding: 45px; */
+	margin: 44px;
+	margin-top: 45px;
+  }
+
+  .contactForm .inputBox2 input[type="submit"] {
+    width: 80%;
+    left: 0;
+    bottom: 0;
+    margin-left: 45px;
+  }
+
+
+}
   
   

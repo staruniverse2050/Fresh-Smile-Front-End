@@ -16,19 +16,6 @@
   margin-bottom: 20px;
   color: #34cfe7;
 }
-/* CSS para la ventana modal */
-/* .modal  {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-} */
 
 .modal .modal-content {
   /* background-color: #fff;
@@ -48,6 +35,7 @@
   text-align: center;
   margin-top: 4rem;
 }
+
 .modal-content .BotonParaMi,
 .modal-content .BotonParaOtraPersona {
   padding: 10px 20px;
@@ -61,9 +49,11 @@
   color: #fff;
   cursor: pointer;
 }
+
 .modal-content button:hover {
   opacity: 0.8;
 }
+
 .modal button {
   margin-right: 10px;
 }
@@ -123,6 +113,7 @@
   left: 34px;
 
 }
+
 .agenda-form-container input[type="text"],
 .agenda-form-container input[type="email"],
 .agenda-form-container .select {
@@ -137,6 +128,7 @@
   /* color: #0056b3; */
   
 }
+
 .agenda-form-container .select{
   width: 85%;
 /* background-color: #0056b3; */
@@ -159,4 +151,133 @@
 
 .Agendar:hover {
   background-color: #0056b3;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+  .agenda-form-container {
+    top: 20px; /* Ajustar la posición vertical para pantallas más pequeñas */
+    left: 0; /* Reiniciar la propiedad 'left' */
+    padding: 20px; /* Ajustar el relleno para pantallas más pequeñas */
+  }
+
+  .agenda-form-container h2 {
+    font-size: 34px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    margin-bottom: 80px; 
+    margin-right: 207px;
+    margin-left: 54px;/* Ajustar el margen inferior para pantallas más pequeñas */
+    
+  }
+
+  .modal .modal-content {
+    height: auto; /* Altura automática según el contenido */
+    padding: 10px; /* Ajustar el relleno para pantallas más pequeñas */
+    margin: -0.5em; /* Ajustar el margen para pantallas más pequeñas */
+  }
+
+  .modal .modal-content {
+    width: auto; /* Ancho automático según el contenido */
+    height: auto; /* Altura automática según el contenido */
+    padding: 10px; /* Ajustar el relleno para pantallas más pequeñas */
+    margin: 0; /* Eliminar el margen para pantallas más pequeñas */
+  }
+
+  .modal h3 {
+    font-size: 20px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    margin-top: 2rem; /* Ajustar el margen superior para pantallas más pequeñas */
+  }
+
+  .modal-content .BotonParaMi,
+  .modal-content .BotonParaOtraPersona {
+    margin-left: 0; /* Reiniciar el margen izquierdo */
+    margin-top: 1em; /* Ajustar el margen superior para pantallas más pequeñas */
+    font-size: 0.8rem; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+  }
+
+  .man-container {
+    /* Ajustar los estilos según sea necesario para pantallas más pequeñas */
+    padding: 10px;
+    margin-right: 45px;
+    margin-left: 0px;
+  }
+
+  .man-image {
+    width: 100%; /* Ajusta el valor según tus necesidades */
+    position: static;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-left: 30px;
+    margin-top: 45px;
+  }
+
+  .hour-grid{
+    grid-template-columns: repeat(2, 1fr); 
+    margin-right: 180px;/* Cambia el número de columnas para pantallas más pequeñas */
+  }
+
+  .hour-button{
+    font-size: 10px; /* Ajusta el tamaño de fuente según tus necesidades */
+  }
+
+  .label-agendacita {
+    left: 0; /* Reinicia la propiedad 'left' para centrar el elemento */
+    text-align: center; /* Centra el texto en pantallas más pequeñas */
+  }
+
+  
+.agenda-form-container input[type="text"],
+.agenda-form-container input[type="email"],
+.agenda-form-container .select {
+  width: 80%; /* Ajusta el ancho al 100% del contenedor */
+  max-width: none; /* Elimina el ancho máximo */
+  margin-right: 0; /* Elimina el margen derecho */
+  margin-bottom: 10px; /* Agrega un margen inferior para separar los elementos */
+  
+  
+}
+
+
+.Agendar {
+  width: 80%; /* Ajusta el ancho al 100% del contenedor */
+  left: 0; /* Reinicia la propiedad 'left' para centrar el elemento */
+  margin-top: 10px; /* Agrega un margen superior para separar los elementos */
+  
+}
+
+.form-group {
+  margin-bottom: 10px; /* Reducir el margen inferior en pantallas más pequeñas */
+  /* Otros estilos específicos para pantallas más pequeñas */
+}
+
+.agenda-form-container{
+ margin-left: 0px;
+ margin-right: 0px;
+}
+
+}
+
+
+
+@media (max-width: 480px) {
+  .hour-grid{
+    grid-template-columns: 1fr; /* Cambia a una sola columna para pantallas aún más pequeñas */
+     
+  }
+
+  .hour-button{
+    font-size: 12px; /* Ajusta el tamaño de fuente según tus necesidades */
+}
+
+.form-group {
+  margin-bottom: 5px;
+  margin-right: 90px; /* Reducir aún más el margen inferior en pantallas más pequeñas */
+  /* Otros estilos específicos para pantallas aún más pequeñas */
+}
+
+.agenda-form-container{
+  margin-left: 0px;
+  margin-right: 450px;
+ }
 }

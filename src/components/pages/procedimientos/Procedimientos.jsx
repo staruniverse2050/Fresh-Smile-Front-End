@@ -9,7 +9,7 @@ export const Procedimientos = () => {
         <>
             <div className="container_proce">
                 <div className="container_home1A">
-                    <h1>CONOCE UN POCO SOBRE NUESTROS PROCEDIMIENTOS</h1>
+                    <h1>NUESTROS PROCEDIMIENTOS</h1>
                 </div>
             </div>
             <div className="barra-procedimientos">

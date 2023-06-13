@@ -268,12 +268,12 @@ const RegistroFormulario = () => {
     <div className="Registro">
       <div className="left-side">
         {/* <img className="img-left-side" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852201/Fresh_Smile_Cmills/equipo_ychejy.png" alt="" /> */}
-        <h1 className="title-left">Fresh Smile Cmills</h1>
+        <h1 className="title-left"></h1>
       </div>
       <div className="right-side">
         <form className="form-input-container" onSubmit={handleSubmit}>
           <div className="form-group">
-            <h1 className="registro-h1">Registro</h1>
+            {/* <h1 className="registro-h1">Registro</h1> */}
             <label htmlFor="tipoDocumento">Tipo de documento</label>
             <select
               id="tipoDocumento"

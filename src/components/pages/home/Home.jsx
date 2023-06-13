@@ -69,106 +69,30 @@ export const Home = () => {
           </button>
         </div>
 
-        {/* <div className="card-procedimientos-home">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684270420/Fresh_Smile_Cmills/peter-kasprzyk-U1gvhqVQ2kQ-unsplash_db0rfk.jpg"
-            alt="Título de la tarjeta 3"
-            class="card-image-proce"
-          />
-          <button className="card-button">
-            <Link to="/Procedimientos">
-              <h2 className="card-title">Prótesis Dental</h2>
-            </Link>
-          </button>
-        </div> */}
-      </div>
-      {/* <div className="container-wrapper-Home">
-        <div className="container-procedimientos-Home">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg"
-            alt=""
-          />
-          <div className="content-procedimientos-home">
-            <h2>Ortodoncia</h2>
-            <button className="btn-blog">
-              <Link to="/Procedimientos">
-                <a className="linksblog" href="#Procedimientos">
-                  Leer más
-                </a>
-              </Link>
-            </button>
-          </div>
-        </div> */}
-      {/* <div className="container-procedimientos-Home">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684267038/Fresh_Smile_Cmills/pexels-karolina-grabowska-6627600_rr7web.jpg"
-            alt=""
-          />
-          <div className="content-procedimientos-home">
-            <h2>Limpieza Dental</h2>
-            <button className="btn-blog">
-              <Link to="/Procedimientos">
-                <a className="linksblog" href="#Procedimientos">
-                  Leer más
-                </a>
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div className="container-procedimientos-Home">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg"
-            alt=""
-          />
-          <div className="content-procedimientos-home">
-            <h2>Endodoncia</h2>
-            <button className="btn-blog">
-              <Link to="/Procedimientos">
-                <a className="linksblog" href="#procedimientos">
-                  Leer más
-                </a>
-              </Link>
-            </button>
-          </div>
-        </div>
-        <div className="container-procedimientos-Home">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg"
-            alt=""
-          />
-          <div className="content-procedimientos-home">
-            <h2>Extracción Dental</h2>
-            <button className="btn-blog">
-              <Link to="/Procedimientos">
-                <a className="linksblog" href="#extraccion-dental">
-                  Leer más
-                </a>
-              </Link>
-            </button>
-          </div>
-        </div>
-      </div> */}
+       </div>
 
       <div className="barra-2">
-      <h2 className="">Sobre Nosotros</h2>
+      <h2 className="">Nuestros Especialistas</h2>
       </div>
 
       <div class="container-nosotros-home">
         <div className="card-nosotros-home">
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505008/doctora1_ng31ar.jpg" alt="Imagen 1" />
-          <h3>Karen Sanchez</h3>
+          <h3 className="card-title-nosotros">Karen Sanchez</h3>
         </div>
         <div className="card-nosotros-home">
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505071/doctor4_qet252.jpg" alt="Imagen 2" />
-          <h3>Juan González</h3>
+          <h3 className="card-title-nosotros">Juan González</h3>
         </div>
         <div className="card-nosotros-home">
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505033/doctora3_x4tvyn.jpg" alt="Imagen 3" />
-          <h3>María Rodríguez</h3>
+          <h3 className="card-title-nosotros">María Rodríguez</h3>
         </div>
       </div>
-
-
+      
+      <div className="barra-2">
+      <h2 className="">Sobre Nosotros</h2>
+      </div>
       {/* <h2 className="title-barra">¿Quiénes Somos?</h2> */}
       <div className="container-nosotros-home2">
         <div className="image-nosotros">
@@ -188,44 +112,18 @@ export const Home = () => {
               pacientes. Por ello, nos enfocamos en brindar tratamientos
               personalizados y eficientes para corregir una amplia variedad de
               problemas dentales y maxilofaciales.</p>
-          <button>Conocer más</button>
+          <button className="btn-nosotros-home">
+          <Link to="/Nosotros">
+          <a className="linksblog" href="#procedimientos">
+          Conocer más
+                </a>
+          </Link>
+         
+          </button>
         </div>
       </div>
 
-      {/* <div className="container-wrapper-2">
-        <div className="container-contacto">
-          <img
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852217/Fresh_Smile_Cmills/nosotros_ax9xkz.jpg"
-            alt=""
-          />
-          <div className="content-procedimientos-home">
-            <p className="p-contacto">
-              Fresh Smile Cmills es una reconocida clínica de ortodoncia
-              comprometida con ofrecer soluciones de alta calidad para la salud
-              dental de nuestros pacientes. Con una amplia experiencia y
-              conocimientos en el campo de la ortodoncia, nos hemos ganado la
-              confianza de numerosos individuos y familias que buscan mejorar su
-              sonrisa y salud bucal.
-            </p>
-            <p className="p-contacto">
-              En Fresh Smile Cmills, comprendemos la importancia de una sonrisa
-              hermosa y saludable, no solo en términos estéticos, sino también
-              en cuanto a la función y el bienestar general de nuestros
-              pacientes. Por ello, nos enfocamos en brindar tratamientos
-              personalizados y eficientes para corregir una amplia variedad de
-              problemas dentales y maxilofaciales.
-            </p>
-
-            <button className="btn-contacto">
-              <Link to="/Nosotros">
-                <a class="linkscontacto" href="#nosotros">
-                  Leer más
-                </a>
-              </Link>
-            </button>
-          </div>
-        </div>
-      </div> */}
+     
       {/* Chat WhatsAPP */}
       <div class="space-wpp">
         <a

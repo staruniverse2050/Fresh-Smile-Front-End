@@ -6,12 +6,16 @@ import { Footer } from "../../layouts/footer/Footer";
 export const Nosotros = () => {
   return (
     <>
+     <div className="container_pronotr">
+                <div className="container_nosotr">
+                    <h1> Conoce Sobre Nosotros</h1>
+                    
+                </div>
+            </div>
 
-      <div className="container_banner1A">
-      <div className="barra-nost1">
-  <h2>Sobre Nosotros</h2>
-</div>
-      </div>
+            <div className="barra-procedimientos">
+                <h2>Nos caracterizamos por ser un consultorio de alta responsabilidad</h2>
+            </div>
 
       <div className="container-usN">
         <div className="post-nosotrosN">

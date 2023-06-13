@@ -1,5 +1,5 @@
 .Registro {
-	padding-top: 10%;
+	padding-top: 100px;
 	display: flex;
 	background-color: rgb(255, 255, 255);
 }
@@ -15,7 +15,7 @@
 	margin-left: 50px;
 	flex: 1;
 	padding: 20px;
-	background-image: url('https://res.cloudinary.com/dexfjrgyw/image/upload/v1685764736/Fresh_Smile_Cmills/3969587_pmgfnk.jpg');
+	background-image: url('https://res.cloudinary.com/dexfjrgyw/image/upload/v1686639162/Fresh_Smile_Cmills/img-register_alsr0e.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -23,6 +23,8 @@
 	height: 870px;
 	text-align: center;
 }
+
+
 .custom-modal {
 	width: 300px; /* Ajusta el ancho de la ventana modal según tus preferencias */
 	max-width: 20%;
@@ -75,7 +77,11 @@
   
 .right-side {
 	flex: 1;
-	padding: 20px;
+	padding: 10px;
+	background-color: #34cfe7;
+	width: 15px;
+	margin-top: -10px;
+	
 }
 
 .img-left-side {
@@ -85,7 +91,7 @@
 	padding-top: 40%; */
 	width: 50%;
 	/* Ajusta el ancho al 100% del contenedor */
-	max-width: 500px;
+	max-width: 00px;
 	/* Define un ancho máximo para evitar que la imagen se haga demasiado grande */
 }
 
@@ -96,6 +102,7 @@
 	width: 60%;
 	/* background-color: #D3D3D3; */
 	height: 870px;
+	
 }
 
 .registro-h1 {
@@ -108,7 +115,8 @@
 	/* font-weight: bold; */
 	/* font-family: 'Open Sans', sans-serif; */
 	/* font-size: 30px; */
-	color: #4fafd2;
+	color: #6d7c81;
+	width: 845px;
 }
 
 /* h1 {
@@ -126,10 +134,11 @@
 }
 
 .Registro label {
-	display: block;
+	/* display: block; */
 	margin-bottom: 5px;
-	text-align: left;
-	font-weight: bold;
+	/* text-align: left; */
+	/* font-weight: bold; */
+	margin-left: 248px;
 }
 
 .Registro input[type="text"],
@@ -141,6 +150,7 @@
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-sizing: border-box;
+	margin-left: 248px;
 }
 
 .Registro select {

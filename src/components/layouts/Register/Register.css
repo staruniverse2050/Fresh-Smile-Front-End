@@ -1,14 +1,9 @@
 .Registro {
-	padding-top: 100px;
+	padding-top: 10%;
 	display: flex;
 	background-color: rgb(255, 255, 255);
 }
 
-/* .container {
-	padding-top: 10%;
-	display: flex;
-	background-color: red;
-} */
 
 .left-side {
 	padding-top: 30%;
@@ -78,29 +73,26 @@
 .right-side {
 	flex: 1;
 	padding: 10px;
-	background-color: #34cfe7;
+	margin-right: 10%;
+	/* background-color: #34cfe7; */
 	width: 15px;
 	margin-top: -10px;
-	
 }
 
+.right-side h1{
+	text-align: center;
+	margin: 0;
+	color: #7DC3E8;
+}
 .img-left-side {
-	/* width: 30%;
-	align-items: center;
-	justify-content: center;
-	padding-top: 40%; */
 	width: 50%;
-	/* Ajusta el ancho al 100% del contenedor */
 	max-width: 00px;
-	/* Define un ancho máximo para evitar que la imagen se haga demasiado grande */
 }
 
 .form-input-container {
 	flex: 1;
 	padding: 20px;
-	/* background-color: #249bad; */
 	width: 60%;
-	/* background-color: #D3D3D3; */
 	height: 870px;
 	
 }
@@ -112,21 +104,12 @@
 	margin: 0;
 	padding: 10px;
 	text-align: center;
-	/* font-weight: bold; */
-	/* font-family: 'Open Sans', sans-serif; */
-	/* font-size: 30px; */
 	color: #6d7c81;
 	width: 845px;
 }
 
-/* h1 {
-	margin-top: 0;
-} */
-
 .title-left {
-	/* padding-top: 50%; */
-	text-align: center;
-	/* margin-bottom: 20px; */
+text-align: center;
 }
 
 .form-group {
@@ -134,10 +117,7 @@
 }
 
 .Registro label {
-	/* display: block; */
 	margin-bottom: 5px;
-	/* text-align: left; */
-	/* font-weight: bold; */
 	margin-left: 248px;
 }
 
@@ -166,7 +146,10 @@
 	background-color: #249bad;
 	color: #fff;
 	font-size: 16px;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
+	margin-left: 51%;
 }
 
 .BotonRegistro:hover,
@@ -176,6 +159,8 @@
 
 .login-link {
 	margin-top: 20px;
+	margin-left: 51%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -201,12 +186,12 @@
 	background-color: #249bad;
 	color: white;
 	border: none;
-	/* Añade otros estilos según tus necesidades */
 }
 
 .custom-swal-button:hover {
 	background-color: #1e6d79;
 }
+
 .custom-modal {
   display: flex;
   justify-content: center;
@@ -219,7 +204,6 @@
 .custom-modal .modal-dialog {
   width: 400px; /* Ajusta el ancho del modal según tus preferencias */
   max-width: 105%;
-
 }
 
 .custom-modal .modal-content {
@@ -282,3 +266,225 @@
 }
 
 
+@media screen and (max-width: 768px) {
+	.Registro {
+		flex-direction: column;
+		padding-top: 5%;
+	}
+	.left-side {
+		width: 100%;
+		height: auto;
+		padding-top: 20px;
+		margin-left: 0;
+	}
+	.custom-modal {
+		width: 100%;
+		max-width: none;
+		max-height: none;
+		margin: 0;
+	}
+	.custom-modal .modal-content {
+		margin-right: 0;
+	}
+
+	.custom-modal .modal-header {
+		border-bottom: 1px solid #ccc; /* Restablece el borde inferior en pantallas más pequeñas */
+	}
+
+	.custom-modal .modal-footer {
+		border-top: 1px solid #ccc; /* Restablece el borde superior en pantallas más pequeñas */
+	}
+
+	.custom-modal .modal-title {
+		font-size: 1rem; /* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
+	}
+
+	.custom-modal .BotonModalCancelar,
+	.custom-modal .BotonModalGuardar {
+		padding: 8px 16px;
+		font-size: 0.8rem;
+	}
+
+	.custom-modal .BotonModalCancelar {
+		background-color: #ff0000; /* Cambia el color de fondo del botón Cancelar para pantallas más pequeñas */
+	}
+
+	.custom-modal .BotonModalGuardar {
+		background-color: #00ff00; /* Cambia el color de fondo del botón Guardar para pantallas más pequeñas */
+	}
+
+	.right-side {
+		margin-right: 0;
+		margin-top: 0;
+	}
+
+	.right-side h1 {
+		font-size: 1.5rem; /* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
+	}
+
+	.img-left-side {
+		width: 70%; /* Ajusta el ancho de la imagen para pantallas más pequeñas */
+	}
+
+	.form-input-container {
+		width: 80%; /* Ajusta el ancho del contenedor para pantallas más pequeñas */
+		height: auto; /* Ajusta la altura del contenedor para pantallas más pequeñas */
+	}
+
+	.registro-h1 {
+		font-size: 1.2rem; /* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
+		width: 90%; /* Ajusta el ancho del título para pantallas más pequeñas */
+		margin: 0 auto; /* Centra el título horizontalmente */
+	}
+
+	.title-left {
+		text-align: left; /* Ajusta la alineación del título para pantallas más pequeñas */
+	}
+
+	.Registro label {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-bottom: 10px; /* Ajusta el margen inferior para pantallas más pequeñas */
+	}
+
+	.Registro input[type="text"],
+	.Registro input[type="email"],
+	.Registro input[type="password"],
+	.Registro select {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-bottom: 10px; /* Ajusta el margen inferior para pantallas más pequeñas */
+	}
+
+	.Registro select {
+		height: 30px; /* Ajusta la altura del select para pantallas más pequeñas */
+	}
+
+	.BotonRegistro {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas */
+	}
+
+	.login-link {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas */
+	}
+
+	.login-link p {
+		margin-bottom: 5px; /* Ajusta el margen inferior para pantallas más pequeñas */
+	}
+
+	.login-link button {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas */
+	}
+	
+}
+
+@media screen and (max-width: 480px) {
+	.Registro {
+		padding-top: 2%;
+	}
+	.left-side {
+		padding-top: 10px;
+	}
+	.custom-modal {
+		width: 90%;
+		max-height: 90%;
+	}
+
+	.custom-modal .modal-content {
+		border-radius: 5px;
+	}
+
+	.custom-modal .modal-header {
+		border-bottom: none; /* Elimina el borde inferior en pantallas aún más pequeñas */
+	}
+
+	.custom-modal .modal-footer {
+		border-top: none; /* Elimina el borde superior en pantallas aún más pequeñas */
+	}
+
+	.custom-modal .modal-title {
+		font-size: 0.8rem; /* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
+	}
+
+	.custom-modal .BotonModalCancelar,
+	.custom-modal .BotonModalGuardar {
+		padding: 6px 12px;
+		font-size: 0.6rem;
+	}
+
+	.custom-modal .BotonModalCancelar {
+		background-color: #cc0000; /* Cambia el color de fondo del botón Cancelar para pantallas aún más pequeñas */
+	}
+
+	.custom-modal .BotonModalGuardar {
+		background-color: #00cc00; /* Cambia el color de fondo del botón Guardar para pantallas aún más pequeñas */
+	}
+
+	.right-side {
+		padding: 5px;
+	}
+
+	.right-side h1 {
+		font-size: 1.2rem; /* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
+	}
+
+	.img-left-side {
+		width: 90%; /* Ajusta aún más el ancho de la imagen para pantallas aún más pequeñas */
+	}
+
+	.form-input-container {
+		width: 90%; /* Ajusta aún más el ancho del contenedor para pantallas aún más pequeñas */
+		padding: 10px; /* Ajusta el padding del contenedor para pantallas aún más pequeñas */
+	}
+
+	.registro-h1 {
+		font-size: 1rem; /* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
+		padding: 5px; /* Ajusta el padding del título para pantallas aún más pequeñas */
+	}
+
+	.title-left {
+		font-size: 1rem; /* Ajusta el tamaño de fuente del título para pantallas aún más pequeñas */
+	}
+
+	.Registro label {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-bottom: 5px; /* Ajusta el margen inferior para pantallas aún más pequeñas */
+	}
+
+	.Registro input[type="text"],
+	.Registro input[type="email"],
+	.Registro input[type="password"],
+	.Registro select {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-bottom: 5px; /* Ajusta el margen inferior para pantallas aún más pequeñas */
+	}
+
+	.Registro select {
+		height: 20px; /* Ajusta la altura del select para pantallas aún más pequeñas */
+	}
+
+	.BotonRegistro {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+	}
+
+	.BotonRegistro {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+	}
+
+	.login-link {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+	}
+
+	.login-link p {
+		margin-bottom: 3px; /* Ajusta el margen inferior para pantallas aún más pequeñas */
+	}
+
+	.login-link button {
+		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+	}
+}

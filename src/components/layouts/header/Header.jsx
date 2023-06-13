@@ -170,7 +170,7 @@ export const Header = () => {
                   Contacto
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className={`links ${
                     isActiveRoute("/PerfilAdministrador") ? "active" : ""
@@ -179,8 +179,8 @@ export const Header = () => {
                 >
                   Perfil Administrador
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   className={`links ${
                     isActiveRoute("/PerfilUsuario") ? "active" : ""
@@ -189,7 +189,7 @@ export const Header = () => {
                 >
                   Perfil Usuario
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </ul>

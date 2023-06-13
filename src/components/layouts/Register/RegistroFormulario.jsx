@@ -29,6 +29,7 @@ const RegistroFormulario = () => {
       setNumeroDocumento(value);
     }
   };
+
   useEffect(() => {
     // Realizar la solicitud HTTP para obtener los procedimientos
     axios.get('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
@@ -107,7 +108,6 @@ const RegistroFormulario = () => {
     { value: "Cédula de extranjería", label: "Cédula de extranjería" },
     // Add more options as needed
   ];
-
 
   const navigate = useNavigate();
 
@@ -199,12 +199,12 @@ const RegistroFormulario = () => {
         correo: correo,
         contraseña: contraseña,
       };
-    
+    } else if (rol === "Paciente") {
       apiEndpoint =
         "https://freshsmile.azurewebsites.net/FreshSmile/CrearPacientes";
       datosFormulario = {
-        tipo_documento: tipoDocumento,
         identificacion_paciente: numeroDocumento,
+        tipo_documento: tipoDocumento,
         nombre_completo: nombrescompletos,
         direccion: direccion,
         telefono: telefono,
@@ -264,6 +264,7 @@ const RegistroFormulario = () => {
       console.error(error);
     }
   };
+
   return (
     <div className="Registro">
       <div className="left-side">
@@ -310,23 +311,22 @@ const RegistroFormulario = () => {
             />
           </div>
           {rol === "Especialista" && (
-  <div className="form-group">
-    <label>Especialidad</label>
-    <select
-      className="form-control"
-      value={especialidad}
-      onChange={handleEspecialidadChange}
-    >
-      <option value="">Seleccionar especialidad</option>
-      {procedimientos.map(procedimiento => (
-        <option key={procedimiento.id} value={procedimiento.nombre}>
-          {procedimiento.nombre}
-        </option>
-      ))}
-    </select>
-  </div>
-)}
-
+            <div className="form-group">
+              <label>Especialidad</label>
+              <select
+                className="form-control"
+                value={especialidad}
+                onChange={handleEspecialidadChange}
+              >
+                <option value="">Seleccionar especialidad</option>
+                {procedimientos.map(procedimiento => (
+                  <option key={procedimiento.id} value={procedimiento.nombre}>
+                    {procedimiento.nombre}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <div className="form-group">
             <label htmlFor="direccion">Dirección</label>
             <input
@@ -387,7 +387,7 @@ const RegistroFormulario = () => {
           >
             Registrar
           </button>
-
+  
           <div className="login-link">
             <p>¿Ya tienes una cuenta?</p>
             <button className="btn btn-link" onClick={handleLoginClick}>
@@ -428,6 +428,6 @@ const RegistroFormulario = () => {
       </div>
     </div>
   );
-};
+        }
 
 export default RegistroFormulario;

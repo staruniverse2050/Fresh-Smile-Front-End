@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import { fill } from "@cloudinary/url-gen/actions/resize";
@@ -9,6 +9,27 @@ const myImage = new CloudinaryImage("sample", {
 }).resize(fill().width(100).height(150));
 
 export const Home = () => {
+  const [especialistas, setEspecialistas] = useState([]);
+
+  useEffect(() => {
+    const fetchEspecialistas = async () => {
+      try {
+        const response = await fetch(
+          "https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/ConsultarEspecialista"
+        );
+        const data = await response.json();
+        const filteredEspecialistas = data.filter(
+          (_, index) => index === 2 || index === 4 || index === 5 || index === 8
+        );
+        setEspecialistas(filteredEspecialistas);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchEspecialistas();
+  }, []);
+
   return (
     <>
       <div className="container_banner">
@@ -72,6 +93,7 @@ export const Home = () => {
        </div>
 
       <div className="barra-2">
+<<<<<<< HEAD
       <h2 className="">Nuestros Especialistas</h2>
       </div>
 
@@ -88,6 +110,22 @@ export const Home = () => {
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505033/doctora3_x4tvyn.jpg" alt="Imagen 3" />
           <h3 className="card-title-nosotros">María Rodríguez</h3>
         </div>
+=======
+        <h2 className="">Sobre Nosotros</h2>
+      </div>
+
+      <div className="container-nosotros-home">
+        {especialistas.slice(0, 3).map((especialista, index) => (
+          <div className="card-nosotros-home" key={index}>
+            <img
+              src={especialista.foto_perfil}
+              alt={`Imagen ${index + 1}`} />          
+              <h3>{especialista.nombre_completo}</h3>
+              <p className="Especialidad">Se le conoce por ser el mejor especilista en {especialista.especialidad}</p>
+
+          </div>
+        ))}
+>>>>>>> 7d0187b7363f68f0f1b4325a52fa1602f1d1e6ea
       </div>
       
       <div className="barra-2">
@@ -101,6 +139,7 @@ export const Home = () => {
         <div className="content-nosotros">
           {/* <h2>¿Quiénes Somos?</h2> */}
           <p>Fresh Smile Cmills es una reconocida clínica de ortodoncia
+<<<<<<< HEAD
               comprometida con ofrecer soluciones de alta calidad para la salud
               dental de nuestros pacientes. Con una amplia experiencia y
               conocimientos en el campo de la ortodoncia, nos hemos ganado la
@@ -120,6 +159,20 @@ export const Home = () => {
           </Link>
          
           </button>
+=======
+            comprometida con ofrecer soluciones de alta calidad para la salud
+            dental de nuestros pacientes. Con una amplia experiencia y
+            conocimientos en el campo de la ortodoncia, nos hemos ganado la
+            confianza de numerosos individuos y familias que buscan mejorar su
+            sonrisa y salud bucal.</p>
+          <p>Comprendemos la importancia de una sonrisa
+            hermosa y saludable, no solo en términos estéticos, sino también
+            en cuanto a la función y el bienestar general de nuestros
+            pacientes. Por ello, nos enfocamos en brindar tratamientos
+            personalizados y eficientes para corregir una amplia variedad de
+            problemas dentales y maxilofaciales.</p>
+          <button>Conocer más</button>
+>>>>>>> 7d0187b7363f68f0f1b4325a52fa1602f1d1e6ea
         </div>
       </div>
 
@@ -127,7 +180,7 @@ export const Home = () => {
       {/* Chat WhatsAPP */}
       <div class="space-wpp">
         <a
-          href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, me gustaría saber mas información."
+          href="https://api.whatsapp.com/send?phone=3204415807&text=Hola, estoy interesada en sacar una cita"
           class="float"
           target="_blank "
         >

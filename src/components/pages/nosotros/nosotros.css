@@ -157,9 +157,8 @@
 
 .specialist-container {
   display: flex;
-  justify-content: space-between;
-  border-radius: 45px;
-  
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .specialist-card {
@@ -168,69 +167,23 @@
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
-  position: relative;
-  left: 745px;
-  bottom: 490px;
- 
 }
 
-.specialist-card2 {
-  width: 300px;
-  background-color: #D3D3D3;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  left: 745px;
-  bottom: 490px;
-  /* margin-left: 25px; */
+.specialist-card:nth-child(odd) {
+  margin-right: 20px;
 }
-
-.specialist-card3 {
-  width: 300px;
-  background-color: #D3D3D3;
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;
-  left: -40px; /* Ajusta el valor según sea necesario */
-  bottom: 50px;
-  margin-bottom: 20px; /* Espacio adicional entre tarjetas */
-}
-
-
-
-.specialist-card4 {
-  width: 300px;
-  background-color:#D3D3D3;
-  border-radius: 8px;
-  padding: 20px;
-  /* margin-bottom: 200px; */
-  position: relative;
-  left:-40px;
-  bottom: 50px;
-  margin-bottom: 20px;
-  /* color: #34cfe7; */
-}
-
-
 
 .specialist-image {
   width: 90px;
   height: 70px;
   margin-bottom: 10px;
-  position: relative;
-  left: 100px;
-  border-radius: 45px;
+  border-radius: 50%;
 }
-
-
 
 .specialist-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  position: relative;
-  left: 64px;
 }
 
 .specialist-description {

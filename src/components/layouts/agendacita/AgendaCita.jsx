@@ -22,13 +22,26 @@ const AgendaCita = () => {
   const [selectedHour, setSelectedHour] = useState(null);
   const [calendarOpen, setCalendarOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+    const [procedimientos, setProcedimientos] = useState([]);
   const [showModal, setShowModal] = useState(false); // Estado para controlar la ventana modal
   const [fieldsDisabled, setFieldsDisabled] = useState(false); // Estado para controlar si los campos están bloqueados o no
 
   useEffect(() => {
     setShowModal(true); // Abrir la ventana modal al cargar el componente
   }, []);
-
+  useEffect(() => {
+    // Realizar la solicitud HTTP para obtener los procedimientos
+    axios.get('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
+      .then(response => {
+        // Guardar los procedimientos en el estado
+        setProcedimientos(response.data);
+      })
+      .catch(error => {
+        // Manejar el error en caso de que la solicitud falle
+        console.error('Error al obtener los procedimientos:', error);
+      });
+  }, []);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -174,9 +187,11 @@ const AgendaCita = () => {
               onChange={(e) => setTipoCita(e.target.value)}
             >
               <option value="">Seleccione un tipo de cita</option>
-              <option value="Consulta">Consulta</option>
-              <option value="Control">Control</option>
-              <option value="Emergencia">Emergencia</option>
+              {procedimientos.map(procedimiento => (
+                  <option key={procedimiento.id} value={procedimiento.nombre}>
+                    {procedimiento.nombre}
+                  </option>
+                ))}
             </select>
           </div>
           <div className="form-group">
@@ -247,7 +262,7 @@ const AgendaCita = () => {
               type="button"
               onClick={() => handleModalButtonClick(false)}
             >
-              Para otra persona
+              Alguien más
             </button>
           </div>
         </div>

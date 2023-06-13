@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/layouts/header/Header";
+import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
+import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador";
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import AgendaCita from "./components/layouts/agendacita/AgendaCita";
@@ -13,6 +15,8 @@ import RegistroFormulario from "./components/layouts/Register/RegistroFormulario
 import Login from "./components/layouts/Login/Login";
 import { PerfilAdministrador } from "./components/pages/PerfilAdministrador/PerfilAdministrador";
 import { PerfilUsuario } from "./components/pages/PerfilUsuario/PerfilUsuario";
+import TableUsuario from "./components/pages/tablas/TableUsuario";
+import TableAdmin from "./components/pages/tablas/TableAdmin";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -34,7 +38,7 @@ function App() {
 
       // Actualizar el componente de encabezado
       setHeaderComponent(
-        rol === "administrador" ? (
+        rol === "especialista" ? (
           <HeaderAdministrador />
         ) : (
           <HeaderPaciente isAuthenticated={true} />
@@ -47,7 +51,7 @@ function App() {
   }, []); // No hay dependencias, solo se ejecuta una vez al cargar la página
 
   const setRol = (rol) => {
-    if (rol === "administrador") {
+    if (rol === "especialista") {
       setHeaderComponent(<HeaderAdministrador />);
       setIsAuthenticated(true);
       setRedirectTo("/Inicio"); // Redirigir a la página de inicio
@@ -89,6 +93,8 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
         <Route path="/Login" element={<Login setRol={setRol} />} />
+        <Route path="/TableUsuario" element={<TableUsuario />} />
+        <Route path="/TableAdmin" element={<TableAdmin />} />
       </Routes>
       <Chatbot />
     </>

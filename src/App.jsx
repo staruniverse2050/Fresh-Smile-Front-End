@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/layouts/header/Header";
+import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
+import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador";
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import AgendaCita from "./components/layouts/agendacita/AgendaCita";
@@ -34,7 +36,7 @@ function App() {
 
       // Actualizar el componente de encabezado
       setHeaderComponent(
-        rol === "administrador" ? (
+        rol === "especialista" ? (
           <HeaderAdministrador />
         ) : (
           <HeaderPaciente isAuthenticated={true} />
@@ -47,7 +49,7 @@ function App() {
   }, []); // No hay dependencias, solo se ejecuta una vez al cargar la página
 
   const setRol = (rol) => {
-    if (rol === "administrador") {
+    if (rol === "especialista") {
       setHeaderComponent(<HeaderAdministrador />);
       setIsAuthenticated(true);
       setRedirectTo("/Inicio"); // Redirigir a la página de inicio

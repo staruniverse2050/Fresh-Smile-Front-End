@@ -31,16 +31,12 @@
 } */
 
 .modal .modal-content {
-  /* background-color: #fff;
-  padding: 20px;
-  border-radius: 5px; */
-  border: none;
   border-radius: 10px;
-  background-color: #fff;
-	width: 100%;
+  background-color: #d1d1d1;
+  width: 100%;
   height: 16em;
-	padding: 15%;
-	margin: -1em;
+  padding: 15%;
+  margin: -1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -56,7 +52,7 @@
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
-  background-color:#249bad;
+  background-color: #249bad;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -145,10 +141,10 @@
 .Agendar {
   width: 40%;
   padding: 10px;
-  background-color: #34cfe7;
+  background-color: #249bad;
   border: none;
   border-radius: 4px;
-  color: #000000;
+  color: #ffffff;
   font-size: 16px;
   position: relative;
   left:156px;
@@ -158,5 +154,5 @@
 }
 
 .Agendar:hover {
-  background-color: #0056b3;
+  background: #1e6d79;
 }

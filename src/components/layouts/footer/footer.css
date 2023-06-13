@@ -128,7 +128,7 @@ h6 {
 }
 
 .fa-envelope:hover {
-  color: blue;
+  color:  #db4a39; /* Cambia el color al pasar el mouse sobre el ícono */
 }
 
 .fa-phone-volume:hover {

@@ -11,7 +11,6 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
   }, []);
 
   const generateAvatar = () => {
-    const name = "John Doe"; // Puedes reemplazar esto con el nombre del usuario o alguna lógica para obtener el nombre
     const apiUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}`;
     setAvatarUrl(apiUrl);
   };

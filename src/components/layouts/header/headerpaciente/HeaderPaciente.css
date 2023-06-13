@@ -14,7 +14,15 @@
 	padding: 10px;
 	position: fixed;
 }
-
+.Bienvenida{
+    color: #f1f1f1;
+    position: relative;
+    bottom: 6px;
+    left: 63%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
 h1 {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.5rem;
@@ -51,6 +59,7 @@ img {
 	padding: 0.5rem;
 	font-size: 22px;
 	position: relative;
+    top: 16px;
 	left: -20px;
 	transition: transform 0.3s ease;
 }

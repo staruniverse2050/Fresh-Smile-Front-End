@@ -12,27 +12,53 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
   useEffect(() => {
     generateAvatar();
   }, []);
-
   const generateAvatar = () => {
-    const accessToken = localStorage.getItem("accessToken"); // Obtener el token de acceso del localStorage
-    const decodedToken = jwt_decode(accessToken); // Decodificar el token
-
-    const id = decodedToken.id; // Obtener el ID de la persona
-
-    fetch(`https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${id}`)
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      console.error("No se encontró el userId en el localStorage");
+      // Manejar el caso en el que no se encuentre el userId, por ejemplo, redirigir al usuario a una página de inicio de sesión
+      return;
+    }
+  
+    fetch(`https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${userId}`)
       .then((response) => response.json())
       .then((data) => {
-        const name = data.nombre; // Obtener el nombre de la persona desde la respuesta de la API
-        setName(name); // Actualizar el estado del nombre
+        const fullName = data.nombre_completo;
+        const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
+        const firstName = names[0]; // Obtener el primer nombre
+        const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
+  
+        setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
+  
+        const avatarStyle = "set4";
+        const size = 600;
+        const apiUrl = `https://robohash.org/${encodeURIComponent(firstName)}?set=${avatarStyle}&size=${size}x${size}`;
+  
+        fetch(apiUrl)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Error al obtener el avatar");
+            }
+            return response.blob();
+          })
+          .then((blob) => {
+            const avatarUrl = URL.createObjectURL(blob);
+            setAvatarUrl(avatarUrl);
+          })
+          .catch((error) => {
+            console.error("Error al obtener el avatar:", error);
+          });
       })
       .catch((error) => {
-        console.error("Error fetching patient data:", error);
+        console.error("Error al obtener los datos del paciente:", error);
+        // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
       });
-
-    const apiUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}`;
-    setAvatarUrl(apiUrl);
   };
+  
 
+
+  
+  
   
   function toggleDropdown() {
     setIsOpen(!isOpen);
@@ -226,14 +252,19 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   Contacto
                 </NavLink>
               </li>
+              
             </ul>
+            <p className="Bienvenida">Hola, {name.split(' ')[0]} {name.split(' ')[1]}</p>
+
           </div>
         </ul>
         <div className="icono-inicio-wrapper">
           <div className="dropdown-wrapper" onClick={toggleDropdown}>
             <div className="icon-container">
-              {avatarUrl ? (
-                <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
+            {avatarUrl ? (
+                <div>
+                  <img className="icono-inicio" src={avatarUrl} alt="Avatar" />
+                </div>
               ) : (
                 <img
                   className="icono-inicio"

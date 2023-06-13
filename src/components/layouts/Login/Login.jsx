@@ -25,7 +25,7 @@ const Login = ({ setRol }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
+  
     try {
       let url;
       if (role === "paciente") {
@@ -35,21 +35,21 @@ const Login = ({ setRol }) => {
       } else {
         throw new Error("Rol no válido");
       }
-
-      const accessToken = localStorage.getItem("accessToken"); // Obtener el token de acceso del almacenamiento local
-      const response = await axios.post(url, { email, password })
-
+  
+      const response = await axios.post(url, { email, password });
+  
       setLoading(false);
-
+  
       if (response.status === 200) {
-        const data = response.data;
-        setModalText(data.message);
+        const { id, token } = response.data;
+        setModalText(response.data.message);
         setModalType("success");
         setRol(role);
         navigate("/Inicio");
-        localStorage.setItem("accessToken",response.data.token);
+        localStorage.setItem("accessToken", token);
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("rol", role);
+        localStorage.setItem("userId", id);
       } else {
         const errorData = response.data;
         throw new Error(errorData.message);
@@ -59,7 +59,7 @@ const Login = ({ setRol }) => {
       setModalType("error");
     }
   };
-
+  
   useEffect(() => {
     if (modalType === "error") {
       Swal.fire({

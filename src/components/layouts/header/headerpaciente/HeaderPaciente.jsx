@@ -231,7 +231,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
               {isAuthenticated && (
                 <>
                   <li>
-                    <NavLink className="links" to="/MisCitas" activeClassName="active">
+                    <NavLink className="links" to="/TableUsuario" activeClassName="active">
                       Citas
                     </NavLink>
                   </li>
@@ -283,7 +283,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   {isAuthenticated && (
                     <li>
-                      <NavLink className="dropdown-link" to="/Perfil">
+                      <NavLink className="dropdown-link" to="/PerfilUsuario">
                         Ver perfil
                       </NavLink>
                     </li>

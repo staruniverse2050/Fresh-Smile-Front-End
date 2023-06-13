@@ -202,7 +202,7 @@ export const HeaderAdministrador = ({ isAuthenticated }) => {
                   </li>
                   {isAuthenticated && (
                     <li>
-                      <NavLink className="dropdown-link" to="/Perfil">
+                      <NavLink className="dropdown-link" to="/PerfilAdministrador">
                         Ver perfil
                       </NavLink>
                     </li>

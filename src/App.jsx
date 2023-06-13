@@ -83,13 +83,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Inicio" element={<Home />} />
-<<<<<<< HEAD
         {/* <Route path="/PerfilAdministrador" element={<PerfilAdministrador />} /> */}
         {/* <Route path="/PerfilUsuario" element={<PerfilUsuario />} /> */}
-=======
-        <Route path="/Perfilespecialista" element={<PerfilAdministrador />} />
-        <Route path="/Perfilpaciente" element={<PerfilUsuario />} />
->>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Agendar" element={<AgendaCita />} />

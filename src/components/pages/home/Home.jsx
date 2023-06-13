@@ -19,7 +19,7 @@ export const Home = () => {
         );
         const data = await response.json();
         const filteredEspecialistas = data.filter(
-          (_, index) => index === 2 || index === 4 || index === 5 || index === 8
+          (_, index) => index === 6 || index === 4 || index === 5
         );
         setEspecialistas(filteredEspecialistas);
       } catch (error) {
@@ -96,20 +96,19 @@ export const Home = () => {
       <h2 className="">Nuestros Especialistas</h2>
       </div>
 
-      <div class="container-nosotros-home">
-        <div className="card-nosotros-home">
-          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505008/doctora1_ng31ar.jpg" alt="Imagen 1" />
-          <h3 className="card-title-nosotros">Karen Sanchez</h3>
-        </div>
-        <div className="card-nosotros-home">
-          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505071/doctor4_qet252.jpg" alt="Imagen 2" />
-          <h3 className="card-title-nosotros">Juan González</h3>
-        </div>
-        <div className="card-nosotros-home">
-          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686505033/doctora3_x4tvyn.jpg" alt="Imagen 3" />
-          <h3 className="card-title-nosotros">María Rodríguez</h3>
-        </div>
+      <div className="container-nosotros-home">
+        {especialistas.slice(0, 3).map((especialista, index) => (
+          <div className="card-nosotros-home" key={index}>
+            <img
+              src={especialista.foto_perfil}
+              alt={`Imagen ${index + 1}`} />          
+              <h3>{especialista.nombre_completo}</h3>
+              <p className="Especialidad">Se le conoce por ser el mejor especilista en {especialista.especialidad}</p>
+
+          </div>
+        ))}
       </div>
+
       
       <div className="barra-2">
         <h2 className="">Sobre Nosotros</h2>

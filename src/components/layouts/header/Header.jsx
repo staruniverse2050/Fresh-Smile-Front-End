@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import "./Header.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -21,8 +21,9 @@ export const Header = () => {
   };
 
   const handleAgendarClick = () => {
-    history.push("/Registro"); // Redirige a la página de registro al hacer clic en "Agenda tu cita"
+    navigate("/Registro");
   };
+  
 
   return (
     <header className="Header_Header">
@@ -146,29 +147,6 @@ export const Header = () => {
                   Contacto
                 </Link>
               </li>
-<<<<<<< HEAD
-              {/* <li>
-                <Link
-                  className={`links ${
-                    isActiveRoute("/PerfilAdministrador") ? "active" : ""
-                  }`}
-                  to="/PerfilAdministrador"
-                >
-                  Perfil Administrador
-                </Link>
-              </li> */}
-              {/* <li>
-                <Link
-                  className={`links ${
-                    isActiveRoute("/PerfilUsuario") ? "active" : ""
-                  }`}
-                  to="/PerfilUsuario"
-                >
-                  Perfil Usuario
-                </Link>
-              </li> */}
-=======
->>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
             </ul>
           </div>
         </ul>

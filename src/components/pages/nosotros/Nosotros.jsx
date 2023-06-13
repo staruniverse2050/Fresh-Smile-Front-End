@@ -14,7 +14,7 @@ export const Nosotros = () => {
         );
         const data = await response.json();
         const filteredEspecialistas = data.filter(
-          (_, index) => index === 2 || index === 4 || index === 5 || index === 8
+          (_, index) => index === 6 || index === 9 || index === 5 || index === 4
         );
         setEspecialistas(filteredEspecialistas);
       } catch (error) {

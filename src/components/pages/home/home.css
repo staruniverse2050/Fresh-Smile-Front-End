@@ -342,13 +342,7 @@ body {
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   align-items: center;
->>>>>>> c3eb635408af7a2935d1ef40cf8a59bb80a884b2
->>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
 }
 
 /*Sobre Nosotros*/
@@ -368,10 +362,12 @@ body {
 }
 
 .container-nosotros-home2 .image-nosotros img {
-  width: 100%;
+  width: 70%;
   height: auto;
   display: block;
-  border-radius: 5px;
+  position: relative;
+  left: 125px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -392,6 +388,8 @@ body {
 }
 .btn-nosotros-home{
   padding: 10px 20px;
+  position: relative;
+  top: 15px;
   font-size: 16px;
   background-color: #1c98ab;
 }

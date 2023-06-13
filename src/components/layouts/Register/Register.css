@@ -6,16 +6,18 @@
 
 
 .left-side {
-	padding-top: 30%;
+	padding-top: 50%;
 	margin-left: 50px;
 	flex: 1;
+	position: relative;
+	top: 40px;
 	padding: 20px;
 	background-image: url('https://res.cloudinary.com/dexfjrgyw/image/upload/v1686639162/Fresh_Smile_Cmills/img-register_alsr0e.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 40%;
-	height: 870px;
+	height: 720px;
 	text-align: center;
 }
 
@@ -82,7 +84,10 @@
 .right-side h1{
 	text-align: center;
 	margin: 0;
-	color: #7DC3E8;
+	color: #249bad;
+	left: 110px;
+	font-size: 30px;
+	position: relative;
 }
 .img-left-side {
 	width: 50%;
@@ -263,7 +268,6 @@ text-align: center;
 }
 .custom-modal button:hover {
   opacity: 0.8;
-<<<<<<< HEAD
 }
 
 
@@ -489,6 +493,4 @@ text-align: center;
 		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 }
-=======
-}
->>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
+

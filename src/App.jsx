@@ -15,6 +15,8 @@ import RegistroFormulario from "./components/layouts/Register/RegistroFormulario
 import Login from "./components/layouts/Login/Login";
 import { PerfilAdministrador } from "./components/pages/PerfilAdministrador/PerfilAdministrador";
 import { PerfilUsuario } from "./components/pages/PerfilUsuario/PerfilUsuario";
+import TableUsuario from "./components/pages/tablas/TableUsuario";
+import TableAdmin from "./components/pages/tablas/TableAdmin";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -91,6 +93,8 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
         <Route path="/Login" element={<Login setRol={setRol} />} />
+        <Route path="/TableUsuario" element={<TableUsuario />} />
+        <Route path="/TableAdmin" element={<TableAdmin />} />
       </Routes>
       <Chatbot />
     </>

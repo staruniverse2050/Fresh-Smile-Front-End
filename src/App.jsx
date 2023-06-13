@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
-import { HeaderAdministrador } from "./components/layouts/header/headeradministrador/HeaderAdministrador";
 import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import AgendaCita from "./components/layouts/agendacita/AgendaCita";
@@ -17,6 +16,7 @@ import { PerfilAdministrador } from "./components/pages/PerfilAdministrador/Perf
 import { PerfilUsuario } from "./components/pages/PerfilUsuario/PerfilUsuario";
 import TableUsuario from "./components/pages/tablas/TableUsuario";
 import TableAdmin from "./components/pages/tablas/TableAdmin";
+import { HeaderEspecialista } from "./components/layouts/header/headerespecialista/HeaderEspecialista";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -39,7 +39,7 @@ function App() {
       // Actualizar el componente de encabezado
       setHeaderComponent(
         rol === "especialista" ? (
-          <HeaderAdministrador />
+          <HeaderEspecialista isAuthenticated={true}/>
         ) : (
           <HeaderPaciente isAuthenticated={true} />
         )
@@ -52,7 +52,7 @@ function App() {
 
   const setRol = (rol) => {
     if (rol === "especialista") {
-      setHeaderComponent(<HeaderAdministrador />);
+      setHeaderComponent(<HeaderEspecialista isAuthenticated={true}/>);
       setIsAuthenticated(true);
       setRedirectTo("/Inicio"); // Redirigir a la página de inicio
     } else if (rol === "paciente") {
@@ -83,8 +83,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Inicio" element={<Home />} />
+<<<<<<< HEAD
         {/* <Route path="/PerfilAdministrador" element={<PerfilAdministrador />} /> */}
         {/* <Route path="/PerfilUsuario" element={<PerfilUsuario />} /> */}
+=======
+        <Route path="/Perfilespecialista" element={<PerfilAdministrador />} />
+        <Route path="/Perfilpaciente" element={<PerfilUsuario />} />
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Agendar" element={<AgendaCita />} />
@@ -93,8 +98,8 @@ function App() {
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
         <Route path="/Login" element={<Login setRol={setRol} />} />
-        <Route path="/TableUsuario" element={<TableUsuario />} />
-        <Route path="/TableAdmin" element={<TableAdmin />} />
+        <Route path="/Tuscitaspaciente" element={<TableUsuario />} />
+        <Route path="/Tuscitasespecialista" element={<TableAdmin />} />
       </Routes>
       <Chatbot />
     </>

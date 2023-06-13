@@ -263,6 +263,7 @@ text-align: center;
 }
 .custom-modal button:hover {
   opacity: 0.8;
+<<<<<<< HEAD
 }
 
 
@@ -488,3 +489,6 @@ text-align: center;
 		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 }
+=======
+}
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178

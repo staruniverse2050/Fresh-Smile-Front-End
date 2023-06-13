@@ -21,6 +21,7 @@ export const Procedimientos = () => {
           <i class="fa fa-whatsapp my-float"></i>
         </a>
       </div>
+<<<<<<< HEAD
       {/* <div className="container-procedimientos">
           <div className="container-blog">
             <img
@@ -168,6 +169,9 @@ export const Procedimientos = () => {
             </div>
           </div>
         </div> */}
+=======
+      
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
       <div className="contenedor-procedimientos">
         <div className="card-procedimientos">
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852202/Fresh_Smile_Cmills/carillas_hbazmk.jpg" alt="Imagen de la tarjeta" />
@@ -177,6 +181,7 @@ export const Procedimientos = () => {
               </p>
           </div>
         </div>
+<<<<<<< HEAD
 
         <div className="card-procedimientos">
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantes_keq38a.jpg" alt="Imagen de la tarjeta" />
@@ -219,36 +224,76 @@ export const Procedimientos = () => {
           <div className="contenido-procedimientos">
             <h2>Limpieza Dental Profunda</h2>
             <p className="p-contenido-procedimientos">La limpieza dental profunda, también conocida como raspado y alisado radicular, es un procedimiento para eliminar la placa bacteriana, el sarro y las toxinas de las superficies de los dientes y las raíces. Ayuda a prevenir la enfermedad periodontal y mantener las encías saludables.
+=======
+
+        <div className="card-procedimientos">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantes_keq38a.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Implantes Dentales</h2>
+            <p className="p-contenido-procedimientos">Son dispositivos utilizados para reemplazar las raíces de los dientes perdidos. Los implantes dentales se colocan en el hueso maxilar o mandibular y luego se colocan coronas dentales artificiales sobre ellos para restaurar la función y la apariencia de los dientes perdidos.
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
               </p>
           </div>
         </div>
 
         <div className="card-procedimientos">
+<<<<<<< HEAD
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg" alt="Imagen de la tarjeta" />
           <div className="contenido-procedimientos">
             <h2>Coronas Dentales</h2>
             <p className="p-contenido-procedimientos">Las coronas dentales son fundas que se colocan sobre dientes dañados, debilitados o restaurados. Proporcionan protección y mejoran la apariencia de los dientes. Las coronas pueden ser de metal, porcelana, porcelana fusionada a metal o materiales cerámicos de alta resistencia.
+=======
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852210/Fresh_Smile_Cmills/implantesss_deur5s.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Prótesis Dental</h2>
+            <p className="p-contenido-procedimientos">Las prótesis dentales son reemplazos artificiales de uno o varios dientes perdidos. Pueden ser parciales o completas, removibles o fijas. Incluyen opciones como puentes y dentaduras postizas, así como implantes dentales.
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
               </p>
           </div>
         </div>
 
         <div className="card-procedimientos">
+<<<<<<< HEAD
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Imagen de la tarjeta" />
           <div className="contenido-procedimientos">
             <h2>Ortodoncia</h2>
             <p className="p-contenido-procedimientos">Tratamiento utilizado para corregir la posición de los dientes y la mandíbula, mejorando la estética y la función de la dentadura. Puede incluir el uso de brackets, alineadores transparentes u otros dispositivos para alinear los dientes correctamente. </p>
+=======
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852212/Fresh_Smile_Cmills/cards1_s5fs46.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Cirugía Oral</h2>
+            <p className="p-contenido-procedimientos">La cirugía oral incluye una variedad de procedimientos quirúrgicos en la boca y los maxilares. Puede involucrar extracciones complejas, colocación de implantes dentales, cirugía de mandíbula y corrección de deformidades faciales.
+             </p>
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
           </div>
         </div>
 
         <div className="card-procedimientos">
+<<<<<<< HEAD
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852203/Fresh_Smile_Cmills/endodoncia_n1qzcw.png" alt="Imagen de la tarjeta" />
           <div className="contenido-procedimientos">
             <h2>Endodoncia</h2>
             <p className="p-contenido-procedimientos">La endodoncia, o tratamiento de conducto, es un procedimiento para tratar y salvar dientes con pulpa dental dañada o infectada. Consiste en eliminar el tejido pulpar afectado, limpiar los conductos radiculares y sellarlos para prevenir futuras infecciones.
+=======
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268627/Fresh_Smile_Cmills/jonathan-borba-v_2FRXEba94-unsplash_cth93o.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Extracción de Muelas del Juicio</h2>
+            <p className="p-contenido-procedimientos">La extracción de las muelas del juicio es un procedimiento común para eliminar las muelas que no tienen suficiente espacio para emerger o están causando problemas como dolor, infecciones o daños a los dientes adyacentes. Se realiza bajo anestesia local.
+             </p>
+          </div>
+        </div>
+        
+        <div className="card-procedimientos">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684269551/Fresh_Smile_Cmills/caroline-lm-8BkF0sTC6Uo-unsplash_efkumb.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Limpieza Dental Profunda</h2>
+            <p className="p-contenido-procedimientos">La limpieza dental profunda, también conocida como raspado y alisado radicular, es un procedimiento para eliminar la placa bacteriana, el sarro y las toxinas de las superficies de los dientes y las raíces. Ayuda a prevenir la enfermedad periodontal y mantener las encías saludables.
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
               </p>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* <div className="card-procedimientos">
           <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685127846/sonrisa_naagzz.png" alt="Imagen de la tarjeta" />
           <div className="contenido-procedimientos">
@@ -275,8 +320,42 @@ export const Procedimientos = () => {
 </p>
           </div>
         </div> */}
+=======
+        <div className="card-procedimientos">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268377/Fresh_Smile_Cmills/jonathan-borba-W9YEY6G8LVM-unsplash_qpfaed.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Coronas Dentales</h2>
+            <p className="p-contenido-procedimientos">Las coronas dentales son fundas que se colocan sobre dientes dañados, debilitados o restaurados. Proporcionan protección y mejoran la apariencia de los dientes. Las coronas pueden ser de metal, porcelana, porcelana fusionada a metal o materiales cerámicos de alta resistencia.
+              </p>
+          </div>
+        </div>
+
+        <div className="card-procedimientos">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684268332/Fresh_Smile_Cmills/enis-yavuz-4u2fG9mqGvQ-unsplash_saf7yd.jpg" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Ortodoncia</h2>
+            <p className="p-contenido-procedimientos">Tratamiento utilizado para corregir la posición de los dientes y la mandíbula, mejorando la estética y la función de la dentadura. Puede incluir el uso de brackets, alineadores transparentes u otros dispositivos para alinear los dientes correctamente. </p>
+          </div>
+        </div>
+
+        <div className="card-procedimientos">
+          <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852203/Fresh_Smile_Cmills/endodoncia_n1qzcw.png" alt="Imagen de la tarjeta" />
+          <div className="contenido-procedimientos">
+            <h2>Endodoncia</h2>
+            <p className="p-contenido-procedimientos">La endodoncia, o tratamiento de conducto, es un procedimiento para tratar y salvar dientes con pulpa dental dañada o infectada. Consiste en eliminar el tejido pulpar afectado, limpiar los conductos radiculares y sellarlos para prevenir futuras infecciones.
+              </p>
+          </div>
+        </div>
+
+       
+        
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
       </div>
       <Footer />
     </>
   );
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178

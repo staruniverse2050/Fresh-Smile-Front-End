@@ -1,10 +1,8 @@
 .banner-principalAd {
   width: 250%; /* Aumentar el ancho al 85% */
   height: 75px; /* Aumentar la altura a 55px */
-  background: #34cfe7;
   padding: 20px;
   text-align: center;
-  /* margin-right: 35px; */
   margin-top: -40px; /* Agregamos esta línea */
 }
 
@@ -12,30 +10,23 @@
   color: rgb(16, 15, 15);
   font-size: 28px;
   padding: 30px;
+  position: relative;
+  left: 93px;
   
 }
 
 .container-usuario {
-    padding-top: 130px;
     display: flex;
     justify-content: center;
     
   }
   
-  /* .banner {
-    width: 100%;
-    display: flex;
-  } */
-  
   .tarjeta-perfilU {
     width: 850px;
-    height: 700px;
+    height: 799px;
     background-color:#e1dddd;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    /* margin-right: 20px; */
-    /* margin-left: 45px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,22 +46,25 @@
   
   .perfil-titulo {
     color: #4fbcd0;
-    font-size: 24px;
+    font-size: 14px;
+    position: relative;
+    bottom: 23px;
     margin-bottom: 10px;
   }
   
   .perfil-info {
     font-size: 16px;
+    position: relative;
+    bottom: 23px;
     margin-bottom: 5px;
     
   }
 
   .image-perfilUsuario {
     width: 150px;
-    /* height: 150px; */
-    /* border-radius: 100%; */
     object-fit: cover;
     margin-bottom: 10px;
+    border-radius: none;
   }
 
   /**/
@@ -79,7 +73,7 @@
     border-collapse: collapse;
     width: 50%;
     margin-left: 650px;
-    margin-top: -600px;
+    margin-top: -730px;
     margin-right: 845px;
   }
   
@@ -126,4 +120,11 @@
   .editar-boton:hover {
     background-color: #8fccd6;
   }
-  
+  .imagenperfil{
+    width: 220px;
+    height: 210px;
+    border-radius: 90%;
+    background-color: #7DC3E8;
+    position: relative;
+    bottom: 43px;
+  }

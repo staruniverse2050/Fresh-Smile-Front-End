@@ -14,7 +14,15 @@
 	padding: 10px;
 	position: fixed;
 }
-
+.Bienvenida{
+    color: #f1f1f1;
+    position: relative;
+    bottom: 6px;
+    left: 63%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
 h1 {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.5rem;
@@ -51,6 +59,7 @@ img {
 	padding: 0.5rem;
 	font-size: 22px;
 	position: relative;
+    top: 16px;
 	left: -20px;
 	transition: transform 0.3s ease;
 }
@@ -80,8 +89,8 @@ img {
 }
 
 .icono-inicio {
-	width: 50px;
-	height: 50px;
+	/* width: 50px;
+	height: 50px; */
 	transition: transform 0.3s ease;
 }
 
@@ -155,6 +164,25 @@ img {
 	/* Agrega otros estilos para resaltar la opción del menú */
 }
 
+.password-input-container {
+    position: relative;
+    display: flex;
+    left: 60px;
+    align-items: center;
+  }
+  
+  .password-toggle-icon {
+    top: 50%;
+    position: relative;
+    right: 60px; /* Ajusta la posición del icono para evitar cambios de ancho */
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+    z-index: 1;
+  }
+  
+  
+  
 @media screen and (min-width: 769px) {
 	.toggle-menu {
 		display: none;
@@ -203,22 +231,33 @@ img {
 	.menu li {
 		margin: 1rem 0;
 	}
-	.icono-inicio {
-		flex-shrink: 0;
-	}
+
 	.icono-mapa2 {
 		position: absolute;
 		margin-right: 300px;
 		margin-bottom: 20px;
 	}
+
 	.icono-inicio-wrapper {
-		margin-left: 290px;
-		margin-bottom: 150px;
+		width: 15px;
 		position: absolute;
+		top: 1rem;
+		right: 0rem;
+		/* margin-left: 100px; */
+		cursor: pointer;
 	}
+	/* .icono-inicio {
+		width: 40px;
+		position: absolute;
+		top: 3rem;
+		left: 9rem;
+		cursor: pointer;
+	} */
+
 	.icono-mapa {
 		display: none;
 	}
+
 	.dropdown-button {
 		font-size: small;
 	}

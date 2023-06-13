@@ -342,6 +342,13 @@ body {
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  align-items: center;
+>>>>>>> c3eb635408af7a2935d1ef40cf8a59bb80a884b2
+>>>>>>> a3aed83731b7fe27bad0a1f9c4d0f7c0edd84178
 }
 
 /*Sobre Nosotros*/
@@ -395,7 +402,7 @@ body {
 
 @media (max-width: 768px) {
   /* Reglas CSS para pantallas con un ancho máximo de 768px */
-  body {
+  .body {
     /* Ajusta el tamaño de fuente para dispositivos móviles */
     font-size: 14px;
   }
@@ -547,7 +554,7 @@ body {
 
 @media (max-width: 480px) {
   /* Reglas CSS para pantallas con un ancho máximo de 480px */
-  body {
+  .body {
     /* Ajusta el tamaño de fuente para dispositivos móviles más pequeños */
     font-size: 12px;
   }
@@ -665,5 +672,3 @@ body {
   }
 
 }
-
-  

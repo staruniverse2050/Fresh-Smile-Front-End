@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import "./perfiladministrador.css";
 
 export const PerfilAdministrador = () => {
@@ -19,9 +19,68 @@ export const PerfilAdministrador = () => {
   const [loading, setLoading] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [editMode, setEditMode] = useState(false);
-  const [identificacionEspecialista, setIdentificacionEspecialista] = useState('');
+  const [name, setName] = useState("");
+  const [avatarUrl, setAvatarUrl] = useState("");
+  const [identificacionEspecialista, setIdentificacionEspecialista] = useState("");
 
+  useEffect(() => {
+    Swal.fire({
+      title: 'Bienvenido a tu perfil',
+      icon: 'success',
+      timer: 2000,
+      showConfirmButton: false
+    });
+  }, []);
 
+  useEffect(() => {
+    generateAvatar();
+  }, []);
+
+  const generateAvatar = () => {
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      console.error("No se encontró el userId en el localStorage");
+      return;
+    }
+
+    fetch(
+      `https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/BuscarEspecialista/${userId}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const fullName = data.nombre_completo;
+        const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
+        const firstName = names[0]; // Obtener el primer nombre
+        const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
+
+        setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
+
+        const avatarStyle = "set4";
+        const size = 600;
+        const apiUrl = `https://robohash.org/${encodeURIComponent(
+          firstName
+        )}?set=${avatarStyle}&size=${size}x${size}`;
+
+        fetch(apiUrl)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Error al obtener el avatar");
+            }
+            return response.blob();
+          })
+          .then((blob) => {
+            const avatarUrl = URL.createObjectURL(blob);
+            setAvatarUrl(avatarUrl);
+          })
+          .catch((error) => {
+            console.error("Error al obtener el avatar:", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Error al obtener los datos del paciente:", error);
+        // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
+      });
+  };
   useEffect(() => {
     const userId = localStorage.getItem("userId");
 
@@ -106,13 +165,20 @@ export const PerfilAdministrador = () => {
     <>
       <div className="container-usuario">
         <div className="tarjeta-perfilU">
-          <img
-            className="image-perfilUsuario"
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
-            alt="Inicio"
-          />
+          {avatarUrl ? (
+            <img
+              className="imagenperfil"
+              src={avatarUrl}
+              alt="Avatar"
+            />
+          ) : (
+            <img
+              className="image-perfilUsuario"
+              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
+              alt="Inicio"
+            />
+          )}
           <h2 className="perfil-titulo">Mi Perfil</h2>
-          <p className="perfil-info">freshSmileCmills</p>
           <p className="perfil-info">Revisa tu perfil</p>
           {editMode ? (
             <button className="guardar-boton" onClick={handleSaveButtonClick}>
@@ -122,10 +188,9 @@ export const PerfilAdministrador = () => {
             <button className="editar-boton" onClick={() => setEditMode(true)}>
               Editar
             </button>
-          )}
-        </div>
+          )}        </div>
         <div className="banner-principalAd">
-          <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1>
+          {/* <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1> */}
         </div>
       </div>
 

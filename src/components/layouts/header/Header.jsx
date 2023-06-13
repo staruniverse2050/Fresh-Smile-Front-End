@@ -93,27 +93,6 @@ export const Header = () => {
                       Contacto
                     </Link>
                   </li>
-
-                  {/* <li>
-                    <Link
-                      className={`links ${
-                        isActiveRoute("/Contacto") ? "active" : ""
-                      }`}
-                      to="/Contacto"
-                    >
-                      Perfil Administrador
-                    </Link>
-                  </li> */}
-                  {/* <li>
-                <Link
-                  className={`links ${
-                    isActiveRoute("/Contacto") ? "active" : ""
-                  }`}
-                  to="/Contacto"
-                >
-                  Perfil Usuario
-                </Link>
-              </li> */}
                 </ul>
               </div>
             )}
@@ -168,26 +147,6 @@ export const Header = () => {
                   to="/Contacto"
                 >
                   Contacto
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`links ${
-                    isActiveRoute("/PerfilAdministrador") ? "active" : ""
-                  }`}
-                  to="/PerfilAdministrador"
-                >
-                  Perfil Administrador
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`links ${
-                    isActiveRoute("/PerfilUsuario") ? "active" : ""
-                  }`}
-                  to="/PerfilUsuario"
-                >
-                  Perfil Usuario
                 </Link>
               </li>
             </ul>

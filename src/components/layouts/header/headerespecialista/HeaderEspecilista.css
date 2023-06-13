@@ -174,7 +174,7 @@ img {
   .password-toggle-icon {
     top: 50%;
     position: relative;
-    right: 40px; /* Ajusta la posición del icono para evitar cambios de ancho */
+    right: 60px; /* Ajusta la posición del icono para evitar cambios de ancho */
     cursor: pointer;
     font-size: 18px;
     color: #999;

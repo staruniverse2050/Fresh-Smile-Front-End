@@ -318,7 +318,6 @@ body {
 }
 
 .card-nosotros-home {
-<<<<<<< HEAD
   width: 230px;
   /* height: 230px; */
   border-radius: 10px;
@@ -343,33 +342,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   align-items: center;
-=======
-  width: 420px;
-  height: 530px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px 50px; /* Ajusta los márgenes laterales aquí */
-  padding: 15px;
-}
-
-.card-nosotros-home img {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  top: 60px;
-  border-radius: 2%;
-  margin: 0 auto;
-  object-fit: cover;
-}
-.Especialidad{
-  color:rgb(0, 0, 0);
-}
-.card-nosotros-home h3 {
-  margin-top: 20px;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
-  color: #000000;
->>>>>>> 7d0187b7363f68f0f1b4325a52fa1602f1d1e6ea
 }
 
 /*Sobre Nosotros*/

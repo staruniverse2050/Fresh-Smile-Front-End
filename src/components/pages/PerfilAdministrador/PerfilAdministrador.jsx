@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import moment from "moment";
+// import moment from "moment";
 import swal from "sweetalert";
 import "./perfiladministrador.css";
 

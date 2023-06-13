@@ -160,6 +160,22 @@ img {
 		width: 50px;
 		}
 }
+@media screen and (min-width: 394px) and (max-width: 767px) {
+	.icono-inicio {
+		width: 50px;
+		}
+		.icono-inicio:hover {
+			transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+}
+		  .icono-inicio-wrapper{
+			margin-left: 60px;
+			position: absolute;
+		  }
+}
 
 @media screen and (max-width: 768px) {
 	.menu {

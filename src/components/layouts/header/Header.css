@@ -10,9 +10,7 @@
 	background-color: #000000;
 	height: 10vh;
 	z-index: 9999;
-	position: relative;
 	padding: 10px;
-	position: fixed;
 }
 
 .menu h1 {
@@ -80,8 +78,8 @@ img {
 }
 
 .icono-inicio {
-	width: 50px;
-	height: 50px;
+	width: 30px;
+	margin-left: 10px;
 	transition: transform 0.3s ease;
 }
 
@@ -105,7 +103,6 @@ img {
 .container2 li {
 	align-items: center;
 	text-align: center;
-	/* margin-left: 1rem; */
 	margin-right: 10px;
 	padding-right: 10px;
 }
@@ -119,11 +116,11 @@ img {
 	padding: 0.5rem;
 	color: #ffffff;
 	text-decoration: none;
-	background-color: #5ffdff; /* Cambia el color de fondo del botón */
-	border: none; /* Elimina el borde del botón */
+	background-color: #5ffdff;
+	border: none;
 	border-radius: 0.5rem;
 	cursor: pointer;
-	transition: background-color 0.3s ease; /* Agrega una transición suave al cambiar el color de fondo */
+	transition: background-color 0.3s ease;
 }
 
 .dropdown {
@@ -140,16 +137,16 @@ img {
 }
 
 .icono-inicio-wrapper {
-	margin-left: 11%;
+	margin-left: auto;
 	margin-right: 2rem;
 }
+
 .links.active {
 	color: aqua;
-	/* Agrega otros estilos para resaltar la opción del menú */
 }
+
 .links2.active {
 	color: aqua;
-	/* Agrega otros estilos para resaltar la opción del menú */
 }
 
 @media screen and (min-width: 769px) {
@@ -159,9 +156,12 @@ img {
 	.icono-mapa2 {
 		display: none;
 	}
+	.icono-inicio {
+		width: 50px;
+		}
 }
-@media screen and (max-width: 768px) {
 
+@media screen and (max-width: 768px) {
 	.menu {
 		flex-direction: column;
 		justify-content: center;
@@ -173,12 +173,13 @@ img {
 		text-transform: uppercase;
 		margin: 0;
 		color: #ffffff;
-		margin-right: 10%;
+		margin-left: 20px; /* Modificado */
+		display: flex;
+		align-items: center;
 	}
 
 	.icon-hamburguer {
 		filter: invert(1);
-		/* margin-top: 60px; */
 		width: 30px;
 	}
 	.toggle-menu {
@@ -187,7 +188,6 @@ img {
 		top: 1rem;
 		left: 1rem;
 		cursor: pointer;
-		width: 40px;
 	}
 	.container2 {
 		display: none;
@@ -210,22 +210,33 @@ img {
 	.menu li {
 		margin: 1rem 0;
 	}
-	.icono-inicio {
-		flex-shrink: 0;
-	}
+
 	.icono-mapa2 {
 		position: absolute;
 		margin-right: 300px;
 		margin-bottom: 20px;
 	}
+
 	.icono-inicio-wrapper {
-		margin-left: 290px;
-		margin-bottom: 150px;
+		width: 15px;
 		position: absolute;
+		top: 1rem;
+		right: 0rem;
+		/* margin-left: 100px; */
+		cursor: pointer;
 	}
+	/* .icono-inicio {
+		width: 40px;
+		position: absolute;
+		top: 3rem;
+		left: 9rem;
+		cursor: pointer;
+	} */
+
 	.icono-mapa {
 		display: none;
 	}
+
 	.dropdown-button {
 		font-size: small;
 	}

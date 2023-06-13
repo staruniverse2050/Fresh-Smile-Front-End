@@ -90,10 +90,10 @@ export const Home = () => {
           </button>
         </div>
 
-       </div>
+      </div>
 
       <div className="barra-2">
-      <h2 className="">Nuestros Especialistas</h2>
+        <h2 className="">Nuestros Especialistas</h2>
       </div>
 
       <div class="container-nosotros-home">
@@ -110,9 +110,9 @@ export const Home = () => {
           <h3 className="card-title-nosotros">María Rodríguez</h3>
         </div>
       </div>
-      
+
       <div className="barra-2">
-      <h2 className="">Sobre Nosotros</h2>
+        <h2 className="">Sobre Nosotros</h2>
       </div>
       {/* <h2 className="title-barra">¿Quiénes Somos?</h2> */}
       <div className="container-nosotros-home2">
@@ -122,29 +122,29 @@ export const Home = () => {
         <div className="content-nosotros">
           {/* <h2>¿Quiénes Somos?</h2> */}
           <p>Fresh Smile Cmills es una reconocida clínica de ortodoncia
-              comprometida con ofrecer soluciones de alta calidad para la salud
-              dental de nuestros pacientes. Con una amplia experiencia y
-              conocimientos en el campo de la ortodoncia, nos hemos ganado la
-              confianza de numerosos individuos y familias que buscan mejorar su
-              sonrisa y salud bucal.</p>
-            <p>Comprendemos la importancia de una sonrisa
-              hermosa y saludable, no solo en términos estéticos, sino también
-              en cuanto a la función y el bienestar general de nuestros
-              pacientes. Por ello, nos enfocamos en brindar tratamientos
-              personalizados y eficientes para corregir una amplia variedad de
-              problemas dentales y maxilofaciales.</p>
+            comprometida con ofrecer soluciones de alta calidad para la salud
+            dental de nuestros pacientes. Con una amplia experiencia y
+            conocimientos en el campo de la ortodoncia, nos hemos ganado la
+            confianza de numerosos individuos y familias que buscan mejorar su
+            sonrisa y salud bucal.</p>
+          <p>Comprendemos la importancia de una sonrisa
+            hermosa y saludable, no solo en términos estéticos, sino también
+            en cuanto a la función y el bienestar general de nuestros
+            pacientes. Por ello, nos enfocamos en brindar tratamientos
+            personalizados y eficientes para corregir una amplia variedad de
+            problemas dentales y maxilofaciales.</p>
           <button className="btn-nosotros-home">
-          <Link to="/Nosotros">
-          <a className="linksblog" href="#procedimientos">
-          Conocer más
-                </a>
-          </Link>
-         
+            <Link to="/Nosotros">
+              <a className="linksblog" href="#procedimientos">
+                Conocer más
+              </a>
+            </Link>
+
           </button>
         </div>
       </div>
 
-     
+
       {/* Chat WhatsAPP */}
       <div class="space-wpp">
         <a

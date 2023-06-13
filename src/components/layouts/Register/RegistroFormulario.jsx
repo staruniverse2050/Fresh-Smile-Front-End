@@ -45,17 +45,21 @@ const RegistroFormulario = () => {
   
   const handleNombresChange = (event) => {
     const value = event.target.value;
-    if (/^[a-zA-Z\s]*$/.test(value)) {
+    if (/^[a-zA-ZñÑ\s]*$/.test(value)) {
       setNombrescompletos(value);
     }
   };
+  
 
   const handleDireccionChange = (event) => {
     setDireccion(event.target.value);
   };
 
   const handleTelefonoChange = (event) => {
-    setTelefono(event.target.value);
+    const value = event.target.value;
+    if (/^\d*$/.test(value)) {
+      setTelefono(value);
+    }
   };
 
   const handleCorreoChange = (event) => {
@@ -100,6 +104,17 @@ const RegistroFormulario = () => {
     } else {
       setShowModal(false);
     }
+  };
+  const handlePasswordClick = () => {
+    Swal.fire({
+      icon: "info",
+      title: "Recordatorio",
+      text: "La contraseña debe tener 8 caracteres.",
+      customClass: {
+        confirmButton: "custom-swal-button",
+      },
+      buttonsStyling: false,
+    });
   };
 
   const opcionesTipoDocumento = [
@@ -364,6 +379,7 @@ const RegistroFormulario = () => {
               id="contraseña"
               value={contraseña}
               onChange={handleContraseñaChange}
+              onClick={handlePasswordClick}
               required
             />
           </div>

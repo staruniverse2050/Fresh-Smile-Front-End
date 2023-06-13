@@ -318,58 +318,30 @@ body {
 }
 
 .card-nosotros-home {
-<<<<<<< HEAD
   width: 230px;
   /* height: 230px; */
   border-radius: 10px;
-  background-color: #249bada2;
+  /* background-color: #f5fbfca2; */
   text-align: center;
   margin: 20px;
   padding: 30px;
 }
 
 .card-nosotros-home img {
-  width: 100%;
-  /* height: 80px; */
+  width: 110%;
+  height: 70%;
   border-radius: 10%;
   /* margin: 0 auto; */
 }
 
 
 .card-title-nosotros{
-  color: #ffffff;
+  color: #000000;
+  margin-left: 30px;
   margin-top: 10px;
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  align-items: center;
-=======
-  width: 420px;
-  height: 530px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px 50px; /* Ajusta los márgenes laterales aquí */
-  padding: 15px;
-}
-
-.card-nosotros-home img {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  top: 60px;
-  border-radius: 2%;
-  margin: 0 auto;
-  object-fit: cover;
-}
-.Especialidad{
-  color:rgb(0, 0, 0);
-}
-.card-nosotros-home h3 {
-  margin-top: 20px;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
-  color: #000000;
->>>>>>> 7d0187b7363f68f0f1b4325a52fa1602f1d1e6ea
 }
 
 /*Sobre Nosotros*/
@@ -423,7 +395,7 @@ body {
 
 @media (max-width: 768px) {
   /* Reglas CSS para pantallas con un ancho máximo de 768px */
-  body {
+  .body {
     /* Ajusta el tamaño de fuente para dispositivos móviles */
     font-size: 14px;
   }
@@ -575,7 +547,7 @@ body {
 
 @media (max-width: 480px) {
   /* Reglas CSS para pantallas con un ancho máximo de 480px */
-  body {
+  .body {
     /* Ajusta el tamaño de fuente para dispositivos móviles más pequeños */
     font-size: 12px;
   }
@@ -693,5 +665,3 @@ body {
   }
 
 }
-
-  

@@ -272,6 +272,7 @@ const RegistroFormulario = () => {
         <h1 className="title-left"></h1>
       </div>
       <div className="right-side">
+        <h1>Registro</h1>
         <form className="form-input-container" onSubmit={handleSubmit}>
           <div className="form-group">
             {/* <h1 className="registro-h1">Registro</h1> */}

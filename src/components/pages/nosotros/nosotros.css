@@ -54,6 +54,7 @@
   left: 123px;
   top: 73px;
 }
+
 .container-usN {
   display: flex;
   justify-content: center;
@@ -84,6 +85,7 @@
   flex-grow: 1;
   max-width: 600px;
 }
+
 .post-ntsP p {
   font-size: 16px;
   line-height: 1.5;
@@ -105,7 +107,7 @@
 }
 
 
-
+/*Misión*/
 
 .icon-containerA {
   position: relative;
@@ -141,8 +143,6 @@
   font-weight: bold;
   margin-bottom: 10px;
   color: #34cfe7;
-  
-  
 }
 
 .icon-subtextE,
@@ -150,45 +150,48 @@
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
-  
 }
 
 /*tarjetas especialistas*/
-
 .specialist-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 990px;
+  margin-right: 120px;
+  margin-top: -495px;
 }
 
 .specialist-card {
   width: 300px;
   background-color: #D3D3D3;
   border-radius: 8px;
-  padding: 20px;
+  padding: 25px;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.specialist-card:nth-child(odd) {
-  margin-right: 20px;
-}
 
 .specialist-image {
-  width: 90px;
+  width: 70px;
   height: 70px;
   margin-bottom: 10px;
   border-radius: 50%;
+  margin-left: 104px;
 }
 
 .specialist-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-left: 84px;
 }
 
 .specialist-description {
   font-size: 14px;
   line-height: 1.5;
+  
 }
 
 
@@ -209,66 +212,77 @@
   }
   
   .specialist-container {
-    justify-content: center; /* Centrar los elementos */
-    flex-direction: column; /* Cambiar a una dirección de columna */
-    align-items: center; /* Centrar verticalmente los elementos */
-  }
-  
-  
-  .specialist-card {
-    margin-left: auto; /* Reiniciar la propiedad 'left' */
-    margin-right: auto; /* Reiniciar la propiedad 'left' */
-    left: auto; /* Reiniciar la propiedad 'left' */
-    bottom: auto; /* Reiniciar la propiedad 'bottom' */
+    margin-left: 80px;
+    /* margin-right: 20px; */
     margin-top: 250px;
+    width: 315px;
   }
- 
 
-  .specialist-card2 {
-    margin-left: auto; /* Reiniciar la propiedad 'left' */
-    margin-right: auto; /* Reiniciar la propiedad 'left' */
-    left: auto; /* Reiniciar la propiedad 'left' */
-    bottom: auto; /* Reiniciar la propiedad 'bottom' */
+  .specialist-card {
+    width: 850px ; /* Las tarjetas ocuparán el 50% del ancho disponible con un margen de 20px */
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .specialist-image {
+    margin-left: 90px;
+  }
+
+  .specialist-name {
+    margin-left: 60px;
+  }
+  
+  /*responsive Misión*/
+  
+  .container-usN {
+    flex-direction: column; /* Cambiar la dirección de flexión a columnas */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    margin: 0 20px;
+    margin-top: -45px;
+    margin-left: 85px;
     
+     /* Agregar margen izquierdo y derecho para separar los elementos del borde de la pantalla */
   }
-  
-  .specialist-card3 {
-    margin-left: auto; /* Reiniciar la propiedad 'left' */
-    margin-right: auto; /* Reiniciar la propiedad 'left' */
-    left: auto; /* Reiniciar la propiedad 'left' */
-    bottom: auto; /* Reiniciar la propiedad 'bottom' */
-  }
-
-  
-  .specialist-card4 {
-    margin-left: auto; /* Reiniciar la propiedad 'left' */
-    margin-right: auto; /* Reiniciar la propiedad 'left' */
-    left: auto; /* Reiniciar la propiedad 'left' */
-    bottom: auto; /* Reiniciar la propiedad 'bottom' */
-}
-
-  .container_nosotr h1 {
-  font-size: 36px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
-  margin-left: 0; 
-  padding: 45px;
-  margin-top: 50px;
-  margin-right: 14px;/* Ajustar el margen izquierdo para pantallas más pequeñas */
-  
-}
-
-.container_pronotr {
-  height: 220px; /* Altura automática según el contenido */
-  min-height: 50; /* Reiniciar la altura mínima */
  
-}
+  .post-nosotrosN {
+    flex-direction: column; /* Cambiar la dirección de flexión a columnas */
+    align-items: flex-start; /* Alinear los elementos a la izquierda */
+    margin-top: 0; 
+    margin-right: 45px;/* Eliminar el margen superior negativo */
+  }
+  
+  .post-nosotrosN img {
+    max-width: 500px;
+    border-radius: 5px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    right: 50px;
+    /* top: 124px; */
+    margin-right: 545px;
+   
+  }
+  
 
-.icon-textD,
-.icon-textDM {
-  font-size: 18px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
-  margin-bottom: 5px; /* Ajustar el margen inferior para pantallas más pequeñas */
-}
-
-
+  .post-ntsP {
+    max-width: 100%;
+    padding-top: 145px; /* Establecer el ancho máximo al 100% para adaptarse al contenedor */
+  }
+  
+  /* @media screen and (max-width: 768px){
+    .post-nosotrosN img {
+      max-width: 500px;
+      border-radius: 5px;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      right: 50px;
+      
+      margin-right: 545px;
+     
+    }
+  }  */
 @media screen and (max-width: 480px) {
   .icon-rowB {
     flex-wrap: wrap;
@@ -281,12 +295,11 @@
     margin-bottom: 20px;
     margin-right: 0;
     width: 85%;
-    margin-left: 20px;
+    margin-left: 50px;
+    
     
   }
 }
-
-  
     .container_home1A h1 {
       font-size: 1.5em;
     }
@@ -296,7 +309,8 @@
     flex-direction: column;
     width: 100%;
     padding: 45px;
-    justify-content: flex-end; /* Ajusta el contenido hacia la parte inferior */
+    justify-content: flex-end;
+    margin-top: -85px; /* Ajusta el contenido hacia la parte inferior */
   }
   
   
@@ -319,7 +333,7 @@
     text-align: left;
     width: 100%;
     font-size: 18px;
-    margin-top: 110px; /* Ajusta la cantidad de espacio que deseas agregar debajo del texto */
+    margin-top: -10px; /* Ajusta la cantidad de espacio que deseas agregar debajo del texto */
     overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
   }
   

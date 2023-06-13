@@ -1,5 +1,5 @@
 .Registro {
-	padding-top: 100px;
+	padding-top: 10%;
 	display: flex;
 	background-color: rgb(255, 255, 255);
 }
@@ -78,12 +78,17 @@
 .right-side {
 	flex: 1;
 	padding: 10px;
-	background-color: #34cfe7;
+	margin-right: 10%;
+	/* background-color: #34cfe7; */
 	width: 15px;
 	margin-top: -10px;
-	
 }
 
+.right-side h1{
+	text-align: center;
+	margin: 0;
+	color: #7DC3E8;
+}
 .img-left-side {
 	/* width: 30%;
 	align-items: center;
@@ -166,7 +171,10 @@
 	background-color: #249bad;
 	color: #fff;
 	font-size: 16px;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
+	margin-left: 51%;
 }
 
 .BotonRegistro:hover,
@@ -176,6 +184,8 @@
 
 .login-link {
 	margin-top: 20px;
+	margin-left: 51%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -280,5 +290,3 @@
 .custom-modal button:hover {
   opacity: 0.8;
 }
-
-

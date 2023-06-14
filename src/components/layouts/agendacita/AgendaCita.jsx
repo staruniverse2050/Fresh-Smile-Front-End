@@ -16,8 +16,6 @@ const AgendaCita = () => {
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [numeroDocumento, setNumeroDocumento] = useState("");
   const [nombre, setNombre] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const [email, setEmail] = useState("");
   const [tipoCita, setTipoCita] = useState("");
   const [selectedHour, setSelectedHour] = useState(null);
   const [calendarOpen, setCalendarOpen] = useState(false);
@@ -28,6 +26,31 @@ const AgendaCita = () => {
 
   useEffect(() => {
     setShowModal(true); // Abrir la ventana modal al cargar el componente
+  }, []);
+
+  useEffect(() => {
+    // Obtener el userId del localStorage
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      console.error("No se encontró el userId en el localStorage");
+      return;
+    }
+
+    // Realizar la solicitud HTTP para obtener los datos de la persona
+    axios
+      .get(`https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${userId}`)
+      .then((response) => {
+        const data = response.data;
+
+        // Establecer los valores en los campos del formulario
+        setTipoDocumento(data.tipo_documento);
+        setNumeroDocumento(data.identificacion_paciente);
+        setNombre(data.nombre_completo);
+        setTelefono(data.telefono);
+      })
+      .catch((error) => {
+        console.error("Error al obtener los datos de la persona:", error);
+      });
   }, []);
 
   useEffect(() => {
@@ -58,37 +81,33 @@ const AgendaCita = () => {
       estado_cita: "Confirmada",
     };
 
-    // Verificar si la opción seleccionada es "BotonParaOtraPersona"
-    if (!fieldsDisabled) {
-      // Realizar la solicitud POST al backend
-      axios
-        .post("https://freshsmile.azurewebsites.net/FreshSmile/CrearCita", data)
-        .then((response) => {
-          // Manejar la respuesta del backend si es necesario
-          console.log(response.data);
-          // Restablecer los campos del formulario después de enviar los datos
-          setTipoDocumento("");
-          setNumeroDocumento("");
-          setNombre("");
-          setTelefono("");
-          setEmail("");
-          setTipoCita("");
-          setSelectedHour(null);
-          setSelectedDate(null);
-          // Mostrar una alerta de cita creada con éxito
-          alert("Cita creada con éxito");
-        })
-        .catch((error) => {
-          // Manejar el error si la solicitud no se completa correctamente
-          console.error(error);
-        });
-    }
+    // Realizar la solicitud POST al backend
+    axios
+      .post("https://freshsmile.azurewebsites.net/FreshSmile/CrearCita", data)
+      .then((response) => {
+        // Manejar la respuesta del backend si es necesario
+        console.log(response.data);
+        // Restablecer los campos del formulario después de enviar los datos
+        setTipoDocumento("");
+        setNumeroDocumento("");
+        setNombre("");
+        setTelefono("");
+        setEmail("");
+        setTipoCita("");
+        setSelectedHour(null);
+        setSelectedDate(null);
+        // Mostrar una alerta de cita creada con éxito
+        alert("Cita creada con éxito");
+      })
+      .catch((error) => {
+        // Manejar el error si la solicitud no se completa correctamente
+        console.error(error);
+      });
   };
-
+  
   const handleHourSelect = (hour) => {
     setSelectedHour(hour);
   };
-
   const isSameDay = (date1, date2) => {
     return (
       date1.getFullYear() === date2.getFullYear() &&
@@ -110,158 +129,146 @@ const AgendaCita = () => {
     setShowModal(false); // Cerrar la ventana modal al hacer clic en un botón
     // Realizar acciones según el botón seleccionado (para mí o para otra persona)
     if (forMe) {
-      // Aquí puedes establecer los valores predeterminados para tu propia cita
+
+      setFieldsDisabled(true); // Bloquear los campos
+    } else {
+            // Aquí puedes establecer los valores predeterminados para tu propia cita
       // utilizando los datos del usuario actual o algún valor por defecto
       setTipoDocumento(""); // Limpiar los campos para evitar valores incorrectos
       setNumeroDocumento("");
       setNombre("");
-      setFieldsDisabled(true); // Bloquear los campos
-    } else {
       // Realizar acciones para permitir al usuario ingresar los datos de otra persona
       setFieldsDisabled(false); // Desbloquear los campos
     }
   };
 
+  const availableHours = ["8:00 AM","8:30 AM","9:00 AM","9:30 AM", "10:00 AM","10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM","12:30 PM", "1:00 PM","1:30 PM", "2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM"];
+
+
   return (
-    <div className="container">
-      <h1>Agenda tu cita</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="tipoDocumento">Tipo de documento</label>
-          <select
-            id="tipoDocumento"
-            className="form-control"
-            value={tipoDocumento}
-            onChange={(e) => setTipoDocumento(e.target.value)}
-            disabled={fieldsDisabled}
-            required
-          >
-            <option value="">Selecciona un tipo de documento</option>
-            {tiposDocumento.map((tipo) => (
-              <option key={tipo} value={tipo}>
-                {tipo}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="numeroDocumento">Número de documento</label>
-          <input
-            type="text"
-            id="numeroDocumento"
-            className="form-control"
-            value={numeroDocumento}
-            onChange={(e) => setNumeroDocumento(e.target.value)}
-            disabled={fieldsDisabled}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="nombre">Nombre completo</label>
-          <input
-            type="text"
-            id="nombre"
-            className="form-control"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
-            disabled={fieldsDisabled}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="telefono">Teléfono</label>
-          <input
-            type="text"
-            id="telefono"
-            className="form-control"
-            value={telefono}
-            onChange={(e) => setTelefono(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="tipoCita">Tipo de cita</label>
-          <select
-            id="tipoCita"
-            className="form-control"
-            value={tipoCita}
-            onChange={(e) => setTipoCita(e.target.value)}
-            required
-          >
-            <option value="">Selecciona un tipo de cita</option>
-            {procedimientos.map((procedimiento) => (
-              <option key={procedimiento.Id} value={procedimiento.Id}>
-                {procedimiento.Nombre}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="fecha">Fecha</label>
-          <br />
-          <DatePicker
-            id="fecha"
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            dateFormat="dd/MM/yyyy"
-            locale={es}
-            required
-            disabled={fieldsDisabled}
-            customInput={
-              <input
-                type="text"
-                className="form-control"
-                readOnly={true}
-                style={{ background: "white" }}
-              />
-            }
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="hora">Hora</label>
-          <br />
-          <input
-            type="time"
-            id="hora"
-            className="form-control"
-            value={selectedHour}
-            onChange={(e) => setSelectedHour(e.target.value)}
-            required
-            disabled={fieldsDisabled}
-          />
-        </div>
-        <div className="form-group">
-          <button type="submit" className="btn btn-primary">
-            Agendar cita
-          </button>
-        </div>
-      </form>
+    <div className="man-container">
+      <img
+        src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686448002/agendarcita_obeh4x.jpg"
+        alt="Hombre"
+        className="man-image"
+      />
+      <div className="agenda-form-container">
+        <h2>Agenda tu cita</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="tipoDocumento">Tipo de documento:</label>
+            <select
+              id="tipoDocumento"
+              className="select"
+              value={tipoDocumento}
+              onChange={(e) => setTipoDocumento(e.target.value)}
+              required
+              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
+            >
+              <option value="">Seleccione un tipo de documento</option>
+              {tiposDocumento.map((tipo) => (
+                <option key={tipo} value={tipo}>
+                  {tipo}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="numeroDocumento">Número de documento:</label>
+            <input
+              type="text"
+              id="numeroDocumento"
+              className="form-input"
+              value={numeroDocumento}
+              onChange={(e) => setNumeroDocumento(e.target.value)}
+              required
+              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="nombre">Nombre completo:</label>
+            <input
+              type="text"
+              id="nombre"
+              className="form-input"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              required
+              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="tipoCita">Tipo de cita:</label>
+            <select
+              id="tipoCita"
+              value={tipoCita}
+              className="select"
+              required
+              onChange={(e) => setTipoCita(e.target.value)}
+            >
+              <option value="">Seleccione un tipo de cita</option>
+              {procedimientos.map((procedimiento) => (
+                <option key={procedimiento.id} value={procedimiento.nombre}>
+                  {procedimiento.nombre}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <label>Fecha disponible:</label>
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              dateFormat="dd/MM/yyyy"
+              className="datepicker"
+              required
+              excludeDates={filterDates()}
+              locale={es}
+              open={calendarOpen} // Estado para controlar si el calendario está abierto o cerrado
+              onClickOutside={() => setCalendarOpen(false)} // Cierra el calendario al hacer clic fuera de él
+              onFocus={() => setCalendarOpen(true)} // Abre el calendario al hacer foco en él
+            />
+          </div>
+          <div className="form-group">
+            <label>Horas disponibles:</label>
+            <div className="hour-grid">
+              {availableHours.map((hour) => (
+                <button
+                  key={hour}
+                  className={`hour-button ${
+                    selectedHour === hour ? "selected" : ""
+                  }`}
+                  onClick={() => handleHourSelect(hour)}
+                >
+                  {hour}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="form-group">
+            <button type="submit" className="Agendar">
+              Agendar cita
+            </button>
+          </div>
+        </form>
+      </div>
       {showModal && (
         <div className="modal">
           <div className="modal-content">
-            <h2>¿Deseas agendar la cita para ti?</h2>
+            <h3>¿Para quién es la cita?</h3>
             <button
-              className="btn btn-primary"
+              className="BotonParaMi"
+              type="button"
               onClick={() => handleModalButtonClick(true)}
             >
-              Sí, para mí
+              Para mí
             </button>
             <button
-              className="btn btn-primary"
+              className="BotonParaOtraPersona"
+              type="button"
               onClick={() => handleModalButtonClick(false)}
             >
-              No, para otra persona
+              Alguien más
             </button>
           </div>
         </div>

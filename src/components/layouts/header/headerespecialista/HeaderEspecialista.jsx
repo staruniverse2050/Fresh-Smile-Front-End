@@ -240,17 +240,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Nosotros
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  className={`links ${
-                    isActiveRoute("/Agendar") ? "active" : ""
-                  }`}
-                  to="/Agendar"
-                  activeClassName="active"
-                >
-                  Agenda
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink
                   className="links"
@@ -268,7 +258,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                       to="/Tuscitasespecialista"
                       activeClassName="active"
                     >
-                      Citas
+                      Agenda
                     </NavLink>
                   </li>
                 </>

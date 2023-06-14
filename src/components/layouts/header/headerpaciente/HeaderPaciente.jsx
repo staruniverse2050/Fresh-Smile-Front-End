@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-import "../headerpaciente/HeaderPaciente.css";
+import "./HeaderPaciente.css";
 
 export const HeaderPaciente = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);

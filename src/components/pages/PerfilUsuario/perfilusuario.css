@@ -22,7 +22,7 @@
   }
   
   .tarjeta-perfilU {
-    width: 850px;
+    width: 870px;
     height: 799px;
     background-color:#e1dddd;
     padding: 20px;
@@ -31,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -40px;
+    margin-top: -16px;
     
   }
   
@@ -73,7 +73,7 @@
     border-collapse: collapse;
     width: 50%;
     margin-left: 650px;
-    margin-top: -570px;
+    margin-top: -640px;
     margin-right: 845px;
   }
   
@@ -82,7 +82,13 @@
     border-bottom: 1px solid #ddd;
     width: 50%;
   }
-  
+  .perfil-valor .password-input-container input {
+    width: 74%;
+    margin-right: 2em;
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+  }
   .perfil-descripcion {
     font-weight: bold;
   }
@@ -90,7 +96,7 @@
   .perfil-valor::before {
     content: "";
     display: inline-block;
-    width: 10%;
+    width: -0%;
   }
   
   .perfil-valor input {

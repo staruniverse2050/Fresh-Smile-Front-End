@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './tables.css';
 import swal from 'sweetalert';
+import 'sweetalert2/src/sweetalert2.scss';
 
 const TableUsuario = () => {
   const [data, setData] = useState([]);
@@ -9,8 +10,6 @@ const TableUsuario = () => {
   const userId = localStorage.getItem('userId');
 
   useEffect(() => {
-    swal('Hola', '¡Aqui puede ver tus citas!', 'success'); // Mostrar la alerta de bienvenida
-
     fetch('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas')
       .then(response => response.json())
       .then(data => {
@@ -60,12 +59,42 @@ const TableUsuario = () => {
           .catch(error => console.error(error));
       })
       .catch(error => console.error(error));
-  }, []); // Arreglo de dependencias vacío para que se ejecute solo una vez
+  }, [userId]);
 
   const formatFechaCreacion = (fecha) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(fecha).toLocaleDateString(undefined, options);
   };
+
+  const cancelarCita = (idCita) => {
+    const accessToken = localStorage.getItem('accessToken');
+  
+    fetch(`https://freshsmile.azurewebsites.net/FreshSmile/CancelarCita/${idCita}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Verificar si la cancelación fue exitosa y mostrar una alerta correspondiente
+        if (data.success) {
+          swal('Cita cancelada', 'La cita ha sido cancelada exitosamente', 'success');
+  
+          // Actualizar los datos en la tabla después de la cancelación de la cita
+          fetchData(); // Vuelve a obtener los datos de las citas
+        } else {
+          swal('Error', 'No se pudo cancelar la cita', 'error');
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        swal('Error', 'Ocurrió un error al cancelar la cita', 'error');
+      });
+  };
+  
+  
 
   return (
     <div className="container">
@@ -83,6 +112,7 @@ const TableUsuario = () => {
             <th>Motivo</th>
             <th>Fecha de Creacion</th>
             <th>Estado</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -99,12 +129,22 @@ const TableUsuario = () => {
               <td>{procedimientos[item.id_procedimiento]}</td>
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
               <td>{item.estado}</td>
+              <td>
+                {item.estado === 'Agendada' && (
+                  <button className="delete-button" onClick={() => cancelarCita(item.identificacion_citas)}>
+                    <i className="fas fa-trash"></i>
+                  </button>
+                )}
+              </td>
+
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
+
 };
 
 export default TableUsuario;
+

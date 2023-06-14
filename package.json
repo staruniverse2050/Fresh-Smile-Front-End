@@ -39,6 +39,7 @@
     "react-router-dom": "^6.12.1",
     "react-spring": "^9.7.1",
     "react-time-picker": "^6.2.0",
+    "sass": "^1.63.4",
     "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.7.12"

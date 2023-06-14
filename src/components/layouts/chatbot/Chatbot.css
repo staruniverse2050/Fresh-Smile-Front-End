@@ -1,4 +1,13 @@
 /* Estilos generales */
+.close-button{
+  background-color: rgb(255, 255, 255);
+  margin-left: 15px;
+  color: #2196f3;
+  margin-right: 15px;
+
+}
+
+
 .chatbot-container {
   position: fixed;
   bottom: 30px;
@@ -6,17 +15,41 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
+  
 }
 
 .chatbot-container .chatbot-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+
+}
+
+.button-chatre{
+   background-color: #2196f3;
+   margin-top: 45px;
+   margin-left: 90px;
 }
 .chatbotpreguntas{
   
   font-size: 15px;
+  
 }
+
+.chatbot-questions{
+  font-size: 44px;
+
+}
+
+.chat-header{
+ font-size:20px;
+}
+
+.chat-body{
+ font-size: 24px;
+}
+
+
 /* Estilos del chat */
 .chat-window {
   position: fixed;
@@ -24,13 +57,14 @@
   right: 30px;
   height: 420px;
   width: 300px;
-  background-color: #f5f5f5;
+  background-color: #fffefe;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   animation: slide-in 0.3s ease-out;
   overflow-y: auto;
-  
+   
 }
+
 .chat-header {
   padding: 10px;
   background-color: #2196f3;
@@ -43,11 +77,13 @@
 
 .chat-body {
   padding: 10px;
+  
 }
 
 .chat-body .chat-form {
   display: flex;
   margin-bottom: 10px;
+  background-color: #2196f3;
 }
 
 .chat-body .chat-input {
@@ -55,9 +91,12 @@
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 45px;
+  
 }
 ul{
   list-style: none;
+  
 }
 .chat-body .chat-submit {
   padding: 5px 10px;
@@ -81,6 +120,8 @@ ul{
 .chatbot-questions {
   font-size: 13px;
   /* margin-left: 25px; */
+  
+  
 }
 .chatbot-questions li {
   font-size: 15px;
@@ -94,8 +135,26 @@ ul{
   padding: 10px;
   border-radius: 15px;
   border: 1px solid #ccc;
+  height: 245px;
   margin-bottom: 10px;
+  margin-top: 45px;
+  
 }
+
+.input-ards{
+  margin-left: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+}
+
+.h1-chatsbnfd {
+  color: #2196f3;
+  margin-top: 45px;
+  font-size: 14px;
+  margin-left: 30px; /* Ajusta el tamaño de la letra según tus necesidades */
+}
+
 
 @keyframes slide-in {
   0% {

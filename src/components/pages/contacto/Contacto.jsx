@@ -180,7 +180,7 @@ emailjs
 
   return (
     <section className="contact">
-      <div className="container">
+      <div className="container-contacto">
         <div className="contactInfo">
           <div className="content">
             <h2>Contáctanos</h2>

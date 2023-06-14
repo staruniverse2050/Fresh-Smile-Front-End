@@ -313,7 +313,7 @@ body {
   top: 23px;
   left:10px;
 }
-/*Especialistas*/
+
 .nombreespecialista{
   position: relative;
   top: 15px;
@@ -360,7 +360,7 @@ body {
   align-items: center;
 }
 
-/*Sobre Nosotros*/
+
 .container-nosotros-home2 {
   display: flex;
   align-items: center;
@@ -472,12 +472,13 @@ body {
 
   .container-wrapper-Home {
     justify-content: flex-start;
+    
   }
 
   .card-procedimientos-home {
-    width: 840px;
+    width: 340px;
     margin: 10px;
-    margin-right: 850px;
+    margin-left: 145px;
   }
 
   .card-procedimientos-home:hover {
@@ -553,7 +554,9 @@ body {
 
   .btn-nosotros-home {
     font-size: 14px;
-    margin-left: 115px;
+    margin-left: 285px;
+   
+    
     
   }
 

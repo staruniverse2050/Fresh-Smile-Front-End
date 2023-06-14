@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './tables.css';
 import swal from 'sweetalert';
 import 'sweetalert2/src/sweetalert2.scss';
+import { useNavigate } from 'react-router-dom';
 
 const TableAdmin = () => {
   const [data, setData] = useState([]);

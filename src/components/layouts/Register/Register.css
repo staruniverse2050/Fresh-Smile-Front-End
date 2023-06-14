@@ -75,7 +75,7 @@
 .right-side {
 	flex: 1;
 	padding: 10px;
-	margin-right: 10%;
+	margin-right: 150px;
 	/* background-color: #34cfe7; */
 	width: 15px;
 	margin-top: -10px;
@@ -88,6 +88,7 @@
 	left: 110px;
 	font-size: 30px;
 	position: relative;
+	margin-right: 45px;
 }
 .img-left-side {
 	width: 50%;
@@ -98,7 +99,7 @@
 	flex: 1;
 	padding: 20px;
 	width: 60%;
-	height: 870px;
+	height: 50px;
 	
 }
 
@@ -109,7 +110,7 @@
 	margin: 0;
 	padding: 10px;
 	text-align: center;
-	color: #6d7c81;
+	color: #35b1db;
 	width: 845px;
 }
 
@@ -123,7 +124,7 @@ text-align: center;
 
 .Registro label {
 	margin-bottom: 5px;
-	margin-left: 248px;
+	margin-left: 148px;
 }
 
 .Registro input[type="text"],
@@ -135,7 +136,7 @@ text-align: center;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-sizing: border-box;
-	margin-left: 248px;
+	margin-left: 148px;
 }
 
 .Registro select {
@@ -154,17 +155,19 @@ text-align: center;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	margin-left: 51%;
+	margin-left: 150px;
 }
 
 .BotonRegistro:hover,
 .BotonRegistro:focus {
 	background-color: #249bad;
+	
 }
 
 .login-link {
 	margin-top: 20px;
-	margin-left: 51%;
+	/* margin-left: 51%; */
+	margin-left: 140px;
 	width: 100%;
 	text-align: center;
 }
@@ -185,16 +188,19 @@ text-align: center;
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
+	margin-left: 15px;
 }
 
 .custom-swal-button {
 	background-color: #249bad;
 	color: white;
 	border: none;
+
 }
 
 .custom-swal-button:hover {
 	background-color: #1e6d79;
+	margin-left: 150px;
 }
 
 .custom-modal {
@@ -249,7 +255,7 @@ text-align: center;
 .custom-modal .BotonModalGuardar {
   padding: 10px 20px;
 	margin-top: 1em;
-	margin-left: 50px;
+	margin-left: 524px;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
@@ -257,14 +263,18 @@ text-align: center;
   border: none;
   color: #fff;
   cursor: pointer;
+  
 }
 
 .custom-modal .BotonModalCancelar {
   background-color:#ccc;
+  
 }
 
 .custom-modal .BotonModalGuardar {
   background-color:#249bad;
+  
+  
 }
 .custom-modal button:hover {
   opacity: 0.8;
@@ -493,4 +503,3 @@ text-align: center;
 		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 }
-

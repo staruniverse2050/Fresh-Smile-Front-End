@@ -126,15 +126,22 @@ const Chatbot = () => {
                 </li>
               </ul>
             </div>
+            
             <form onSubmit={handleFormSubmit}>
-              <input
+            <h1 className="h1-chatsbnfd">ingresar numero</h1>
+              <input className="input-ards"
+              
                 type="text"
                 value={question}
                 onChange={handleInputChange}
               />
-              <button type="submit">Enviar</button>
+             
+
+              <div className="chatbot-response">{answer}</div>
+            <button  className="button-chatre" type="submit">Enviar</button>
+
             </form>
-            <div className="chatbot-response">{answer}</div>
+           
           </div>
         </div>
       )}

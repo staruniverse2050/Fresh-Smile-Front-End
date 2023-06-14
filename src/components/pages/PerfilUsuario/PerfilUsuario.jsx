@@ -1,198 +1,313 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import moment from "moment";
+import Swal from "sweetalert2";
 import "./perfilusuario.css";
 
 export const PerfilUsuario = () => {
-
-  const [Identificación, setIdentificación] = useState("");
-  const [TipoDocumento, setTipoDocumento] = useState("");
-  const [Nombre, setNombre] = useState("");
+  const [Documento, setTipoDocumento] = useState("");
+  const [nombre, setNombre] = useState("");
   const [Telefono, setTelefono] = useState("");
-  const [Dirección, setdirección] = useState("");
+  const [Direccion, setDireccion] = useState("");
+  const [estado, setEstado] = useState("");
   const [Correo, setCorreo] = useState("");
-  const [Contraseña, setdContraseña] = useState("");
-  const [Estado, setEstado] = useState("");
-  const [FechaRegistro, setFechaRegistro] = useState("");
+  const [Contraseña, setContraseña] = useState("");
+  const [fechaRegistro, setFechaRegistro] = useState("");
+  const [paciente, setPaciente] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [name, setName] = useState("");
+  const [avatarUrl, setAvatarUrl] = useState("");
+  const [identificacionPaciente, setIdentificacionPaciente] = useState('');
+
+  useEffect(() => {
+    Swal.fire({
+      title: 'Bienvenido a tu perfil',
+      icon: 'success',
+      timer: 2000,
+      showConfirmButton: false
+    });
+  }, []);
+
+  useEffect(() => {
+    generateAvatar();
+  }, []);
+
+  const generateAvatar = () => {
+    const userId = localStorage.getItem("userId");
+    if (!userId) {
+      console.error("No se encontró el userId en el localStorage");
+      return;
+    }
+
+    fetch(
+      `https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${userId}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const fullName = data.nombre_completo;
+        const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
+        const firstName = names[0]; // Obtener el primer nombre
+        const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
+
+        setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
+
+        const avatarStyle = "set4";
+        const size = 600;
+        const apiUrl = `https://robohash.org/${encodeURIComponent(
+          firstName
+        )}?set=${avatarStyle}&size=${size}x${size}`;
+
+        fetch(apiUrl)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Error al obtener el avatar");
+            }
+            return response.blob();
+          })
+          .then((blob) => {
+            const avatarUrl = URL.createObjectURL(blob);
+            setAvatarUrl(avatarUrl);
+          })
+          .catch((error) => {
+            console.error("Error al obtener el avatar:", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Error al obtener los datos del paciente:", error);
+        // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
+      });
+  };
+
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://freshsmile.azurewebsites.net/FreshSmile/BuscarPacientes/${userId}`
+        );
+        setPaciente(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (!loading) {
+      setTipoDocumento(paciente.tipo_documento);
+      setNombre(paciente.nombre_completo);
+      setTelefono(paciente.telefono);
+      setDireccion(paciente.direccion);
+      setCorreo(paciente.correo);
+      setContraseña(paciente.contraseña);
+      setFechaRegistro(paciente.fecha_registro);
+      setEstado(paciente.estado);
+      setIdentificacionPaciente(paciente.identificacion_paciente);
+    }
+  }, [loading, paciente]);
   
 
-  const handleIdentificaciónChange = (event) => {
-    setIdentificación(event.target.value);
+  const formattedFechaRegistro = moment(fechaRegistro).format(
+    "DD/MM/YYYY HH:mm:ss"
+  );
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
-  const handleNombreChange = (event) => {
-    setNombre(event.target.value);
+  const handleSaveButtonClick = async () => {
+    try {
+      const datosPaciente = {
+        tipo_documento: Documento,
+        identificacion_paciente:identificacionPaciente,
+        nombre_completo: nombre,
+        telefono: Telefono,
+        direccion: Direccion,
+        correo: Correo,
+        contraseña: Contraseña,
+      };
+
+      const accessToken = localStorage.getItem("accessToken"); // Obtén el token de acceso almacenado en el localStorage
+
+      const config = {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      };
+
+      await axios.put(
+        "https://freshsmile.azurewebsites.net/FreshSmile/ModificarPacientes",
+        datosPaciente,
+        config
+      );
+
+      setEditMode(false);
+      setLoading(true);
+      swal("¡Éxito!", "Datos modificados con éxito", "success");
+    } catch (error) {
+      console.error(error.response);
+      swal("¡Error!", "Ocurrió un error al modificar los datos", "error");
+    }
   };
-
-  const handleTipoDocumentoChange = (event) => {
-    setTipoDocumento(event.target.value);
-  };
- 
-  const handleTelefonoChange = (event) => {
-    setTelefono(event.target.value);
-  };
-
-  const handleDirecciónChange = (event) => {
-    setdirección(event.target.value);
-  };
-
-  const handleCorreoChange = (event) => {
-    setCorreo(event.target.value);
-  };
-
-  const handleContraseñaChange = (event) => {
-    setdContraseña(event.target.value);
-  };
-
-  const handleFechaRegistroChange = (event) => {
-    setFechaRegistro(event.target.value);
-  };
-
-  const handleEstadoChange = (event) => {
-    setEstado(event.target.value);
-  };
-
-  
-
-
-
 
   return (
     <>
       <div className="container-usuario">
-  <div className="tarjeta-perfilU">
-    <img
-      className="image-perfilUsuario"
-      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
-      alt="Inicio"
-    />
-    <h2 className="perfil-titulo">Mi Perfil</h2>
-    <p className="perfil-info">freshSmileCmills</p>
-    <p className="perfil-info">Revisa tu perfil</p>
-    {/* <p className="perfil-info">Fecha de registro: 01/01/2023</p> */}
-    <button className="editarU-boton">Editar</button>
-  </div>
-  <div className="banner-principalAd">
-    <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1>
-  </div>
-</div>
+        <div className="tarjeta-perfilU">
+           {avatarUrl ? (
+             <img
+             className="imagenperfil"
+             src={avatarUrl}
+             alt="Avatar"
+           />
+         ) : (
+          <img
+            className="image-perfilUsuario"
+            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
+            alt="Inicio"
+          />
+         )}
+          <h2 className="perfil-titulo">Mi Perfil</h2>
+          <p className="perfil-info">Revisa tu perfil</p>
+          {editMode ? (
+            <button className="guardar-boton" onClick={handleSaveButtonClick}>
+              Guardar
+            </button>
+          ) : (
+            <button className="editar-boton" onClick={() => setEditMode(true)}>
+              Editar
+            </button>
+          )}
+        </div>
+        <div className="banner-principalAd">
+          {/* <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1> */}
+        </div>
+      </div>
 
-      <table className="perfil-table">
+      <table className="perfil-tabla">
         <tbody>
-
           <tr>
-            <td>Identificación:</td>
-            <td>
+            <td className="perfil-descripcion">Tipo de documento:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
-                value={Identificación}
-                onChange={handleIdentificaciónChange}
-                className="input-field"
+                value={Documento}
+                onChange={(e) => setTipoDocumento(e.target.value)}
+                disabled
+              />
+            </td>
+          </tr>
+          <tr>
+            <td className="perfil-descripcion">
+              Identificación:
+            </td>
+            <td className="perfil-valor">
+              <input
+                type="text"
+                value={identificacionPaciente}
+                onChange={(e) => setIdentificacionPaciente(e.target.value)}
+                disabled={!editMode}
               />
             </td>
           </tr>
 
-          
           <tr>
-            <td>Tipo de documento:</td>
-            <td>
+            <td className="perfil-descripcion">Nombre:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
-                value={TipoDocumento}
-                onChange={handleTipoDocumentoChange}
-                className="input-field"
+                value={nombre}
+                onChange={(e) => setNombre(e.target.value)}
+                disabled={!editMode}
               />
             </td>
           </tr>
 
           <tr>
-            <td>Nombre:</td>
-            <td>
-              <input
-                type="text"
-                value={Nombre}
-                onChange={handleNombreChange}
-                className="input-field"
-              />
-            </td>
-          </tr>
-        
-          <tr>
-            <td>Telefono:</td>
-            <td>
+            <td className="perfil-descripcion">Teléfono:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
                 value={Telefono}
-                onChange={handleTelefonoChange}
-                className="input-field"
+                onChange={(e) => setTelefono(e.target.value)}
+                disabled={!editMode}
               />
             </td>
           </tr>
 
           <tr>
-            <td>Dirección:</td>
-            <td>
+            <td className="perfil-descripcion">Dirección:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
-                value={Dirección}
-                onChange={handleDirecciónChange}
-                className="input-field"
+                value={Direccion}
+                onChange={(e) => setDireccion(e.target.value)}
+                disabled={!editMode}
               />
             </td>
           </tr>
 
-
           <tr>
-            <td>Correo:</td>
-            <td>
+            <td className="perfil-descripcion">Correo:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
                 value={Correo}
-                onChange={handleCorreoChange}
-                className="input-field"
-              />
-            </td>
-          </tr>
-
-        <tr>
-            <td>Contraseña:</td>
-            <td>
-              <input
-                type="text"
-                value={Contraseña}
-                onChange={handleContraseñaChange}
-                className="input-field"
+                onChange={(e) => setCorreo(e.target.value)}
+                disabled={!editMode}
               />
             </td>
           </tr>
 
           <tr>
-            <td>Estado:</td>
-            <td>
-              <input
-                type="text"
-                value={Estado}
-                onChange={handleEstadoChange}
-                className="input-field"
-              />
+            <td className="perfil-descripcion">Contraseña:</td>
+            <td className="perfil-valor">
+              <div className="password-input-container">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  value={Contraseña}
+                  onChange={(e) => setContraseña(e.target.value)}
+                  disabled={!editMode}
+                />
+                <i
+                  className={`password-toggle-icon ${
+                    showPassword ? "fa fa-eye-slash" : "fa fa-eye"
+                  }`}
+                  onClick={togglePasswordVisibility}
+                ></i>
+              </div>
             </td>
           </tr>
-
           <tr>
-            <td>Fecha Registro:</td>
-            <td>
+            <td className="perfil-descripcion">Fecha de registro:</td>
+            <td className="perfil-valor">
               <input
                 type="text"
-                value={FechaRegistro}
-                onChange={handleFechaRegistroChange}
-                className="input-field"
+                value={formattedFechaRegistro}
+                onChange={(e) => setFechaRegistro(e.target.value)}
+                disabled
               />
             </td>
           </tr>
-
-
-
+          <tr>
+            <td className="perfil-descripcion">Estado:</td>
+            <td className="perfil-valor">
+              <input
+                type="text"
+                value={estado}
+                onChange={(e) => setEstado(e.target.value)}
+                disabled
+              />
+            </td>
+          </tr>
         </tbody>
       </table>
-
     </>
   );
 };

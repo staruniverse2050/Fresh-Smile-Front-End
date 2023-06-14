@@ -1,45 +1,43 @@
-.banner-principal {
-  width: 80%;
-  height: 50px;
-  background: #D3D3D3;
+.banner-principalAd {
+  width: 250%; /* Aumentar el ancho al 85% */
+  height: 75px; /* Aumentar la altura a 55px */
   padding: 20px;
   text-align: center;
+  margin-top: -40px; /* Agregamos esta línea */
 }
 
 .titulo-banner {
   color: rgb(16, 15, 15);
   font-size: 28px;
+  padding: 30px;
+  position: relative;
+  left: 93px;
+  
 }
 
 .container-usuario {
-    padding-top: 130px;
     display: flex;
     justify-content: center;
     
   }
   
-  /* .banner {
-    width: 100%;
-    display: flex;
-  } */
-  
-  .tarjeta-perfil {
-    width: 450px;
-    height: 300px;
-    background-color:#3b5e63;
+  .tarjeta-perfilU {
+    width: 870px;
+    height: 799px;
+    background-color:#e1dddd;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -16px;
+    
   }
   
   .banner {
     display: flex;
-    background: #D3D3D3;
+    background-color:#000000;
     width: 100%; /* Ancho del banner-2 */
     padding: 20px;
     border-radius: 8px;
@@ -47,65 +45,92 @@
   }
   
   .perfil-titulo {
-    color: #1c98ab;
-    font-size: 24px;
+    color: #4fbcd0;
+    font-size: 14px;
+    position: relative;
+    bottom: 23px;
     margin-bottom: 10px;
   }
   
   .perfil-info {
     font-size: 16px;
+    position: relative;
+    bottom: 23px;
     margin-bottom: 5px;
     
   }
 
   .image-perfilUsuario {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    border-radius: none;
   }
 
-/*tablas aparte*/
-.perfil-table {
-  width: 50%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  margin-left: 650px;
-  margin-top: -600px;
+  /**/
   
+  .perfil-tabla {
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 650px;
+    margin-top: -640px;
+    margin-right: 845px;
+  }
   
-}
-
-.perfil-table td {
-  padding: 8px;
-  width: 50%;
+  .perfil-descripcion,
+  .perfil-valor {
+    border-bottom: 1px solid #ddd;
+    width: 50%;
+  }
+  .perfil-valor .password-input-container input {
+    width: 74%;
+    margin-right: 2em;
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+  }
+  .perfil-descripcion {
+    font-weight: bold;
+  }
   
-}
-
-
-.perfil-table td:first-child {
-  font-weight: bold;
+  .perfil-valor::before {
+    content: "";
+    display: inline-block;
+    width: -0%;
+  }
   
-}
-
-.input-field {
-  width: 90%;
-  padding: 8px;
-  border: 1px solid #fffdfd;
-}
-
-
-.editarU-boton {
-  background-color: #7DC3E8;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.editarU-boton:hover {
-  background-color: #8fccd6;
-}
+  .perfil-valor input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+  }
+  
+  .perfil-valor input:focus {
+    outline: none;
+    border-color: #4c9aff;
+    box-shadow: 0 0 5px rgba(76, 154, 255, 0.5);
+  }
+  
+ 
+  .editar-boton {
+    background-color: #7DC3E8;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .editar-boton:hover {
+    background-color: #8fccd6;
+  }
+  .imagenperfil{
+    width: 220px;
+    height: 210px;
+    border-radius: 90%;
+    background-color: #7DC3E8;
+    position: relative;
+    bottom: 43px;
+  }

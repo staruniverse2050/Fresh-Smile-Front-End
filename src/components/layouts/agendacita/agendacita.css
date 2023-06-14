@@ -2,9 +2,9 @@
   width: 500px; /* Ancho deseado para el contenedor principal */
   margin: 0 auto;
   position: relative;
-  top: 90px;
+  top: 200px;
   padding: 10px;
-  left:358px;
+  left:400px;
   /* background-color: #ffffff; */
   /* border-radius: 8px; */
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
@@ -19,9 +19,9 @@
 
 .modal .modal-content {
   border-radius: 10px;
-  background-color: #d1d1d1;
-  width: 100%;
-  height: 16em;
+  background-color: #eeeded;
+  width: 74%;
+  height: 17em;
   padding: 15%;
   margin: -1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -36,7 +36,7 @@
 .modal-content .BotonParaOtraPersona {
   padding: 10px 20px;
 	margin-top: 2em;
-	margin-left: 30px;
+	margin-left: 50px;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
@@ -51,7 +51,7 @@
 }
 
 .modal button {
-  margin-right: 10px;
+  margin-right: -28px;
 }
 
 .man-container {
@@ -65,7 +65,7 @@
   height: auto; /* Esto permite mantener la proporción de la imagen */
   position: absolute;
   top: 65%; /* Ajusta el valor según tus necesidades */
-  right: 850px; /* Ajusta el valor según tus necesidades y asegúrate de incluir las unidades (por ejemplo, px para píxeles) */
+  right: 950px; /* Ajusta el valor según tus necesidades y asegúrate de incluir las unidades (por ejemplo, px para píxeles) */
   transform: translate(0, -50%);
 }
 
@@ -149,7 +149,7 @@
   background: #1e6d79;
 }
 
-/*Responsive*/
+/* Responsive */
 
 @media (max-width: 768px) {
   .agenda-form-container {

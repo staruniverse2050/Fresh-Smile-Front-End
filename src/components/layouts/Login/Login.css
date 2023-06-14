@@ -47,7 +47,7 @@
   }
   
   .login-label {
-	color: rgb(49, 45, 45);
+	color: rgb(0, 0, 0);
 	font-weight: bold;
 	margin-bottom: 10px;
 	/* background-color: #52b788; */
@@ -58,7 +58,7 @@
 	margin-bottom: 5px;
 	border-radius: 10px;
 	border: 1px solid #ccc; /* Borde gris transparente */
-	background-color: rgba(191, 207, 210, 0.5);/* Color de fondo gris transparente */
+	background-color: rgb(255, 255, 255);/* Color de fondo gris transparente */
 }
 
   .login-select {
@@ -112,4 +112,4 @@
 	border-radius: 10px;
   
 	/* Añade estilos de sombra */
-  }  
+  }

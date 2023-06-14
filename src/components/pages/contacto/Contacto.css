@@ -11,7 +11,6 @@
 
 .content {
 	padding: 25px 25px 35px 25px;
-	/* Ajusta los valores según tus necesidades */
 }
 
 .content h2 {
@@ -19,7 +18,6 @@
 	font-weight: 100;
 	color: #ffffff;
 	margin-bottom: 10px;
-	/* Ajusta el valor según tus necesidades */
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -35,7 +33,7 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-.container {
+.container-contacto {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -44,19 +42,19 @@
 	border-radius: 30px;
 }
 
-.container .contactInfo {
+.container-contacto .contactInfo {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
 }
 
-.container .contactInfo .box {
+.container-contacto .contactInfo .box {
 	margin-top: 30px;
 	padding: 10px 0;
 	display: flex;
 }
 
-.container .contactInfo .box .icon {
+.container-contacto .contactInfo .box .icon {
 	min-width: 50px;
 	height: 70px;
 	width: 60px;
@@ -67,7 +65,7 @@
 	font-size: 20px;
 }
 
-.container .contactInfo .box .text h3 {
+.container-contacto .contactInfo .box .text h3 {
 	display: flex;
 	margin-left: 20px;
 	font-size: 25px;
@@ -77,7 +75,7 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
-.container .contactInfo .box .text p {
+.container-contacto .contactInfo .box .text p {
 	display: flex;
 	margin-left: 20px;
 	font-size: 25px;
@@ -206,9 +204,7 @@ input[type="text"] {
 	pointer-events: none;
 	transition: 0.5s;
 	color: rgb(21, 20, 20);
-	/*color de la letra*/
 	font-size: 15px;
-	/*tamaño de letra del span*/
 }
 
 
@@ -223,9 +219,6 @@ input[type="text"] {
 }
 
 
-
-
-/*checkbox*/
 .inputBox-post input[type="checkbox"] {
 	transform: scale(1.5);
 	top: 19px;
@@ -267,22 +260,22 @@ input[type="text"] {
 		font-size: 15px;
 	}
 
-	.container .contactInfo .box .text h3 {
+	.container-contacto .contactInfo .box .text h3 {
 		font-size: 20px;
 
 	}
 
-	.container .contactInfo .box .text p {
+	.container-contacto .contactInfo .box .text p {
 		font-size: 15px;
 
 	}
 
-	.container {
+	.container-contacto {
 		flex-direction: column;
 
 	}
 
-	.container .contactInfo {
+	.container-contacto .contactInfo {
 		width: 50%;
 		padding: 5%;
 	}
@@ -377,5 +370,3 @@ input[type="text"] {
 
 
 }
-  
-  

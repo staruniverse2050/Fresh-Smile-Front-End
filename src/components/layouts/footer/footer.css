@@ -140,7 +140,7 @@ h6 {
 }
 
 
-.container i {
+.container-footer i {
   color: #ffffff;
   font-size: 30px;
   margin-top: 8px;
@@ -318,7 +318,7 @@ li {
     margin-left: 15px;
   }
 
-  .container i {
+  .container-footer i {
     font-size: 35px;
     margin-top: 15px;
     display: flex;

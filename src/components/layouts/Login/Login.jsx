@@ -78,7 +78,7 @@ const Login = ({ setRol }) => {
 
     <div className="login-container">
       <div className="left-login">
-        <img src="https://i.pinimg.com/736x/a4/8c/b2/a48cb248e8b5886a8843daf3dbb1fa15.jpg" alt="Imagen de inicio de sesión" className="login-image" />
+        <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686637348/Fresh_Smile_Cmills/img-login_q7bhdc.png" alt="Imagen de inicio de sesión" className="login-image" />
       </div>
       <div className="right-login">
         <h1 className="login-title">Iniciar Sesión</h1>

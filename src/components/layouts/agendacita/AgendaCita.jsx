@@ -25,9 +25,9 @@ const AgendaCita = () => {
   const [showModal, setShowModal] = useState(false);
   const [fieldsDisabled, setFieldsDisabled] = useState(false);
   const [actualCitas, setActualCitas] = useState([]);
-  const [filteredCitas, setFilterCitas] = useState([]);
   const [unavailableDates, setUnavailableDates] = useState([]);
   const [procedimientos, setProcedimientos] = useState([]);
+  const [filteredCitas, setFilteredCitas] = useState([]);
   const [especialistas, setEspecialistas] = useState([]);
   useEffect(() => {
     axios.get('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
@@ -138,29 +138,38 @@ const filterDates = (date) => {
 
 
   const getCitas = () => {
-    axios.get("https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas")
-    .then(res => setActualCitas(res.data.map(cita => { return { 'fecha': cita.fecha, 'hora' : cita.hora }})))
-    .catch(err => console.log(err))
-  }
-
-  useEffect(()=>{
-    console.log(filteredCitas);
-  },[filteredCitas])
-
-  useEffect(()=>{
-    console.log(selectedDate.toISOString().slice(0,10) || "");
-    console.log(actualCitas.filter(cita => cita.fecha === selectedDate.toISOString().slice(0,10)));
-    setFilterCitas(actualCitas.filter(cita => cita.fecha === selectedDate.toISOString().slice(0,10)).map(cita2 => cita2.hora));
-  },[selectedDate])
-
-  useEffect(()=> {
-    console.log(actualCitas);
-  },[actualCitas])
-
+    axios
+      .get("https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas")
+      .then((res) => {
+        const citas = res.data.map((cita) => {
+          return { fecha: cita.fecha, hora: cita.hora };
+        });
+        setActualCitas(citas);
+      })
+      .catch((err) => console.log(err));
+  };
+  
   useEffect(() => {
-    setShowModal(true); // Abrir la ventana modal al cargar el componente
+    console.log(filteredCitas);
+  }, [filteredCitas]);
+  
+  useEffect(() => {
+    console.log(selectedDate.toISOString().slice(0, 10) || "");
+    const selectedDateString = selectedDate.toISOString().slice(0, 10);
+    const filteredData = actualCitas.filter((cita) => cita.fecha === selectedDateString);
+    const uniqueData = Array.from(new Set(filteredData.map((cita) => cita.hora)));
+    setFilteredCitas(uniqueData);
+  }, [selectedDate, actualCitas]);
+  
+  useEffect(() => {
+    console.log(actualCitas);
+  }, [actualCitas]);
+  
+  useEffect(() => {
+    setShowModal(true);
     getCitas();
   }, []);
+  
 
   useEffect(() => {
     // Obtener el userId del localStorage

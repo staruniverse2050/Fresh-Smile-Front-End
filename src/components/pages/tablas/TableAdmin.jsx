@@ -8,14 +8,13 @@ const TableAdmin = () => {
   const [especialistas, setEspecialistas] = useState({});
   const [procedimientos, setProcedimientos] = useState({});
   const userId = localStorage.getItem('userId');
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas')
       .then(response => response.json())
       .then(data => {
         // Filtrar las citas por el id_paciente que coincida con userId
-        const citasUsuario = data.filter(cita => cita.id_paciente === parseInt(userId));
+        const citasUsuario = data.filter(cita => cita.id_especialista === parseInt(userId));
         setData(citasUsuario);
 
         // Obtener una lista de identificaciones de especialistas únicos en las citas

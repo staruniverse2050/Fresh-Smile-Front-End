@@ -71,7 +71,7 @@ export const Header = () => {
                     <Link
                       className={`links2 ${isActiveRoute("/Agendar") ? "active" : ""
                         }`}
-                      to="/Agendar"
+                      to="/Registro"
                       onClick={handleAgendarClick}
                     >
                       Agenda tu cita
@@ -123,7 +123,7 @@ export const Header = () => {
                 <Link
                   className={`links ${isActiveRoute("/Agendar") ? "active" : ""
                     }`}
-                  to="/Agendar"
+                  to="/Registro"
                   onClick={handleAgendarClick}
                 >
                   Agenda cita

@@ -83,8 +83,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Inicio" element={<Home />} />
-        {/* <Route path="/PerfilAdministrador" element={<PerfilAdministrador />} /> */}
-        {/* <Route path="/PerfilUsuario" element={<PerfilUsuario />} /> */}
+        <Route path="/PerfilEspecialista" element={<PerfilAdministrador />} /> 
+        <Route path="/Perfilpaciente" element={<PerfilUsuario />} />
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Agendar" element={<AgendaCita />} />

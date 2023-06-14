@@ -102,7 +102,7 @@ export const Home = () => {
             <img
               src={especialista.foto_perfil}
               alt={`Imagen ${index + 1}`} />          
-              <h3>{especialista.nombre_completo}</h3>
+              <h3 className="nombreespecialista">{especialista.nombre_completo}</h3>
               <p className="Especialidad">Se le conoce por ser el mejor especilista en {especialista.especialidad}</p>
 
           </div>

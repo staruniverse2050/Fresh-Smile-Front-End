@@ -308,8 +308,17 @@ body {
 }
 
 
-
+.Especialidad{
+  position: relative;
+  top: 23px;
+  left:10px;
+}
 /*Especialistas*/
+.nombreespecialista{
+  position: relative;
+  top: 15px;
+  left: 12px;
+}
 
 .container-nosotros-home {
   display: flex;
@@ -326,14 +335,20 @@ body {
   margin: 20px;
   padding: 30px;
 }
+.card-nosotros-home img:hover {
+  transform: scale(1.1);
+  font-family: 'Open Sans', sans-serif;
+}
 
 .card-nosotros-home img {
   width: 110%;
-  height: 70%;
-  border-radius: 10%;
+  height: 75%;
+  border-radius: 2%;
   /* margin: 0 auto; */
 }
-
+.card-nosotros-home:hover {
+  opacity: 1;
+}
 
 .card-title-nosotros{
   color: #000000;
@@ -352,7 +367,6 @@ body {
   justify-content: space-between;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
   background-color: #D3D3D3;
 }
 

@@ -4,6 +4,8 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { es } from "date-fns/locale";
+import Swal from 'sweetalert2';
+
 
 const tiposDocumento = [
   "Cédula de ciudadanía",
@@ -19,13 +21,145 @@ const AgendaCita = () => {
   const [tipoCita, setTipoCita] = useState("");
   const [selectedHour, setSelectedHour] = useState(null);
   const [calendarOpen, setCalendarOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [showModal, setShowModal] = useState(false);
+  const [fieldsDisabled, setFieldsDisabled] = useState(false);
+  const [actualCitas, setActualCitas] = useState([]);
+  const [filteredCitas, setFilterCitas] = useState([]);
+  const [unavailableDates, setUnavailableDates] = useState([]);
   const [procedimientos, setProcedimientos] = useState([]);
-  const [showModal, setShowModal] = useState(false); // Estado para controlar la ventana modal
-  const [fieldsDisabled, setFieldsDisabled] = useState(false); // Estado para controlar si los campos están bloqueados o no
+  const [especialistas, setEspecialistas] = useState([]);
+  useEffect(() => {
+    axios.get('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
+      .then(response => {
+        const procedimientos = response.data;
+  
+        // Guardar los procedimientos en el estado del componente
+        setEspecialistas(procedimientos);
+      })
+      .catch(error => {
+        console.error('Error al obtener los procedimientos:', error);
+      });
+  }, []);
+  
+ 
+ 
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const userId = localStorage.getItem('userId');
+    const accessToken = localStorage.getItem('accessToken');
+  
+    // Obtener el procedimiento seleccionado
+    const selectedProcedimiento = procedimientos.find((procedimiento) => procedimiento.nombre === tipoCita);
+  
+    // Obtener el identificador y el identificacion_especialistas del procedimiento seleccionado
+    const identificacionProcedimiento = selectedProcedimiento ? selectedProcedimiento.identificacion_procedimientos : '';
+    const identificacionEspecialistas = selectedProcedimiento ? selectedProcedimiento.identificacion_especialistas : '';
+  
+    // Obtener los valores del formulario
+    const formData = {
+      numero_documento: numeroDocumento,
+      nombre_completo: nombre,
+      tipo_documento: tipoDocumento,
+      fecha: selectedDate,
+      hora: selectedHour,
+      estado_cita: 'Programada',
+      id_paciente: userId,
+      id_procedimiento: identificacionProcedimiento,
+      id_especialista: identificacionEspecialistas, // Agregar el identificacion_especialistas al objeto formData
+    };
+  
+    // Realizar la solicitud POST a la API
+    axios
+      .post('https://freshsmile.azurewebsites.net/FreshSmile/CrearCita', formData, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      })
+      .then((response) => {
+        // Aquí puedes manejar la respuesta de la API después de crear la cita
+        console.log('Cita creada:', response.data);
+  
+        // Mostrar la alerta de SweetAlert
+        Swal.fire({
+          icon: 'success',
+          title: 'Cita Agendada',
+          text: 'La cita ha sido agendada exitosamente.',
+        });
+      })
+      .catch((error) => {
+        console.error('Error al crear la cita:', error);
+      });
+  };
+
+const isDateAvailable = (date) => {
+  const selectedDateWithoutTime = new Date(date);
+  selectedDateWithoutTime.setHours(0, 0, 0, 0); // Establecer la hora, minutos, segundos y milisegundos a cero
+
+  return !unavailableDates.includes(selectedDateWithoutTime.toISOString().split("T")[0]);
+};
+
+// Genera una lista de fechas no disponibles de manera aleatoria o mediante una llamada al servidor
+useEffect(() => {
+  const generateUnavailableDates = () => {
+    // Replace this code with your logic to generate unavailable dates randomly or fetch them from the server
+    const dates = [
+      "2023-01-01", "2023-01-10", "2023-01-15", "2023-01-20", "2023-01-25",
+      "2023-02-05", "2023-02-12", "2023-02-18", "2023-02-22", "2023-02-28",
+      "2023-03-07", "2023-03-15", "2023-03-22", "2023-03-28", "2023-03-30",
+      "2023-04-05", "2023-04-12", "2023-04-20", "2023-04-25", "2023-04-28",
+      "2023-05-05", "2023-05-10", "2023-05-15", "2023-05-20", "2023-05-25",
+      "2023-06-10", "2023-06-15", "2023-06-20", 
+      "2023-07-05", "2023-07-20", "2023-07-25", "2023-07-30",
+      "2023-08-05", "2023-08-10", "2023-08-15", "2023-08-20", "2023-08-25",
+      "2023-09-05", "2023-09-10", "2023-09-15", "2023-09-20", "2023-09-28",
+      "2023-10-05", "2023-10-10", "2023-10-15", "2023-10-20", "2023-10-25",
+      "2023-11-05", "2023-11-10", "2023-11-15", "2023-11-20", "2023-11-28",
+      "2023-12-05", "2023-12-10", "2023-12-15", "2023-12-20", "2023-12-25"
+    ];
+        setUnavailableDates(dates);
+  };
+
+  generateUnavailableDates();
+}, []);
+
+// Función para filtrar las fechas y deshabilitar las no disponibles
+const filterDates = (date) => {
+  const formattedDate = date.toISOString().split("T")[0];
+  return !unavailableDates.includes(formattedDate);
+};
+
+
+  // Actualiza la fecha seleccionada
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
+
+
+  const getCitas = () => {
+    axios.get("https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas")
+    .then(res => setActualCitas(res.data.map(cita => { return { 'fecha': cita.fecha, 'hora' : cita.hora }})))
+    .catch(err => console.log(err))
+  }
+
+  useEffect(()=>{
+    console.log(filteredCitas);
+  },[filteredCitas])
+
+  useEffect(()=>{
+    console.log(selectedDate.toISOString().slice(0,10) || "");
+    console.log(actualCitas.filter(cita => cita.fecha === selectedDate.toISOString().slice(0,10)));
+    setFilterCitas(actualCitas.filter(cita => cita.fecha === selectedDate.toISOString().slice(0,10)).map(cita2 => cita2.hora));
+  },[selectedDate])
+
+  useEffect(()=> {
+    console.log(actualCitas);
+  },[actualCitas])
 
   useEffect(() => {
     setShowModal(true); // Abrir la ventana modal al cargar el componente
+    getCitas();
   }, []);
 
   useEffect(() => {
@@ -46,7 +180,6 @@ const AgendaCita = () => {
         setTipoDocumento(data.tipo_documento);
         setNumeroDocumento(data.identificacion_paciente);
         setNombre(data.nombre_completo);
-        setTelefono(data.telefono);
       })
       .catch((error) => {
         console.error("Error al obtener los datos de la persona:", error);
@@ -67,72 +200,26 @@ const AgendaCita = () => {
       });
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Crear el objeto de datos a enviar al backend
-    const data = {
-      identificacion_citas: numeroDocumento,
-      numero_documento: numeroDocumento,
-      nombre_completo: nombre,
-      tipo_documento: tipoDocumento,
-      fecha: selectedDate,
-      hora: selectedHour,
-      estado_cita: "Confirmada",
-    };
-
-    // Realizar la solicitud POST al backend
-    axios
-      .post("https://freshsmile.azurewebsites.net/FreshSmile/CrearCita", data)
-      .then((response) => {
-        // Manejar la respuesta del backend si es necesario
-        console.log(response.data);
-        // Restablecer los campos del formulario después de enviar los datos
-        setTipoDocumento("");
-        setNumeroDocumento("");
-        setNombre("");
-        setTelefono("");
-        setEmail("");
-        setTipoCita("");
-        setSelectedHour(null);
-        setSelectedDate(null);
-        // Mostrar una alerta de cita creada con éxito
-        alert("Cita creada con éxito");
-      })
-      .catch((error) => {
-        // Manejar el error si la solicitud no se completa correctamente
-        console.error(error);
-      });
-  };
   
-  const handleHourSelect = (hour) => {
+  
+const handleHourSelect = (hour) => {
+  // Verificar si la hora seleccionada ya está ocupada
+  const isHourAvailable = filteredCitas.every((cita) => cita !== hour);
+  
+  if (isHourAvailable) {
     setSelectedHour(hour);
-  };
-  const isSameDay = (date1, date2) => {
-    return (
-      date1.getFullYear() === date2.getFullYear() &&
-      date1.getMonth() === date2.getMonth() &&
-      date1.getDate() === date2.getDate()
-    );
-  };
-
-  const filterDates = () => {
-    // Aquí debes implementar tu lógica para determinar si la fecha está disponible o no
-    // Puedes usar una lista de fechas disponibles o una API para verificar la disponibilidad
-    const availableDates = [new Date(2023, 6, 4), new Date(2023, 6, 5), new Date(2023, 6, 6)];
-
-    // Retorna true si la fecha está en la lista de fechas disponibles
-    return availableDates;
-  };
+  } else {
+    alert("La hora seleccionada ya está ocupada. Por favor, elige otra hora.");
+  }
+};
 
   const handleModalButtonClick = (forMe) => {
     setShowModal(false); // Cerrar la ventana modal al hacer clic en un botón
     // Realizar acciones según el botón seleccionado (para mí o para otra persona)
     if (forMe) {
-
       setFieldsDisabled(true); // Bloquear los campos
     } else {
-            // Aquí puedes establecer los valores predeterminados para tu propia cita
+      // Aquí puedes establecer los valores predeterminados para tu propia cita
       // utilizando los datos del usuario actual o algún valor por defecto
       setTipoDocumento(""); // Limpiar los campos para evitar valores incorrectos
       setNumeroDocumento("");
@@ -142,139 +229,168 @@ const AgendaCita = () => {
     }
   };
 
-  const availableHours = ["8:00 AM","8:30 AM","9:00 AM","9:30 AM", "10:00 AM","10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM","12:30 PM", "1:00 PM","1:30 PM", "2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM"];
+  const availableHours = ["08:30:00","09:00:00","09:30:00", "10:00:00","10:30:00", "11:00:00", "14:30:00","15:00:00","15:30:00","16:00:00","17:00:00","17:30:00"];
 
 
   return (
     <div className="man-container">
-      <img
-        src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686448002/agendarcita_obeh4x.jpg"
-        alt="Hombre"
-        className="man-image"
-      />
-      <div className="agenda-form-container">
-        <h2>Agenda tu cita</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="tipoDocumento">Tipo de documento:</label>
-            <select
-              id="tipoDocumento"
-              className="select"
-              value={tipoDocumento}
-              onChange={(e) => setTipoDocumento(e.target.value)}
-              required
-              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
-            >
-              <option value="">Seleccione un tipo de documento</option>
-              {tiposDocumento.map((tipo) => (
-                <option key={tipo} value={tipo}>
-                  {tipo}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="numeroDocumento">Número de documento:</label>
-            <input
-              type="text"
-              id="numeroDocumento"
-              className="form-input"
-              value={numeroDocumento}
-              onChange={(e) => setNumeroDocumento(e.target.value)}
-              required
-              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="nombre">Nombre completo:</label>
-            <input
-              type="text"
-              id="nombre"
-              className="form-input"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
-              required
-              disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="tipoCita">Tipo de cita:</label>
-            <select
-              id="tipoCita"
-              value={tipoCita}
-              className="select"
-              required
-              onChange={(e) => setTipoCita(e.target.value)}
-            >
-              <option value="">Seleccione un tipo de cita</option>
-              {procedimientos.map((procedimiento) => (
-                <option key={procedimiento.id} value={procedimiento.nombre}>
-                  {procedimiento.nombre}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="form-group">
-            <label>Fecha disponible:</label>
-            <DatePicker
-              selected={selectedDate}
-              onChange={(date) => setSelectedDate(date)}
-              dateFormat="dd/MM/yyyy"
-              className="datepicker"
-              required
-              excludeDates={filterDates()}
-              locale={es}
-              open={calendarOpen} // Estado para controlar si el calendario está abierto o cerrado
-              onClickOutside={() => setCalendarOpen(false)} // Cierra el calendario al hacer clic fuera de él
-              onFocus={() => setCalendarOpen(true)} // Abre el calendario al hacer foco en él
-            />
-          </div>
-          <div className="form-group">
-            <label>Horas disponibles:</label>
-            <div className="hour-grid">
-              {availableHours.map((hour) => (
-                <button
-                  key={hour}
-                  className={`hour-button ${
-                    selectedHour === hour ? "selected" : ""
-                  }`}
-                  onClick={() => handleHourSelect(hour)}
-                >
-                  {hour}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="form-group">
-            <button type="submit" className="Agendar">
-              Agendar cita
-            </button>
-          </div>
-        </form>
+  <img
+    src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686448002/agendarcita_obeh4x.jpg"
+    alt="Hombre"
+    className="man-image"
+  />
+  <div className="agenda-form-container">
+    <h2>Agenda tu cita</h2>
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="tipoDocumento">Tipo de documento:</label>
+        {fieldsDisabled ? (
+          <input
+            id="tipoDocumento"
+            className="select"
+            value={tipoDocumento}
+            onChange={(e) => setTipoDocumento(e.target.value)}
+            required
+            disabled={fieldsDisabled}
+          />
+        ) : (
+          <select
+            id="tipoDocumento"
+            className="select"
+            value={tipoDocumento}
+            onChange={(e) => setTipoDocumento(e.target.value)}
+            required
+            disabled={fieldsDisabled}
+          >
+            <option value="">Seleccione un tipo de documento</option>
+            {tiposDocumento.map((tipo) => (
+              <option key={tipo} value={tipo}>
+                {tipo}
+              </option>
+            ))}
+          </select>
+        )}
       </div>
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <h3>¿Para quién es la cita?</h3>
-            <button
-              className="BotonParaMi"
-              type="button"
-              onClick={() => handleModalButtonClick(true)}
-            >
-              Para mí
-            </button>
-            <button
-              className="BotonParaOtraPersona"
-              type="button"
-              onClick={() => handleModalButtonClick(false)}
-            >
-              Alguien más
-            </button>
-          </div>
+      <div className="form-group">
+        <label htmlFor="numeroDocumento">Número de documento:</label>
+        <input
+          type="text"
+          id="numeroDocumento"
+          className="form-input"
+          value={numeroDocumento}
+          onChange={(e) => setNumeroDocumento(e.target.value)}
+          required
+          disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="nombre">Nombre completo:</label>
+        <input
+          type="text"
+          id="nombre"
+          className="form-input"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+          required
+          disabled={fieldsDisabled} // Desactivar el campo si fieldsDisabled es true
+        />
+      </div>
+      <div className="form-group">
+  <label htmlFor="tipoCita">Tipo de cita:</label>
+  <select
+    id="tipoCita"
+    value={tipoCita}
+    className="select"
+    required
+    onChange={(e) => {
+      setTipoCita(e.target.value);
+
+      // Buscar el procedimiento seleccionado por su nombre
+      const selectedProcedimiento = especialistas.find(procedimiento => procedimiento.nombre === e.target.value);
+
+      if (selectedProcedimiento) {
+        const identificacionEspecialistas = selectedProcedimiento.identificacion_especialistas;
+
+        // Aquí puedes hacer lo que necesites con la identificación de especialistas
+        console.log(identificacionEspecialistas);
+      }
+    }}
+  >
+    <option value="">Seleccione un tipo de cita</option>
+    {especialistas.map((procedimiento) => (
+      <option key={procedimiento.id} value={procedimiento.nombre}>
+        {procedimiento.nombre}
+      </option>
+    ))}
+  </select>
+</div>
+
+
+
+      <div className="form-group">
+        <label>Fecha disponible:</label>
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          dateFormat="dd/MM/yyyy"
+          className="datepicker"
+          required
+          locale={es}
+          open={calendarOpen}
+          onClickOutside={() => setCalendarOpen(false)}
+          onFocus={() => setCalendarOpen(true)}
+          filterDate={filterDates} // Aplica el filtro de fechas
+        />
+      </div>
+      <div className="form-group">
+        <label>Horas disponibles:</label>
+        <div className="hour-grid">
+          {availableHours.map((hour) =>
+            filteredCitas.length > 0 && filteredCitas.includes(hour) ? null : (
+              <button
+                key={hour}
+                className={`hour-button ${
+                  selectedHour === hour ? "selected" : ""
+                }`}
+                onClick={() => handleHourSelect(hour)}
+              >
+                {hour}
+              </button>
+            )
+          )}
         </div>
-      )}
+      </div>
+      <div className="form-group">
+        <button type="submit" className="Agendar">
+          Agendar cita
+        </button>
+      </div>
+    </form>
+  </div>
+  {showModal && (
+    <div className="modal">
+      <div className="modal-content">
+        <h3>¿Para quién es la cita?</h3>
+        <button
+          className="BotonParaMi"
+          type="button"
+          onClick={() => handleModalButtonClick(true)}
+        >
+          Para mí
+        </button>
+        <button
+          className="BotonParaOtraPersona"
+          type="button"
+          onClick={() => handleModalButtonClick(false)}
+        >
+          Alguien más
+        </button>
+      </div>
     </div>
+  )}
+</div>
   );
-};
+}
+
 
 export default AgendaCita;

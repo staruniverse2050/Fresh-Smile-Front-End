@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 
 import "./Header.css";
 
@@ -21,8 +23,25 @@ export const Header = () => {
   };
 
   const handleAgendarClick = () => {
-    navigate("/Registro");
+    Swal.fire({
+      title: "Primero debes iniciar sesión",
+      text: "Debes iniciar sesión para poder agendar una cita",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Iniciar sesión",
+      cancelButtonText: "Cancelar",
+      dangerMode: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Aquí puedes agregar la lógica para redireccionar a la página de inicio de sesión
+        navigate("/Registro");
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        // El botón de cancelar fue presionado
+        navigate("/Inicio"); // Redirige al usuario nuevamente al inicio
+      }
+    });
   };
+  
   
 
   return (
@@ -69,7 +88,7 @@ export const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`links2 ${isActiveRoute("/Agendar") ? "active" : ""
+                      className={`links2 ${isActiveRoute("/Registro") ? "active" : ""
                         }`}
                       to="/Registro"
                       onClick={handleAgendarClick}
@@ -121,7 +140,7 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  className={`links ${isActiveRoute("/Agendar") ? "active" : ""
+                  className={`links ${isActiveRoute("/Registro") ? "active" : ""
                     }`}
                   to="/Registro"
                   onClick={handleAgendarClick}

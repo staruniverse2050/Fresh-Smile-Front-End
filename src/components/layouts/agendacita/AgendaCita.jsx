@@ -19,13 +19,36 @@ const AgendaCita = () => {
   const [tipoCita, setTipoCita] = useState("");
   const [selectedHour, setSelectedHour] = useState(null);
   const [calendarOpen, setCalendarOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [procedimientos, setProcedimientos] = useState([]);
   const [showModal, setShowModal] = useState(false); // Estado para controlar la ventana modal
   const [fieldsDisabled, setFieldsDisabled] = useState(false); // Estado para controlar si los campos están bloqueados o no
+  const [actualCitas, setActualCitas] = useState([]);
+  const [filteredCitas, setFilterCitas] = useState([]);
+
+  const getCitas = () => {
+    axios.get("https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas")
+    .then(res => setActualCitas(res.data.map(cita => { return { 'fecha': cita.fecha, 'hora' : cita.hora }})))
+    .catch(err => console.log(err))
+  }
+
+  useEffect(()=>{
+    console.log(filteredCitas);
+  },[filteredCitas])
+
+  useEffect(()=>{
+    console.log(selectedDate.toISOString().slice(0,10) || "");
+    console.log(actualCitas.filter(cita => cita.fecha === selectedDate.toISOString().slice(0,10)));
+    setFilterCitas(actualCitas.filter(cita => cita.fecha === selectedDate.toISOString().slice(0,10)).map(cita2 => cita2.hora));
+  },[selectedDate])
+
+  useEffect(()=> {
+    console.log(actualCitas);
+  },[actualCitas])
 
   useEffect(() => {
     setShowModal(true); // Abrir la ventana modal al cargar el componente
+    getCitas();
   }, []);
 
   useEffect(() => {
@@ -117,12 +140,7 @@ const AgendaCita = () => {
   };
 
   const filterDates = () => {
-    // Aquí debes implementar tu lógica para determinar si la fecha está disponible o no
-    // Puedes usar una lista de fechas disponibles o una API para verificar la disponibilidad
-    const availableDates = [new Date(2023, 6, 4), new Date(2023, 6, 5), new Date(2023, 6, 6)];
-
-    // Retorna true si la fecha está en la lista de fechas disponibles
-    return availableDates;
+    
   };
 
   const handleModalButtonClick = (forMe) => {
@@ -142,7 +160,7 @@ const AgendaCita = () => {
     }
   };
 
-  const availableHours = ["8:00 AM","8:30 AM","9:00 AM","9:30 AM", "10:00 AM","10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM","12:30 PM", "1:00 PM","1:30 PM", "2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM"];
+  const availableHours = ["08:00:00","08:30:00","09:00:00","09:30:00", "10:00:00","10:30:00", "11:00:00", "11:30:00", "12:00:00","12:30:00", "13:00:00","13:30:00", "14:00:00","14:30:00","15:00:00","15:30:00","16:00:00","16:30:00","17:00:00","17:30:00","18:00:00"];
 
 
   return (
@@ -222,7 +240,6 @@ const AgendaCita = () => {
               dateFormat="dd/MM/yyyy"
               className="datepicker"
               required
-              excludeDates={filterDates()}
               locale={es}
               open={calendarOpen} // Estado para controlar si el calendario está abierto o cerrado
               onClickOutside={() => setCalendarOpen(false)} // Cierra el calendario al hacer clic fuera de él
@@ -232,8 +249,11 @@ const AgendaCita = () => {
           <div className="form-group">
             <label>Horas disponibles:</label>
             <div className="hour-grid">
-              {availableHours.map((hour) => (
-                <button
+              {availableHours.map((hour) => 
+              {
+                if(filteredCitas.length > 0){
+                  if(!filteredCitas.includes(hour)){
+                    return <button
                   key={hour}
                   className={`hour-button ${
                     selectedHour === hour ? "selected" : ""
@@ -242,7 +262,22 @@ const AgendaCita = () => {
                 >
                   {hour}
                 </button>
-              ))}
+                    
+                  }
+                }
+                else{
+                  return <button
+                  key={hour}
+                  className={`hour-button ${
+                    selectedHour === hour ? "selected" : ""
+                  }`}
+                  onClick={() => handleHourSelect(hour)}
+                >
+                  {hour}
+                </button>
+                }
+              }
+              )}
             </div>
           </div>
           <div className="form-group">

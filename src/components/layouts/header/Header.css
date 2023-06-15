@@ -25,13 +25,19 @@
 .menu h1 span {
 	color: aqua;
 }
-
+.LetrerodeIniciarSesion{
+	color: #ffffff;
+	position:relative;
+	right: 120px;
+	top:33px;
+}
 img {
 	cursor: pointer;
 }
 
 .menu li {
 	margin: 0.15rem;
+	position: relative;
 }
 
 .menu ul {
@@ -80,6 +86,8 @@ img {
 .icono-inicio {
 	width: 30px;
 	margin-left: 10px;
+	position: relative;
+	bottom: 5px;
 	transition: transform 0.3s ease;
 }
 

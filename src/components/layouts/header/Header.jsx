@@ -171,6 +171,7 @@ export const Header = () => {
         </ul>
         <div className="icono-inicio-wrapper">
           <Link to="/Registro">
+            <p className="LetrerodeIniciarSesion">Iniciar sesión</p>
             <img
               className="icono-inicio"
               src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"

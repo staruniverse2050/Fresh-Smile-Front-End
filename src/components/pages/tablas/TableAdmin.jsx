@@ -122,9 +122,9 @@ const TableAdmin = () => {
               <td>{item.id_paciente}</td>
               <td>{procedimientos[item.id_procedimiento]}</td>
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
-              <td>{item.estado}</td>
+              <td>{item.estado_cita}</td>
               <td>
-                {item.estado === 'Agendada' && (
+                {item.estado === 'Programada' && (
                    <button className="edit-button" onClick={() => handleEditarCita(item.identificacion_citas)}>
                       <i className="fas fa-pencil-alt"></i>
                     </button>

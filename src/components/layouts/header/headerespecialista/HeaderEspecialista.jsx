@@ -163,6 +163,18 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${
+                        isActiveRoute("/Procedimientos") ? "active" : ""
+                      }`}
+                      to="/Procedimientos"
+                      activeClassName="active"
+                      onClick={toggleDropdown}
+                    >
+                      Agregar Procedimiento
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={`links ${
                         isActiveRoute("/DoctorCard") ? "active" : ""
                       }`}
                       to="/DoctorCard"
@@ -250,6 +262,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Procedimientos
                 </NavLink>
               </li>
+              
               {isAuthenticated && (
                 <>
                   <li>
@@ -263,7 +276,20 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                 </>
               )}
+                  <li>
+                    <NavLink
+                      className={`links ${
+                        isActiveRoute("/") ? "active" : ""
+                      }`}
+                      to="/"
+                      activeClassName="active"
+                      onClick={toggleDropdown}
+                    >
+                      Agregar Procedimiento
+                    </NavLink>
+                  </li>
               <li>
+                
                 <NavLink
                   className="links"
                   to="/Especialistas"

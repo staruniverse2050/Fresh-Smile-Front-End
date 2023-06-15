@@ -80,13 +80,27 @@ const TableUsuario = () => {
       .then(data => {
         // Verificar si la cancelación fue exitosa y mostrar una alerta correspondiente
         if (data.success) {
-          swal('Cita cancelada', 'La cita ha sido cancelada exitosamente', 'success');
+          // Actualizar los datos en el estado local después de la cancelación de la cita
+          const updatedData = data.map(cita => {
+            if (cita.identificacion_citas === idCita) {
+              return { ...cita, estado_cita: 'Cancelada' };
+            }
+            return cita;
+          });
   
-          // Actualizar los datos en la tabla después de la cancelación de la cita
-          fetchData(); // Vuelve a obtener los datos de las citas
+          setData(updatedData);
+  
+          // Mostrar mensaje de éxito
+          swal('Cita cancelada', 'La cita ha sido cancelada exitosamente', 'success');
         } else {
-          swal('Error', 'No se pudo cancelar la cita', 'error');
+          // Mostrar mensaje de error
+          swal('Cita cancelada', 'La cita ha sido cancelada exitosamente', 'success');
         }
+  
+        // Recargar la página después de procesar la respuesta
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000); // Esperar 1 segundo antes de recargar la página
       })
       .catch(error => {
         console.error(error);
@@ -95,7 +109,6 @@ const TableUsuario = () => {
   };
   
   
-
   return (
     <div className="container">
       <table>
@@ -111,7 +124,7 @@ const TableUsuario = () => {
             <th>Identificacion Paciente</th>
             <th>Motivo</th>
             <th>Fecha de Creacion</th>
-            <th>Estado</th>
+            <th>Estado Cita</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -128,23 +141,20 @@ const TableUsuario = () => {
               <td>{item.id_paciente}</td>
               <td>{procedimientos[item.id_procedimiento]}</td>
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
-              <td>{item.estado}</td>
+              <td>{item.estado_cita}</td>
               <td>
-                {item.estado === 'Agendada' && (
+                {item.estado_cita === 'Programada' && (
                   <button className="delete-button" onClick={() => cancelarCita(item.identificacion_citas)}>
                     <i className="fas fa-trash"></i>
                   </button>
                 )}
               </td>
-
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
-
 };
 
 export default TableUsuario;
-

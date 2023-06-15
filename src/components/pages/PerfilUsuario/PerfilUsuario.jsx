@@ -19,14 +19,14 @@ export const PerfilUsuario = () => {
   const [editMode, setEditMode] = useState(false);
   const [name, setName] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
-  const [identificacionPaciente, setIdentificacionPaciente] = useState('');
+  const [identificacionPaciente, setIdentificacionPaciente] = useState("");
 
   useEffect(() => {
     Swal.fire({
-      title: 'Bienvenido a tu perfil',
-      icon: 'success',
+      title: "Bienvenido a tu perfil",
+      icon: "success",
       timer: 2000,
-      showConfirmButton: false
+      showConfirmButton: false,
     });
   }, []);
 
@@ -111,7 +111,6 @@ export const PerfilUsuario = () => {
       setIdentificacionPaciente(paciente.identificacion_paciente);
     }
   }, [loading, paciente]);
-  
 
   const formattedFechaRegistro = moment(fechaRegistro).format(
     "DD/MM/YYYY HH:mm:ss"
@@ -120,59 +119,59 @@ export const PerfilUsuario = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
   const handleSaveButtonClick = async () => {
     try {
       const datosPaciente = {
         tipo_documento: Documento,
-        identificacion_paciente:identificacionPaciente,
+        identificacion_paciente: identificacionPaciente,
         nombre_completo: nombre,
         telefono: Telefono,
         direccion: Direccion,
         correo: Correo,
         contraseña: Contraseña,
       };
-
-      const accessToken = localStorage.getItem("accessToken"); // Obtén el token de acceso almacenado en el localStorage
-
+  
+      const accessToken = localStorage.getItem("accessToken");
+  
       const config = {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
       };
-
+  
       await axios.put(
         "https://freshsmile.azurewebsites.net/FreshSmile/ModificarPacientes",
         datosPaciente,
         config
       );
-
+  
+      // Actualizar los estados con los nuevos valores modificados
+      setNombre(nombre);
+      setTelefono(Telefono);
+      setDireccion(Direccion);
       setEditMode(false);
-      setLoading(true);
       swal("¡Éxito!", "Datos modificados con éxito", "success");
     } catch (error) {
       console.error(error.response);
       swal("¡Error!", "Ocurrió un error al modificar los datos", "error");
     }
   };
+  
+  
 
   return (
     <>
       <div className="container-usuario">
         <div className="tarjeta-perfilU">
-           {avatarUrl ? (
-             <img
-             className="imagenperfil"
-             src={avatarUrl}
-             alt="Avatar"
-           />
-         ) : (
-          <img
-            className="image-perfilUsuario"
-            src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
-            alt="Inicio"
-          />
-         )}
+          {avatarUrl ? (
+            <img className="imagenperfil" src={avatarUrl} alt="Avatar" />
+          ) : (
+            <img
+              className="image-perfilUsuario"
+              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686197632/usuario_fitvn6.png"
+              alt="Inicio"
+            />
+          )}
           <h2 className="perfil-titulo">Mi Perfil</h2>
           <p className="perfil-info">Revisa tu perfil</p>
           {editMode ? (
@@ -204,15 +203,13 @@ export const PerfilUsuario = () => {
             </td>
           </tr>
           <tr>
-            <td className="perfil-descripcion">
-              Identificación:
-            </td>
+            <td className="perfil-descripcion">Identificación:</td>
             <td className="perfil-valor">
               <input
                 type="text"
                 value={identificacionPaciente}
                 onChange={(e) => setIdentificacionPaciente(e.target.value)}
-                disabled={!editMode}
+                disabled
               />
             </td>
           </tr>
@@ -224,7 +221,7 @@ export const PerfilUsuario = () => {
                 type="text"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                disabled={!editMode}
+                disabled
               />
             </td>
           </tr>

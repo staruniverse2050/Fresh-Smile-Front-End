@@ -29,6 +29,11 @@ const AgendaCita = () => {
   const [procedimientos, setProcedimientos] = useState([]);
   const [filteredCitas, setFilteredCitas] = useState([]);
   const [especialistas, setEspecialistas] = useState([]);
+  const [citasAgendadas, setCitasAgendadas] = useState([]);
+  const [noHayHorasDisponibles, setNoHayHorasDisponibles] = useState(false);
+
+
+
   useEffect(() => {
     axios.get('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
       .then(response => {
@@ -50,6 +55,27 @@ const AgendaCita = () => {
     const userId = localStorage.getItem('userId');
     const accessToken = localStorage.getItem('accessToken');
   
+    const currentDateWithoutTime = new Date();
+    currentDateWithoutTime.setHours(0, 0, 0, 0);
+
+    if (citasAgendadas.length >= 2) {
+      Swal.fire({
+        icon: 'error',
+        title: 'No puedes agendar más citas',
+        text: 'Ya has agendado el máximo de citas permitidas.',
+      });
+      return;
+    }
+    
+  
+    if (selectedDate < currentDateWithoutTime) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Fecha inválida',
+        text: 'No puedes agendar una cita en una fecha pasada.',
+      });
+      return;
+    }
     // Obtener el procedimiento seleccionado
     const selectedProcedimiento = procedimientos.find((procedimiento) => procedimiento.nombre === tipoCita);
   
@@ -87,10 +113,12 @@ const AgendaCita = () => {
           title: 'Cita Agendada',
           text: 'La cita ha sido agendada exitosamente.',
         });
+        setCitasAgendadas([...citasAgendadas, response.data]);
       })
       .catch((error) => {
         console.error('Error al crear la cita:', error);
       });
+      
   };
 
 const isDateAvailable = (date) => {
@@ -154,12 +182,14 @@ const filterDates = (date) => {
   }, [filteredCitas]);
   
   useEffect(() => {
-    console.log(selectedDate.toISOString().slice(0, 10) || "");
     const selectedDateString = selectedDate.toISOString().slice(0, 10);
     const filteredData = actualCitas.filter((cita) => cita.fecha === selectedDateString);
     const uniqueData = Array.from(new Set(filteredData.map((cita) => cita.hora)));
     setFilteredCitas(uniqueData);
+  
+    setNoHayHorasDisponibles(uniqueData.length === 0);
   }, [selectedDate, actualCitas]);
+  
   
   useEffect(() => {
     console.log(actualCitas);
@@ -220,6 +250,7 @@ const handleHourSelect = (hour) => {
   } else {
     alert("La hora seleccionada ya está ocupada. Por favor, elige otra hora.");
   }
+  
 };
 
   const handleModalButtonClick = (forMe) => {
@@ -352,23 +383,29 @@ const handleHourSelect = (hour) => {
         />
       </div>
       <div className="form-group">
-        <label>Horas disponibles:</label>
-        <div className="hour-grid">
-          {availableHours.map((hour) =>
-            filteredCitas.length > 0 && filteredCitas.includes(hour) ? null : (
-              <button
-                key={hour}
-                className={`hour-button ${
-                  selectedHour === hour ? "selected" : ""
-                }`}
-                onClick={() => handleHourSelect(hour)}
-              >
-                {hour}
-              </button>
-            )
-          )}
-        </div>
-      </div>
+  <label>Horas disponibles:</label>
+  {availableHours.length > 0 ? (
+    <div className="hour-grid">
+      {availableHours.map((hour) =>
+        filteredCitas.length > 0 && filteredCitas.includes(hour) ? null : (
+          <button
+            key={hour}
+            className={`hour-button ${selectedHour === hour ? "selected" : ""}`}
+            onClick={(event) => {
+              event.preventDefault(); // Evitar la recarga de la página
+              handleHourSelect(hour);
+            }}
+          >
+            {hour}
+          </button>
+        )
+      )}
+    </div>
+  ) : (
+    <p className="Mensaje">No hay horas disponibles.</p>
+  )}
+</div>
+
       <div className="form-group">
         <button type="submit" className="Agendar">
           Agendar cita

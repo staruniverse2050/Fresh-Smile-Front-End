@@ -88,7 +88,7 @@ function App() {
         <Route path="/Procedimientos" element={<Procedimientos />} />
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Agendar" element={<AgendaCita />} />
-        <Route path="/Ranking" element={<Ranking />} />
+        <Route path="/MiRanking" element={<Ranking />} />
         <Route path="/Especialistas" element={<DoctorCard />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />

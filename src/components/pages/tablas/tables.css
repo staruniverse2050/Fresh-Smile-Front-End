@@ -13,6 +13,9 @@ table {
   border-collapse: collapse;
   border: 1px solid #e6e6e6;
   background-color: #fff;
+  position: relative;
+  left: 160px;
+  bottom: 99px;
 }
 
 thead {

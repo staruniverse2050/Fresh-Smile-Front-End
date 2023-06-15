@@ -21,14 +21,15 @@ export const PerfilAdministrador = () => {
   const [editMode, setEditMode] = useState(false);
   const [name, setName] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
-  const [identificacionEspecialista, setIdentificacionEspecialista] = useState("");
+  const [identificacionEspecialista, setIdentificacionEspecialista] =
+    useState("");
 
   useEffect(() => {
     Swal.fire({
-      title: 'Bienvenido a tu perfil',
-      icon: 'success',
+      title: "Bienvenido a tu perfil",
+      icon: "success",
       timer: 2000,
-      showConfirmButton: false
+      showConfirmButton: false,
     });
   }, []);
 
@@ -114,7 +115,6 @@ export const PerfilAdministrador = () => {
       setIdentificacionEspecialista(especialista.identificacion_especialista);
     }
   }, [loading, especialista]);
-  
 
   const formattedFechaRegistro = moment(fechaRegistro).format(
     "DD/MM/YYYY HH:mm:ss"
@@ -128,7 +128,7 @@ export const PerfilAdministrador = () => {
     try {
       const datosEspecialista = {
         tipo_documento: Documento,
-        identificacion_especialista:identificacionEspecialista,
+        identificacion_especialista: identificacionEspecialista,
         nombre_completo: nombre,
         telefono: Telefono,
         direccion: Direccion,
@@ -151,7 +151,10 @@ export const PerfilAdministrador = () => {
         datosEspecialista,
         config
       );
-
+      // Actualizar los estados con los nuevos valores modificados
+      setNombre(datosEspecialista.nombre_completo);
+      setTelefono(datosEspecialista.telefono);
+      setDireccion(datosEspecialista.direccion);
       setEditMode(false);
       setLoading(true);
       swal("¡Éxito!", "Datos modificados con éxito", "success");
@@ -166,11 +169,7 @@ export const PerfilAdministrador = () => {
       <div className="container-usuario">
         <div className="tarjeta-perfilU">
           {avatarUrl ? (
-            <img
-              className="imagenperfil"
-              src={avatarUrl}
-              alt="Avatar"
-            />
+            <img className="imagenperfil" src={avatarUrl} alt="Avatar" />
           ) : (
             <img
               className="image-perfilUsuario"
@@ -188,7 +187,8 @@ export const PerfilAdministrador = () => {
             <button className="editar-boton" onClick={() => setEditMode(true)}>
               Editar
             </button>
-          )}        </div>
+          )}{" "}
+        </div>
         <div className="banner-principalAd">
           {/* <h1 className="titulo-banner">¡Bienvenido A Tu Perfil!</h1> */}
         </div>
@@ -216,7 +216,7 @@ export const PerfilAdministrador = () => {
                 type="text"
                 value={identificacionEspecialista}
                 onChange={(e) => setIdentificacionEspecialista(e.target.value)}
-                disabled={!editMode}
+                disabled
               />
             </td>
           </tr>
@@ -228,7 +228,7 @@ export const PerfilAdministrador = () => {
                 type="text"
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                disabled={!editMode}
+                disabled
               />
             </td>
           </tr>

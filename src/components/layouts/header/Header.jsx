@@ -176,6 +176,7 @@ export const Header = () => {
               src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"
               alt="Inicio"
             />
+            <h2 className="text-inicio">Iniciar sesión</h2>
           </Link>
         </div>
       </div>

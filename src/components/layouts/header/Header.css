@@ -79,7 +79,7 @@ margin: 0.15rem;
 
 .icono-inicio {
 	width: 30px;
-	margin-left: 10px;
+	margin-left: 13px;
 	transition: transform 0.3s ease;
 }
 
@@ -141,7 +141,7 @@ margin: 0.15rem;
 }
 
 .icono-inicio-wrapper {
-	margin-left: auto;
+	/* margin-left: auto; */
 	margin-right: 2rem;
 }
 
@@ -153,6 +153,12 @@ margin: 0.15rem;
 	color: aqua;
 }
 
+.text-inicio{
+	color: #ffffff;
+	/* font-size: 10px; */
+	font-family: "Open Sans", sans-serif;
+		font-size: 0.70rem;
+}
 @media screen and (min-width: 769px) {
 	.toggle-menu {
 		display: none;

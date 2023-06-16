@@ -1,25 +1,31 @@
 .login-container {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff82; /* Negro con una transparencia del 50% */
+    margin: 200px;
+    /* border-radius: 10px; */
+    height: 545px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra negra con una transparencia del 50% */
+	margin-top: 150px;
 
-	margin: 200px;
-	border-radius: 10px;
 }
 
   
-  .left-login {
+  /* .left-login {
 	float: left;
 	margin-right: 50px;
-	/* margin-left: 45px; */
+	margin-left: 45px;
   }
-  
+   */
+
   .login-image {
-	width: 800px;
-	max-width: 500px;
+	width: 700px;
+	max-width: 700px;
 	/* height: auto; */
 	/* height: 450px; */
 	/* margin-left: 40px; */
-	height: 450px;
+	height: 548px;
+	background-color:#7dc3e882;
   }
   
   .right-login {
@@ -27,14 +33,19 @@
 	flex-direction: column;
 	align-items: center;
 	margin-left: 120px;
+
+	
   }
   
   .login-title {
-	color: #4fafd2;
+	color: #0a0a0a;
 	/* font-size: 24px; */
 	/* margin-bottom: 40px; */
-	margin-left: 40px;
+	/* margin-left: 40px; */
 	margin-bottom: 40px;
+	margin-right: 290px;
+	margin-left: 15px;
+	font-family: "Open Sans", Arial, sans-serif;
 	
 	
   }
@@ -44,6 +55,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 20px;
+	
   }
   
   .login-label {
@@ -51,35 +63,47 @@
 	font-weight: bold;
 	margin-bottom: 10px;
 	/* background-color: #52b788; */
+	margin-right: 200px;
+	align-items: center;
   }
+
   .login-input {
-	width: 100%;
+	width: 300px;
 	padding: 10px;
 	margin-bottom: 5px;
-	border-radius: 10px;
-	border: 1px solid #ccc; /* Borde gris transparente */
-	background-color: rgb(255, 255, 255);/* Color de fondo gris transparente */
+	/* border-radius: 10px; */
+	border: 1px solid #ffffff; /* Borde gris transparente */
+	background-color: #D3D3D3;/* Color de fondo gris transparente */
+	margin-right:85px;
 }
+
 
   .login-select {
 	width: 100%;
 	padding: 10px;
 	margin-bottom: 10px;
 	border-radius: 10px;
+	margin-right:85px;
 	
   }
   
   .login-button {
 	padding: 10px 20px;
-	background-color:#249bad;
-	color: rgb(250, 246, 246);
+	background-color:#73d5e4;
+	color: rgb(0, 0, 0);
 	border: none;
 	cursor: pointer;
 	border-radius: 15px;
+	margin-right: 270px;
   }
-  
+  .login-label-log{
+	border: #ffffff;
+	margin-right: 270px;
+  }
+
+
   .login-button:hover {
-	background-color: #1e6d79;
+	background-color: #c5eaef;
   }
   
   

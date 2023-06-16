@@ -77,9 +77,9 @@ const Login = ({ setRol }) => {
   return (
 
     <div className="login-container">
-      <div className="left-login">
+      
         <img src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686637348/Fresh_Smile_Cmills/img-login_q7bhdc.png" alt="Imagen de inicio de sesión" className="login-image" />
-      </div>
+      
       <div className="right-login">
         <h1 className="login-title">Iniciar Sesión</h1>
         <form className="login-form" onSubmit={handleSubmit}>
@@ -103,7 +103,7 @@ const Login = ({ setRol }) => {
             />
           </label>
           <br />
-          <label className="login-label">
+          <label className="login-label-log">
             Rol:
             <select
               value={role}

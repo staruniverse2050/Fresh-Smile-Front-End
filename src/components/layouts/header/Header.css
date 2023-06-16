@@ -19,8 +19,12 @@
 	text-transform: uppercase;
 	/* margin: 0; */
 	color: #ffffff;
+<<<<<<< HEAD
 	padding-right: 1%;
 	padding-left: 15px;
+=======
+	padding-right: 98px; 
+>>>>>>> b229bc59414848d55258b81e8ccd2b4f31bb2c9d
 }
 
 .menu-principal h1 span {
@@ -101,20 +105,32 @@
 	margin-left: 3rem;
 }
 
+<<<<<<< HEAD
 .container2-principal {
+=======
+
+/* ESTILOS PARA EL CONTENEDOR DEL HEADER WEB */
+.container2 {
+>>>>>>> b229bc59414848d55258b81e8ccd2b4f31bb2c9d
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
+	/* background-color: red; */
 }
 
+<<<<<<< HEAD
 .container2-principal li {
+=======
+
+.container2 li {
+>>>>>>> b229bc59414848d55258b81e8ccd2b4f31bb2c9d
 	align-items: center;
 	text-align: center;
-	margin-right: 10px;
-	padding-right: 10px;
+	/* margin-right: 70px; */
+	padding-right: 70px;
 }
 
 .dropdown-wrapper {
@@ -147,7 +163,7 @@
 }
 
 .icono-inicio-wrapper {
-	margin-left: auto;
+	/* margin-left: auto; */
 	margin-right: 2rem;
 }
 
@@ -159,6 +175,12 @@
 	color: aqua;
 }
 
+.text-inicio{
+	color: #ffffff;
+	/* font-size: 10px; */
+	font-family: "Open Sans", sans-serif;
+		font-size: 0.70rem;
+}
 @media screen and (min-width: 769px) {
 	.toggle-menu {
 		display: none;

@@ -46,7 +46,7 @@ export const Header = () => {
 
   return (
     <header className="Header_Header">
-      <div className="menu">
+      <div className="menu-principal">
         <Link to="/Inicio">
           <img
             className="logo"
@@ -118,7 +118,7 @@ export const Header = () => {
               </div>
             )}
           </div>
-          <div className="container2">
+          <div className="container2-principal">
             <ul>
               <li>
                 <Link
@@ -171,13 +171,12 @@ export const Header = () => {
         </ul>
         <div className="icono-inicio-wrapper">
           <Link to="/Registro">
-            <p className="LetrerodeIniciarSesion">Iniciar sesión</p>
             <img
               className="icono-inicio"
               src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"
               alt="Inicio"
             />
-            <h2 className="text-inicio">Iniciar sesión</h2>
+            <p className="Texto-Login">Iniciar sesión</p>
           </Link>
         </div>
       </div>

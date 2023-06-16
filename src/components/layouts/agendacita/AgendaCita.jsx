@@ -113,7 +113,15 @@ const AgendaCita = () => {
           title: 'Cita Agendada',
           text: 'La cita ha sido agendada exitosamente.',
         });
-        setCitasAgendadas([...citasAgendadas, response.data]);
+
+         // Reiniciar los campos del formulario
+      setTipoDocumento("");
+      setNumeroDocumento("");
+      setNombre("");
+      setTipoCita("");
+      setSelectedHour(null);
+      setSelectedDate(new Date());
+      setCitasAgendadas([...citasAgendadas, response.data]);
       })
       .catch((error) => {
         console.error('Error al crear la cita:', error);

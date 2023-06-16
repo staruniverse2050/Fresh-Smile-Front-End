@@ -1,7 +1,7 @@
 .ranking-container {
 	max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
 	margin: 0 auto; /* Centra el contenedor horizontalmente */
-	background-color: #f2f2f2; /* Color de fondo de la tarjeta */
+	background-color: #e6e5e5; /* Color de fondo de la tarjeta */
 	border: 1px solid #ccc;
 	border-radius: 8px;
 	padding: 20px;
@@ -25,20 +25,6 @@ td {
 	border-bottom: none;
 }
 
-th {
-	background-color: #f2f2f2;
-	font-weight: bold;
-	border: 1px solid #ccc;
-	color: #555;
-	text-transform: uppercase;
-}
-
-td {
-	background-color: #ffffff;
-	border: 1px solid #ccc;
-	color: #333;
-}
-
 th:first-child,
 td:first-child {
 	width: 40px;
@@ -60,16 +46,6 @@ td:first-child {
 	margin-left: 10px;
 }
 
-h2 {
-	color: aqua;
-	text-align: center;
-	font-size: 50px;
-}
-
-h1 {
-	text-align: center;
-}
-
 .position {
 	font-size: xx-large;
 }
@@ -82,16 +58,22 @@ h1 {
 .crown-icon {
 	position: absolute;
 	top: -10px; /* Ajusta el valor según la posición deseada */
-	right: 27px; /* Ajusta el valor según el grado de inclinación deseado */
+	right: 17px; /* Ajusta el valor según el grado de inclinación deseado */
 	width: 20px;
 	height: 20px;
-	transform: rotate(-45deg); /* Aplica una rotación de 45 grados */
+	transform: rotate(45deg);
 }
 
-.profile-pic {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-left: 10px;
+.title {
+	color: #000000;
+	text-align: center;
+	font-size: 50px;
+}
+
+.table-heading {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	border: 1px solid #ccc;
+	color: #555;
+	text-transform: uppercase;
 }

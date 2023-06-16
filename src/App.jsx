@@ -17,6 +17,7 @@ import { PerfilUsuario } from "./components/pages/PerfilUsuario/PerfilUsuario";
 import TableUsuario from "./components/pages/tablas/TableUsuario";
 import TableAdmin from "./components/pages/tablas/TableAdmin";
 import { HeaderEspecialista } from "./components/layouts/header/headerespecialista/HeaderEspecialista";
+import Especialistas from "./components/pages/Especialistas/Especialistas";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -89,7 +90,7 @@ function App() {
         <Route path="/Nosotros" element={<Nosotros />} />
         <Route path="/Agendar" element={<AgendaCita />} />
         <Route path="/MiRanking" element={<Ranking />} />
-        <Route path="/Especialistas" element={<DoctorCard />} />
+        <Route path="/Especialistas" element={<Especialistas />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
         <Route path="/Login" element={<Login setRol={setRol} />} />

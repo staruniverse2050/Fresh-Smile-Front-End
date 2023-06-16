@@ -207,12 +207,12 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   Inicio
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
                   to="/Nosotros" activeClassName="active">
                   Nosotros
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink className={`links ${isActiveRoute('/Agendar') ? 'active' : ''}`}
                   to="/Agendar" activeClassName="active">

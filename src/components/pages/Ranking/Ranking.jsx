@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Ranking.css";
 
 const Ranking = () => {
-  const data = [
-    {
-      id: 1,
-      nombre: "Juan David Lopez Montoya",
-      valoracion: 4.7,
-      foto: "../src/img/descarga - copia.jpg",
-    },
-    { id: 2, nombre: "María", valoracion: 3.8, foto: "ruta_de_la_foto" },
-    { id: 3, nombre: "Pedro", valoracion: 4.2, foto: "ruta_de_la_foto" },
-    { id: 4, nombre: "Laura", valoracion: 4.5, foto: "ruta_de_la_foto" },
-    { id: 5, nombre: "Carlos", valoracion: 3.9, foto: "ruta_de_la_foto" },
-  ];
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("URL_DE_LA_API");
+        setData(response.data);
+      } catch (error) {
+        console.error("Error al obtener los datos desde la API:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const calculateStars = (valoracion) => {
     const roundedValoracion = Math.round(valoracion);
@@ -26,14 +29,14 @@ const Ranking = () => {
 
   return (
     <div className="ranking-container">
-      <h2>Ranking</h2>
-      <h1>Fresh Smile Cmills</h1>
+      <h2 className="title">Ranking</h2>
+      <hr></hr>
       <table className="ranking-table">
         <thead>
           <tr>
-            <th>Puesto</th>
-            <th>Nombre</th>
-            <th>Valoración</th>
+            <th className="table-heading">Puesto</th>
+            <th className="table-heading">Nombre</th>
+            <th className="table-heading">Valoración</th>
           </tr>
         </thead>
         <tbody>
@@ -49,7 +52,7 @@ const Ranking = () => {
                   />
                   {index === 0 && (
                     <img
-                      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685893707/corona_ysuxhw.png" // Reemplaza "ruta_de_la_corona" por la ruta de tu imagen de corona
+                      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685893707/corona_ysuxhw.png"
                       alt="Corona"
                       className="crown-icon"
                     />

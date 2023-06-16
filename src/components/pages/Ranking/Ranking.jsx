@@ -1,25 +1,19 @@
-
-
 import React, { useEffect, useState } from "react";
 import "./Ranking.css";
-import { Footer } from "../../layouts/footer/Footer";
 
-export const Ranking = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      // Realiza la llamada a tu API y obtén los datos en formato JSON
-      const response = await fetch("/FreshSmile/Especialistas/"); // Reemplaza "URL_DE_LA_API" por la URL de tu API que devuelve los datos del ranking
-      const json = await response.json();
-      setData(json);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+const Ranking = () => {
+  const data = [
+    {
+      id: 1,
+      nombre: "Juan David Lopez Montoya",
+      valoracion: 4.7,
+      foto: "../src/img/descarga - copia.jpg",
+    },
+    { id: 2, nombre: "María", valoracion: 3.8, foto: "ruta_de_la_foto" },
+    { id: 3, nombre: "Pedro", valoracion: 4.2, foto: "ruta_de_la_foto" },
+    { id: 4, nombre: "Laura", valoracion: 4.5, foto: "ruta_de_la_foto" },
+    { id: 5, nombre: "Carlos", valoracion: 3.9, foto: "ruta_de_la_foto" },
+  ];
 
   const calculateStars = (valoracion) => {
     const roundedValoracion = Math.round(valoracion);
@@ -31,7 +25,6 @@ export const Ranking = () => {
     .slice(0, 5);
 
   return (
-    <>
     <div className="ranking-container">
       <h2>Ranking</h2>
       <h1>Fresh Smile Cmills</h1>
@@ -70,11 +63,7 @@ export const Ranking = () => {
         </tbody>
       </table>
     </div>
-    
-    <Footer />
-    </>
   );
 };
-
 
 export default Ranking;

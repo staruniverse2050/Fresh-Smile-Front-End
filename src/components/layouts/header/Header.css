@@ -17,9 +17,9 @@
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.7rem;
 	text-transform: uppercase;
-	margin: 0;
+	/* margin: 0; */
 	color: #ffffff;
-	margin-right: 10%;
+	padding-right: 98px; 
 }
 
 .menu h1 span {
@@ -99,6 +99,8 @@ img {
 	margin-left: 3rem;
 }
 
+
+/* ESTILOS PARA EL CONTENEDOR DEL HEADER WEB */
 .container2 {
 	display: flex;
 	justify-content: center;
@@ -106,13 +108,15 @@ img {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
+	/* background-color: red; */
 }
+
 
 .container2 li {
 	align-items: center;
 	text-align: center;
-	margin-right: 10px;
-	padding-right: 10px;
+	/* margin-right: 70px; */
+	padding-right: 70px;
 }
 
 .dropdown-wrapper {
@@ -145,7 +149,7 @@ img {
 }
 
 .icono-inicio-wrapper {
-	margin-left: auto;
+	/* margin-left: auto; */
 	margin-right: 2rem;
 }
 
@@ -157,6 +161,12 @@ img {
 	color: aqua;
 }
 
+.text-inicio{
+	color: #ffffff;
+	/* font-size: 10px; */
+	font-family: "Open Sans", sans-serif;
+		font-size: 0.70rem;
+}
 @media screen and (min-width: 769px) {
 	.toggle-menu {
 		display: none;

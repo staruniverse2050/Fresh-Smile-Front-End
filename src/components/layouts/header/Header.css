@@ -1,4 +1,4 @@
-.menu {
+.menu-principal {
 	font-family: "Open Sans", sans-serif;
 	display: flex;
 	justify-content: space-between;
@@ -13,34 +13,36 @@
 	padding: 10px;
 }
 
-.menu h1 {
+.menu-principal h1 {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.7rem;
 	text-transform: uppercase;
-	margin: 0;
+	/* margin: 0; */
 	color: #ffffff;
-	margin-right: 10%;
+	padding-right: 1%;
+	padding-left: 15px;
 }
 
-.menu h1 span {
+.menu-principal h1 span {
 	color: aqua;
 }
-.LetrerodeIniciarSesion{
+.Texto-Login{
 	color: #ffffff;
-	position:relative;
-	right: 120px;
-	top:33px;
-}
-img {
-	cursor: pointer;
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	align-items: center;
 }
 
-.menu li {
-	margin: 0.15rem;
+/* img {
+	cursor: pointer;
+} */
+
+.menu-principal li {
+	margin: 4rem;
 	position: relative;
 }
 
-.menu ul {
+.menu-principal ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -79,13 +81,13 @@ img {
 .logo {
 	float: left;
 	position: relative;
-	margin-left: 28px;
+	padding-left: 28px;
 	margin-right: 35px;
 }
 
 .icono-inicio {
 	width: 30px;
-	margin-left: 10px;
+	margin-left: 21px;
 	position: relative;
 	bottom: 5px;
 	transition: transform 0.3s ease;
@@ -99,7 +101,7 @@ img {
 	margin-left: 3rem;
 }
 
-.container2 {
+.container2-principal {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -108,7 +110,7 @@ img {
 	padding: 0;
 }
 
-.container2 li {
+.container2-principal li {
 	align-items: center;
 	text-align: center;
 	margin-right: 10px;
@@ -213,7 +215,7 @@ img {
 		left: 1rem;
 		cursor: pointer;
 	}
-	.container2 {
+	.container2-principal {
 		display: none;
 	}
 	.container3 {
@@ -249,13 +251,15 @@ img {
 		/* margin-left: 100px; */
 		cursor: pointer;
 	}
-	/* .icono-inicio {
-		width: 40px;
-		position: absolute;
-		top: 3rem;
-		left: 9rem;
+
+	.icono-inicio {
+		/* width: 40px;
+		position: absolute; */
+		/* top: 3rem; */
+		/* left: 9rem; */
+		padding-left: 10px;
 		cursor: pointer;
-	} */
+	}
 
 	.icono-mapa {
 		display: none;

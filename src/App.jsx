@@ -6,7 +6,7 @@ import { Home } from "./components/pages/home/Home";
 import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
 import AgendaCita from "./components/layouts/agendacita/AgendaCita";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
-import { Ranking } from "./components/pages/Ranking/Ranking";
+import  Ranking  from "./components/pages/Ranking/Ranking";
 import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
 import Contacto from "./components/pages/contacto/Contacto";
 import Chatbot from "./components/layouts/chatbot/Chatbot";

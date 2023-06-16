@@ -36,9 +36,9 @@ h1 {
 span {
 	color: aqua;
 }
-img {
+/* img {
 	cursor: pointer;
-}
+} */
 
 .menu li {
 	margin: 0.15rem;
@@ -91,6 +91,7 @@ img {
 .icono-inicio {
 	/* width: 50px;
 	height: 50px; */
+	cursor: pointer;
 	transition: transform 0.3s ease;
 }
 
@@ -163,7 +164,10 @@ img {
 	color: aqua;
 	/* Agrega otros estilos para resaltar la opción del menú */
 }
-
+.icono-inicio-wrapper.active .dropdown {
+	display: block;
+  }
+  
 
 @media screen and (min-width: 769px) {
 	.toggle-menu {

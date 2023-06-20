@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
 import axios from 'axios';
-// import withReactContent from "sweetalert2-react-content";
+import withReactContent from "sweetalert2-react-content";
 import "../headerespecialista/HeaderEspecilista.css";
 
 export const HeaderEspecialista = ({ isAuthenticated }) => {
@@ -17,6 +17,12 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [descripcion, setDescripcion] = useState('');
   const [costo, setCosto] = useState('');
   const [foto, setFoto] = useState(null);
+
+
+  const namePros = useRef(null);
+  const descripcionProps = useRef(null);
+  const costProps = useRef(null);
+  const imagenProps = useRef(null);
 
   const userId = localStorage.getItem("userId");
   const accessToken = localStorage.getItem("accessToken");
@@ -118,11 +124,10 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
             <div>
               <label htmlFor="nombre">Nombre:</label>
               <input
+                ref={namePros}
                 type="text"
                 id="nombre"
-                value={nombre}
                 className="input-text"
-                onChange={(e) => setNombre(e.target.value)}
               />
             </div>
             <div>
@@ -131,10 +136,9 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               </label>
               <textarea
                 id="descripcion"
-                value={descripcion}
                 rows="4"
                 className="textarea"
-                onChange={(e) => setDescripcion(e.target.value)}
+                ref={descripcionProps}
               ></textarea>
             </div>
             <div>
@@ -142,11 +146,10 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               <input
                 type="text"
                 id="costo"
-                value={costo}
                 className="input-number"
                 inputMode="numeric"
                 pattern="[0-9]*"
-                onChange={(e) => setCosto(e.target.value)}
+                ref={costProps}
               />
             </div>
             <div>
@@ -157,7 +160,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 type="file"
                 id="imagen"
                 className="file-input"
-                onChange={(e) => setFoto(e.target.files[0])}
+                ref={imagenProps}
               />
             </div>
           </form>
@@ -172,41 +175,42 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
         const formData = {
           identificacion_especialistas: userId,
-          nombre: nombre,
-          descripcion: descripcion,
-          costo: costo,
-          foto: foto,
+          nombre: namePros.current.value,
+          descripcion: descripcionProps.current.value,
+          costo: costProps.current.value,
+          foto: imagenProps.current.value,
         };
+        console.log(formData);
 
         // Realizar la solicitud POST a la API
-        axios
-          .post(
-            'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
-            formData,
-            {
-              headers: {
-                Authorization: `Bearer ${accessToken}`,
-              },
-            }
-          )
-          .then((response) => {
-            console.log('Procedimiento creado:', response.data);
+        // axios
+        //   .post(
+        //     'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
+        //     formData,
+        //     {
+        //       headers: {
+        //         Authorization: `Bearer ${accessToken}`,
+        //       },
+        //     }
+        //   )
+        //   .then((response) => {
+        //     console.log('Procedimiento creado:', response.data);
 
-            // Mostrar la alerta de SweetAlert
-            Swal.fire({
-              icon: 'success',
-              title: 'Procedimiento creado',
-              text: 'El procedimiento ha sido creado exitosamente.',
-            });
+        //     // Mostrar la alerta de SweetAlert
+        //     Swal.fire({
+        //       icon: 'success',
+        //       title: 'Procedimiento creado',
+        //       text: 'El procedimiento ha sido creado exitosamente.',
+        //     });
 
-            // Reiniciar los campos del formulario
-            setNombre('');
-            setDescripcion('');
-            setCosto('');
-          })
-          .catch((error) => {
-            console.error('Error al crear el procedimiento:', error);
-          });
+        //     // Reiniciar los campos del formulario
+        //     setNombre('');
+        //     setDescripcion('');
+        //     setCosto('');
+        //   })
+        //   .catch((error) => {
+        //     console.error('Error al crear el procedimiento:', error);
+        //   });
       },
     });
   };

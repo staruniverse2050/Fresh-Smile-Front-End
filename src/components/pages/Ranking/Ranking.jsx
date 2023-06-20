@@ -29,7 +29,7 @@ const Ranking = () => {
 
   return (
     <div className="ranking-container">
-      <h2 className="title">Ranking</h2>
+      <h2 className="title-rang">Ranking</h2>
       <hr></hr>
       <table className="ranking-table">
         <thead>

@@ -4,6 +4,7 @@ body {
 }
 
 /* Estilos del banner */
+
 .container_banner {
   font-family: 'Open Sans', sans-serif;
   display: flex;
@@ -82,6 +83,8 @@ body {
   /* Ajusta el valor según sea necesario */
 }
 
+/*estilos principales*/
+
 .container_home {
   flex-direction: column;
   align-items: center;
@@ -102,6 +105,7 @@ body {
   left: 123px;
   top: 73px;
 }
+
 
 .container-btn {
   display: flex;
@@ -142,6 +146,7 @@ body {
 }
 
 /* Procedimientos*/
+
 .container-wrapper-Home {
   display: flex;
   flex-wrap: wrap;
@@ -169,6 +174,7 @@ body {
     transform: scale(1.1);
   
 }
+
 .card-image-proce {
   width: 100%;
   height: 200px;
@@ -208,6 +214,7 @@ body {
   position: relative;
   left: 1px;
 }
+
 
 .container-procedimientos-Home {
   align-items: center;
@@ -321,6 +328,8 @@ body {
   left: 12px;
 }
 
+/*nosotros*/
+
 .container-nosotros-home {
   display: flex;
   justify-content: center;
@@ -336,10 +345,12 @@ body {
   margin: 20px;
   padding: 30px;
 }
+
 .card-nosotros-home img:hover {
   transform: scale(1.1);
   font-family: 'Open Sans', sans-serif;
 }
+
 
 .card-nosotros-home img {
   width: 110%;
@@ -347,6 +358,7 @@ body {
   border-radius: 2%;
   /* margin: 0 auto; */
 }
+
 .card-nosotros-home:hover {
   opacity: 1;
 }
@@ -370,6 +382,7 @@ body {
   border: 1px solid #ccc;
   background-color: #D3D3D3;
 }
+
 
 .container-nosotros-home2 .image-nosotros {
   flex: 1;
@@ -401,6 +414,7 @@ body {
   margin-bottom: 10px;
   font-family: 'Open Sans', sans-serif;
 }
+
 .btn-nosotros-home{
   padding: 10px 20px;
   position: relative;
@@ -413,278 +427,349 @@ body {
   background: #1e6d79;
 }
 
-@media (max-width: 768px) {
-  /* Reglas CSS para pantallas con un ancho máximo de 768px */
-  .body {
-    /* Ajusta el tamaño de fuente para dispositivos móviles */
-    font-size: 14px;
-  }
 
-  .container_banner {
-    height: 25em;
-  }
-
-  .linksinicio1 {
-    font-size: 0.8rem;
-    padding: 0.3rem;
-    left: 5px;
-  }
-
-  .space-wpp {
-    bottom: 80px;
-    right: 40px;
-  }
-
-  .float {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-
-  .linksinicio2 {
-    font-size: 18px;
-    padding: 0.3rem;
-    left: 2px;
-  }
-
-  .container_home {
-    padding: 20px;
-  }
-
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas con un ancho máximo de 768px */
   .container_home h1 {
     font-size: 2em;
-    margin-right: 10%;
+    margin-right: 5%;
     left: 0;
     top: 0;
   }
 
   .container-btn {
     flex-direction: column;
-    margin-top: -45px;
   }
 
   .boton-home {
-    width: 160px;
+    width: 150px;
     height: 50px;
     font-size: 12px;
     top: 40px;
-    margin-top: 45px;
-  }
-
-  .container-wrapper-Home {
-    justify-content: flex-start;
-    
   }
 
   .card-procedimientos-home {
-    width: 340px;
-    margin: 10px;
-    margin-left: 145px;
+    width: 300px;
+    margin: 20px;
   }
 
-  .card-procedimientos-home:hover {
-    transform: scale(1);
+  .card-procedimientos-home {
+    width: 300px;
+    margin: 20px;
   }
 
-  .container-procedimientos-Home img {
-    width: 70%;
-    max-height: 150px;
-    margin-right: 10px;
+  .card-title {
+    font-size: 20px;
+   
   }
 
-  .container-procedimientos-Home .content-procedimientos-home {
-    width: 90%;
-  }
-
-  .btn-blog {
+  .card-button {
+    /* Actualiza los estilos según tus necesidades */
     font-size: 14px;
     padding: 8px 16px;
-    left: 50px;
+
   }
 
-  .barra {
-    margin: 10px auto;
-    padding: 10px;
+  .linksblog {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 14px;
   }
 
-  .barra h2 {
-    font-size: 36px;
-  }
-
-  .barra-2 {
-    margin: 10px auto;
-    padding: 20px;
-    margin-right: 45px;
-    margin-left: 5px;
-  }
-
-  .barra-2 h2 {
-    font-size: 36px;
-  }
-
-  .container-nosotros-home {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-  }
-
-  .container-nosotros-home2 {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
+  .container-procedimientos-Home {
+    width: 90%;
     padding: 15px;
   }
 
+   /*estilos de bararas*/
+
+  .barra {
+    /* Actualiza los estilos según tus necesidades */
+    padding: 15px;
+  }
+ 
+  .barra-2 {
+    /* Actualiza los estilos según tus necesidades */
+    padding: 25px;
+  }
+
+  .barra-2 h2 {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 36px;
+  }
+
+  .title-barra {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 36px;
+  }
+
+  /*especialistas*/
+
+  .Especialidad {
+    /* Actualiza los estilos según tus necesidades */
+    top: 15px;
+    left: 5px;
+  }
+  
+  .nombreespecialista {
+    /* Actualiza los estilos según tus necesidades */
+    top: 10px;
+    left: 8px;
+  }
+
+  /*nosotros*/
+
+  .container-nosotros-home {
+    /* Actualiza los estilos según tus necesidades */
+    padding: 30px;
+  }
+
+  .card-nosotros-home {
+    /* Actualiza los estilos según tus necesidades */
+    width: 180px;
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .card-nosotros-home img {
+    /* Actualiza los estilos según tus necesidades */
+    width: 100%;
+    height: auto;
+  }
+
+  .card-title-nosotros {
+    /* Actualiza los estilos según tus necesidades */
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 20px;
+  }
+
+  .container-nosotros-home2 {
+    /* Actualiza los estilos según tus necesidades */
+    flex-direction: column;
+    justify-content: center;
+    padding: 810px;
+    
+  }
+
   .container-nosotros-home2 .image-nosotros {
-    flex: 0 0 100%;
+    /* Actualiza los estilos según tus necesidades */
+    flex: none;
     margin-right: 0;
     margin-bottom: 20px;
+   
   }
 
   .container-nosotros-home2 .image-nosotros img {
-    border-radius: 0;
+    /* Actualiza los estilos según tus necesidades */
+    width: 90%;
+    left: 0;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  .container-nosotros-home2 .content-nosotros {
+    /* Actualiza los estilos según tus necesidades */
+    text-align: center;
   }
 
   .container-nosotros-home2 h2 {
+    /* Actualiza los estilos según tus necesidades */
     font-size: 20px;
   }
 
   .container-nosotros-home2 p {
+    /* Actualiza los estilos según tus necesidades */
     font-size: 18px;
+    margin-bottom: 8px;
   }
 
   .btn-nosotros-home {
+    /* Actualiza los estilos según tus necesidades */
     font-size: 14px;
-    margin-left: 285px;
-   
-    
-    
+    top: 10px;
   }
 
-  .container-nosotros-home2 button:hover {
-    background: #1e6d79;
-   
+  /*responsive del fondo */
+
+  .container_banner {
+    /* Actualiza los estilos según tus necesidades */
+    height: 20em;
+  }
+
+  .linksinicio1 {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 14px;
+    padding: 0.3rem;
+    left: 5px;
   }
 
 }
 
-@media (max-width: 480px) {
-  /* Reglas CSS para pantallas con un ancho máximo de 480px */
-  .body {
-    /* Ajusta el tamaño de fuente para dispositivos móviles más pequeños */
-    font-size: 12px;
-  }
-
-  .container_banner {
-    height: 25em;
-    padding: 0px;
-  }
-
-  .linksinicio1 {
-    font-size: 0.7rem;
-    padding: 0.2rem;
-    left: 2px;
-  }
-
-  .space-wpp {
-    bottom: 80px;
-    right: 20px;
-    width: 45px;
-  }
-
-  .float {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-  }
-
-  .linksinicio2 {
-    font-size: 14px;
-    padding: 0.2rem;
-    left: 1px;
-  }
-
-  .container_home {
-    padding: 10px;
-  }
-
+@media screen and (max-width: 480px) {
+  /* Estilos para pantallas con un ancho máximo de 480px */
   .container_home h1 {
-    font-size: 1.8em;
-    margin-right: 5%;
-    
+    font-size: 1.5em;
+    margin-right: 2%;
+    left: 0;
+    top: 0;
   }
 
   .container-btn {
     flex-direction: column;
-    margin-top: -45px;
+    /* align-items: flex-start; */
   }
 
   .boton-home {
-    width: 140px;
-    height: 40px;
-    font-size: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 11px;
     top: 20px;
   }
 
-  .container-wrapper-Home {
-    justify-content: flex-start;
+  .card-procedimientos-home {
+    width: 250px;
+    margin: 15px;
   }
 
   .card-procedimientos-home {
-    width: 840px;
-    margin: 10px;
-    margin-top: 20px;
+    width: 250px;
+    margin: 15px;
   }
 
-  .card-procedimientos-home:hover {
-    transform: scale(0.9);
+  .card-title {
+    font-size: 18px;
+    
   }
 
-  .container-procedimientos-Home img {
-    width: 90%;
-    max-height: 120px;
-    margin-right: 5px;
-  }
-
-  .content-procedimientos-home h2 {
-    font-size: 20px;
-    margin-bottom: 6px;
-  }
-
-  .btn-blog {
+  .card-button {
+    /* Actualiza los estilos según tus necesidades */
     font-size: 12px;
     padding: 6px 12px;
-    left: 20px;
+  }
+
+  .linksblog {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 12px;
+  }
+
+  .container-procedimientos-Home {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
   }
 
   .barra {
-    margin: 5px auto;
-    padding: 5px;
-  }
-
-  .barra h2 {
-    font-size: 30px;
+    /* Actualiza los estilos según tus necesidades */
+    padding: 10px;
+    margin: 10px auto;
   }
 
   .barra-2 {
-    margin: 5px auto;
-    padding: 10px;
+    /* Actualiza los estilos según tus necesidades */
+    padding: 20px;
+    margin: 10px auto;
+    
   }
 
   .barra-2 h2 {
-    font-size: 30px;
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 24px;
+    margin-right: 40px;
   }
 
+  .title-barra {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 24px;
+  }
+
+  /*especialistas*/
+
+  .Especialidad {
+    /* Actualiza los estilos según tus necesidades */
+    top: 10px;
+    left: 2px;
+  }
+
+  .nombreespecialista {
+    /* Actualiza los estilos según tus necesidades */
+    top: 5px;
+    left: 4px;
+  }
+
+  /*nosotros*/
+
   .container-nosotros-home {
+    /* Actualiza los estilos según tus necesidades */
     padding: 20px;
+    
+  }
+
+  .card-nosotros-home {
+    /* Actualiza los estilos según tus necesidades */
+    width: 140px;
+    padding: 15px;
+    margin: 10px;
+    
+  }
+
+  .card-nosotros-home img {
+    /* Actualiza los estilos según tus necesidades */
+    width: 90%;
+    height: auto;
+  }
+
+  .card-title-nosotros {
+    /* Actualiza los estilos según tus necesidades */
+    margin-left: 10px;
+    margin-top: 3px;
+    font-size: 18px;
   }
 
   .container-nosotros-home2 {
-    padding: 10px;
+    /* Actualiza los estilos según tus necesidades */
+    padding: 5px;
   }
 
   .container-nosotros-home2 .image-nosotros {
+    /* Actualiza los estilos según tus necesidades */
     margin-bottom: 10px;
+  }
+
+  .container-nosotros-home2 .image-nosotros img {
+    /* Actualiza los estilos según tus necesidades */
+    border-radius: 5px;
+  }
+
+  .container-nosotros-home2 h2 {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .container-nosotros-home2 p {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .btn-nosotros-home {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 12px;
+    top: 5px;
+  }
+
+  /*responsive principal fondo*/
+
+  .container_banner {
+    /* Actualiza los estilos según tus necesidades */
+    height: 15em;
+  }
+
+  .linksinicio1 {
+    /* Actualiza los estilos según tus necesidades */
+    font-size: 12px;
+    padding: 0.2rem;
+    left: 3px;
   }
 
 }

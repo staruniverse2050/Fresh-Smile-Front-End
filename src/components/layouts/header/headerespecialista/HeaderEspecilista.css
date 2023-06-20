@@ -263,3 +263,66 @@ span {
 		font-size: small;
 	}
 }
+.swal2-container {
+  font-family: Arial, sans-serif;
+}
+
+.swal2-title {
+  font-size: 18px;
+}
+
+#formulario-procedimiento {
+  margin-top: 20px;
+}
+
+#formulario-procedimiento div {
+  margin-bottom: 15px;
+}
+
+.label-bold {
+  font-weight: bold;
+}
+
+.input-text,
+.textarea,
+.input-number,
+.file-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.file-input {
+  padding: 4px 8px;
+}
+
+.file-input-label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.input-number {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Añade estilo para el texto de ayuda */
+.input-number::placeholder {
+  color: #999;
+}
+
+/* Añade estilo para resaltar el campo cuando se enfoca */
+.input-number:focus {
+  outline: none;
+  border-color: #888;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}

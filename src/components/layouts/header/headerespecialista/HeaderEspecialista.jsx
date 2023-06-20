@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
+import Swal from "sweetalert2";
+import axios from 'axios';
+import withReactContent from "sweetalert2-react-content";
 import "../headerespecialista/HeaderEspecilista.css";
 
 export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
-  const [name, setName] = useState(""); // Estado para almacenar el nombre de la persona
+  const [name, setName] = useState("");
   const location = useLocation();
   const [isEditing, setIsEditing] = useState(false);
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     generateAvatar();
@@ -19,7 +22,6 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
     const userId = localStorage.getItem("userId");
     if (!userId) {
       console.error("No se encontró el userId en el localStorage");
-      // Manejar el caso en el que no se encuentre el userId, por ejemplo, redirigir al usuario a una página de inicio de sesión
       return;
     }
 
@@ -29,11 +31,11 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       .then((response) => response.json())
       .then((data) => {
         const fullName = data.nombre_completo;
-        const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
-        const firstName = names[0]; // Obtener el primer nombre
-        const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
+        const names = fullName.split(" ");
+        const firstName = names[0];
+        const lastName = names.length > 1 ? names[1] : "";
 
-        setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
+        setName(`${firstName} ${lastName}`);
 
         const avatarStyle = "set4";
         const size = 600;
@@ -58,7 +60,6 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       })
       .catch((error) => {
         console.error("Error al obtener los datos del paciente:", error);
-        // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
       });
   };
 
@@ -72,22 +73,127 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   const handleLogoClick = (event) => {
     event.preventDefault();
-    // Lógica adicional si es necesario
   };
 
   const logout = () => {
-    // Eliminar la información de inicio de sesión del almacenamiento local
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("rol");
 
-    // Redireccionar al usuario a la página de registro
-    history.push("/Inicio");
+    navigate("/Inicio");
   };
 
   const isActiveRoute = (route) => {
     return location.pathname === route;
   };
 
+  const handleAgregarProcedimiento = () => {
+    Swal.fire({
+      title: "Agregar nuevo procedimiento",
+      text: "¿Deseas agregar un nuevo procedimiento?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Sí",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        mostrarFormulario();
+      }
+    });
+  };
+
+  const mostrarFormulario = () => {
+    const MySwal = withReactContent(Swal);
+  
+    MySwal.fire({
+      title: "Nuevo procedimiento",
+      html: (
+        <div>
+          <form id="formulario-procedimiento">
+            <div>
+              <label htmlFor="nombre">Nombre:</label>
+              <input type="text" id="nombre" className="input-text" />
+            </div>
+            <div>
+              <label className="label-bold" htmlFor="descripcion">
+                Descripción:
+              </label>
+              <textarea id="descripcion" rows="4" className="textarea"></textarea>
+            </div>
+            <div>
+              <label htmlFor="costo">Costo:</label>
+              <input
+                type="text"
+                id="costo"
+                className="input-number"
+                inputmode="numeric"
+                pattern="[0-9]*"
+              />
+            </div>
+  
+            <div>
+              <label className="label-bold" htmlFor="imagen">
+                Imagen:
+              </label>
+              <input type="file" id="imagen" className="file-input" />
+            </div>
+          </form>
+        </div>
+      ),
+      showCancelButton: true,
+      confirmButtonText: "Guardar",
+      cancelButtonText: "Cancelar",
+      preConfirm: () => {
+        const userId = localStorage.getItem("userId");
+        const accessToken = localStorage.getItem("accessToken");
+        // Obtener los valores del formulario
+        const nombre = document.getElementById("nombre").value;
+        const descripcion = document.getElementById("descripcion").value;
+        const costo = document.getElementById("costo").value;
+        const foto = document.getElementById("imagen").files[0];
+  
+        const formData = new FormData();
+        formData.append("identificacion_especialistas", userId);
+        formData.append("foto", null);
+        formData.append("nombre", nombre);
+        formData.append("descripcion", descripcion);
+        formData.append("costo", costo);
+  
+        // Realizar la solicitud POST a la API
+        axios
+          .post(
+            "https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento",
+            formData,
+            {
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            }
+          )
+          .then((response) => {
+            console.log("Procedimiento creado:", response.data);
+  
+            // Mostrar la alerta de SweetAlert
+            Swal.fire({
+              icon: "success",
+              title: "Procedimiento creado",
+              text: "El procedimiento ha sido creado exitosamente.",
+            });
+  
+            // Reiniciar los campos del formulario
+            document.getElementById("nombre").value = "";
+            document.getElementById("descripcion").value = "";
+            document.getElementById("costo").value = "";
+            document.getElementById("imagen").value = "";
+          })
+          .catch((error) => {
+            console.error("Error al crear el procedimiento:", error);
+          });
+      },
+    });
+  };
+  
+  
+ 
   return (
     <header className="Header_Header">
       <div className="menu">
@@ -155,21 +261,9 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                       }`}
                       to="/Procedimientos"
                       activeClassName="active"
-                      onClick={toggleDropdown}
+                      onClick={handleAgregarProcedimiento}
                     >
                       Procedimientos
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className={`links ${
-                        isActiveRoute("/Procedimientos") ? "active" : ""
-                      }`}
-                      to="/Procedimientos"
-                      activeClassName="active"
-                      onClick={toggleDropdown}
-                    >
-                      Agregar Procedimiento
                     </NavLink>
                   </li>
                   <li>
@@ -252,17 +346,16 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Nosotros
                 </NavLink>
               </li>
-
               <li>
                 <NavLink
                   className="links"
                   to="/Procedimientos"
                   activeClassName="active"
+                  onClick={handleAgregarProcedimiento}
                 >
                   Procedimientos
                 </NavLink>
               </li>
-              
               {isAuthenticated && (
                 <>
                   <li>
@@ -276,20 +369,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                 </>
               )}
-                  <li>
-                    <NavLink
-                      className={`links ${
-                        isActiveRoute("/") ? "active" : ""
-                      }`}
-                      to="/"
-                      activeClassName="active"
-                      onClick={toggleDropdown}
-                    >
-                      Agregar Procedimiento
-                    </NavLink>
-                  </li>
               <li>
-                
                 <NavLink
                   className="links"
                   to="/Especialistas"
@@ -342,7 +422,10 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   {isAuthenticated && (
                     <li>
-                      <NavLink className="dropdown-link" to="/Perfilespecialista">
+                      <NavLink
+                        className="dropdown-link"
+                        to="/Perfilespecialista"
+                      >
                         Ver perfil
                       </NavLink>
                     </li>

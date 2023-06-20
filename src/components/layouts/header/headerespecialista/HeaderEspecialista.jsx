@@ -213,15 +213,15 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   return (
     <header className="Header_Header">
-      <div className="menu">
+      <div className="menu-especialista">
         <Link to="/Inicio" onClick={handleLogoClick}>
           <img
-            className="logo"
+            className="logo-especialista"
             src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
             alt=""
           />
         </Link>
-        <h1>
+        <h1 className="h1-especialista">
           <span>Fresh </span> Smile<span> Cmills</span>
         </h1>
         <ul>
@@ -339,7 +339,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               </div>
             )}
           </div>
-          <div className="container2">
+          <div className="container2-especialita">
             <ul>
               <li>
                 <NavLink
@@ -352,7 +352,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Inicio
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   className={`links ${
                     isActiveRoute("/Nosotros") ? "active" : ""
@@ -362,7 +362,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 >
                   Nosotros
                 </NavLink>
-              </li>
+              </li> */}
+
               <li>
                 <NavLink
                   className="links"
@@ -395,7 +396,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Valoraciones
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   className="links"
                   to="/Contacto"
@@ -403,7 +404,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 >
                   Contacto
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <p className="Bienvenida">
               Hola, {name.split(" ")[0]} {name.split(" ")[1]}

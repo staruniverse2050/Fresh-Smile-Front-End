@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
+import Swal from "sweetalert2";
+import axios from 'axios';
+// import withReactContent from "sweetalert2-react-content";
 import "../headerespecialista/HeaderEspecilista.css";
 
 export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
-  const [name, setName] = useState(""); // Estado para almacenar el nombre de la persona
+  const [name, setName] = useState("");
   const location = useLocation();
   const [isEditing, setIsEditing] = useState(false);
+  const navigate = useNavigate();
+  const [nombre, setNombre] = useState('');
+  const [descripcion, setDescripcion] = useState('');
+  const [costo, setCosto] = useState('');
+  const [foto, setFoto] = useState(null);
 
-
+  const userId = localStorage.getItem("userId");
+  const accessToken = localStorage.getItem("accessToken");
   useEffect(() => {
     generateAvatar();
   }, []);
@@ -19,7 +28,6 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
     const userId = localStorage.getItem("userId");
     if (!userId) {
       console.error("No se encontró el userId en el localStorage");
-      // Manejar el caso en el que no se encuentre el userId, por ejemplo, redirigir al usuario a una página de inicio de sesión
       return;
     }
 
@@ -29,11 +37,11 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       .then((response) => response.json())
       .then((data) => {
         const fullName = data.nombre_completo;
-        const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
-        const firstName = names[0]; // Obtener el primer nombre
-        const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
+        const names = fullName.split(" ");
+        const firstName = names[0];
+        const lastName = names.length > 1 ? names[1] : "";
 
-        setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
+        setName(`${firstName} ${lastName}`);
 
         const avatarStyle = "set4";
         const size = 600;
@@ -58,7 +66,6 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       })
       .catch((error) => {
         console.error("Error al obtener los datos del paciente:", error);
-        // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
       });
   };
 
@@ -72,33 +79,149 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   const handleLogoClick = (event) => {
     event.preventDefault();
-    // Lógica adicional si es necesario
   };
 
   const logout = () => {
-    // Eliminar la información de inicio de sesión del almacenamiento local
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("rol");
 
-    // Redireccionar al usuario a la página de registro
-    history.push("/Inicio");
+    navigate("/Inicio");
   };
 
   const isActiveRoute = (route) => {
     return location.pathname === route;
   };
 
+  const handleAgregarProcedimiento = () => {
+    Swal.fire({
+      title: "Agregar nuevo procedimiento",
+      text: "¿Deseas agregar un nuevo procedimiento?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: "Sí",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        mostrarFormulario();
+      }
+    });
+  };
+
+  const mostrarFormulario = () => {
+    const MySwal = withReactContent(Swal);
+
+    MySwal.fire({
+      title: 'Nuevo procedimiento',
+      html: (
+        <div>
+          <form id="formulario-procedimiento">
+            <div>
+              <label htmlFor="nombre">Nombre:</label>
+              <input
+                type="text"
+                id="nombre"
+                value={nombre}
+                className="input-text"
+                onChange={(e) => setNombre(e.target.value)}
+              />
+            </div>
+            <div>
+              <label className="label-bold" htmlFor="descripcion">
+                Descripción:
+              </label>
+              <textarea
+                id="descripcion"
+                value={descripcion}
+                rows="4"
+                className="textarea"
+                onChange={(e) => setDescripcion(e.target.value)}
+              ></textarea>
+            </div>
+            <div>
+              <label htmlFor="costo">Costo:</label>
+              <input
+                type="text"
+                id="costo"
+                value={costo}
+                className="input-number"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                onChange={(e) => setCosto(e.target.value)}
+              />
+            </div>
+            <div>
+              <label className="label-bold" htmlFor="imagen">
+                Imagen:
+              </label>
+              <input
+                type="file"
+                id="imagen"
+                className="file-input"
+                onChange={(e) => setFoto(e.target.files[0])}
+              />
+            </div>
+          </form>
+        </div>
+      ),
+      showCancelButton: true,
+      confirmButtonText: 'Guardar',
+      cancelButtonText: 'Cancelar',
+      preConfirm: () => {
+        const userId = localStorage.getItem('userId');
+        const accessToken = localStorage.getItem('accessToken');
+
+        const formData = {
+          identificacion_especialistas: userId,
+          nombre: nombre,
+          descripcion: descripcion,
+          costo: costo,
+          foto: foto,
+        };
+
+        // Realizar la solicitud POST a la API
+        axios
+          .post(
+            'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
+            formData,
+            {
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            }
+          )
+          .then((response) => {
+            console.log('Procedimiento creado:', response.data);
+
+            // Mostrar la alerta de SweetAlert
+            Swal.fire({
+              icon: 'success',
+              title: 'Procedimiento creado',
+              text: 'El procedimiento ha sido creado exitosamente.',
+            });
+
+            // Reiniciar los campos del formulario
+            setNombre('');
+            setDescripcion('');
+            setCosto('');
+          })
+          .catch((error) => {
+            console.error('Error al crear el procedimiento:', error);
+          });
+      },
+    });
+  };
+
   return (
     <header className="Header_Header">
-      <div className="menu">
+      <div className="menu-especialista">
         <Link to="/Inicio" onClick={handleLogoClick}>
           <img
-            className="logo"
+            className="logo-especialista"
             src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
             alt=""
           />
         </Link>
-        <h1>
+        <h1 className="h1-especialista">
           <span>Fresh </span> Smile<span> Cmills</span>
         </h1>
         <ul>
@@ -155,21 +278,9 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                       }`}
                       to="/Procedimientos"
                       activeClassName="active"
-                      onClick={toggleDropdown}
+                      onClick={handleAgregarProcedimiento}
                     >
                       Procedimientos
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className={`links ${
-                        isActiveRoute("/Procedimientos") ? "active" : ""
-                      }`}
-                      to="/Procedimientos"
-                      activeClassName="active"
-                      onClick={toggleDropdown}
-                    >
-                      Agregar Procedimiento
                     </NavLink>
                   </li>
                   <li>
@@ -228,7 +339,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               </div>
             )}
           </div>
-          <div className="container2">
+          <div className="container2-especialita">
             <ul>
               <li>
                 <NavLink
@@ -241,7 +352,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Inicio
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   className={`links ${
                     isActiveRoute("/Nosotros") ? "active" : ""
@@ -251,18 +362,18 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 >
                   Nosotros
                 </NavLink>
-              </li>
+              </li> */}
 
               <li>
                 <NavLink
                   className="links"
                   to="/Procedimientos"
                   activeClassName="active"
+                  onClick={handleAgregarProcedimiento}
                 >
                   Procedimientos
                 </NavLink>
               </li>
-              
               {isAuthenticated && (
                 <>
                   <li>
@@ -276,20 +387,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                 </>
               )}
-                  <li>
-                    <NavLink
-                      className={`links ${
-                        isActiveRoute("/") ? "active" : ""
-                      }`}
-                      to="/"
-                      activeClassName="active"
-                      onClick={toggleDropdown}
-                    >
-                      Agregar Procedimiento
-                    </NavLink>
-                  </li>
               <li>
-                
                 <NavLink
                   className="links"
                   to="/Especialistas"
@@ -298,7 +396,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Valoraciones
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   className="links"
                   to="/Contacto"
@@ -306,7 +404,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 >
                   Contacto
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <p className="Bienvenida">
               Hola, {name.split(" ")[0]} {name.split(" ")[1]}
@@ -342,7 +440,10 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   {isAuthenticated && (
                     <li>
-                      <NavLink className="dropdown-link" to="/Perfilespecialista">
+                      <NavLink
+                        className="dropdown-link"
+                        to="/Perfilespecialista"
+                      >
                         Ver perfil
                       </NavLink>
                     </li>

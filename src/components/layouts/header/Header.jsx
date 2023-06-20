@@ -51,7 +51,7 @@ export const Header = () => {
           <img
             className="logo"
             src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
-            alt=""
+            alt="toggle-menu"
           />
         </Link>
         <h1>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
-import axios from 'axios';
+import axios from "axios";
 import withReactContent from "sweetalert2-react-content";
 import "../headerespecialista/HeaderEspecilista.css";
 
@@ -13,7 +13,13 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
   const location = useLocation();
   const [isEditing, setIsEditing] = useState(false);
   const navigate = useNavigate();
+  const [nombre, setNombre] = useState('');
+  const [descripcion, setDescripcion] = useState('');
+  const [costo, setCosto] = useState('');
+  const [foto, setFoto] = useState(null);
 
+  const userId = localStorage.getItem("userId");
+  const accessToken = localStorage.getItem("accessToken");
   useEffect(() => {
     generateAvatar();
   }, []);
@@ -103,65 +109,79 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   const mostrarFormulario = () => {
     const MySwal = withReactContent(Swal);
-  
+
     MySwal.fire({
-      title: "Nuevo procedimiento",
+      title: 'Nuevo procedimiento',
       html: (
         <div>
           <form id="formulario-procedimiento">
             <div>
               <label htmlFor="nombre">Nombre:</label>
-              <input type="text" id="nombre" className="input-text" />
+              <input
+                type="text"
+                id="nombre"
+                value={nombre}
+                className="input-text"
+                onChange={(e) => setNombre(e.target.value)}
+              />
             </div>
             <div>
               <label className="label-bold" htmlFor="descripcion">
                 Descripción:
               </label>
-              <textarea id="descripcion" rows="4" className="textarea"></textarea>
+              <textarea
+                id="descripcion"
+                value={descripcion}
+                rows="4"
+                className="textarea"
+                onChange={(e) => setDescripcion(e.target.value)}
+              ></textarea>
             </div>
             <div>
               <label htmlFor="costo">Costo:</label>
               <input
                 type="text"
                 id="costo"
+                value={costo}
                 className="input-number"
-                inputmode="numeric"
+                inputMode="numeric"
                 pattern="[0-9]*"
+                onChange={(e) => setCosto(e.target.value)}
               />
             </div>
-  
             <div>
               <label className="label-bold" htmlFor="imagen">
                 Imagen:
               </label>
-              <input type="file" id="imagen" className="file-input" />
+              <input
+                type="file"
+                id="imagen"
+                className="file-input"
+                onChange={(e) => setFoto(e.target.files[0])}
+              />
             </div>
           </form>
         </div>
       ),
       showCancelButton: true,
-      confirmButtonText: "Guardar",
-      cancelButtonText: "Cancelar",
+      confirmButtonText: 'Guardar',
+      cancelButtonText: 'Cancelar',
       preConfirm: () => {
-        const userId = localStorage.getItem("userId");
-        const accessToken = localStorage.getItem("accessToken");
-        // Obtener los valores del formulario
-        const nombre = document.getElementById("nombre").value;
-        const descripcion = document.getElementById("descripcion").value;
-        const costo = document.getElementById("costo").value;
-        const foto = document.getElementById("imagen").files[0];
-  
-        const formData = new FormData();
-        formData.append("identificacion_especialistas", userId);
-        formData.append("foto", null);
-        formData.append("nombre", nombre);
-        formData.append("descripcion", descripcion);
-        formData.append("costo", costo);
-  
+        const userId = localStorage.getItem('userId');
+        const accessToken = localStorage.getItem('accessToken');
+
+        const formData = {
+          identificacion_especialistas: userId,
+          nombre: nombre,
+          descripcion: descripcion,
+          costo: costo,
+          foto: foto,
+        };
+
         // Realizar la solicitud POST a la API
         axios
           .post(
-            "https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento",
+            'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
             formData,
             {
               headers: {
@@ -170,30 +190,27 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
             }
           )
           .then((response) => {
-            console.log("Procedimiento creado:", response.data);
-  
+            console.log('Procedimiento creado:', response.data);
+
             // Mostrar la alerta de SweetAlert
             Swal.fire({
-              icon: "success",
-              title: "Procedimiento creado",
-              text: "El procedimiento ha sido creado exitosamente.",
+              icon: 'success',
+              title: 'Procedimiento creado',
+              text: 'El procedimiento ha sido creado exitosamente.',
             });
-  
+
             // Reiniciar los campos del formulario
-            document.getElementById("nombre").value = "";
-            document.getElementById("descripcion").value = "";
-            document.getElementById("costo").value = "";
-            document.getElementById("imagen").value = "";
+            setNombre('');
+            setDescripcion('');
+            setCosto('');
           })
           .catch((error) => {
-            console.error("Error al crear el procedimiento:", error);
+            console.error('Error al crear el procedimiento:', error);
           });
       },
     });
   };
-  
-  
- 
+
   return (
     <header className="Header_Header">
       <div className="menu">

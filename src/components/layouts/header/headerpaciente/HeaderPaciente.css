@@ -1,4 +1,4 @@
-.menu {
+.menu-paciente {
 	font-family: "Open Sans", sans-serif;
 	display: flex;
 	justify-content: space-between;
@@ -22,28 +22,27 @@
     display: flex;
     align-items: center;
 }
-h1 {
+.h1-paciente {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.5rem;
 	text-transform: uppercase;
-	color: var(--font-color);
 	margin: 0;
 	color: #ffffff;
 	margin-right: 15%;
 }
 
-span {
+.h1-paciente span {
 	color: aqua;
 }
 /* img {
 	cursor: pointer;
 } */
 
-.menu li {
+.menu-paciente li {
 	margin: 0.15rem;
 }
 
-.menu ul {
+.menu-paciente ul {
 	margin: 0;
 	padding: 0;
 	display: flex;

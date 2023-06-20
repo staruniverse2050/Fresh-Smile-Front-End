@@ -89,7 +89,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
 
   return (
     <header className="Header_Header">
-      <div className="menu">
+      <div className="menu-paciente">
         <Link to="/Inicio" onClick={handleLogoClick}>
           <img
             className="logo"
@@ -97,7 +97,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
             alt=""
           />
         </Link>
-        <h1>
+        <h1 className="h1-paciente">
           <span>Fresh </span> Smile<span> Cmills</span>
         </h1>
         <ul>

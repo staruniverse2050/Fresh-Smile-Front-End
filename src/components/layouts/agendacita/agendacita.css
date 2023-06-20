@@ -161,8 +161,8 @@
   .agenda-form-container h2 {
     font-size: 34px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
     margin-bottom: 80px; 
-    margin-right: 207px;
-    margin-left: 54px;/* Ajustar el margen inferior para pantallas más pequeñas */
+    margin-right: 207px;  /* Ajustar el margen inferior para pantallas más pequeñas */
+  
     
   }
 
@@ -194,8 +194,8 @@
   .man-container {
     /* Ajustar los estilos según sea necesario para pantallas más pequeñas */
     padding: 10px;
-    margin-right: 45px;
-    margin-left: 0px;
+    margin-right: 30px;
+    
   }
 
   .man-image {
@@ -210,11 +210,12 @@
 
   .hour-grid{
     grid-template-columns: repeat(2, 1fr); 
-    margin-right: 180px;/* Cambia el número de columnas para pantallas más pequeñas */
+    margin-right: 200px;/* Cambia el número de columnas para pantallas más pequeñas */
   }
 
   .hour-button{
-    font-size: 10px; /* Ajusta el tamaño de fuente según tus necesidades */
+    font-size: 10px; 
+   /* Ajusta el tamaño de fuente según tus necesidades */
   }
 
   .label-agendacita {
@@ -228,7 +229,7 @@
 .agenda-form-container .select {
   width: 80%; /* Ajusta el ancho al 100% del contenedor */
   max-width: none; /* Elimina el ancho máximo */
-  margin-right: 0; /* Elimina el margen derecho */
+  margin-right: 10px; /* Elimina el margen derecho */
   margin-bottom: 10px; /* Agrega un margen inferior para separar los elementos */
   
   
@@ -243,13 +244,14 @@
 }
 
 .form-group {
-  margin-bottom: 10px; /* Reducir el margen inferior en pantallas más pequeñas */
+  margin-bottom: 10px; 
+  margin-right: 20px;/* Reducir el margen inferior en pantallas más pequeñas */
   /* Otros estilos específicos para pantallas más pequeñas */
 }
 
 .agenda-form-container{
- margin-left: 0px;
- margin-right: 0px;
+ margin-left: 50px;
+ margin-right: 50px;
 }
 
 }
@@ -268,12 +270,12 @@
 
 .form-group {
   margin-bottom: 5px;
-  margin-right: 90px; /* Reducir aún más el margen inferior en pantallas más pequeñas */
+  margin-right: 40px; /* Reducir aún más el margen inferior en pantallas más pequeñas */
   /* Otros estilos específicos para pantallas aún más pequeñas */
 }
 
 .agenda-form-container{
   margin-left: 0px;
-  margin-right: 450px;
+  margin-right: 50px;
  }
 }

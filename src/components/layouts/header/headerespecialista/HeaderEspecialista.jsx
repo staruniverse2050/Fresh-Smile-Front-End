@@ -2,13 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
-<<<<<<< HEAD
 import axios from 'axios';
 // import withReactContent from "sweetalert2-react-content";
-=======
-import axios from "axios";
-import withReactContent from "sweetalert2-react-content";
->>>>>>> 305315a0a06de46c16ca122e6c7268c3ebfdd004
 import "../headerespecialista/HeaderEspecilista.css";
 
 export const HeaderEspecialista = ({ isAuthenticated }) => {

@@ -92,7 +92,7 @@ const Chatbot = () => {
           </div>
           <div className="chat-body">
             <div className="chatbot-questions">
-            <p>Bienvenido ¿que pregunta tienes?</p>
+            <p>Bienvenido ¿Qué preguntas tienes?</p>
               <ul className="chatbotpreguntas">
                 <li>
                   1. ¿Cuáles son los horarios de atención de la clínica dental?
@@ -130,16 +130,12 @@ const Chatbot = () => {
             <form onSubmit={handleFormSubmit}>
             <h1 className="h1-chatsbnfd">ingresar numero</h1>
               <input className="input-ards"
-              
                 type="text"
                 value={question}
                 onChange={handleInputChange}
               />
-             
-
+               <button  className="button-chatre" type="submit">Enviar</button>
               <div className="chatbot-response">{answer}</div>
-            <button  className="button-chatre" type="submit">Enviar</button>
-
             </form>
            
           </div>

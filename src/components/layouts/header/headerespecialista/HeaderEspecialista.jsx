@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
 import axios from 'axios';
-import withReactContent from "sweetalert2-react-content";
+// import withReactContent from "sweetalert2-react-content";
 import "../headerespecialista/HeaderEspecilista.css";
 
 export const HeaderEspecialista = ({ isAuthenticated }) => {

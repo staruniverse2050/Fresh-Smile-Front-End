@@ -4,18 +4,20 @@
   max-width: 10px;
   margin: 0 auto;
   padding: 20px;
-  margin-left: 15px;
+  margin-left: 70px;
   margin-top: -95px;
+  
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #e6e6e6;
-  background-color: #fff;
+  background-color:#61eefd;
   position: relative;
-  left: 160px;
   bottom: 99px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra negra con una transparencia del 50% */
+
 }
 
 thead {
@@ -49,3 +51,4 @@ td:nth-child(3) {
   color: red;
   font-weight: bold;
 }
+

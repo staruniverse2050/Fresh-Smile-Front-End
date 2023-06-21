@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
@@ -18,6 +18,10 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [costo, setCosto] = useState('');
   const [foto, setFoto] = useState(null);
 
+  const namePros = useRef(null);
+  const descripcionProps = useRef(null);
+  const costProps = useRef(null);
+  const imagenProps = useRef(null);
 
   useEffect(() => {
     generateAvatar();

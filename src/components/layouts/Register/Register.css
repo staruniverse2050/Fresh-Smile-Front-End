@@ -191,17 +191,6 @@ text-align: center;
 	margin-left: 15px;
 }
 
-.custom-swal-button {
-	background-color: #249bad;
-	color: white;
-	border: none;
-
-}
-
-.custom-swal-button:hover {
-	background-color: #1e6d79;
-	margin-left: 150px;
-}
 
 .custom-modal {
   display: flex;

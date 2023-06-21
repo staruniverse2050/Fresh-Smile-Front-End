@@ -69,7 +69,6 @@ const Login = ({ setRol }) => {
         customClass: {
           confirmButton: "custom-swal-button",
         },
-        buttonsStyling: false,
       });
     }
   }, [modalType]);

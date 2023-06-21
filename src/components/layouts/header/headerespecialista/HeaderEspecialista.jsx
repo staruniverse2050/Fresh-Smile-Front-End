@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
@@ -9,7 +9,7 @@ import "../headerespecialista/HeaderEspecilista.css";
 export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
-  const [name, setName] = useState("");
+  const [name, setName] = useState(""); // Estado para almacenar el nombre de la persona
   const location = useLocation();
   const [isEditing, setIsEditing] = useState(false);
   const navigate = useNavigate();
@@ -19,13 +19,6 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [foto, setFoto] = useState(null);
 
 
-  const namePros = useRef(null);
-  const descripcionProps = useRef(null);
-  const costProps = useRef(null);
-  const imagenProps = useRef(null);
-
-  const userId = localStorage.getItem("userId");
-  const accessToken = localStorage.getItem("accessToken");
   useEffect(() => {
     generateAvatar();
   }, []);
@@ -34,6 +27,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
     const userId = localStorage.getItem("userId");
     if (!userId) {
       console.error("No se encontró el userId en el localStorage");
+      // Manejar el caso en el que no se encuentre el userId, por ejemplo, redirigir al usuario a una página de inicio de sesión
       return;
     }
 
@@ -43,11 +37,11 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       .then((response) => response.json())
       .then((data) => {
         const fullName = data.nombre_completo;
-        const names = fullName.split(" ");
-        const firstName = names[0];
-        const lastName = names.length > 1 ? names[1] : "";
+        const names = fullName.split(" "); // Dividir la cadena en partes separadas por espacios
+        const firstName = names[0]; // Obtener el primer nombre
+        const lastName = names.length > 1 ? names[1] : ""; // Obtener el primer apellido (si está disponible)
 
-        setName(`${firstName} ${lastName}`);
+        setName(`${firstName} ${lastName}`); // Establecer el nombre en el formato deseado
 
         const avatarStyle = "set4";
         const size = 600;
@@ -72,6 +66,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       })
       .catch((error) => {
         console.error("Error al obtener los datos del paciente:", error);
+        // Manejar el error de forma adecuada, por ejemplo, mostrar una notificación de error al usuario
       });
   };
 
@@ -85,19 +80,21 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   const handleLogoClick = (event) => {
     event.preventDefault();
+    // Lógica adicional si es necesario
   };
 
   const logout = () => {
+    // Eliminar la información de inicio de sesión del almacenamiento local
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("rol");
 
-    navigate("/Inicio");
+    // Redireccionar al usuario a la página de registro
+    history.push("/Inicio");
   };
 
   const isActiveRoute = (route) => {
     return location.pathname === route;
   };
-
   const handleAgregarProcedimiento = () => {
     Swal.fire({
       title: "Agregar nuevo procedimiento",
@@ -181,6 +178,37 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
           foto: imagenProps.current.value,
         };
         console.log(formData);
+        return axios.post('https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento', formData, {
+          headers: {
+            Authorization: `Bearer ${accessToken}` // Asegúrate de tener el token de acceso válido
+          }
+        })
+          .then(response => {
+            // Manejar la respuesta exitosa de la API aquí
+            console.log(response.data);
+            return response.data; // Pasar la respuesta a la función 'preConfirm'
+          })
+          .catch(error => {
+            // Manejar errores de la API aquí
+            console.error(error);
+            throw new Error('Ocurrió un error al crear el procedimiento.'); // Lanzar un error para mostrar el mensaje de error
+          });
+      }
+    })
+      .then(result => {
+        // Se ejecutará si no se lanzó ningún error en 'preConfirm'
+        if (result) {
+          // Mostrar mensaje de procedimiento creado exitosamente
+          MySwal.fire('Procedimiento creado', 'El procedimiento se ha creado correctamente.', 'success');
+        }
+      })
+      .catch(error => {
+        // Se ejecutará si se lanzó un error en 'preConfirm'
+        console.error(error);
+        // Mostrar mensaje de error al crear el procedimiento
+        MySwal.fire('Error', error.message, 'error');
+      });
+
 
         // Realizar la solicitud POST a la API
         // axios
@@ -211,22 +239,20 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
         //   .catch((error) => {
         //     console.error('Error al crear el procedimiento:', error);
         //   });
-      },
-    });
-  };
+      }
 
   return (
     <header className="Header_Header">
-      <div className="menu-especialista">
+      <div className="menu">
         <Link to="/Inicio" onClick={handleLogoClick}>
           <img
-            className="logo-especialista"
+            className="logo"
             src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
             alt=""
           />
         </Link>
-        <h1 className="h1-especialista">
-          <span>Fresh </span> Smile<span> Cmills</span>
+        <h1>
+          <span>Fresh </span>Smile<span> Cmills</span>
         </h1>
         <ul>
           <div className="toggle-menu">
@@ -343,7 +369,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               </div>
             )}
           </div>
-          <div className="container2-especialita">
+          <div className="container2">
             <ul>
               <li>
                 <NavLink
@@ -356,7 +382,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Inicio
                 </NavLink>
               </li>
-              {/* <li>
+              <li>
                 <NavLink
                   className={`links ${
                     isActiveRoute("/Nosotros") ? "active" : ""
@@ -366,7 +392,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 >
                   Nosotros
                 </NavLink>
-              </li> */}
+              </li>
 
               <li>
                 <NavLink
@@ -374,6 +400,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   to="/Procedimientos"
                   activeClassName="active"
                   onClick={handleAgregarProcedimiento}
+
                 >
                   Procedimientos
                 </NavLink>
@@ -400,7 +427,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   Valoraciones
                 </NavLink>
               </li>
-              {/* <li>
+              <li>
                 <NavLink
                   className="links"
                   to="/Contacto"
@@ -408,7 +435,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 >
                   Contacto
                 </NavLink>
-              </li> */}
+              </li>
             </ul>
             <p className="Bienvenida">
               Hola, {name.split(" ")[0]} {name.split(" ")[1]}
@@ -444,10 +471,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   {isAuthenticated && (
                     <li>
-                      <NavLink
-                        className="dropdown-link"
-                        to="/Perfilespecialista"
-                      >
+                      <NavLink className="dropdown-link" to="/Perfilespecialista">
                         Ver perfil
                       </NavLink>
                     </li>

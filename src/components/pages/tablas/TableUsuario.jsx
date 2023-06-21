@@ -125,6 +125,7 @@ const TableUsuario = () => {
             <th>Motivo</th>
             <th>Fecha de Creacion</th>
             <th>Estado Cita</th>
+            <th>Valor cita</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -142,6 +143,7 @@ const TableUsuario = () => {
               <td>{procedimientos[item.id_procedimiento]}</td>
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
               <td>{item.estado_cita}</td>
+              <td>{item.costo}</td>
               <td>
                 {item.estado_cita === 'Programada' && (
                   <button className="delete-button" onClick={() => cancelarCita(item.identificacion_citas)}>

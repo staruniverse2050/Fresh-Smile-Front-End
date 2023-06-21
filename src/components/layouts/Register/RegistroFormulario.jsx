@@ -182,7 +182,6 @@ const RegistroFormulario = () => {
         customClass: {
           confirmButton: "custom-swal-button",
         },
-        buttonsStyling: false,
       });
       return;
     }

@@ -3,13 +3,26 @@ import './tables.css';
 import swal from 'sweetalert';
 import 'sweetalert2/src/sweetalert2.scss';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const TableAdmin = () => {
   const [data, setData] = useState([]);
   const [especialistas, setEspecialistas] = useState({});
   const [procedimientos, setProcedimientos] = useState({});
   const userId = localStorage.getItem('userId');
+  const [estadoCitaEditando, setEstadoCitaEditando] = useState('');
+const [isEstadoCitaEditing, setIsEstadoCitaEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [citaEditando, setCitaEditando] = useState(null);
+  const navigate = useNavigate();
 
+  const EstadoCitaEnum = {
+    REALIZADA: 'Realizada',
+    PENDIENTE: 'Pendiente',
+    CANCELADA: 'Cancelada',
+    AUSENCIA: 'Ausencia',
+  };
+  
   useEffect(() => {
     fetch('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas')
       .then(response => response.json())
@@ -41,7 +54,6 @@ const TableAdmin = () => {
         // Obtener una lista de identificaciones de procedimientos únicos en las citas
         const procedimientosIds = [...new Set(citasUsuario.map(cita => cita.id_procedimiento))];
 
-        // Realizar una solicitud para obtener los procedimientos
         fetch('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
           .then(response => response.json())
           .then(procedimientosData => {
@@ -50,14 +62,17 @@ const TableAdmin = () => {
               procedimientosIds.includes(procedimiento.identificacion_procedimientos)
             );
 
-            // Crear un objeto con las identificaciones de los procedimientos como clave y sus nombres como valor
+            // Crear un objeto con las identificaciones de los procedimientos como clave, 
+            // sus nombres y costos como valores
             const procedimientosMap = {};
             procedimientosFiltrados.forEach(procedimiento => {
-              procedimientosMap[procedimiento.identificacion_procedimientos] = procedimiento.nombre;
+              procedimientosMap[procedimiento.identificacion_procedimientos] = {
+                nombre: procedimiento.nombre,
+                costo: procedimiento.costo
+              };
             });
             setProcedimientos(procedimientosMap);
           })
-          .catch(error => console.error(error));
       })
       .catch(error => console.error(error));
   }, [userId]);
@@ -71,16 +86,23 @@ const TableAdmin = () => {
     try {
       const accessToken = localStorage.getItem('accessToken');
   
-      const response = await axios.put(`https://freshsmile.azurewebsites.net/FreshSmile/ModificarCita/${citaEditada.identificacion_citas}`, citaEditada, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          'Content-Type': 'application/json',
-        },
-      });
+      if (citaEditada.estado_cita === EstadoCitaEnum.AUSENCIA) {
+        citaEditada.estado_cita = EstadoCitaEnum.REALIZADA; // Permitir cambiar de "Ausencia" a "Realizada"
+      }
+  
+      const response = await axios.put(
+        `https://freshsmile.azurewebsites.net/FreshSmile/ModificarCita/${citaEditada.identificacion_citas}`,
+        citaEditada,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
   
       if (response.status === 200) {
-        fetchData(); // Vuelve a obtener los datos de las citas actualizados
-        setCitaEditando(null); // Restablece el estado de citaEditando a null
+        setIsEditing(false);
         swal('Cita actualizada', 'La cita ha sido actualizada correctamente', 'success');
       } else {
         swal('Error', 'Hubo un problema al actualizar la cita', 'error');
@@ -90,6 +112,57 @@ const TableAdmin = () => {
       swal('Error', 'Hubo un problema al actualizar la cita', 'error');
     }
   };
+  
+  const actualizarEstadoCita = () => {
+    const currentDate = new Date(); // Obtener la fecha actual
+  
+    // Filtrar las citas que necesitan ser actualizadas
+    const citasActualizadas = data.map(cita => {
+      const fechaCita = new Date(cita.fecha);
+  
+      // Verificar si ha pasado un día después de la fecha programada
+      if (
+        cita.estado_cita === EstadoCitaEnum.PROGRAMADA &&
+        currentDate > fechaCita &&
+        currentDate.getDate() - fechaCita.getDate() === 1
+      ) {
+        return {
+          ...cita,
+          estado_cita: EstadoCitaEnum.AUSENCIA
+        };
+      }
+  
+      return cita;
+    });
+  
+    setData(citasActualizadas); // Actualizar el estado de las citas
+  };
+  
+
+  useEffect(() => {
+    // Llamar a la función actualizarEstadoCita cada vez que se renderice el componente
+    actualizarEstadoCita();
+
+    // Resto de tu código...
+  }, [userId]);
+
+  const getEstadoCita = (cita) => {
+    const currentDate = new Date(); // Obtener la fecha actual
+    const fechaCita = new Date(cita.fecha);
+  
+    // Verificar si ha pasado un día después de la fecha programada
+    if (currentDate > fechaCita && currentDate.getDate() - fechaCita.getDate() === 1) {
+      if (cita.estado_cita === EstadoCitaEnum.AUSENCIA) {
+        return EstadoCitaEnum.AUSENCIA; // Permitir cambiar de "Ausencia" a "Realizada"
+      } else {
+        return EstadoCitaEnum.AUSENCIA;
+      }
+    }
+  
+    return cita.estado_cita;
+  };
+  
+
   return (
     <div className="container">
       <table>
@@ -106,6 +179,7 @@ const TableAdmin = () => {
             <th>Motivo</th>
             <th>Fecha de Creacion</th>
             <th>Estado</th>
+            <th>Valor cita</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -120,14 +194,39 @@ const TableAdmin = () => {
               <td>{item.hora}</td>
               <td>{especialistas[item.id_especialista]}</td>
               <td>{item.id_paciente}</td>
-              <td>{procedimientos[item.id_procedimiento]}</td>
+              <td>{procedimientos[item.id_procedimiento]?.nombre}</td>
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
-              <td>{item.estado_cita}</td>
               <td>
-                {item.estado === 'Programada' && (
-                   <button className="edit-button" onClick={() => handleEditarCita(item.identificacion_citas)}>
-                      <i className="fas fa-pencil-alt"></i>
-                    </button>
+                {isEditing && citaEditando === item.identificacion_citas ? (
+                  <input
+                    type="text"
+                    value={item.estado_cita}
+                    onChange={(e) => {
+                      const newState = [...data];
+                      newState[index].estado_cita = e.target.value;
+                      setData(newState);
+                    }}
+                  />
+                ) : (
+                  getEstadoCita(item)
+                )}
+              </td>
+
+              <td>{procedimientos[item.id_procedimiento]?.costo?.toFixed(3)}</td>
+              <td>
+                {item.estado_cita && !isEditing ? (
+                  <button className="edit-button" onClick={() => { setIsEditing(true); setCitaEditando(item.identificacion_citas); }}>
+                    <i className="fas fa-pencil-alt"></i>
+                  </button>
+                ) : (
+                  <>
+                    {isEditing && citaEditando === item.identificacion_citas && (
+                      <button className="edit-button" onClick={() => handleEditarCita(item)}>
+                        Guardar
+                      </button>
+                    )}
+
+                  </>
                 )}
               </td>
             </tr>

@@ -1,29 +1,120 @@
-  .doctor-card-container{
+.card-comentario{
+  background-color: #2b2b2b;
+  color: #ffffff;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.vote-advise{
+  color: #777777;
+  font-size: small;
+}
+
+.div1-coment{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-form{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.btn-vote{
+  padding: 1px 2px 2px 3px;
+  text-align: center;
+}
+
+button:not(.star){
+  transition: 250ms;
+}
+
+.comments-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-comm{
+  width: fit-content;
+  font-size: small;
+  padding: 2px;
+}
+
+.alwaysend{
+  align-self: end;
+}
+
+.doctor-card-container{
     display:flex;
     width: 100%;
-    gap: 5px;
+    gap: 8px;
     flex-wrap: wrap;
     padding: 10px;
   }
 
+  .div-picture-rating{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .div2-details{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    max-height: calc(100% - 5px);
+    padding: 5px 5px 0 5px;
+  }
+
+  .doctor-section1{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    max-height: min-content;
+  }
+
+  .doctor-section2::before{
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    content: '';
+  }
+
+  .doctor-section2{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
   .doctor-card {
-    width: 300px;
+    width: 450px;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 36px;
+    padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column;
+    gap: 4px;
   }
 
-  .doctor-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 16px;
+  .doctor-card .div-picture-rating img{
+    border: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 85%;
+    padding: 2px;
   }
 
   .doctor-details {
-    margin-bottom: 16px;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
   }
 
   .doctor-details h2 {
@@ -35,6 +126,22 @@
     font-size: 14px;
     margin: 0;
     color: #777777;
+  }
+
+  .span-email{
+    color: #000000;
+  }
+
+  .span-email:hover{
+    text-decoration: underline;
+    color: #39b2ee;
+    cursor: pointer;
+  }
+
+  .doctor-details p span {
+    font-size: 14px;
+    margin: 0;
+    color: #000000;
   }
 
   .doctor-rating {
@@ -56,6 +163,12 @@
     color: #cccccc;
     transition: color 0.3s;
     cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
   }
 
   .star-rating .star.selected,
@@ -72,7 +185,7 @@
     resize: none;
   }
 
-  button {
+  button:not(.star) {
     background: #39b2ee;
     color: #ffffff;
     border: none;
@@ -82,6 +195,6 @@
     cursor: pointer;
   }
 
-  button:hover {
+  button:hover:not(.star) {
     background-color: #556f97;
   }

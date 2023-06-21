@@ -1,31 +1,40 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Ranking.css";
+import userDefault from "../../../../public/user.webp";
 
 const Ranking = () => {
-  const [data, setData] = useState([]);
+  const [especialistasData, setEspecialistasData] = useState([]);
+  const [especialistasVC, setEspecialistasVC] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
+  const fetchEspecialistasData = async () => {
       try {
-        const response = await axios.get("URL_DE_LA_API");
-        setData(response.data);
+        const response = await axios.get("https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/ConsultarEspecialista");
+        setEspecialistasData(response.data);
       } catch (error) {
         console.error("Error al obtener los datos desde la API:", error);
       }
     };
 
-    fetchData();
+    const fetchEspecialistasVC = async () => {
+      try {
+        const response = await axios.get("https://freshsmile.azurewebsites.net/FreshSmile/Especialistas/ConsultarRating");
+        setEspecialistasVC(response.data.sort((a, b) => b.valoracion - a.valoracion)
+        .slice(0, 5));
+      } catch (error) {
+        console.error("Error al obtener los datos desde la API:", error);
+      }
+    };
+
+  useEffect(() => {
+    fetchEspecialistasVC();
+    fetchEspecialistasData();
   }, []);
 
   const calculateStars = (valoracion) => {
     const roundedValoracion = Math.round(valoracion);
     return "⭐".repeat(roundedValoracion);
   };
-
-  const sortedData = data
-    .sort((a, b) => b.valoracion - a.valoracion)
-    .slice(0, 5);
 
   return (
     <div className="ranking-container">
@@ -40,26 +49,26 @@ const Ranking = () => {
           </tr>
         </thead>
         <tbody>
-          {sortedData.map((item, index) => (
+          {especialistasData.length > 0 && especialistasVC.length > 0 && especialistasVC.map((item, index) => (
             <tr key={item.id} className={index === 0 ? "first-place" : ""}>
               <td className="position">
                 <span>{index + 1}</span>
                 <div className="profile-pic-container">
                   <img
-                    src={item.foto}
+                    src={item.foto || userDefault}
                     alt="Foto de perfil"
                     className="profile-pic"
                   />
                   {index === 0 && (
                     <img
-                      src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685893707/corona_ysuxhw.png"
+                      src="https://png.pngtree.com/png-clipart/20220206/original/pngtree-crown-vector-png-image_7263860.png"
                       alt="Corona"
                       className="crown-icon"
                     />
                   )}
                 </div>
               </td>
-              <td className="name">{item.nombre}</td>
+              <td className="name">{especialistasData.find(elem => elem.identificacion_especialista == item.identificacion_especialista).nombre_completo}</td>
               <td className="stars">{calculateStars(item.valoracion)}</td>
             </tr>
           ))}

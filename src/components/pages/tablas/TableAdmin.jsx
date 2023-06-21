@@ -10,19 +10,27 @@ const TableAdmin = () => {
   const [especialistas, setEspecialistas] = useState({});
   const [procedimientos, setProcedimientos] = useState({});
   const userId = localStorage.getItem('userId');
-  const [estadoCitaEditando, setEstadoCitaEditando] = useState('');
-const [isEstadoCitaEditing, setIsEstadoCitaEditing] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [citaEditando, setCitaEditando] = useState(null);
   const navigate = useNavigate();
+  const [campoEditando, setCampoEditando] = useState(null);
+  const [citasProgramadas, setCitasProgramadas] = useState([]);
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+  const [error, setError] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  const handleCancelarEdicion = () => {
+    setIsEditing(false);
+    setCitaEditando(null);
+  };
 
   const EstadoCitaEnum = {
     REALIZADA: 'Realizada',
-    PENDIENTE: 'Pendiente',
+    PROGRAMADA: 'Programada',
     CANCELADA: 'Cancelada',
     AUSENCIA: 'Ausencia',
   };
-  
+
   useEffect(() => {
     fetch('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarCitas')
       .then(response => response.json())
@@ -85,11 +93,46 @@ const [isEstadoCitaEditing, setIsEstadoCitaEditing] = useState(false);
   const handleEditarCita = async (citaEditada) => {
     try {
       const accessToken = localStorage.getItem('accessToken');
+      const currentDate = new Date();
+      const fechaCita = new Date(citaEditada.fecha);
+      const horaCita = new Date(`${citaEditada.fecha}T${citaEditada.hora}`);
   
-      if (citaEditada.estado_cita === EstadoCitaEnum.AUSENCIA) {
-        citaEditada.estado_cita = EstadoCitaEnum.REALIZADA; // Permitir cambiar de "Ausencia" a "Realizada"
+      if (fechaCita > currentDate) {
+        swal('Error', 'No puedes cambiar la fecha de una cita que aún no ha llegado', 'error');
+        return;
       }
-  
+      if (
+        citaEditada.estado_cita === EstadoCitaEnum.PROGRAMADA &&
+        isFechaPasada // Verificar si la fecha de la cita ha pasado
+      ) {
+        // Mostrar una alerta con botón de cancelar
+        swal({
+          title: 'Error',
+          text: 'No puedes establecer el estado como "Programada" si la fecha de la cita ya ha pasado',
+          icon: 'error',
+          buttons: {
+            cancel: {
+              text: 'Cancelar',
+              value: null,
+              visible: true,
+              closeModal: true,
+            },
+          },
+        }).then((value) => {
+          if (value === null) {
+            // El usuario ha cancelado, no se realiza ningún cambio
+            setIsEditing(false);
+            setCitaEditando(null);
+          }
+        });
+
+        return;
+      }
+      const estadoCitaActual = citaEditada.estado_cita;
+
+      if (estadoCitaActual !== EstadoCitaEnum.REALIZADA && estadoCitaActual !== EstadoCitaEnum.AUSENCIA) {
+        citaEditada.estado_cita = EstadoCitaEnum.REALIZADA; // Establecer el estado como "Realizada"
+      }
       const response = await axios.put(
         `https://freshsmile.azurewebsites.net/FreshSmile/ModificarCita/${citaEditada.identificacion_citas}`,
         citaEditada,
@@ -100,31 +143,37 @@ const [isEstadoCitaEditing, setIsEstadoCitaEditing] = useState(false);
           },
         }
       );
-  
+
       if (response.status === 200) {
         setIsEditing(false);
+        setCitaEditando(null);
         swal('Cita actualizada', 'La cita ha sido actualizada correctamente', 'success');
       } else {
         swal('Error', 'Hubo un problema al actualizar la cita', 'error');
       }
     } catch (error) {
       console.error(error);
+      setError(true);
+      setShowError(true);
       swal('Error', 'Hubo un problema al actualizar la cita', 'error');
     }
+    
+    
   };
-  
   const actualizarEstadoCita = () => {
-    const currentDate = new Date(); // Obtener la fecha actual
-  
-    // Filtrar las citas que necesitan ser actualizadas
+    const currentDate = new Date();
+    setCurrentDateTime(new Date());
+
     const citasActualizadas = data.map(cita => {
       const fechaCita = new Date(cita.fecha);
+      const horaCita = new Date(`${cita.fecha}T${cita.hora}`);
   
-      // Verificar si ha pasado un día después de la fecha programada
+      // Verificar si ha pasado un día completo después de la fecha y hora programadas
       if (
-        cita.estado_cita === EstadoCitaEnum.PROGRAMADA &&
+        cita.estado_cita !== EstadoCitaEnum.REALIZADA &&
         currentDate > fechaCita &&
-        currentDate.getDate() - fechaCita.getDate() === 1
+        currentDate.getTime() - fechaCita.getTime() >= 24 * 60 * 60 * 1000 &&
+        currentDate > horaCita
       ) {
         return {
           ...cita,
@@ -135,34 +184,113 @@ const [isEstadoCitaEditing, setIsEstadoCitaEditing] = useState(false);
       return cita;
     });
   
-    setData(citasActualizadas); // Actualizar el estado de las citas
+    setData(citasActualizadas);
   };
   
-
   useEffect(() => {
     // Llamar a la función actualizarEstadoCita cada vez que se renderice el componente
     actualizarEstadoCita();
-
-    // Resto de tu código...
   }, [userId]);
 
   const getEstadoCita = (cita) => {
-    const currentDate = new Date(); // Obtener la fecha actual
+    const currentDate = currentDateTime;
     const fechaCita = new Date(cita.fecha);
+    const horaCita = new Date(`${cita.fecha}T${cita.hora}`);
   
-    // Verificar si ha pasado un día después de la fecha programada
     if (currentDate > fechaCita && currentDate.getDate() - fechaCita.getDate() === 1) {
-      if (cita.estado_cita === EstadoCitaEnum.AUSENCIA) {
-        return EstadoCitaEnum.AUSENCIA; // Permitir cambiar de "Ausencia" a "Realizada"
+      if (cita.estado_cita === EstadoCitaEnum.AUSENCIA || cita.estado_cita === EstadoCitaEnum.REALIZADA) {
+        return cita.estado_cita;
       } else {
         return EstadoCitaEnum.AUSENCIA;
       }
+    }
+  
+    if (currentDate >= horaCita && currentDate.getHours() < 17 && cita.estado_cita === EstadoCitaEnum.PROGRAMADA) {
+      return EstadoCitaEnum.PROGRAMADA;
     }
   
     return cita.estado_cita;
   };
   
 
+  const handleEditCitaClick = (cita) => {
+    setIsEditing(true);
+    setCitaEditando(cita.identificacion_citas);
+  };
+
+  const handleGuardarCitaClick = async (cita) => {
+    try {
+      const accessToken = localStorage.getItem('accessToken');
+      const currentDate = new Date();
+      const fechaCita = new Date(cita.fecha);
+      const horaCita = new Date(`${cita.fecha}T${cita.hora}`);
+  
+      if (fechaCita > currentDate) {
+        swal('Error', 'No puedes cambiar la fecha de una cita que aún no ha llegado', 'error');
+        return;
+      }
+      if (
+        cita.estado_cita === EstadoCitaEnum.PROGRAMADA &&
+        isFechaPasada // Verificar si la fecha de la cita ha pasado
+      ) {
+        // Mostrar una alerta con botón de cancelar
+        swal({
+          title: 'Error',
+          text: 'No puedes establecer el estado como "Programada" si la fecha de la cita ya ha pasado',
+          icon: 'error',
+          buttons: {
+            cancel: {
+              text: 'Cancelar',
+              value: null,
+              visible: true,
+              closeModal: true,
+            },
+          },
+        }).then((value) => {
+          if (value === null) {
+            // El usuario ha cancelado, no se realiza ningún cambio
+            setIsEditing(false);
+            setCitaEditando(null);
+          }
+        });
+
+        return;
+      }
+      const estadoCitaActual = cita.estado_cita;
+
+      if (estadoCitaActual !== EstadoCitaEnum.REALIZADA && estadoCitaActual !== EstadoCitaEnum.AUSENCIA) {
+        cita.estado_cita = EstadoCitaEnum.REALIZADA; // Establecer el estado como "Realizada"
+      }
+      const response = await axios.put(
+        `https://freshsmile.azurewebsites.net/FreshSmile/ModificarCita/${cita.identificacion_citas}`,
+        cita,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        setIsEditing(false);
+        setCitaEditando(null);
+        swal('Cita actualizada', 'La cita ha sido actualizada correctamente', 'success');
+      } else {
+        swal('Error', 'Hubo un problema al actualizar la cita', 'error');
+      }
+    } catch (error) {
+      console.error(error);
+      swal('Error', 'Hubo un problema al actualizar la cita', 'error');
+    }
+  };
+  useEffect(() => {
+    if (showError) {
+      window.location.reload();
+    }
+  }, [showError]);
+  
+  
   return (
     <div className="container">
       <table>
@@ -198,35 +326,55 @@ const [isEstadoCitaEditing, setIsEstadoCitaEditing] = useState(false);
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
               <td>
                 {isEditing && citaEditando === item.identificacion_citas ? (
-                  <input
-                    type="text"
-                    value={item.estado_cita}
-                    onChange={(e) => {
-                      const newState = [...data];
-                      newState[index].estado_cita = e.target.value;
-                      setData(newState);
-                    }}
-                  />
+                  campoEditando === 'estado_cita' ? (
+                    <input
+                      type="text"
+                      value={item.estado_cita}
+                      onChange={(e) => {
+                        const newState = [...data];
+                        newState[index].estado_cita = e.target.value;
+                        setData(newState);
+                      }}
+                    />
+                  ) : (
+                    getEstadoCita(item)
+                  )
                 ) : (
                   getEstadoCita(item)
                 )}
               </td>
-
               <td>{procedimientos[item.id_procedimiento]?.costo?.toFixed(3)}</td>
               <td>
-                {item.estado_cita && !isEditing ? (
-                  <button className="edit-button" onClick={() => { setIsEditing(true); setCitaEditando(item.identificacion_citas); }}>
-                    <i className="fas fa-pencil-alt"></i>
+                {item.estado_cita && !isEditing && !error ? (
+                  <button
+                    className="botonEdit"
+                    onClick={() => {
+                      setIsEditing(true);
+                      setCampoEditando('estado_cita');
+                      setCitaEditando(item.identificacion_citas);
+                    }}
+                  >
+                    Editar
                   </button>
                 ) : (
-                  <>
-                    {isEditing && citaEditando === item.identificacion_citas && (
-                      <button className="edit-button" onClick={() => handleEditarCita(item)}>
-                        Guardar
-                      </button>
-                    )}
-
-                  </>
+                  <div>
+                    <button
+                      className="botonEdit"
+                      onClick={() => {
+                        handleGuardarCitaClick(item);
+                      }}
+                    >
+                      Guardar
+                    </button>
+                    <button
+                      className="botonCancel"
+                      onClick={() => {
+                        handleCancelarEdicion();
+                      }}
+                    >
+                      Cancelar
+                    </button>
+                  </div>
                 )}
               </td>
             </tr>

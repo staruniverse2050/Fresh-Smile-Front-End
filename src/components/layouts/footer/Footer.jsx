@@ -29,7 +29,7 @@ export const Footer = () => {
                 <i className="fa-solid fa-envelope"></i>
                 <p>
                   <span className="email-text">Correo</span>
-                  <p className="dateT">.freshsmilecmills@gmail.com</p>
+                  <p className="dateT">freshsmilecmills@gmail.com</p>
                 </p>
               </div>
             </div>

@@ -295,7 +295,7 @@ const RegistroFormulario = () => {
           <div className="form-group">
             {/* <h1 className="registro-h1">Registro</h1> */}
             <label htmlFor="tipoDocumento">
-              <i className="fas fa-id-card"></i> Tipo de documento</label>
+              <i className="fas fa-id-card" id='i'></i> Tipo de documento</label>
             <select
               id="tipoDocumento"
               className="form-input-select"
@@ -311,7 +311,7 @@ const RegistroFormulario = () => {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="numeroDocumento"><i className="fas fa-file-alt"></i> Número de documento</label>
+            <label htmlFor="numeroDocumento"><i className="fas fa-file-alt" id='i'></i> Número de documento</label>
 
             <input
               type="text"
@@ -323,7 +323,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="nombrescompletos"><i className="fas fa-user"></i>Nombre completo</label>
+            <label htmlFor="nombrescompletos"><i className="fas fa-user" id='i'></i>Nombre completo</label>
             <input
               type="text"
               id="nombrescompletos"
@@ -351,7 +351,7 @@ const RegistroFormulario = () => {
             </div>
           )}
           <div className="form-group">
-            <label htmlFor="direccion"><i className="fas fa-map-marker-alt"></i> Dirección
+            <label htmlFor="direccion"><i className="fas fa-map-marker-alt" id='i'></i> Dirección
             </label>
             <input
               type="text"
@@ -363,7 +363,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="telefono"><i className="fas fa-phone"></i>Teléfono</label>
+            <label htmlFor="telefono"><i className="fas fa-phone" id='i'></i>Teléfono</label>
             <input
               type="text"
               id="telefono"
@@ -374,7 +374,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="correo" id='correo'><i className="fas fa-envelope"></i>Correo electrónico</label>
+            <label htmlFor="correo" id='correo'><i className="fas fa-envelope" id='i'></i>Correo electrónico</label>
             <input
               type="email"
               id="correoi"
@@ -385,7 +385,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="contraseña"><i className="fas fa-lock"></i>Contraseña</label>
+            <label htmlFor="contraseña"><i className="fas fa-lock" id='i'></i>Contraseña</label>
             <input
               type="password"
               id="contraseña"
@@ -397,7 +397,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="rol"><i className="fas fa-user"></i>Rol</label>
+            <label htmlFor="rol"><i className="fas fa-user" id='i'></i>Rol</label>
             <select
               id="rol"
               value={rol}

@@ -197,10 +197,11 @@ text-align: center;
 	text-decoration: none;
 	margin-left: 15px;
 }
-i {
-	color: #237581;
+#i {
+	color: #249bad;
 	position: relative;
 	right: 7px;
+	bottom: 1px;
 }
 
 .Registro input::placeholder {

@@ -113,7 +113,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                 <ul>
                   <li>
                     <NavLink
-                      className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      className={`links2 ${isActiveRoute('/Inicio') ? 'active' : ''}`}
                       to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -123,18 +123,8 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${isActiveRoute('/Nosotros') ? 'active' : ''}`}
-                      to="/Nosotros"
-                      activeClassName="active"
-                      onClick={toggleDropdown}
-                    >
-                      Nosotros
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className={`links ${isActiveRoute('/AgendaCita') ? 'active' : ''}`}
-                      to="/AgendaCita"
+                      className={`links2 ${isActiveRoute('/Agendar') ? 'active' : ''}`}
+                      to="/Agendar"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -143,7 +133,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
+                      className={`links2 ${isActiveRoute('/Procedimientos') ? 'active' : ''}`}
                       to="/Procedimientos"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -153,41 +143,41 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${isActiveRoute('/DoctorCard') ? 'active' : ''}`}
-                      to="/DoctorCard"
+                      className={`links2 ${isActiveRoute('/Tuscitaspaciente') ? 'active' : ''}`}
+                      to="/Tuscitaspaciente"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
-                      Nuestros especialistas
+                      Citas
                     </NavLink>
                   </li>
                   {isAuthenticated && (
                     <>
                       <li>
                         <NavLink
-                          className={`links ${isActiveRoute('/Ranking') ? 'active' : ''}`}
+                          className={`links2 ${isActiveRoute('/MiRanking') ? 'active' : ''}`}
                           to="/Ranking"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >
-                          Mi ranking
+                          Ranking
                         </NavLink>
                       </li>
                       <li>
                         <NavLink
-                          className={`links ${isActiveRoute('/MisCitas') ? 'active' : ''}`}
-                          to="/MisCitas"
+                          className={`links2 ${isActiveRoute('/Especialistas') ? 'active' : ''}`}
+                          to="/Especialistas"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >
-                          Mis citas
+                          Especialistas
                         </NavLink>
                       </li>
                     </>
                   )}
                   <li>
                     <NavLink
-                      className={`links ${isActiveRoute('/Contacto') ? 'active' : ''}`}
+                      className={`links2 ${isActiveRoute('/Contacto') ? 'active' : ''}`}
                       to="/Contacto"
                       activeClassName="active"
                       onClick={toggleDropdown}

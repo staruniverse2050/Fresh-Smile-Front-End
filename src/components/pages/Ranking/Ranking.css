@@ -1,4 +1,4 @@
-/* .ranking-container {
+ /* .ranking-container {
 	max-width: 600px;
 	margin: 0 auto;
 	background-color: #e6e5e5;
@@ -8,7 +8,7 @@
 	padding: 20px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	margin-top: 120px;
-} */
+}  */
 
 .title-rang {
 	color: #000000;
@@ -25,13 +25,13 @@
 
 
 .ranking-table {
-	width: 90%;
+	width: 20%;
 	position: relative;
 	border-collapse: collapse;
 	background-color: rgba(255, 255, 255, 0);
-	top: 30px;
+	top: 70px;
 	height: 500px;
-	left: 5%;
+	left: 40%;
 	margin-bottom: 30px;
 }
 

@@ -9,7 +9,6 @@ import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import  Ranking  from "./components/pages/Ranking/Ranking";
 import { DoctorCard } from "./components/pages/Especialistas/DoctorCard";
 import Contacto from "./components/pages/contacto/Contacto";
-import Chatbot from "./components/layouts/chatbot/Chatbot";
 import RegistroFormulario from "./components/layouts/Register/RegistroFormulario";
 import Login from "./components/layouts/Login/Login";
 import { PerfilAdministrador } from "./components/pages/PerfilAdministrador/PerfilAdministrador";
@@ -94,12 +93,11 @@ function App() {
         <Route path="/Especialistas" element={<Especialistas />} />
         <Route path="/Contacto" element={<Contacto />} />
         <Route path="/Registro" element={<RegistroFormulario />} />
-        <Route path="/Login" element={<Login setRol={setRol} />} />
+        <Route path="/Inicio de sesion" element={<Login setRol={setRol} />} />
         <Route path="/Tuscitaspaciente" element={<TableUsuario />} />
-        <Route path="/Tuscitasespecialista" element={<TableAdmin />} />
+        <Route path="/Agenda" element={<TableAdmin />} />
         <Route path="/Valoraciones" element={<Valoracion />} />
       </Routes>
-      <Chatbot />
     </>
   );
 }

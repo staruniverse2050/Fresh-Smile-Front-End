@@ -4,6 +4,8 @@ import "./home.css";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { Footer } from "../../layouts/footer/Footer";
+import Chatbot from "../../layouts/chatbot/Chatbot";
+
 const myImage = new CloudinaryImage("sample", {
   cloudName: "dfvxujvf8",
 }).resize(fill().width(100).height(150));
@@ -154,7 +156,7 @@ export const Home = () => {
           <i class="fa fa-whatsapp my-float"></i>
         </a>
       </div>
-
+<Chatbot/>
       <Footer />
     </>
   );

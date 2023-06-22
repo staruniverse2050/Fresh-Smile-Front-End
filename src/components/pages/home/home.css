@@ -58,7 +58,7 @@ body {
 }
 
 .float:hover {
-  background-color: #128c7e;
+  background-color: #0f7a8f;
 }
 
 .my-float {
@@ -136,7 +136,7 @@ body {
 
 .boton-home:hover,
 .boton-home:focus {
-  background: #1e6d79;
+  background-color: #0f7a8f;
 }
 
 
@@ -204,7 +204,7 @@ body {
 }
 
 .card-button:hover {
-  background-color: #1e6d79;
+  background-color: #0f7a8f;
 }
 
 .linksblog {
@@ -271,7 +271,7 @@ body {
 }
 
 .btn-blog:hover {
-  background-color: #1e6d79;
+  background-color: #0f7a8f;
 }
 
 /* Estilos Barras */
@@ -424,7 +424,7 @@ body {
 }
 
 .container-nosotros-home2 button:hover{
-  background: #1e6d79;
+  background-color: #0f7a8f;
 }
 
 

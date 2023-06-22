@@ -120,7 +120,7 @@ const RegistroFormulario = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate("/Login");
+    navigate("/Inicio de sesion");
   };
 
   const validarCodigo = async () => {

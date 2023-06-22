@@ -115,13 +115,13 @@ export const Contacto = () => {
     }
 
     if (!isChecked) {
-     Swal.fire({
+      Swal.fire({
         icon: 'warning',
         title: 'Oops...',
         text: 'Debes aceptar los términos y condiciones.',
       });
-       return;
-     }
+      return;
+    }
 
     // Variable para almacenar el correo de la empresa
     const correoEmpresa = "freshsmilecmills@gmail.com";
@@ -252,7 +252,7 @@ export const Contacto = () => {
                 onChange={handleNombreChange}
                 required
               />
-              <span>Nombre completo</span>
+              <span><i className="fas fa-user" id='iconosdecontacto'></i>Nombre completo</span>
             </div>
             <div className="inputBox">
               <input
@@ -261,7 +261,7 @@ export const Contacto = () => {
                 onChange={handleTelefonoChange}
                 required
               />
-              <span>Teléfono</span>
+              <span><i className="fas fa-phone" id='iconosdecontacto'></i>Teléfono</span>
             </div>
             <div className="inputBox">
               <input
@@ -272,15 +272,18 @@ export const Contacto = () => {
                 onClick={handleSubmit}
                 required
               />
-              <span>Correo electrónico</span>
-            </div>
+              <span id="correocontacto">
+                <i className="fas fa-envelope" id='iconosdecontacto'></i>
+                Correo electrónico
+              </span>            
+              </div>
             <div className="inputBox">
               <textarea
                 value={motivo}
                 onChange={handleMotivoChange}
                 required
               ></textarea>
-              <span>Motivo del mensaje</span>
+              <span><i className="fas fa-comment" id='iconosdecontacto'></i>Motivo del mensaje</span>
             </div>
 
             <div class="inputBox-post">

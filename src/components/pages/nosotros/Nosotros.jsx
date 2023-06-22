@@ -1,6 +1,7 @@
  import React, { useState, useEffect } from "react";
 import "./nosotros.css";
 import { Footer } from "../../layouts/footer/Footer";
+import Chatbot from "../../layouts/chatbot/Chatbot";
 
 
 export const Nosotros = () => {
@@ -105,6 +106,8 @@ export const Nosotros = () => {
         </div>
       ))}
     </div>
+    <Chatbot/>
+
       <Footer />
 
     </>

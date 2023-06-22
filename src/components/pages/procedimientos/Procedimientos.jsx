@@ -2,6 +2,7 @@ import React from "react";
 import './procedimientos.css'
 import { Footer } from "../../layouts/footer/Footer";
 import { Link } from "react-router-dom";
+import Chatbot from "../../layouts/chatbot/Chatbot";
 
 
 export const Procedimientos = () => {
@@ -276,6 +277,7 @@ export const Procedimientos = () => {
           </div>
         </div> */}
       </div>
+      <Chatbot/>
       <Footer />
     </>
   );

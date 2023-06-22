@@ -416,7 +416,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className="links"
-                      to="/Tuscitasespecialista"
+                      to="/Agenda"
                       activeClassName="active"
                     >
                       Agenda

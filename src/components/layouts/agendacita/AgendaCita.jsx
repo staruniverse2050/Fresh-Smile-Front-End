@@ -283,7 +283,7 @@ const handleHourSelect = (hour) => {
   return (
     <div className="man-container">
   <img
-    src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1686448002/agendarcita_obeh4x.jpg"
+    src="https://res.cloudinary.com/smilecmills/image/upload/v1686448002/agendarcita_obeh4x.jpg"
     alt="Hombre"
     className="man-image"
   />

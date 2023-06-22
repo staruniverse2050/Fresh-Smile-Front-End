@@ -68,18 +68,18 @@ const RegistroFormulario = () => {
 
   const handleContraseñaChange = (event) => {
     const contraseña = event.target.value;
-
-    if (contraseña.length <= 8) {
+  
+    if (contraseña.length === 10 && /[\W_]/.test(contraseña)) {
       setContraseña(contraseña);
     } else {
       Swal.fire({
         icon: "error",
         title: "Contraseña inválida",
-        text: "La contraseña no puede tener más de 8 caracteres.",
+        text: "La contraseña debe tener exactamente 10 caracteres y contener al menos un caracter especial.",
       });
     }
   };
-
+  
   const handleOpenModal = () => {
     setShowModal(true);
   };

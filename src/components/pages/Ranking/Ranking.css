@@ -1,53 +1,58 @@
-.ranking-container {
-	max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
-	margin: 0 auto; /* Centra el contenedor horizontalmente */
-	background-color: #e6e5e5; /* Color de fondo de la tarjeta */
+/* .ranking-container {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #e6e5e5;
 	border: 1px solid #ccc;
 	border-radius: 8px;
+	height: 560px;
 	padding: 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra para resaltar la tarjeta */
-	margin-top: 250px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-top: 120px;
+} */
+
+.title-rang {
+	color: #000000;
+	text-align: center;
+	font-size: 40px;
+	position: relative;
+	top: 34px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 .ranking-table {
-	border-collapse: separate;
-	border-spacing: 0;
-	width: 100%;
-	margin-bottom: 20px;
-	margin-top: 150px;
-	margin-left: -160px; /* Ajusta el valor para mover la tabla hacia la izquierda */
+	width: 90%;
+	position: relative;
+	border-collapse: collapse;
+	background-color: rgba(255, 255, 255, 0);
+	top: 30px;
+	height: 500px;
+	left: 5%;
+	margin-bottom: 30px;
 }
 
-th,
-td {
+.table-heading {
 	padding: 12px;
-	text-align: center;
-	border-bottom: none;
-}
-
-th:first-child,
-td:first-child {
-	width: 40px;
-}
-
-.points {
+	text-align: left;
 	font-weight: bold;
-}
-
-.first-place {
-	font-weight: bold;
-}
-
-.profile-pic {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-left: 10px;
+	color: #333;
+	text-transform: uppercase;
+	border-bottom: 2px solid #ddd;
 }
 
 .position {
-	font-size: xx-large;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.position span {
+	font-weight: bold;
+	font-size: 16px;
+	margin-right: 8px;
 }
 
 .profile-pic-container {
@@ -55,25 +60,43 @@ td:first-child {
 	display: inline-block;
 }
 
+.profile-pic {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
 .crown-icon {
 	position: absolute;
-	top: -10px; /* Ajusta el valor según la posición deseada */
-	right: 17px; /* Ajusta el valor según el grado de inclinación deseado */
-	width: 20px;
-	height: 20px;
-	transform: rotate(45deg);
+	top: -8px;
+	left: -8px;
+	width: 24px;
+	height: 24px;
 }
 
-.title-rang {
-	color: #000000;
-	text-align: center;
-	font-size: 50px;
-}
-
-.table-heading {
-	background-color: #f2f2f2;
-	font-weight: bold;
-	border: 1px solid #ccc;
+.name {
 	color: #555;
-	text-transform: uppercase;
+}
+
+.stars {
+	color: #f2a500;
+	font-size: 20px;
+}
+
+.first-place {
+	background-color: #ffd700;
+}
+
+.first-place .name {
+	color: #fff;
+	font-weight: bold;
+}
+
+.first-place .stars {
+	color: #fff;
+}
+
+/* Estilos para la imagen de perfil por defecto */
+.profile-pic[src='../../../../public/user.webp'] {
+	/* Estilos personalizados */
 }

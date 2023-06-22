@@ -40,7 +40,6 @@ const TableUsuario = () => {
         // Obtener una lista de identificaciones de procedimientos únicos en las citas
         const procedimientosIds = [...new Set(citasUsuario.map(cita => cita.id_procedimiento))];
 
-        // Realizar una solicitud para obtener los procedimientos
         fetch('https://freshsmile.azurewebsites.net/FreshSmile/ConsultarProcedimientos')
           .then(response => response.json())
           .then(procedimientosData => {
@@ -49,10 +48,14 @@ const TableUsuario = () => {
               procedimientosIds.includes(procedimiento.identificacion_procedimientos)
             );
 
-            // Crear un objeto con las identificaciones de los procedimientos como clave y sus nombres como valor
+            // Crear un objeto con las identificaciones de los procedimientos como clave,
+            // sus nombres y costos como valores
             const procedimientosMap = {};
             procedimientosFiltrados.forEach(procedimiento => {
-              procedimientosMap[procedimiento.identificacion_procedimientos] = procedimiento.nombre;
+              procedimientosMap[procedimiento.identificacion_procedimientos] = {
+                nombre: procedimiento.nombre,
+                costo: procedimiento.costo
+              };
             });
             setProcedimientos(procedimientosMap);
           })
@@ -61,54 +64,54 @@ const TableUsuario = () => {
       .catch(error => console.error(error));
   }, [userId]);
 
-  const formatFechaCreacion = (fecha) => {
+  const formatFechaCreacion = fecha => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(fecha).toLocaleDateString(undefined, options);
   };
 
-  const cancelarCita = (idCita) => {
+  const modificarEstadoCita = (idCita) => {
     const accessToken = localStorage.getItem('accessToken');
   
-    fetch(`https://freshsmile.azurewebsites.net/FreshSmile/CancelarCita/${idCita}`, {
-      method: 'DELETE',
+    const updatedData = data.map(cita => {
+      if (cita.identificacion_citas === idCita) {
+        // Actualizar el estado_cita localmente a "Cancelada"
+        return { ...cita, estado_cita: 'Cancelada' };
+      }
+      return cita;
+    });
+  
+    // Actualizar los datos localmente
+    setData(updatedData);
+  
+    // Realizar la solicitud PUT a la API para actualizar el estado de la cita
+    fetch(`https://freshsmile.azurewebsites.net/FreshSmile/ModificarCita/${idCita}`, {
+      method: 'PUT',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json'
       },
+      body: JSON.stringify({ estado_cita: 'Cancelada' }) // Enviar el nuevo estado en el cuerpo de la solicitud
     })
-      .then(response => response.json())
-      .then(data => {
-        // Verificar si la cancelación fue exitosa y mostrar una alerta correspondiente
-        if (data.success) {
-          // Actualizar los datos en el estado local después de la cancelación de la cita
-          const updatedData = data.map(cita => {
-            if (cita.identificacion_citas === idCita) {
-              return { ...cita, estado_cita: 'Cancelada' };
-            }
-            return cita;
-          });
-  
-          setData(updatedData);
-  
-          // Mostrar mensaje de éxito
+      .then(response => {
+        if (response.ok) {
+          // Mostrar mensaje de éxito si la solicitud es exitosa
           swal('Cita cancelada', 'La cita ha sido cancelada exitosamente', 'success');
         } else {
-          // Mostrar mensaje de error
-          swal('Cita cancelada', 'La cita ha sido cancelada exitosamente', 'success');
+          // Mostrar mensaje de error si la solicitud no es exitosa
+          swal('Error', 'Ocurrió un error al cancelar la cita', 'error');
+          // Revertir los cambios locales en caso de error
+          setData(data);
         }
-  
-        // Recargar la página después de procesar la respuesta
-        setTimeout(() => {
-          window.location.reload();
-        }, 1000); // Esperar 1 segundo antes de recargar la página
       })
       .catch(error => {
         console.error(error);
         swal('Error', 'Ocurrió un error al cancelar la cita', 'error');
+        // Revertir los cambios locales en caso de error
+        setData(data);
       });
   };
   
-  
+
   return (
     <div className="container">
       <table>
@@ -140,17 +143,18 @@ const TableUsuario = () => {
               <td>{item.hora}</td>
               <td>{especialistas[item.id_especialista]}</td>
               <td>{item.id_paciente}</td>
-              <td>{procedimientos[item.id_procedimiento]}</td>
+              <td>{procedimientos[item.id_procedimiento]?.nombre}</td>
               <td>{formatFechaCreacion(item.fecha_de_creacion)}</td>
               <td>{item.estado_cita}</td>
-              <td>{item.costo}</td>
+              <td>{procedimientos[item.id_procedimiento]?.costo?.toFixed(3)}</td>
               <td>
-                {item.estado_cita === 'Programada' && (
-                  <button className="delete-button" onClick={() => cancelarCita(item.identificacion_citas)}>
-                    <i className="fas fa-trash"></i>
-                  </button>
-                )}
-              </td>
+              {item.estado_cita === 'Programada' && (
+  <button className="cancel-button" onClick={() => modificarEstadoCita(item.identificacion_citas)}>
+    Cancelar
+  </button>
+)}
+
+</td>
             </tr>
           ))}
         </tbody>

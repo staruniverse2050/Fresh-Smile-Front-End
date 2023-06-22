@@ -15,7 +15,7 @@ export const Nosotros = () => {
         );
         const data = await response.json();
         const filteredEspecialistas = data.filter(
-          (_, index) => index === 1 || index === 9 || index === 5 || index === 4
+          (_, index) => index === 1 || index === 2 || index === 5 || index === 4
         );
         setEspecialistas(filteredEspecialistas);
       } catch (error) {
@@ -41,7 +41,7 @@ export const Nosotros = () => {
 
       <div className="container-usN">
         <div className="post-nosotrosN">
-          <img className="" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852193/Fresh_Smile_Cmills/imagen15.jpg_gg3f9o.jpg" alt="" />
+          <img className="" src="https://res.cloudinary.com/smilecmills/image/upload/v1683852193/Fresh_Smile_Cmills/imagen15.jpg_gg3f9o.jpg" alt="" />
           <div className="post-ntsP">
             <p className="text-us">
               Nuestro equipo de profesionales altamente capacitados y especializados trabaja de la mano con cada paciente para diseñar un plan de tratamiento
@@ -66,7 +66,7 @@ export const Nosotros = () => {
       <div className="icon-containerA">
   <div className="icon-rowB">
     <div>
-      <img className="icon-imgCM" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png" />
+      <img className="icon-imgCM" src="https://res.cloudinary.com/smilecmills/image/upload/v1683852199/Fresh_Smile_Cmills/cohete_tzkzcz.png" />
     </div>
     <div>
       <h2 className="icon-textD">Misión</h2>
@@ -76,7 +76,7 @@ export const Nosotros = () => {
     </div>
   </div>
   <div className="icon-rowB">
-    <img className="icon-imgCM1" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png" />
+    <img className="icon-imgCM1" src="https://res.cloudinary.com/smilecmills/image/upload/v1683852194/Fresh_Smile_Cmills/ojo_zeqrkh.png" />
     <div>
       <h2 className="icon-textDM">Visión</h2>
       <p className="icon-subtextEM">
@@ -85,7 +85,7 @@ export const Nosotros = () => {
     </div>
   </div>
   <div className="icon-rowB">
-    <img className="icon-imgC" src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852200/Fresh_Smile_Cmills/diamante_nyvce1.png" />
+    <img className="icon-imgC" src="https://res.cloudinary.com/smilecmills/image/upload/v1683852200/Fresh_Smile_Cmills/diamante_nyvce1.png" />
     <div>
       <h2 className="icon-textDM">Valores</h2>
       <p className="icon-subtextEM">

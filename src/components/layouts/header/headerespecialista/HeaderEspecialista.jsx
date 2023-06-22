@@ -253,7 +253,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
         <Link to="/Inicio" onClick={handleLogoClick}>
           <img
             className="logo"
-            src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
+            src="https://res.cloudinary.com/smilecmills/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
             alt=""
           />
         </Link>
@@ -265,7 +265,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
             <img
               onClick={toggleDropdown}
               className="icon-hamburguer"
-              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
+              src="https://res.cloudinary.com/smilecmills/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
               alt=""
             />
             {isOpen && (
@@ -433,7 +433,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               ) : (
                 <img
                   className="icono-inicio"
-                  src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
+                  src="https://res.cloudinary.com/smilecmills/image/upload/v1683825569/Fresh_Smile_Cmills/icono_inicio_enxtjd.png"
                   alt=""
                 />
               )}

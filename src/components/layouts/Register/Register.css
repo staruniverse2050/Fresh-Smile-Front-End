@@ -244,7 +244,7 @@ text-align: center;
 .custom-modal .BotonModalGuardar {
   padding: 10px 20px;
 	margin-top: 1em;
-	margin-left: 524px;
+	margin-left: 340px;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
@@ -257,11 +257,16 @@ text-align: center;
 
 .custom-modal .BotonModalCancelar {
   background-color:#ccc;
+  position: relative;
+  right: 103px;
+  top: 53px;
   
 }
 
 .custom-modal .BotonModalGuardar {
   background-color:#249bad;
+  position: relative;
+  right: 290px;
   
   
 }

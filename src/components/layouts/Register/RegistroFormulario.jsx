@@ -109,7 +109,7 @@ const RegistroFormulario = () => {
     Swal.fire({
       icon: "info",
       title: "Recordatorio",
-      text: "La contraseña debe tener 8 caracteres.",
+      text: "La contraseña debe tener 10 caracteres.",
       customClass: {
         confirmButton: "custom-swal-button",
       },

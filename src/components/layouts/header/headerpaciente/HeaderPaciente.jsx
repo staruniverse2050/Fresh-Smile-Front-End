@@ -93,7 +93,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
         <Link to="/Inicio" onClick={handleLogoClick}>
           <img
             className="logo"
-            src="https://res.cloudinary.com/smilecmills/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
+            src="https://res.cloudinary.com/smilecmills/image/upload/v1683852212/Fresh_Smile_Cmills/logo_brh9rw.png"
             alt=""
           />
         </Link>

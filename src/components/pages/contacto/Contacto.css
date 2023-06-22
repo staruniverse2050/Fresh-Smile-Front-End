@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.671) 0%, rgba(0, 0, 0, 0.712) 100%), url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1685327156/pexels-photo-6528851_t30tqf.jpg");
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.671) 0%, rgba(0, 0, 0, 0.712) 100%), url("https://res.cloudinary.com/smilecmills/image/upload/v1685327156/pexels-photo-6528851_t30tqf.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 94.2vh;

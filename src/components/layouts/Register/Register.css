@@ -20,6 +20,25 @@
 	height: 720px;
 	text-align: center;
 }
+#foto {
+	position: relative;
+	left: 154px;
+	background-color: #f0f0f0;
+	border: 1px dashed #ccc;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	width: 455px;
+	bottom: 10px;
+	transition: background-color 0.3s ease;
+  }
+  #foto:hover {
+	background-color: #e0e0e0;
+  }
+  #titulofoto{
+	position: relative;
+	bottom: 5px;
+  }
 
 
 .custom-modal {

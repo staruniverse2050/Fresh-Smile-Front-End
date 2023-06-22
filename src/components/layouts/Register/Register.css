@@ -124,7 +124,7 @@ text-align: center;
 
 .Registro label {
 	margin-bottom: 5px;
-	margin-left: 148px;
+	margin-left: 165px;
 }
 
 .Registro input[type="text"],
@@ -197,6 +197,11 @@ text-align: center;
 	text-decoration: none;
 	margin-left: 15px;
 }
+i {
+	color: #237581;
+	position: relative;
+	right: 7px;
+}
 
 .Registro input::placeholder {
 	font-size: 15px;
@@ -211,7 +216,10 @@ text-align: center;
   height: 100vh; /* Ocupa todo el alto de la ventana */
   padding: 20px;
 }
-
+#correo{
+	right: 8px;
+	position: relative;
+}
 .custom-modal .modal-dialog {
   width: 400px; /* Ajusta el ancho del modal según tus preferencias */
   max-width: 105%;

@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
 
+
 const RegistroFormulario = () => {
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [numeroDocumento, setNumeroDocumento] = useState("");
@@ -43,14 +44,14 @@ const RegistroFormulario = () => {
         console.error('Error al obtener los procedimientos:', error);
       });
   }, []);
-  
+
   const handleNombresChange = (event) => {
     const value = event.target.value;
     if (/^[a-zA-ZñÑ\s]*$/.test(value)) {
       setNombrescompletos(value);
     }
   };
-  
+
 
   const handleDireccionChange = (event) => {
     setDireccion(event.target.value);
@@ -71,7 +72,7 @@ const RegistroFormulario = () => {
     const contraseña = event.target.value;
     setContraseña(contraseña);
   };
-  
+
   const handleOpenModal = () => {
     setShowModal(true);
   };
@@ -238,7 +239,7 @@ const RegistroFormulario = () => {
         },
         body: JSON.stringify(datosFormulario),
       });
-  
+
       if (response.ok) {
         Swal.fire({
           icon: "success",
@@ -293,7 +294,8 @@ const RegistroFormulario = () => {
         <form className="form-input-container" onSubmit={handleSubmit}>
           <div className="form-group">
             {/* <h1 className="registro-h1">Registro</h1> */}
-            <label htmlFor="tipoDocumento">Tipo de documento</label>
+            <label htmlFor="tipoDocumento">
+              <i className="fas fa-id-card"></i> Tipo de documento</label>
             <select
               id="tipoDocumento"
               className="form-input-select"
@@ -309,7 +311,8 @@ const RegistroFormulario = () => {
             </select>
           </div>
           <div className="form-group">
-            <label htmlFor="numeroDocumento">Número de documento</label>
+            <label htmlFor="numeroDocumento"><i className="fas fa-file-alt"></i> Número de documento</label>
+
             <input
               type="text"
               id="numeroDocumento"
@@ -320,7 +323,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="nombrescompletos">Nombre completo</label>
+            <label htmlFor="nombrescompletos"><i className="fas fa-user"></i>Nombre completo</label>
             <input
               type="text"
               id="nombrescompletos"
@@ -348,7 +351,8 @@ const RegistroFormulario = () => {
             </div>
           )}
           <div className="form-group">
-            <label htmlFor="direccion">Dirección</label>
+            <label htmlFor="direccion"><i className="fas fa-map-marker-alt"></i> Dirección
+            </label>
             <input
               type="text"
               id="direccion"
@@ -359,7 +363,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="telefono">Teléfono</label>
+            <label htmlFor="telefono"><i className="fas fa-phone"></i>Teléfono</label>
             <input
               type="text"
               id="telefono"
@@ -370,10 +374,10 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="correo">Correo electrónico</label>
+            <label htmlFor="correo" id='correo'><i className="fas fa-envelope"></i>Correo electrónico</label>
             <input
               type="email"
-              id="correo"
+              id="correoi"
               value={correo}
               onChange={handleCorreoChange}
               required
@@ -381,7 +385,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="contraseña" >Contraseña</label>
+            <label htmlFor="contraseña"><i className="fas fa-lock"></i>Contraseña</label>
             <input
               type="password"
               id="contraseña"
@@ -393,7 +397,7 @@ const RegistroFormulario = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="rol">Rol</label>
+            <label htmlFor="rol"><i className="fas fa-user"></i>Rol</label>
             <select
               id="rol"
               value={rol}
@@ -412,7 +416,7 @@ const RegistroFormulario = () => {
           >
             Registrar
           </button>
-  
+
           <div className="login-link">
             <p>¿Ya tienes una cuenta?</p>
             <button className="btn btn-link" onClick={handleLoginClick}>
@@ -453,6 +457,6 @@ const RegistroFormulario = () => {
       </div>
     </div>
   );
-        }
+}
 
 export default RegistroFormulario;

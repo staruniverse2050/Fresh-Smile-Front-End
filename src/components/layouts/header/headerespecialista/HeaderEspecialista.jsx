@@ -443,7 +443,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 </NavLink>
               </li>
             </ul>
-            <p className="Bienvenida">
+            <p className="Bienvenida-especialista">
               Hola, {name.split(" ")[0]} {name.split(" ")[1]}
             </p>
           </div>

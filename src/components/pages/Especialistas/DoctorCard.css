@@ -189,9 +189,9 @@ button:not(.star) {
   cursor: pointer;
 }
 
-button:hover:not(.star) {
-  background-color: #556f97;
-}
+/* button:hover:not(.star) {
+  background-color: #556f97;+
+} */
 
 textarea {
   resize: vertical;

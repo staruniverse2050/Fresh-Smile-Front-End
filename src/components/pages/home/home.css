@@ -116,7 +116,7 @@ body {
 .boton-home {
   display: flex;
   align-items: center;
-  width: 190px;
+  width: auto;
   height: 60px;
   background-color: #249bad;
   color: white;
@@ -128,7 +128,7 @@ body {
   position: relative;
   top: 80px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
   font-family: 'Open Sans', sans-serif;
 }

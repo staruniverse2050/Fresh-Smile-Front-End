@@ -19,10 +19,18 @@ const RegistroFormulario = () => {
   const [codigo, setCodigo] = useState("");
   const [procedimientos, setProcedimientos] = useState([]);
   const [especialidad, setEspecialidad] = useState("");
+  const [foto, setFoto] = useState(null);
+  const [codigoValido, setCodigoValido] = useState(false);
 
   const handleTipoDocumentoChange = (event) => {
     setTipoDocumento(event.target.value);
   };
+
+  const handleFotoChange = (event) => {
+    const file = event.target.files[0];
+    setFoto(file);
+  };
+
   const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10}$/;
 
   const handleNumeroDocumentoChange = (event) => {
@@ -74,14 +82,20 @@ const RegistroFormulario = () => {
   };
 
   const handleOpenModal = () => {
-    setShowModal(true);
+    setModalOpen(true);
   };
-
+  
   const handleCloseModal = () => {
     setShowModal(false);
     setCodigo("");
+    if (codigoValido) {
+      handleGuardarClick();
+    }
   };
-
+  const handleGuardarClick = () => {
+    handleSubmit();
+  };
+  
   const handleCodigoChange = (event) => {
     setCodigo(event.target.value);
   };
@@ -165,7 +179,9 @@ const RegistroFormulario = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    if (event && event.preventDefault) {
+      event.preventDefault();
+    }    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(correo)) {
       Swal.fire({
@@ -182,13 +198,6 @@ const RegistroFormulario = () => {
     if (regex.test(contraseña)) {
       // Aquí puedes hacer lo que necesites con la contraseña válida
       console.log("Contraseña válida:", contraseña);
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Contraseña inválida",
-        text:
-          "La contraseña debe tener exactamente 10 caracteres y contener al menos una letra, un número y un carácter especial.",
-      });
     }
     let apiEndpoint = "";
     let datosFormulario = {};
@@ -334,22 +343,36 @@ const RegistroFormulario = () => {
             />
           </div>
           {rol === "Especialista" && (
-            <div className="form-group">
-              <label>Especialidad</label>
-              <select
-                className="form-control"
-                value={especialidad}
-                onChange={handleEspecialidadChange}
-              >
-                <option value="">Seleccionar especialidad</option>
-                {procedimientos.map(procedimiento => (
-                  <option key={procedimiento.id} value={procedimiento.nombre}>
-                    {procedimiento.nombre}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <>
+              <div className="form-group">
+                <label>Especialidad</label>
+                <select
+                  className="form-control"
+                  value={especialidad}
+                  onChange={handleEspecialidadChange}
+                >
+                  <option value="">Seleccionar especialidad</option>
+                  {procedimientos.map(procedimiento => (
+                    <option key={procedimiento.id} value={procedimiento.nombre}>
+                      {procedimiento.nombre}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="foto" id='titulofoto'>Sube una foto tuya</label>
+                <br></br>
+                <br></br>
+                <input
+                  type="file"
+                  id="foto"
+                  accept="image/*"
+                  onChange={handleFotoChange}
+                />
+              </div>
+            </>
           )}
+
           <div className="form-group">
             <label htmlFor="direccion"><i className="fas fa-map-marker-alt" id='i'></i> Dirección
             </label>
@@ -405,14 +428,14 @@ const RegistroFormulario = () => {
               className="form-input-select"
             >
               <option value="">Seleccione un rol</option>
-              <option value="Especialista">Especialista</option>
+              <option value="Especialista" onClick={handleOpenModal} >Especialista</option>
               <option value="Paciente">Paciente</option>
             </select>
           </div>
           <button
             className="BotonRegistro"
             type="submit"
-            onClick={handleOpenModal}
+            onClick={handleSubmit}
           >
             Registrar
           </button>
@@ -448,7 +471,7 @@ const RegistroFormulario = () => {
               <button className="BotonModalCancelar" onClick={handleCloseModal}>
                 Cancelar
               </button>
-              <button className="BotonModalGuardar" onClick={handleSubmit}>
+              <button className="BotonModalGuardar" onClick={handleGuardarClick}>
                 Guardar
               </button>
             </Modal.Footer>

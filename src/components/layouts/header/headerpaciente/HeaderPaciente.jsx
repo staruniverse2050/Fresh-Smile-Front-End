@@ -244,7 +244,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
               </li>
 
             </ul>
-            <p className="Bienvenida">Hola, {name.split(' ')[0]} {name.split(' ')[1]}</p>
+            <p className="Bienvenida-paciente">Hola, {name.split(' ')[0]} {name.split(' ')[1]}</p>
 
           </div>
         </ul>

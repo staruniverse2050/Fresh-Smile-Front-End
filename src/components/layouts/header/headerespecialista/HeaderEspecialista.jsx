@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import axios from 'axios';
 import withReactContent from "sweetalert2-react-content";
 import "../headerespecialista/HeaderEspecilista.css";
+import CloudinaryUploadWidget from "../../Cloudinary/CloudinaryUploadWidget";
 
 export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [costo, setCosto] = useState('');
-  const [foto, setFoto] = useState(null);
+  const [foto, setFoto] = useState();
 
   const namePros = useRef(null);
   const descripcionProps = useRef(null);
@@ -26,6 +27,10 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
   useEffect(() => {
     generateAvatar();
   }, []);
+
+  useEffect(() => {
+    console.log(foto)
+  },[foto])
 
   const generateAvatar = () => {
     const userId = localStorage.getItem("userId");
@@ -116,6 +121,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   const mostrarFormulario = () => {
     const MySwal = withReactContent(Swal);
+    let fotoLocal ="";
+    let setFotoLocal = (newFoto) => fotoLocal = newFoto;
 
     MySwal.fire({
       title: 'Nuevo procedimiento',
@@ -157,12 +164,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               <label className="label-bold" htmlFor="imagen">
                 Imagen:
               </label>
-              <input
-                type="file"
-                id="imagen"
-                className="file-input"
-                ref={imagenProps}
-              />
+              <CloudinaryUploadWidget sendInfo={setFotoLocal} />
             </div>
           </form>
         </div>
@@ -179,7 +181,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
           nombre: namePros.current.value,
           descripcion: descripcionProps.current.value,
           costo: costProps.current.value,
-          foto: imagenProps.current.value,
+          foto: fotoLocal,
         };
         console.log(formData);
         return axios.post('https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento', formData, {

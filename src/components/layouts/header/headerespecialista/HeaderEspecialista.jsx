@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
@@ -30,7 +30,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   useEffect(() => {
     console.log(foto)
-  },[foto])
+  }, [foto])
 
   const generateAvatar = () => {
     const userId = localStorage.getItem("userId");
@@ -121,7 +121,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
 
   const mostrarFormulario = () => {
     const MySwal = withReactContent(Swal);
-    let fotoLocal ="";
+    let fotoLocal = "";
     let setFotoLocal = (newFoto) => fotoLocal = newFoto;
 
     MySwal.fire({
@@ -216,36 +216,36 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
       });
 
 
-        // Realizar la solicitud POST a la API
-        // axios
-        //   .post(
-        //     'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
-        //     formData,
-        //     {
-        //       headers: {
-        //         Authorization: `Bearer ${accessToken}`,
-        //       },
-        //     }
-        //   )
-        //   .then((response) => {
-        //     console.log('Procedimiento creado:', response.data);
+    // Realizar la solicitud POST a la API
+    // axios
+    //   .post(
+    //     'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
+    //     formData,
+    //     {
+    //       headers: {
+    //         Authorization: `Bearer ${accessToken}`,
+    //       },
+    //     }
+    //   )
+    //   .then((response) => {
+    //     console.log('Procedimiento creado:', response.data);
 
-        //     // Mostrar la alerta de SweetAlert
-        //     Swal.fire({
-        //       icon: 'success',
-        //       title: 'Procedimiento creado',
-        //       text: 'El procedimiento ha sido creado exitosamente.',
-        //     });
+    //     // Mostrar la alerta de SweetAlert
+    //     Swal.fire({
+    //       icon: 'success',
+    //       title: 'Procedimiento creado',
+    //       text: 'El procedimiento ha sido creado exitosamente.',
+    //     });
 
-        //     // Reiniciar los campos del formulario
-        //     setNombre('');
-        //     setDescripcion('');
-        //     setCosto('');
-        //   })
-        //   .catch((error) => {
-        //     console.error('Error al crear el procedimiento:', error);
-        //   });
-      }
+    //     // Reiniciar los campos del formulario
+    //     setNombre('');
+    //     setDescripcion('');
+    //     setCosto('');
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error al crear el procedimiento:', error);
+    //   });
+  }
 
   return (
     <header className="Header_Header">
@@ -273,9 +273,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                 <ul>
                   <li>
                     <NavLink
-                      className={`links ${
-                        isActiveRoute("/Inicio") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Inicio") ? "active" : ""
+                        }`}
                       to="/Inicio"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -285,9 +284,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${
-                        isActiveRoute("/Nosotros") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Nosotros") ? "active" : ""
+                        }`}
                       to="/Nosotros"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -297,9 +295,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${
-                        isActiveRoute("/AgendaCita") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/AgendaCita") ? "active" : ""
+                        }`}
                       to="/AgendaCita"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -309,9 +306,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${
-                        isActiveRoute("/Procedimientos") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Procedimientos") ? "active" : ""
+                        }`}
                       to="/Procedimientos"
                       activeClassName="active"
                       onClick={handleAgregarProcedimiento}
@@ -321,9 +317,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${
-                        isActiveRoute("/Especialistas") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/Especialistas") ? "active" : ""
+                        }`}
                       to="/Especialistas"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -331,39 +326,21 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                       Valoraciones
                     </NavLink>
                   </li>
-                  {isAuthenticated && (
-                    <>
-                      <li>
-                        <NavLink
-                          className={`links ${
-                            isActiveRoute("/Ranking") ? "active" : ""
-                          }`}
-                          to="/Ranking"
-                          activeClassName="active"
-                          onClick={toggleDropdown}
-                        >
-                          Valoraciones
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink
-                          className={`links ${
-                            isActiveRoute("/MisCitas") ? "active" : ""
-                          }`}
-                          to="/MisCitas"
-                          activeClassName="active"
-                          onClick={toggleDropdown}
-                        >
-                          Agenda
-                        </NavLink>
-                      </li>
-                    </>
-                  )}
                   <li>
                     <NavLink
-                      className={`links ${
-                        isActiveRoute("/Contacto") ? "active" : ""
-                      }`}
+                      className={`links2 ${isActiveRoute("/MisCitas") ? "active" : ""
+                        }`}
+                      to="/MisCitas"
+                      activeClassName="active"
+                      onClick={toggleDropdown}
+                    >
+                      Agenda
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={`links ${isActiveRoute("/Contacto") ? "active" : ""
+                        }`}
                       to="/Contacto"
                       activeClassName="active"
                       onClick={toggleDropdown}
@@ -379,9 +356,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
             <ul>
               <li>
                 <NavLink
-                  className={`links ${
-                    isActiveRoute("/Inicio") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Inicio") ? "active" : ""
+                    }`}
                   to="/Inicio"
                   activeClassName="active"
                 >
@@ -390,9 +366,8 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               </li>
               <li>
                 <NavLink
-                  className={`links ${
-                    isActiveRoute("/Nosotros") ? "active" : ""
-                  }`}
+                  className={`links ${isActiveRoute("/Nosotros") ? "active" : ""
+                    }`}
                   to="/Nosotros"
                   activeClassName="active"
                 >

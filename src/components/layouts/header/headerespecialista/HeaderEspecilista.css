@@ -14,18 +14,10 @@
 	padding: 10px;
 	position: fixed;
 }
-<<<<<<< HEAD
 .Bienvenida {
 	color: #f1f1f1;
 	position: relative;
 	top: 5px;
-=======
-.Bienvenida-especialista {
-	color: #f1f1f1;
-	position: relative;
-	bottom: 6px;
-	top: 10px;
->>>>>>> a4ef12e163c1009a1d7b78337d9404c85c274979
 	left: 20%;
 	font-size: 16px;
 	display: flex;

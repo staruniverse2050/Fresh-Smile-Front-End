@@ -13,10 +13,11 @@
 	position: relative;
 	padding: 10px;
 }
-.Bienvenida {
+.Bienvenida-paciente {
     color: #f1f1f1;
     position: relative;
     bottom: 6px;
+		top: 1px;
     left: 70%;
     font-size: 16px;
     display: flex;

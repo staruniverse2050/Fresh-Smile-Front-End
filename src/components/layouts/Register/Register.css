@@ -42,36 +42,44 @@
 
 
 .custom-modal {
-	width: 300px; /* Ajusta el ancho de la ventana modal según tus preferencias */
+	width: 300px;
+	/* Ajusta el ancho de la ventana modal según tus preferencias */
 	max-width: 20%;
 	max-height: 20%;
 	margin: 0 auto;
-  }
-  
-  .custom-modal .modal-content {
-	border: none; /* Elimina el borde */
-	border-radius: 10px; /* Agrega esquinas redondeadas */
-	background-color: #fff; /* Cambia el color de fondo a blanco o el color deseado */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-	margin-right: 25px;/* Agrega una sombra */
-  }
-  
-  .custom-modal .modal-header {
-	border-bottom: none; /* Elimina el borde inferior del encabezado */
-  }
-  
-  .custom-modal .modal-footer {
-	border-top: none; /* Elimina el borde superior del pie de página */
-  }
-  
-  .custom-modal .modal-title {
-	font-size: 1.2rem; /* Ajusta el tamaño de fuente del título según tus preferencias */
-	font-weight: bold;
-  }
+}
 
-  
-  .custom-modal .BotonModalCancelar,
-  .custom-modal .BotonModalGuardar {
+.custom-modal .modal-content {
+	border: none;
+	/* Elimina el borde */
+	border-radius: 10px;
+	/* Agrega esquinas redondeadas */
+	background-color: #fff;
+	/* Cambia el color de fondo a blanco o el color deseado */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin-right: 25px;
+	/* Agrega una sombra */
+}
+
+.custom-modal .modal-header {
+	border-bottom: none;
+	/* Elimina el borde inferior del encabezado */
+}
+
+.custom-modal .modal-footer {
+	border-top: none;
+	/* Elimina el borde superior del pie de página */
+}
+
+.custom-modal .modal-title {
+	font-size: 1.2rem;
+	/* Ajusta el tamaño de fuente del título según tus preferencias */
+	font-weight: bold;
+}
+
+
+.custom-modal .BotonModalCancelar,
+.custom-modal .BotonModalGuardar {
 	/* Ajusta los estilos de los botones según tus preferencias */
 	padding: 10px 20px;
 	font-size: 1rem;
@@ -81,16 +89,18 @@
 	border: none;
 	color: #fff;
 	cursor: pointer;
-  }
-  
-  .custom-modal .BotonModalCancelar {
-	background-color: #e74c3c; /* Cambia el color de fondo del botón Cancelar */
-  }
-  
-  .custom-modal .BotonModalGuardar {
-	background-color: #2ecc71; /* Cambia el color de fondo del botón Guardar */
-  }
-  
+}
+
+.custom-modal .BotonModalCancelar {
+	background-color: #e74c3c;
+	/* Cambia el color de fondo del botón Cancelar */
+}
+
+.custom-modal .BotonModalGuardar {
+	background-color: #2ecc71;
+	/* Cambia el color de fondo del botón Guardar */
+}
+
 .right-side {
 	flex: 1;
 	padding: 10px;
@@ -100,7 +110,7 @@
 	margin-top: -40px;
 }
 
-.right-side h1{
+.right-side h1 {
 	text-align: center;
 	margin: 0;
 	color: #249bad;
@@ -109,6 +119,7 @@
 	position: relative;
 	margin-right: 45px;
 }
+
 .img-left-side {
 	width: 50%;
 	max-width: 00px;
@@ -119,7 +130,7 @@
 	padding: 20px;
 	width: 60%;
 	height: 50px;
-	
+
 }
 
 .registro-h1 {
@@ -134,7 +145,7 @@
 }
 
 .title-left {
-text-align: center;
+	text-align: center;
 }
 
 .form-group {
@@ -181,7 +192,7 @@ text-align: center;
 .BotonRegistro:hover,
 .BotonRegistro:focus {
 	background-color: #0f7a8f;
-	
+
 }
 
 .login-link {
@@ -216,6 +227,7 @@ text-align: center;
 	text-decoration: none;
 	margin-left: 15px;
 }
+
 #i {
 	color: #249bad;
 	position: relative;
@@ -226,91 +238,97 @@ text-align: center;
 .Registro input::placeholder {
 	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
-  }
-  
-.custom-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  height: 100vh; /* Ocupa todo el alto de la ventana */
-  padding: 20px;
 }
-#correo{
+
+.custom-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Fondo semi-transparente */
+	height: 100vh;
+	/* Ocupa todo el alto de la ventana */
+	padding: 20px;
+}
+
+#correo {
 	right: 8px;
 	position: relative;
 }
+
 .custom-modal .modal-dialog {
-  width: 400px; /* Ajusta el ancho del modal según tus preferencias */
-  max-width: 105%;
+	width: 400px;
+	/* Ajusta el ancho del modal según tus preferencias */
+	max-width: 105%;
 }
 
 .custom-modal .modal-content {
-  border: none;
-  border-radius: 10px;
-  background-color: #fff;
+	border: none;
+	border-radius: 10px;
+	background-color: #fff;
 	width: 100%;
 	padding: 15%;
 	margin: -2em;
 	margin-top: -2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .custom-modal .modal-header {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .custom-modal .modal-footer {
-  border-top: none;
+	border-top: none;
 }
 
 .custom-modal .modal-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 15px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 15px;
 	margin-top: 3.2rem;
 }
 
 .custom-modal .InputCodigo {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 .custom-modal .BotonModalCancelar,
 .custom-modal .BotonModalGuardar {
-  padding: 10px 20px;
+	padding: 10px 20px;
 	margin-top: 1em;
 	margin-left: 340px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  background-color: #ccc;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: #ccc;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+
 }
 
 .custom-modal .BotonModalCancelar {
-  background-color:#ccc;
-  position: relative;
-  right: 103px;
-  top: 53px;
-  
+	background-color: #ccc;
+	position: relative;
+	right: 103px;
+	top: 53px;
+
 }
 
 .custom-modal .BotonModalGuardar {
-  background-color:#249bad;
-  position: relative;
-  right: 290px;
-  
-  
+	background-color: #249bad;
+	position: relative;
+	right: 290px;
+
+
 }
+
 .custom-modal button:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 
@@ -319,32 +337,38 @@ text-align: center;
 		flex-direction: column;
 		padding-top: 5%;
 	}
+
 	.left-side {
 		width: 100%;
 		height: auto;
 		padding-top: 20px;
 		margin-left: 0;
 	}
+
 	.custom-modal {
 		width: 100%;
 		max-width: none;
 		max-height: none;
 		margin: 0;
 	}
+
 	.custom-modal .modal-content {
 		margin-right: 0;
 	}
 
 	.custom-modal .modal-header {
-		border-bottom: 1px solid #ccc; /* Restablece el borde inferior en pantallas más pequeñas */
+		border-bottom: 1px solid #ccc;
+		/* Restablece el borde inferior en pantallas más pequeñas */
 	}
 
 	.custom-modal .modal-footer {
-		border-top: 1px solid #ccc; /* Restablece el borde superior en pantallas más pequeñas */
+		border-top: 1px solid #ccc;
+		/* Restablece el borde superior en pantallas más pequeñas */
 	}
 
 	.custom-modal .modal-title {
-		font-size: 1rem; /* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
+		font-size: 1rem;
+		/* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
 	}
 
 	.custom-modal .BotonModalCancelar,
@@ -354,11 +378,13 @@ text-align: center;
 	}
 
 	.custom-modal .BotonModalCancelar {
-		background-color: #ff0000; /* Cambia el color de fondo del botón Cancelar para pantallas más pequeñas */
+		background-color: #ff0000;
+		/* Cambia el color de fondo del botón Cancelar para pantallas más pequeñas */
 	}
 
 	.custom-modal .BotonModalGuardar {
-		background-color: #00ff00; /* Cambia el color de fondo del botón Guardar para pantallas más pequeñas */
+		background-color: #00ff00;
+		/* Cambia el color de fondo del botón Guardar para pantallas más pequeñas */
 	}
 
 	.right-side {
@@ -367,73 +393,95 @@ text-align: center;
 	}
 
 	.right-side h1 {
-		font-size: 1.5rem; /* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
+		font-size: 1.5rem;
+		/* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
 	}
 
 	.img-left-side {
-		width: 70%; /* Ajusta el ancho de la imagen para pantallas más pequeñas */
+		width: 70%;
+		/* Ajusta el ancho de la imagen para pantallas más pequeñas */
 	}
 
 	.form-input-container {
-		width: 80%; /* Ajusta el ancho del contenedor para pantallas más pequeñas */
-		height: auto; /* Ajusta la altura del contenedor para pantallas más pequeñas */
+		width: 80%;
+		/* Ajusta el ancho del contenedor para pantallas más pequeñas */
+		height: auto;
+		/* Ajusta la altura del contenedor para pantallas más pequeñas */
 	}
 
 	.registro-h1 {
-		font-size: 1.2rem; /* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
-		width: 90%; /* Ajusta el ancho del título para pantallas más pequeñas */
-		margin: 0 auto; /* Centra el título horizontalmente */
+		font-size: 1.2rem;
+		/* Ajusta el tamaño de fuente del título para pantallas más pequeñas */
+		width: 90%;
+		/* Ajusta el ancho del título para pantallas más pequeñas */
+		margin: 0 auto;
+		/* Centra el título horizontalmente */
 	}
 
 	.title-left {
-		text-align: left; /* Ajusta la alineación del título para pantallas más pequeñas */
+		text-align: left;
+		/* Ajusta la alineación del título para pantallas más pequeñas */
 	}
 
 	.Registro label {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
-		margin-bottom: 10px; /* Ajusta el margen inferior para pantallas más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-bottom: 10px;
+		/* Ajusta el margen inferior para pantallas más pequeñas */
 	}
 
 	.Registro input[type="text"],
 	.Registro input[type="email"],
 	.Registro input[type="password"],
 	.Registro select {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
-		margin-bottom: 10px; /* Ajusta el margen inferior para pantallas más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-bottom: 10px;
+		/* Ajusta el margen inferior para pantallas más pequeñas */
 	}
 
 	.Registro select {
-		height: 30px; /* Ajusta la altura del select para pantallas más pequeñas */
+		height: 30px;
+		/* Ajusta la altura del select para pantallas más pequeñas */
 	}
 
 	.BotonRegistro {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
-		margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-top: 10px;
+		/* Ajusta el margen superior para pantallas más pequeñas */
 	}
 
 	.login-link {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
-		margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-top: 10px;
+		/* Ajusta el margen superior para pantallas más pequeñas */
 	}
 
 	.login-link p {
-		margin-bottom: 5px; /* Ajusta el margen inferior para pantallas más pequeñas */
+		margin-bottom: 5px;
+		/* Ajusta el margen inferior para pantallas más pequeñas */
 	}
 
 	.login-link button {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas más pequeñas */
-		margin-top: 10px; /* Ajusta el margen superior para pantallas más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas más pequeñas */
+		margin-top: 10px;
+		/* Ajusta el margen superior para pantallas más pequeñas */
 	}
-	
+
 }
 
 @media screen and (max-width: 480px) {
 	.Registro {
 		padding-top: 2%;
 	}
+
 	.left-side {
 		padding-top: 10px;
 	}
+
 	.custom-modal {
 		width: 90%;
 		max-height: 90%;
@@ -444,15 +492,18 @@ text-align: center;
 	}
 
 	.custom-modal .modal-header {
-		border-bottom: none; /* Elimina el borde inferior en pantallas aún más pequeñas */
+		border-bottom: none;
+		/* Elimina el borde inferior en pantallas aún más pequeñas */
 	}
 
 	.custom-modal .modal-footer {
-		border-top: none; /* Elimina el borde superior en pantallas aún más pequeñas */
+		border-top: none;
+		/* Elimina el borde superior en pantallas aún más pequeñas */
 	}
 
 	.custom-modal .modal-title {
-		font-size: 0.8rem; /* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
+		font-size: 0.8rem;
+		/* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
 	}
 
 	.custom-modal .BotonModalCancelar,
@@ -462,11 +513,13 @@ text-align: center;
 	}
 
 	.custom-modal .BotonModalCancelar {
-		background-color: #cc0000; /* Cambia el color de fondo del botón Cancelar para pantallas aún más pequeñas */
+		background-color: #cc0000;
+		/* Cambia el color de fondo del botón Cancelar para pantallas aún más pequeñas */
 	}
 
 	.custom-modal .BotonModalGuardar {
-		background-color: #00cc00; /* Cambia el color de fondo del botón Guardar para pantallas aún más pequeñas */
+		background-color: #00cc00;
+		/* Cambia el color de fondo del botón Guardar para pantallas aún más pequeñas */
 	}
 
 	.right-side {
@@ -474,65 +527,86 @@ text-align: center;
 	}
 
 	.right-side h1 {
-		font-size: 1.2rem; /* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
+		font-size: 1.2rem;
+		/* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
 	}
 
 	.img-left-side {
-		width: 90%; /* Ajusta aún más el ancho de la imagen para pantallas aún más pequeñas */
+		width: 90%;
+		/* Ajusta aún más el ancho de la imagen para pantallas aún más pequeñas */
 	}
 
 	.form-input-container {
-		width: 90%; /* Ajusta aún más el ancho del contenedor para pantallas aún más pequeñas */
-		padding: 10px; /* Ajusta el padding del contenedor para pantallas aún más pequeñas */
+		width: 90%;
+		/* Ajusta aún más el ancho del contenedor para pantallas aún más pequeñas */
+		padding: 10px;
+		/* Ajusta el padding del contenedor para pantallas aún más pequeñas */
 	}
 
 	.registro-h1 {
-		font-size: 1rem; /* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
-		padding: 5px; /* Ajusta el padding del título para pantallas aún más pequeñas */
+		font-size: 1rem;
+		/* Ajusta aún más el tamaño de fuente del título para pantallas aún más pequeñas */
+		padding: 5px;
+		/* Ajusta el padding del título para pantallas aún más pequeñas */
 	}
 
 	.title-left {
-		font-size: 1rem; /* Ajusta el tamaño de fuente del título para pantallas aún más pequeñas */
+		font-size: 1rem;
+		/* Ajusta el tamaño de fuente del título para pantallas aún más pequeñas */
 	}
 
 	.Registro label {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
-		margin-bottom: 5px; /* Ajusta el margen inferior para pantallas aún más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-bottom: 5px;
+		/* Ajusta el margen inferior para pantallas aún más pequeñas */
 	}
 
 	.Registro input[type="text"],
 	.Registro input[type="email"],
 	.Registro input[type="password"],
 	.Registro select {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
-		margin-bottom: 5px; /* Ajusta el margen inferior para pantallas aún más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-bottom: 5px;
+		/* Ajusta el margen inferior para pantallas aún más pequeñas */
 	}
 
 	.Registro select {
-		height: 20px; /* Ajusta la altura del select para pantallas aún más pequeñas */
+		height: 20px;
+		/* Ajusta la altura del select para pantallas aún más pequeñas */
 	}
 
 	.BotonRegistro {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
-		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px;
+		/* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 
 	.BotonRegistro {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
-		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px;
+		/* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 
 	.login-link {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
-		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px;
+		/* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 
 	.login-link p {
-		margin-bottom: 3px; /* Ajusta el margen inferior para pantallas aún más pequeñas */
+		margin-bottom: 3px;
+		/* Ajusta el margen inferior para pantallas aún más pequeñas */
 	}
 
 	.login-link button {
-		margin-left: 0; /* Elimina el margen izquierdo para pantallas aún más pequeñas */
-		margin-top: 5px; /* Ajusta el margen superior para pantallas aún más pequeñas */
+		margin-left: 0;
+		/* Elimina el margen izquierdo para pantallas aún más pequeñas */
+		margin-top: 5px;
+		/* Ajusta el margen superior para pantallas aún más pequeñas */
 	}
 }

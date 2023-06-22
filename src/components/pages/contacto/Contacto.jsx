@@ -232,7 +232,7 @@ export const Contacto = () => {
           <div className="box">
             <div className="icon">
               <img
-                src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852208/Fresh_Smile_Cmills/icono-email_wqz4wa.png"
+                src="https://res.cloudinary.com/smilecmills/image/upload/v1683852208/Fresh_Smile_Cmills/icono-email_wqz4wa.png"
                 alt=""
               />
             </div>

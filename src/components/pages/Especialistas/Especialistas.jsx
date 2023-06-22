@@ -27,7 +27,7 @@ function Especialistas() {
 
   return (
     <main className='main'>
-        <h1>Nuestros especialistas</h1>
+        <h1 className='EspecialistaTitulo'>Nuestros especialistas</h1>
         <div className='doctor-card-container'>
             {especialistasVC.length > 0 && especialistas.map((especialista, i) => {
                 return <DoctorCard 

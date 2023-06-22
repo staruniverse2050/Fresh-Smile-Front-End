@@ -18,6 +18,7 @@ import TableUsuario from "./components/pages/tablas/TableUsuario";
 import TableAdmin from "./components/pages/tablas/TableAdmin";
 import { HeaderEspecialista } from "./components/layouts/header/headerespecialista/HeaderEspecialista";
 import Especialistas from "./components/pages/Especialistas/Especialistas";
+import Valoracion from "./components/pages/Especialistas/SpecialistCard";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -96,6 +97,7 @@ function App() {
         <Route path="/Login" element={<Login setRol={setRol} />} />
         <Route path="/Tuscitaspaciente" element={<TableUsuario />} />
         <Route path="/Tuscitasespecialista" element={<TableAdmin />} />
+        <Route path="/Valoraciones" element={<Valoracion />} />
       </Routes>
       <Chatbot />
     </>

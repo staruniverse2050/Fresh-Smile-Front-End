@@ -2,7 +2,9 @@ import { useRef } from 'react'
 
 function CloudinaryUploadWidget({ sendInfo }) {
   const cloudName = "smilecmills";
-  const uploadPreset = "FreshSmile";
+  const uploadPreset = "Fresh_Smile_Cmills
+
+  ";
 
   const abled = useRef(null);
 

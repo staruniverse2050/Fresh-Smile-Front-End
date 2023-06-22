@@ -204,7 +204,7 @@ export const Contacto = () => {
           <div className="box">
             <div className="icon">
               <img
-                src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852208/Fresh_Smile_Cmills/icono-direcci%C3%B3n_h51k4v.png"
+                src="https://res.cloudinary.com/smilecmills/image/upload/v1683852208/Fresh_Smile_Cmills/icono-direcci%C3%B3n_h51k4v.png"
                 alt=""
               />
             </div>
@@ -220,7 +220,7 @@ export const Contacto = () => {
           <div className="box">
             <div className="icon">
               <img
-                src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852209/Fresh_Smile_Cmills/icono-llamada_dch8ue.png"
+                src="https://res.cloudinary.com/smilecmills/image/upload/v1683852209/Fresh_Smile_Cmills/icono-llamada_dch8ue.png"
                 alt=""
               />
             </div>

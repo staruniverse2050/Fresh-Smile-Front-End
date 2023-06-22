@@ -50,7 +50,7 @@ export const Header = () => {
         <Link to="/Inicio">
           <img
             className="logo"
-            src="https://res.cloudinary.com/dfvxujvf8/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
+            src="https://res.cloudinary.com/smilecmills/image/upload/v1683825575/Fresh_Smile_Cmills/logo_xxmptj.png"
             alt="toggle-menu"
           />
         </Link>
@@ -62,7 +62,7 @@ export const Header = () => {
             <img
               onClick={toggleMenu}
               className="icon-hamburguer"
-              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
+              src="hhttps://res.cloudinary.com/smilecmills/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
               alt=""
             />
             {isOpen && (
@@ -173,7 +173,7 @@ export const Header = () => {
           <Link to="/Registro">
             <img
               className="icono-inicio"
-              src="https://res.cloudinary.com/dexfjrgyw/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"
+              src="https://res.cloudinary.com/smilecmills/image/upload/v1685122951/agregar-usuario_1_mjksdh.png"
               alt="Inicio"
             />
             <p className="Texto-Login">Iniciar sesión</p>

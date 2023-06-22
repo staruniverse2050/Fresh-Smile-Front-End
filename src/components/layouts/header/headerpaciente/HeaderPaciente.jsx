@@ -199,7 +199,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
               </div>
             )}
           </div>
-          <div className="container2">
+          <div className="container2-paciente">
             <ul>
               <li>
                 <NavLink className={`links ${isActiveRoute('/Inicio') ? 'active' : ''}`}

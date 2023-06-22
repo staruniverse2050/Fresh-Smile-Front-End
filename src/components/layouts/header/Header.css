@@ -19,9 +19,9 @@
 	font-family: "Open Sans", sans-serif;
     font-size: 1.7rem;
     text-transform: uppercase;
-    margin: 0;
+    /* margin: 0; */
     color: #ffffff;
-    /* margin-left: 20px; */
+    /* margin-left: 29px; */
     display: flex;
     align-items: center;
 }
@@ -43,6 +43,7 @@
 .menu-principal li {
 	/* margin: 2px; */
 	margin: 0.15rem;
+	margin-left: 24px;
 }
 
 .menu-principal ul {

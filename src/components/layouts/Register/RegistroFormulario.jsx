@@ -22,6 +22,7 @@ const RegistroFormulario = () => {
   const handleTipoDocumentoChange = (event) => {
     setTipoDocumento(event.target.value);
   };
+  const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10}$/;
 
   const handleNumeroDocumentoChange = (event) => {
     const value = event.target.value;
@@ -68,16 +69,7 @@ const RegistroFormulario = () => {
 
   const handleContraseñaChange = (event) => {
     const contraseña = event.target.value;
-  
-    if (contraseña.length === 10 && /[\W_]/.test(contraseña)) {
-      setContraseña(contraseña);
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Contraseña inválida",
-        text: "La contraseña debe tener exactamente 10 caracteres y contener al menos un caracter especial.",
-      });
-    }
+    setContraseña(contraseña);
   };
   
   const handleOpenModal = () => {
@@ -185,7 +177,18 @@ const RegistroFormulario = () => {
       });
       return;
     }
-
+    const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10}$/;
+    if (regex.test(contraseña)) {
+      // Aquí puedes hacer lo que necesites con la contraseña válida
+      console.log("Contraseña válida:", contraseña);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Contraseña inválida",
+        text:
+          "La contraseña debe tener exactamente 10 caracteres y contener al menos una letra, un número y un carácter especial.",
+      });
+    }
     let apiEndpoint = "";
     let datosFormulario = {};
 
@@ -313,6 +316,7 @@ const RegistroFormulario = () => {
               value={numeroDocumento}
               onChange={handleNumeroDocumentoChange}
               required
+              placeholder='Aquí digite su número de documento'
             />
           </div>
           <div className="form-group">
@@ -323,6 +327,7 @@ const RegistroFormulario = () => {
               value={nombrescompletos}
               onChange={handleNombresChange}
               required
+              placeholder='Aquí digite su nombre completo'
             />
           </div>
           {rol === "Especialista" && (
@@ -350,6 +355,7 @@ const RegistroFormulario = () => {
               value={direccion}
               onChange={handleDireccionChange}
               required
+              placeholder='Aquí digite su dirección'
             />
           </div>
           <div className="form-group">
@@ -360,6 +366,7 @@ const RegistroFormulario = () => {
               value={telefono}
               onChange={handleTelefonoChange}
               required
+              placeholder='Aquí digite su teléfono'
             />
           </div>
           <div className="form-group">
@@ -370,10 +377,11 @@ const RegistroFormulario = () => {
               value={correo}
               onChange={handleCorreoChange}
               required
+              placeholder='Aquí digite su correo electrónico'
             />
           </div>
           <div className="form-group">
-            <label htmlFor="contraseña">Contraseña</label>
+            <label htmlFor="contraseña" >Contraseña</label>
             <input
               type="password"
               id="contraseña"
@@ -381,6 +389,7 @@ const RegistroFormulario = () => {
               onChange={handleContraseñaChange}
               onClick={handlePasswordClick}
               required
+              placeholder='Aquí digite su contraseña'
             />
           </div>
           <div className="form-group">

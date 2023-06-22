@@ -547,6 +547,8 @@ body {
     /* Actualiza los estilos según tus necesidades */
     flex-direction: column;
     justify-content: center;
+    padding: 810px;
+    
   }
 
   .container-nosotros-home2 .image-nosotros {

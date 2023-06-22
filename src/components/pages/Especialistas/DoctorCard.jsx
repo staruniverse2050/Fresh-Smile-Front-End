@@ -136,7 +136,7 @@ export const DoctorCard = ({ valoracion, votos, comentarios, data, ratingId }) =
           <form className='comment-form' onSubmit={handleComment}>
             <label>Ingresa tu comentario</label>
             <textarea ref={commentInput} name='Comentario' type='text' />
-            <button type='submit'>Comentar</button>
+            <button ref={commentButton} type='submit'>Comentar</button>
           </form>}
         {
           actualComments.length > 0 ?

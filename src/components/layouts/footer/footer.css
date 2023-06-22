@@ -13,7 +13,7 @@ h6 {
 .footer-area {
   background: #000000;
   padding: 10px;
-  margin-top: 50px; /* Ajusta el valor según tu necesidad */
+  margin-top: 20px; /* Ajusta el valor según tu necesidad */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,10 +32,11 @@ h6 {
 }
 
 .phone,
-.email {
+.email,.address {
   box-sizing: border-box;
   padding: 10px;
   width: 20.1%;
+  position: absolute;
 }
 
 .dateT {
@@ -46,7 +47,7 @@ h6 {
 
 .address {
   margin-left: 30px;
-  margin-top: 10px;
+  margin-top: 35px;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
@@ -62,7 +63,8 @@ h6 {
 }
 
 .phone {
-  margin-left: 50px;
+  margin-left: 300px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +82,8 @@ h6 {
 }
 
 .email {
-  margin-left: 100px;
+  margin-left: 600px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,6 +113,7 @@ h6 {
   width: 15%;
   display: flex;
   align-items: center;
+  margin-left: 900px;
   justify-content: center;
 }
 
@@ -247,17 +251,26 @@ li {
     padding: 2px 15px;
   }
 
+  .phone,
+  .email,
+  .redes,
+  .address {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .footer-area p {
     font-size: 10px;
   }
-
   .footer-area p span {
     font-size: 10px;
   }
 
 
   .phone {
-    margin-right: 40px;
+    margin-left: 0;
   }
 
   .text_telefono {
@@ -273,7 +286,7 @@ li {
   }
 
   .address {
-    margin-left: 10px;
+    margin-left: 0;
   }
 
   .fa-location-dot {
@@ -295,7 +308,7 @@ li {
   }
 
   .email {
-    margin-left: 9px;
+    margin-left: 0;
   }
 
   .fa-envelope {
@@ -307,7 +320,7 @@ li {
   }
 
   .redes {
-    width: 50%;
+    margin-left: 0;
   }
 
   .redes-info p {
@@ -325,6 +338,13 @@ li {
     flex-direction: column;
     align-items: center;
   }
+
+  /* .container-footer {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
 
   .panel-icons .footer-icons .fa-instagram {
     margin-left: 5px;

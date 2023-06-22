@@ -27,8 +27,9 @@
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	margin: 0;
+	display: flex;
 	color: #ffffff;
-	margin-right: 15%;
+	/* margin-right: 15%; */
 }
 
 .h1-paciente span {
@@ -47,8 +48,10 @@
 	padding: 0;
 	display: flex;
 	justify-content: center;
+	margin-left: 10%;
 	align-items: center;
 	list-style: none;
+	/* background-color: red; */
 }
 
 .links {
@@ -101,7 +104,7 @@
 	margin-left: 3rem;
 }
 
-.container2 {
+.container2-paciente {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -110,10 +113,10 @@
 	padding: 0;
 }
 
-.container2 li {
+.container2-paciente li {
 	margin-left: 1rem;
-	font-size: medium;
-	margin-right: 10px;
+	/* font-size: medium; */
+	/* margin-right: 10px; */
 }
 
 .dropdown {
@@ -194,7 +197,7 @@
 
 		width: 40px;
 	}
-	.container2 {
+	.container2-paciente {
 		display: none;
 	}
 	.container3 {

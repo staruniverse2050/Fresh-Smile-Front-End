@@ -55,7 +55,7 @@ export const Header = () => {
           />
         </Link>
         <h1>
-          <span>Fresh </span>Smile<span> Cmills</span>
+          <span>Fresh</span> Smile<span> Cmills</span>
         </h1>
         <ul>
           <div className="toggle-menu">

@@ -14,11 +14,18 @@
 	padding: 10px;
 	position: fixed;
 }
+<<<<<<< HEAD
+.Bienvenida {
+	color: #f1f1f1;
+	position: relative;
+	top: 5px;
+=======
 .Bienvenida-especialista {
 	color: #f1f1f1;
 	position: relative;
 	bottom: 6px;
 	top: 10px;
+>>>>>>> a4ef12e163c1009a1d7b78337d9404c85c274979
 	left: 20%;
 	font-size: 16px;
 	display: flex;
@@ -61,8 +68,8 @@ img {
 	padding: 0.5rem;
 	font-size: 22px;
 	position: relative;
-  top: 5px;
-	left:  -158px;
+	top: 5px;
+	left: -158px;
 	transition: transform 0.3s ease;
 }
 
@@ -167,24 +174,22 @@ img {
 }
 
 .password-input-container {
-    position: relative;
-    display: flex;
-    left: 60px;
-    align-items: center;
-  }
-  
-  .password-toggle-icon {
-    top: 50%;
-    position: relative;
-    right: 60px; /* Ajusta la posición del icono para evitar cambios de ancho */
-    cursor: pointer;
-    font-size: 18px;
-    color: #999;
-    z-index: 1;
-  }
-  
-  
-  
+	position: relative;
+	display: flex;
+	left: 60px;
+	align-items: center;
+}
+
+.password-toggle-icon {
+	top: 50%;
+	position: relative;
+	right: 60px; /* Ajusta la posición del icono para evitar cambios de ancho */
+	cursor: pointer;
+	font-size: 18px;
+	color: #999;
+	z-index: 1;
+}
+
 @media screen and (min-width: 769px) {
 	.toggle-menu {
 		display: none;
@@ -199,6 +204,10 @@ img {
 		justify-content: center;
 		height: auto;
 	}
+
+	/* .menu h1 {
+		margin-top: 30px;
+	} */
 
 	.icon-hamburguer {
 		filter: invert(1);
@@ -266,65 +275,65 @@ img {
 }
 
 .swal2-container {
-  font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 .swal2-title {
-  font-size: 18px;
+	font-size: 18px;
 }
 
 #formulario-procedimiento {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 #formulario-procedimiento div {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .label-bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .input-text,
 .textarea,
 .input-number,
 .file-input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
 }
 
 .textarea {
-  resize: none;
+	resize: none;
 }
 
 .file-input {
-  padding: 4px 8px;
+	padding: 4px 8px;
 }
 
 .file-input-label {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
+	display: block;
+	margin-top: 10px;
+	font-size: 14px;
 }
 .input-number {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
 }
 
 /* Añade estilo para el texto de ayuda */
 .input-number::placeholder {
-  color: #999;
+	color: #999;
 }
 
 /* Añade estilo para resaltar el campo cuando se enfoca */
 .input-number:focus {
-  outline: none;
-  border-color: #888;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	outline: none;
+	border-color: #888;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }

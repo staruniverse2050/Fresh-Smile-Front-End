@@ -1,0 +1,83 @@
+/* SpecialistCard.css */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .card {
+    width: 25%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    position:relative;
+    top:170px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 50%;
+    }
+  }
+  
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icon {
+    margin-bottom: 20px;
+  }
+  
+  .icon-large {
+    font-size: 48px;
+    color: #555;
+  }
+  
+  .card p {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  .comentarios {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .comentarios p {
+    margin-bottom: 5px;
+    color: #777;
+  }
+  
+  .comentarios div {
+    margin-bottom: 10px;
+  }
+  
+  .comentarios div:last-child {
+    margin-bottom: 0;
+  }
+  
+  .star-icon {
+    color: gold;
+  }
+  
+  .loading-message {
+    text-align: center;
+    margin: 20px;
+    color: #888;
+  }
+  

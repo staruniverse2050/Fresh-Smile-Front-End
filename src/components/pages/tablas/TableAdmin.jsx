@@ -37,8 +37,11 @@ const TableAdmin = () => {
       .then(data => {
         // Filtrar las citas por el id_paciente que coincida con userId
         const citasUsuario = data.filter(cita => cita.id_especialista === parseInt(userId));
-        setData(citasUsuario);
+        
+        // Ordenar las citas por mes y día
+        const citasOrdenadas = sortCitas(citasUsuario);
 
+        setData(citasOrdenadas);
         // Obtener una lista de identificaciones de especialistas únicos en las citas
         const especialistasIds = [...new Set(citasUsuario.map(cita => cita.id_especialista))];
 
@@ -85,6 +88,17 @@ const TableAdmin = () => {
       .catch(error => console.error(error));
   }, [userId]);
 
+  const sortCitas = (citas) => {
+    citas.sort((a, b) => {
+      const fechaA = new Date(a.fecha);
+      const fechaB = new Date(b.fecha);
+      if (fechaA.getMonth() === fechaB.getMonth()) {
+        return fechaA.getDate() - fechaB.getDate();
+      }
+      return fechaA.getMonth() - fechaB.getMonth();
+    });
+    return citas;
+  };
   const formatFechaCreacion = (fecha) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(fecha).toLocaleDateString(undefined, options);

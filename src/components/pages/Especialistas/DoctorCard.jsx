@@ -129,7 +129,7 @@ export const DoctorCard = ({ valoracion, votos, comentarios, data, ratingId }) =
           { !actualComments.map(elem => elem.userId).includes(userId) ?
             <button onClick={(e) => setIsCommenting(!isCommenting)}>Comentar</button>
             :
-            <span>Usted ya comentó acá</span>
+            <span className="comentó">Usted ya comentó acá</span>
            }
         </div>
         {isCommenting && 

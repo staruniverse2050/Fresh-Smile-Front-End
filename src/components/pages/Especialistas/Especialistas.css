@@ -3,6 +3,20 @@
     width: 100%;
 }
 
-h1{
+textarea{
+    resize: none;
+}
+.comentó{
+    color: #5ea4cc;
+
+}
+.EspecialistaTitulo{
     color: black;
+    font-size: 60px;
+    position: relative;
+    left: 550px;
+    top: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
 }

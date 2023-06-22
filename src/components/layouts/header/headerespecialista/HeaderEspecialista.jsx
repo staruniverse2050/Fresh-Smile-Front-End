@@ -322,9 +322,9 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   <li>
                     <NavLink
                       className={`links ${
-                        isActiveRoute("/DoctorCard") ? "active" : ""
+                        isActiveRoute("/Especialistas") ? "active" : ""
                       }`}
-                      to="/DoctorCard"
+                      to="/Especialistas"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
@@ -427,7 +427,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
               <li>
                 <NavLink
                   className="links"
-                  to="/Especialistas"
+                  to="/Valoraciones"
                   activeClassName="active"
                 >
                   Valoraciones

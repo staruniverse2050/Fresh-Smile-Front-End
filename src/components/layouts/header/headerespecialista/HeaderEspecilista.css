@@ -14,11 +14,11 @@
 	padding: 10px;
 	position: fixed;
 }
-.Bienvenida {
+.Bienvenida-especialista {
 	color: #f1f1f1;
 	position: relative;
 	top: 5px;
-	left: 20%;
+	left: 10%;
 	font-size: 16px;
 	display: flex;
 	align-items: center;

@@ -96,13 +96,13 @@ body {
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
-  margin-right: 15%;
+  margin-right: 85px;
   font-size: 2.8em;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
   align-items: center;
   position: relative;
-  left: 123px;
+  left: 523px; /*left para mover el texto*/
   top: 73px;
 }
 

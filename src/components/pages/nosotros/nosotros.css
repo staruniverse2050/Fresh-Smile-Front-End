@@ -17,7 +17,7 @@
     top: 43px;
     left: 530px;
     font-size: 54px; /* Tamaño de fuente deseado */
-    margin-left: 445px;
+    margin-left: -45px;  /*organización de tamaño*/
   }
   
 

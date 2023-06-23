@@ -45,7 +45,7 @@
 .menu-principal li {
 	/* margin: 2px; */
 	margin: 0.15rem;
-	margin-left: 24px;
+	margin-left: 54px;
 }
 
 .menu-principal ul {
@@ -77,7 +77,7 @@
 	left: 0;
 	z-index: 1;
 	background-color: #000000;
-	color: #ffffff;
+	color: #d12c2c;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
 	margin-top: 0.5rem;

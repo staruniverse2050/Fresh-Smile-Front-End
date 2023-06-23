@@ -13,7 +13,7 @@
     border: 2px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    margin: 10px;
+    margin: 25px;
     position:relative;
     top:150px;
     margin-bottom: 20px;
@@ -24,9 +24,8 @@
   }
   
   .card:hover {
-    border-color: #0f7a8f;
-    -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
-    box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .icon {
@@ -35,7 +34,7 @@
   
   .icon-large {
     font-size: 48px;
-    color: #555;
+    color: #24bdd1;
   }
   
   .card p {

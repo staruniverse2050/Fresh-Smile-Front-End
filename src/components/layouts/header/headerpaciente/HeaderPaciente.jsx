@@ -156,7 +156,7 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                       <li>
                         <NavLink
                           className={`links2 ${isActiveRoute('/MiRanking') ? 'active' : ''}`}
-                          to="/Ranking"
+                          to="/MiRanking"
                           activeClassName="active"
                           onClick={toggleDropdown}
                         >

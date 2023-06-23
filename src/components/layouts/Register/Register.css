@@ -152,6 +152,12 @@
 	margin-bottom: 15px;
 }
 
+.form-img{
+	width: fit-content;
+	display: flex;
+	align-items: center;
+}
+
 .Registro label {
 	margin-bottom: 5px;
 	margin-left: 165px;

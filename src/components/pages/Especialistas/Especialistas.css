@@ -1,5 +1,9 @@
 .main{
+<<<<<<< HEAD
     margin-top: 3rem;
+=======
+    margin-top: 5rem;
+>>>>>>> 90523af4cddde218e42118932aea6cbe6b518c50
     width: 100%;
 }
 
@@ -17,7 +21,15 @@ textarea{
     align-items: center;
     text-align: center;
     position: relative;
+<<<<<<< HEAD
     left: 130px;
     /* top: 25px; */
     font-family: 'Open Sans', sans-serif;
 }
+=======
+    left: 500px;
+    top: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+>>>>>>> 90523af4cddde218e42118932aea6cbe6b518c50

@@ -62,7 +62,7 @@ export const Header = () => {
             <img
               onClick={toggleMenu}
               className="icon-hamburguer"
-              src="hhttps://res.cloudinary.com/smilecmills/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
+              src="https://res.cloudinary.com/smilecmills/image/upload/v1684259567/Fresh_Smile_Cmills/lista_pxmv7v.png"
               alt=""
             />
             {isOpen && (

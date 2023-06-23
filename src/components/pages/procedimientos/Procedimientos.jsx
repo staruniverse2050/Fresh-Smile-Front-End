@@ -20,7 +20,7 @@ const Procedimientos = () => {
 
     fetchData();
   }, []);
-
+// a
   return (
     <>
       <div className="container_proce">

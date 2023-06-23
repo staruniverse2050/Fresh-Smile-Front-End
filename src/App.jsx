@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/layouts/header/Header";
 import { HeaderPaciente } from "./components/layouts/header/headerpaciente/HeaderPaciente";
 import { Home } from "./components/pages/home/Home";
-import { Procedimientos } from "./components/pages/procedimientos/Procedimientos";
+import Procedimientos  from "./components/pages/procedimientos/Procedimientos";
 import AgendaCita from "./components/layouts/agendacita/AgendaCita";
 import { Nosotros } from "./components/pages/nosotros/Nosotros";
 import  Ranking  from "./components/pages/Ranking/Ranking";

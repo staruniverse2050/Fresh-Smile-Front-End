@@ -178,6 +178,15 @@ const RegistroFormulario = () => {
     if (event && event.preventDefault) {
       event.preventDefault();
     }    
+
+    if (numeroDocumento.length !== 10) {
+      Swal.fire({
+        icon: "error",
+        title: "Número de documento inválido",
+        text: "El número de documento debe tener exactamente 10 caracteres.",
+      });
+      return; // Detener el proceso de registro
+    }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(correo)) {
       Swal.fire({

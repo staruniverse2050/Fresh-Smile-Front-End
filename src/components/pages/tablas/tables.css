@@ -11,6 +11,7 @@ table {
   position: relative;
   top: 290px;
   right: 316px;
+  margin-left: -30px;
   background-color: rgba(255, 255, 255, 0.507);
 }
 
@@ -57,4 +58,10 @@ td:nth-child(3) {
 .error-message {
   color: red;
   font-weight: bold;
+}
+
+/*estilos de los botones*/
+.botonCancel{
+  
+  margin-top: 45px;
 }

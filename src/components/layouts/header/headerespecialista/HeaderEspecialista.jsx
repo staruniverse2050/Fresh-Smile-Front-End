@@ -170,9 +170,9 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
         </div>
       ),
       showCancelButton: true,
-      confirmButtonText: 'Guardar',
-      cancelButtonText: 'Cancelar',
-      preConfirm: () => {
+    confirmButtonText: 'Guardar',
+    cancelButtonText: 'Cancelar',
+    preConfirm: () => {
         const userId = localStorage.getItem('userId');
         const accessToken = localStorage.getItem('accessToken');
 
@@ -201,52 +201,22 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
           });
       }
     })
-      .then(result => {
-        // Se ejecutará si no se lanzó ningún error en 'preConfirm'
-        if (result) {
-          // Mostrar mensaje de procedimiento creado exitosamente
-          MySwal.fire('Procedimiento creado', 'El procedimiento se ha creado correctamente.', 'success');
-        }
-      })
-      .catch(error => {
-        // Se ejecutará si se lanzó un error en 'preConfirm'
+    .then(result => {
+      // Se ejecutará si no se lanzó ningún error en 'preConfirm'
+      if (result.isConfirmed) {
+        // Mostrar mensaje de procedimiento creado exitosamente
+        MySwal.fire('Procedimiento creado', 'El procedimiento se ha creado correctamente.', 'success');
+      }
+    })
+    .catch(error => {
+      // Se ejecutará si se lanzó un error en 'preConfirm'
+      if (error !== 'cancel') {
         console.error(error);
         // Mostrar mensaje de error al crear el procedimiento
         MySwal.fire('Error', error.message, 'error');
-      });
-
-
-    // Realizar la solicitud POST a la API
-    // axios
-    //   .post(
-    //     'https://freshsmile.azurewebsites.net/FreshSmile/CrearProcedimiento',
-    //     formData,
-    //     {
-    //       headers: {
-    //         Authorization: `Bearer ${accessToken}`,
-    //       },
-    //     }
-    //   )
-    //   .then((response) => {
-    //     console.log('Procedimiento creado:', response.data);
-
-    //     // Mostrar la alerta de SweetAlert
-    //     Swal.fire({
-    //       icon: 'success',
-    //       title: 'Procedimiento creado',
-    //       text: 'El procedimiento ha sido creado exitosamente.',
-    //     });
-
-    //     // Reiniciar los campos del formulario
-    //     setNombre('');
-    //     setDescripcion('');
-    //     setCosto('');
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error al crear el procedimiento:', error);
-    //   });
-  }
-
+      }
+    });
+}
   return (
     <header className="Header_Header">
       <div className="menu">

@@ -56,21 +56,32 @@ const AgendaCita = () => {
     const accessToken = localStorage.getItem('accessToken');
     // Obtener la hora actual
     const currentHour = new Date().getHours();
-
+    const currentMinute = new Date().getMinutes();
+    
     // Obtener la hora seleccionada
     const selectedTime = selectedHour.split(":");
     const selectedHourValue = parseInt(selectedTime[0]);
-
-    // Verificar si la hora seleccionada ya ha pasado
-    if (selectedHourValue < currentHour) {
+    const selectedMinuteValue = parseInt(selectedTime[1]);
+    
+    // Calcular la diferencia en minutos entre la hora actual y la hora seleccionada
+    const timeDifference = (selectedHourValue * 60 + selectedMinuteValue) - (currentHour * 60 + currentMinute);
+    
+    // Verificar si la hora seleccionada ya ha pasado o si faltan menos de 5 minutos
+    if (timeDifference < 0) {
       Swal.fire({
         icon: 'error',
         title: 'Hora inválida',
         text: 'No puedes agendar una cita para una hora pasada.',
       });
       return;
+    } else if (timeDifference < 20) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Hora inválida',
+        text: 'Debes agendar la cita al menos con 20 minutos de anticipación.',
+      });
+      return;
     }
-
     const currentDateWithoutTime = new Date();
     currentDateWithoutTime.setHours(0, 0, 0, 0);
 

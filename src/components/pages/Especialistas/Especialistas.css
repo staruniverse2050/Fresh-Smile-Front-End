@@ -1,22 +1,23 @@
 .main{
-    margin-top: 10rem;
+    margin-top: 3rem;
     width: 100%;
 }
 
 textarea{
     resize: none;
 }
+
 .comentó{
     color: #5ea4cc;
-
 }
+
 .EspecialistaTitulo{
-    color: black;
+    color: #7DC3E8;
     font-size: 60px;
+    align-items: center;
+    text-align: center;
     position: relative;
-    left: 550px;
-    top: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-
+    left: 130px;
+    /* top: 25px; */
+    font-family: 'Open Sans', sans-serif;
 }

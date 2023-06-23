@@ -21,7 +21,7 @@ export const Home = () => {
         );
         const data = await response.json();
         const filteredEspecialistas = data.filter(
-          (_, index) => index === 6 || index === 2 || index === 5
+          (_, index) => index === 15 || index === 16 || index === 17
         );
         setEspecialistas(filteredEspecialistas);
       } catch (error) {

@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("https://res.cloudinary.com/dexfjrgyw/image/upload/v1683852207/Fresh_Smile_Cmills/galeria6_bk1cfa.jpg");
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.945) 0%, rgba(0, 0, 0, 0.89) 100%), url("https://res.cloudinary.com/smilecmills/image/upload/v1683852207/Fresh_Smile_Cmills/galeria6_bk1cfa.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 30em;
@@ -13,6 +13,9 @@
 
   .container_nosotr h1 {
     color: #fefbfb;
+    position: relative;
+    top: 43px;
+    left: 530px;
     font-size: 54px; /* Tamaño de fuente deseado */
     margin-left: 45px;
   }

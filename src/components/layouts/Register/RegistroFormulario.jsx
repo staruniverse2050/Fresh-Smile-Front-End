@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 import axios from "axios";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
+import CloudinaryUploadWidget from '../Cloudinary/CloudinaryUploadWidget';
 
 
 const RegistroFormulario = () => {
@@ -19,16 +20,11 @@ const RegistroFormulario = () => {
   const [codigo, setCodigo] = useState("");
   const [procedimientos, setProcedimientos] = useState([]);
   const [especialidad, setEspecialidad] = useState("");
-  const [foto, setFoto] = useState(null);
+  const [foto, setFoto] = useState("");
   const [codigoValido, setCodigoValido] = useState(false);
 
   const handleTipoDocumentoChange = (event) => {
     setTipoDocumento(event.target.value);
-  };
-
-  const handleFotoChange = (event) => {
-    const file = event.target.files[0];
-    setFoto(file);
   };
 
   const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{10}$/;
@@ -234,6 +230,7 @@ const RegistroFormulario = () => {
         especialidad: especialidad,
         correo: correo,
         contraseña: contraseña,
+        foto_perfil : foto
       };
     } else if (rol === "Paciente") {
       apiEndpoint =
@@ -275,6 +272,7 @@ const RegistroFormulario = () => {
           setContraseña("");
           setRol("");
           setCodigo("");
+          setFoto("");
         });
       } else {
         Swal.fire({
@@ -300,6 +298,10 @@ const RegistroFormulario = () => {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    console.log(foto)
+  },[foto])
 
   return (
     <div className="Registro">
@@ -368,16 +370,8 @@ const RegistroFormulario = () => {
                   ))}
                 </select>
               </div>
-              <div className="form-group">
-                <label htmlFor="foto" id='titulofoto'>Sube una foto tuya</label>
-                <br></br>
-                <br></br>
-                <input
-                  type="file"
-                  id="foto"
-                  accept="image/*"
-                  onChange={handleFotoChange}
-                />
+              <div className="form-group form-img">
+                <CloudinaryUploadWidget sendInfo={setFoto}/>
               </div>
             </>
           )}

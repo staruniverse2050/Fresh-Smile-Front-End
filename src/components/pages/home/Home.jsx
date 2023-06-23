@@ -36,7 +36,7 @@ export const Home = () => {
     <>
       <div className="container_banner">
         <div className="container_home">
-          <h1>¡Bienvenidos a la clinica!</h1>
+          <h1>¡Bienvenidos a la clínica!</h1>
           <div className="container-btn">
             <button className="boton-home">
               <a

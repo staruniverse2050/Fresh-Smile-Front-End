@@ -123,10 +123,10 @@
 	text-align: center;
 	margin: 0;
 	color: #249bad;
-	left: 30px;
+	left: 330px; /*aliniación para el titulo*/
 	font-size: 30px;
 	position: relative;
-	margin-right: 45px;
+	/* margin-right: -245px; */
 }
 
 .img-left-side {

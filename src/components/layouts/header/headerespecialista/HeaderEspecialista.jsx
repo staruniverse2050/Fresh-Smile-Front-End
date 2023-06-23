@@ -227,7 +227,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
             alt=""
           />
         </Link>
-        <h1>
+        <h1 className="">
           <span>Fresh </span>Smile<span> Cmills</span>
         </h1>
         <ul>

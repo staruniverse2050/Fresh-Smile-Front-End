@@ -370,7 +370,10 @@ const RegistroFormulario = () => {
                   ))}
                 </select>
               </div>
-              <div className="form-group form-img">
+              <div className="form-group form-img" id="fotoespecialista">
+                <p>Sube una foto tuya (laboral) </p>
+                <br></br>
+                <br></br>
                 <CloudinaryUploadWidget sendInfo={setFoto}/>
               </div>
             </>

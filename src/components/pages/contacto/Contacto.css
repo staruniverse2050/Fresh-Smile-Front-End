@@ -169,6 +169,7 @@ textarea {
   position: relative;
   width: 100%;
   margin-top: 2px;
+  /* margin-right: 10%; */
 }
 
 .contactForm .inputBox1 input[type="submit"] {
@@ -186,7 +187,7 @@ textarea {
   height: 48px;
   font-size: 15px;
   position: relative;
-  left: 320px;
+  left: 230px;
   top: 25px;
   margin-right: 80px;
 }

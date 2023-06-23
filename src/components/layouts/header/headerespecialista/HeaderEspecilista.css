@@ -44,6 +44,7 @@ img {
 
 .menu li {
 	margin: 0.15rem;
+	
 }
 
 .menu ul {
@@ -113,10 +114,10 @@ img {
 	padding: 0;
 }
 
-.container2 li {
-	margin-left: 1rem;
-	font-size: medium;
-	margin-right: 10px;
+.container2 li { /*codigo del menu*/
+	/* margin: 2px; */
+	margin: 0.15rem;
+	margin-left: 54px;
 }
 
 .dropdown {

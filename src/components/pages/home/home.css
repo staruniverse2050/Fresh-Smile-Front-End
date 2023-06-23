@@ -485,6 +485,7 @@ body {
   .barra {
     /* Actualiza los estilos según tus necesidades */
     padding: 15px;
+    margin-right: 145px;
   }
  
   .barra-2 {
@@ -521,13 +522,16 @@ body {
   .container-nosotros-home {
     /* Actualiza los estilos según tus necesidades */
     padding: 30px;
+    flex-direction: column;
+    margin-left: 145px;
+   
   }
 
   .card-nosotros-home {
     /* Actualiza los estilos según tus necesidades */
     width: 180px;
     padding: 20px;
-    margin: 15px;
+    
   }
 
   .card-nosotros-home img {
@@ -701,6 +705,8 @@ body {
   .container-nosotros-home {
     /* Actualiza los estilos según tus necesidades */
     padding: 20px;
+    margin-left:85px;
+    
     
   }
 
@@ -709,6 +715,7 @@ body {
     width: 140px;
     padding: 15px;
     margin: 10px;
+   
     
   }
 
@@ -716,6 +723,7 @@ body {
     /* Actualiza los estilos según tus necesidades */
     width: 90%;
     height: auto;
+    
   }
 
   .card-title-nosotros {

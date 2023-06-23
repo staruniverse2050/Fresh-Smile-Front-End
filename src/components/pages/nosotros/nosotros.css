@@ -14,9 +14,10 @@
   .container_nosotr h1 {
     color: #fefbfb;
     font-size: 54px; /* Tamaño de fuente deseado */
-    margin-left: 45px;
+    margin-left: 445px;
   }
   
+
 
 .barra-nost1 {
   width: 100%;
@@ -36,11 +37,13 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+
 .container_home1A {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 
 .container_home1A h1 {
   line-height: 1.5;
@@ -70,6 +73,7 @@
   margin-top: -95px; /* Valor negativo para subir el elemento */
 }
 
+
 .post-nosotrosN img {
   max-width: 500px;
   border-radius: 5px;
@@ -85,6 +89,7 @@
   flex-grow: 1;
   max-width: 600px;
 }
+
 
 .post-ntsP p {
   font-size: 16px;
@@ -116,7 +121,7 @@
   max-width: 600px;
   text-align: center;
   list-style:none;
-  left: 50px;
+  left: 250px;
 }
 
 .icon-rowB {
@@ -181,6 +186,7 @@
   margin-left: 104px;
 }
 
+
 .specialist-name {
   font-size: 18px;
   font-weight: bold;
@@ -197,148 +203,151 @@
 
 /*Responsive*/
 
-@media screen and (max-width: 768px) {
-  .container_banner1A {
-    height: 500px;
+@media (max-width: 768px) {
+
+  /*responsive para mision*/
+  .icon-containerA {
+    top: 850;
+    left: 0;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .icon-rowB {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .icon-rowB img {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: static;
+    bottom: auto;
+  }
+
+  /*tarjetas especialistas*/
+
+  .specialist-container {
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 280px;
+  }
+
+  .specialist-card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .specialist-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+
+  .specialist-name {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .specialist-description {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  /*responsive para el codigo principal*/
+
+  .container_pronotr {
+    height: 20em;
+  }
+
+  .container_nosotr h1 {
+    font-size: 20px;
+    margin-left: 0;
+    margin-left: 45px;
+    padding-top: 85px;
+  }
+
+  .barra-nost1 {
+    margin-top: 40px;
+    padding: 30px;
+    top: 0;
+  }
+
+  .barra-nost1 h2 {
+    font-size: 36px;
   }
 
   .container_home1A {
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .container_home1A h1 {
+    font-size: 2.5em;
+    left: 0;
+    top: 0;
+  }
+
+  .container-usN {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-nosotrosN {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -45px; /* Ajusta el valor negativo según sea necesario */
+  }
+
+  .post-nosotrosN img {
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 50;
+    right: auto;
+    
+  }
+
+
+  .post-ntsP {
+    max-width: 100%;
+  }
+
+  .post-ntsP p {
+    right: 0;
+    top: 80;
+    font-size: 15px;
+  }
+  
+}
+
+
+@media (max-width: 480px) {
+  .specialist-description {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .container_pronotr {
+    height: 15em;
+  }
+  .barra-nost1 {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .barra-nost1 h2 {
+    font-size: 30px;
+  }
+
+  .container_home1A {
+    padding: 10px;
   }
 
   .container_home1A h1 {
     font-size: 2em;
-  }
-  
-  .specialist-container {
-    margin-left: 80px;
-    /* margin-right: 20px; */
-    margin-top: 250px;
-    width: 315px;
-  }
-
-  .specialist-card {
-    width: 850px ; /* Las tarjetas ocuparán el 50% del ancho disponible con un margen de 20px */
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .specialist-image {
-    margin-left: 90px;
-  }
-
-  .specialist-name {
-    margin-left: 60px;
-  }
-  
-  /*responsive Misión*/
-  
-  .container-usN {
-    flex-direction: column; /* Cambiar la dirección de flexión a columnas */
-    align-items: center; /* Centrar los elementos horizontalmente */
-    margin: 0 20px;
-    margin-top: -45px;
-    margin-left: 85px;
-    
-     /* Agregar margen izquierdo y derecho para separar los elementos del borde de la pantalla */
-  }
- 
-  .post-nosotrosN {
-    flex-direction: column; /* Cambiar la dirección de flexión a columnas */
-    align-items: flex-start; /* Alinear los elementos a la izquierda */
-    margin-top: 0; 
-    margin-right: 45px;/* Eliminar el margen superior negativo */
-  }
-  
-  .post-nosotrosN img {
-    max-width: 500px;
-    border-radius: 5px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    right: 50px;
-    /* top: 124px; */
-    margin-right: 545px;
-   
-  }
-  
-
-  .post-ntsP {
-    max-width: 100%;
-    padding-top: 145px; /* Establecer el ancho máximo al 100% para adaptarse al contenedor */
-  }
-  
-  /* @media screen and (max-width: 768px){
-    .post-nosotrosN img {
-      max-width: 500px;
-      border-radius: 5px;
-      margin: 20px auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      position: relative;
-      right: 50px;
-      
-      margin-right: 545px;
-     
-    }
-  }  */
-@media screen and (max-width: 480px) {
-  .icon-rowB {
-    flex-wrap: wrap;
-    width: 245px;
-  }
-
-  .icon-rowB .icon-imgCM,
-  .icon-rowB .icon-imgC,
-  .icon-rowB .icon-imgCM1 {
-    margin-bottom: 20px;
-    margin-right: 0;
-    width: 85%;
-    margin-left: 50px;
-    
-    
-  }
-}
-    .container_home1A h1 {
-      font-size: 1.5em;
-    }
-  
-  .post-nosotrosN {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 45px;
-    justify-content: flex-end;
-    margin-top: -85px; /* Ajusta el contenido hacia la parte inferior */
-  }
-  
-  
-  .post-nosotrosN img {
-    max-width: 180%;
-    height: auto;
-    /* float: left; */
-    margin-left: 50px;
-    width: 280px; /* Ajusta el ancho según tus necesidades */
-  }
-  
-  .post-titleT {
-    font-size: 40px;
-    margin-left: 0;
-    text-align: center;
-  }
-  
-  .post-ntsP {
-    max-width: 100%;
-    text-align: left;
-    width: 100%;
-    font-size: 18px;
-    margin-top: -10px; /* Ajusta la cantidad de espacio que deseas agregar debajo del texto */
-    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
-  }
-  
-  
-  .post-ntsP p {
     left: 0;
     top: 0;
   }

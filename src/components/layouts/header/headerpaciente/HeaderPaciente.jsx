@@ -185,6 +185,26 @@ export const HeaderPaciente = ({ isAuthenticated }) => {
                       Contacto
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      className={`links2 ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
+                      activeClassName="active"
+                      onClick={handleLogoutClick}
+                    >
+                      Cerrar sesión
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={`links2 ${isActiveRoute('/Perfilpaciente') ? 'active' : ''}`}
+                      to="/Perfilpaciente"
+                      activeClassName="active"
+                      onClick={toggleDropdown}
+                    >
+                      Ver perfil
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             )}

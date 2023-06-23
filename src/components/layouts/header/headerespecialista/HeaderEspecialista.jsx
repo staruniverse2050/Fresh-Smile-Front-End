@@ -227,7 +227,7 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
             alt=""
           />
         </Link>
-        <h1>
+        <h1 className="">
           <span>Fresh </span>Smile<span> Cmills</span>
         </h1>
         <ul>
@@ -309,13 +309,33 @@ export const HeaderEspecialista = ({ isAuthenticated }) => {
                   </li>
                   <li>
                     <NavLink
-                      className={`links ${isActiveRoute("/Contacto") ? "active" : ""
+                      className={`links2 ${isActiveRoute("/Contacto") ? "active" : ""
                         }`}
                       to="/Contacto"
                       activeClassName="active"
                       onClick={toggleDropdown}
                     >
                       Contacto
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={`links2 ${isActiveRoute('/Inicio') ? 'active' : ''}`}
+                      to="/Inicio"
+                      activeClassName="active"
+                      onClick={handleLogoutClick}
+                    >
+                      Cerrar sesión
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={`links2 ${isActiveRoute('/Perfilpaciente') ? 'active' : ''}`}
+                      to="/Perfilpaciente"
+                      activeClassName="active"
+                      onClick={toggleDropdown}
+                    >
+                      Ver perfil
                     </NavLink>
                   </li>
                 </ul>

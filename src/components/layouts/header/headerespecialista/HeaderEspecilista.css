@@ -17,8 +17,8 @@
 .Bienvenida-especialista {
 	color: #f1f1f1;
 	position: relative;
-	top: 5px;
-	left: 10%;
+	top: 1px;
+	left: 45%;
 	font-size: 16px;
 	display: flex;
 	align-items: center;
@@ -27,11 +27,12 @@ h1 {
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.5rem;
 	text-transform: uppercase;
-	color: var(--font-color);
+	/* color: var(--font-color); */
 	margin: 0;
-	position: relative;
+	display: flex;
+	/* position: relative; */
 	color: #ffffff;
-	margin-right: 15%;
+	margin-right: 12%;
 }
 
 span {

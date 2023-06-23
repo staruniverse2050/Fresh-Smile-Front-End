@@ -189,10 +189,7 @@ const TableAdmin = () => {
         currentDate.getTime() - fechaCita.getTime() >= 24 * 60 * 60 * 1000 &&
         currentDate > horaCita
       ) {
-        return {
-          ...cita,
-          estado_cita: EstadoCitaEnum.AUSENCIA
-        };
+        
       }
   
       return cita;
@@ -212,11 +209,9 @@ const TableAdmin = () => {
     const horaCita = new Date(`${cita.fecha}T${cita.hora}`);
   
     if (currentDate > fechaCita && currentDate.getDate() - fechaCita.getDate() === 1) {
-      if (cita.estado_cita === EstadoCitaEnum.AUSENCIA || cita.estado_cita === EstadoCitaEnum.REALIZADA) {
+      if (cita.estado_cita === EstadoCitaEnum.REALIZADA) {
         return cita.estado_cita;
-      } else {
-        return EstadoCitaEnum.AUSENCIA;
-      }
+      } 
     }
   
     if (currentDate >= horaCita && currentDate.getHours() < 17 && cita.estado_cita === EstadoCitaEnum.PROGRAMADA) {
@@ -272,7 +267,7 @@ const TableAdmin = () => {
       }
       const estadoCitaActual = cita.estado_cita;
 
-      if (estadoCitaActual !== EstadoCitaEnum.REALIZADA && estadoCitaActual !== EstadoCitaEnum.AUSENCIA) {
+      if (estadoCitaActual !== EstadoCitaEnum.REALIZADA && estadoCitaActual) {
         cita.estado_cita = EstadoCitaEnum.REALIZADA; // Establecer el estado como "Realizada"
       }
       const response = await axios.put(

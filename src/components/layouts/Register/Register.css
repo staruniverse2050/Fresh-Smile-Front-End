@@ -20,6 +20,15 @@
 	height: 720px;
 	text-align: center;
 }
+
+#fotoespecialista{
+	position: relative;
+	left: 220px;
+}
+#fotoespecialista p{
+	position: relative;
+	right:45px;
+}
 #foto {
 	position: relative;
 	left: 154px;

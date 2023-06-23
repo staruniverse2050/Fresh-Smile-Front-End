@@ -114,7 +114,7 @@ const SpecialistCards = () => {
           </div>
         ))
       ) : (
-        <p></p>
+        <p>Cargando datos...</p>
       )}
     </div>
   );
